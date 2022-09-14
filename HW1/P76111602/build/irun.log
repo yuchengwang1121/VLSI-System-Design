@@ -1,0 +1,155 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Sep 12, 2022 at 20:22:51 CST
+irun
+	/home/YuChengWang/P76111602/./sim/top_tb.sv
+	+incdir+/home/YuChengWang/P76111602/./src+/home/YuChengWang/P76111602/./include+/home/YuChengWang/P76111602/./sim
+	+define+prog4+FSDB_ALL
+	-define CYCLE=10.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/YuChengWang/P76111602/./sim/prog4
+	+rdcycle=1
+
+   User defined plus("+") options:
+	+prog_path=/home/YuChengWang/P76111602/./sim/prog4
+	+rdcycle=1
+
+file: /home/YuChengWang/P76111602/./sim/top_tb.sv
+`define CYCLE 10.0 // Cycle time
+                                |
+ncvlog: *W,MACNDF (/home/YuChengWang/P76111602/./sim/top_tb.sv,2|32): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 100000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/YuChengWang/P76111602/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/YuChengWang/P76111602/./sim/top_tb.sv,42|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	$value$plusargs("rdcycle=%s", rdcycle);
+	              |
+ncvlog: *W,NOSYST (/home/YuChengWang/P76111602/./sim/top_tb.sv,43|15): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/YuChengWang/P76111602/./sim/top_tb.sv,58|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+ncvlog: *W,SPDUSD: Include directory /home/YuChengWang/P76111602/./include given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh({prog_path, "/main0.hex"}, TOP.IM1.i_SRAM.Memory_byte0);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,46|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main0.hex"}, TOP.DM1.i_SRAM.Memory_byte0); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,47|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.IM1.i_SRAM.Memory_byte1);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.DM1.i_SRAM.Memory_byte1); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.IM1.i_SRAM.Memory_byte2);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,50|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.DM1.i_SRAM.Memory_byte2); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,51|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.IM1.i_SRAM.Memory_byte3);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,52|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.DM1.i_SRAM.Memory_byte3); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,53|67): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 20      18
+		Registers:              187     179
+		Scalar wires:           249       -
+		Expanded wires:         164       8
+		Vectored wires:         150       -
+		Always blocks:           27      25
+		Initial blocks:           2       2
+		Cont. assignments:      109      96
+		Pseudo assignments:     143     143
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main0.hex".
+            File: ../sim/top_tb.sv, line = 46, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main0.hex".
+            File: ../sim/top_tb.sv, line = 47, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main1.hex".
+            File: ../sim/top_tb.sv, line = 48, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main1.hex".
+            File: ../sim/top_tb.sv, line = 49, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main2.hex".
+            File: ../sim/top_tb.sv, line = 50, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main2.hex".
+            File: ../sim/top_tb.sv, line = 51, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main3.hex".
+            File: ../sim/top_tb.sv, line = 52, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+ncsim: *W,RMEMNOF: $readmem error: open failed on file "/home/YuChengWang/P76111602/./sim/prog4/main3.hex".
+            File: ../sim/top_tb.sv, line = 53, pos = 67
+           Scope: top_tb
+            Time: 10 NS + 0
+
+DM[8192] = xxxxxxxx, expect = 00375f00
+DM[8193] = xxxxxxxx, expect = 00000000
+DM[8194] = xxxxxxxx, expect = 0000129b
+SIM_END(16383) = xxxxxxxx, expect = ffffffff
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  OOPS!!                **      / X,X  | 
+        **                        **    /_____   | 
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+         Totally has           3 errors                     
+
+
+Simulation complete via $finish(1) at time 1 MS + 0
+../sim/top_tb.sv:155     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 12, 2022 at 20:22:53 CST  (total: 00:00:02)
