@@ -2,14 +2,16 @@
 // File created by:  irun
 // Do not modify this file
 //
-/home/YuChengWang/P76111602/./sim/top_tb.sv
-+incdir+/home/YuChengWang/P76111602/./src+/home/YuChengWang/P76111602/./include+/home/YuChengWang/P76111602/./sim
-+define+prog4+FSDB_ALL
+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
+-sdf_file
+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./syn/top_syn.sdf
++incdir+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./syn+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
++define+SYN+prog0
 -define
-CYCLE=10.0
+CYCLE=20.0
 -define
 MAX=100000
 +access+r
 +nc64bit
-+prog_path=/home/YuChengWang/P76111602/./sim/prog4
++prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
 +rdcycle=1

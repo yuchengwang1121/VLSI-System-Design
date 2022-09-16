@@ -1,5 +1,6 @@
 `include "ALUCtrl.sv"
 `include "ALU.sv"
+`include "Src.sv"
 module EXE(
     input clk,
     input rst,
@@ -10,8 +11,8 @@ module EXE(
     input [2:0] ID_Funct3,
     input [6:0] ID_Funct7,
     input [4:0] ID_rdaddr,
-    input [4:0] ID_rs1addr,
-    input [4:0] ID_rs2addr,
+    input [4:0] rs1addr,
+    input [4:0] rs2addr,
     input [2:0] ID_ALUOP,
     input ID_PCtoRegSrc,
     input ID_ALUSrc,
@@ -26,6 +27,7 @@ module EXE(
     input [1:0] Forward_rs2src,
     input [11:0] ID_csraddr,
     input ID_csrweb,
+    input [1:0]BranchCtrl,
 
     output logic [31:0] EXE_PCtoReg,
     output logic [31:0] EXE_ALUout,
@@ -41,11 +43,15 @@ module EXE(
     output logic [31:0] PC_imm,     //for branch
     output logic [31:0] PC_jr       //for jalr
 );
+parameter [1:0] PC4 = 2'b00,
+                Branch = 2'b01,
+                Loaduse = 2'b10;
 
 logic [31:0] ALU_pcimm,ALU_pc4;
-logic [31:0] ALU_rs1,ALU_rs21,ALU_rs22;  //rs2 have two MUX
-logic [31:0] Wire_ALUout;
+logic [31:0] ALU_rs1,ALU_rs21,ALU_rs22;     //rs2 have two MUX
+logic [31:0] Wire_ALUout,Wire_csrrdata;     //Wire to pass value
 logic [4:0] Wire_ALUCtrl;
+logic [1:0] Src_state;
 
 assign ALU_pcimm = ID_pcout + ID_imm;  //for EXE_PCtoReg
 assign ALU_pc4 = ID_pcout + 4;
@@ -53,6 +59,8 @@ assign ALU_pc4 = ID_pcout + 4;
 assign PC_imm = ID_pcout + ID_imm;     //for IF's PC
 assign PC_jr = Wire_ALUout;
 
+assign Src_state = (ID_MemRead && ((ID_rdaddr == rs1addr)||(ID_rdaddr == rs2addr)))? Loaduse:(BranchCtrl!=PC4)? Branch:2'b0;  // branch or lu for src
+  
 always_comb begin                       //rs1 MUX
     if (Forward_rs1src == 2'b00) ALU_rs1 = ID_rs1data;
     else if (Forward_rs1src == 2'b01) ALU_rs1 = Forward_Memrddata;
@@ -89,14 +97,13 @@ Src Src(
     .clk        (clk),
     .rst        (rst),
     .ALUCtrl    (Wire_ALUCtrl),
-    .RegWrite   (EXEMEM_RegWrite),
-    .Funct7     (ID_Funct7),
+    .state      (Src_state),
     .rs1        (ALU_rs1),
-    .rs1addr    (ID_rs1addr),
+    .rs1addr    (rs1addr),
     .Imm        (ID_imm),
-    .Csraddr    (ID_csraddr),
-    .Csrweb     (ID_csrweb),
-    .Csrrdata   (Wire_Csrrdata)
+    .csraddr    (ID_csraddr),
+    .csrweb     (ID_csrweb),
+    .csrrdata   (Wire_csrrdata)
 );
 
 always_ff @(posedge clk or posedge rst) begin
@@ -118,7 +125,7 @@ always_ff @(posedge clk or posedge rst) begin
         else EXE_PCtoReg <= ALU_pc4;
         
         //Pass ALU_out
-        if (ID_csrweb) EXE_ALUout <= Wire_Csrrdata
+        if (ID_csrweb) EXE_ALUout <= Wire_csrrdata;
         else EXE_ALUout  <= Wire_ALUout;
 
         //otherwise data pass

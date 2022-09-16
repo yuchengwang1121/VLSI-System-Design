@@ -34,7 +34,7 @@ parameter [4:0] ALU_Bltu = 5'b01111;
 parameter [4:0] ALU_Bgeu = 5'b10000;
 parameter [4:0] ALU_Imm = 5'b10001;
 parameter [4:0] ALU_CsrRW = 5'b10010;   //added
-parameter [4:0] ALU_CsrR = 5'b10011;    //added
+parameter [4:0] ALU_CsrRS = 5'b10011;    //added
 parameter [4:0] ALU_CsrRC = 5'b10100;   //added
 parameter [4:0] ALU_CsrRWI = 5'b10101;  //added
 parameter [4:0] ALU_CsrRSI = 5'b10110;  //added
@@ -95,7 +95,7 @@ always_comb begin
         Csr_type : begin                        //added
             case (Funct3)
                 3'b001: ALUCtrl = ALU_CsrRW;
-                3'b010: ALUCtrl = ALU_CsrR;
+                3'b010: ALUCtrl = ALU_CsrRS;
                 3'b011: ALUCtrl = ALU_CsrRC;
                 3'b101: ALUCtrl = ALU_CsrRWI;
                 3'b110: ALUCtrl = ALU_CsrRSI;

@@ -1,0 +1,169 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Fri Sep 16 19:34:18 2022
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: EXE/Src/rdinstret_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: EXE/Src/rdinstreth_reg_31_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  Src                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  Src_DW01_dec_0     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  EXE/Src/rdinstret_reg_1_/CK (QDFFRBN)                   0.00       1.00 r
+  EXE/Src/rdinstret_reg_1_/Q (QDFFRBN)                    0.42       1.42 f
+  EXE/Src/sub_40_S2/A[1] (Src_DW01_dec_0)                 0.00       1.42 f
+  EXE/Src/sub_40_S2/U18/O (NR2T)                          0.12       1.54 r
+  EXE/Src/sub_40_S2/U185/O (INV1S)                        0.16       1.70 f
+  EXE/Src/sub_40_S2/U71/O (NR2P)                          0.15       1.85 r
+  EXE/Src/sub_40_S2/U174/O (INV1S)                        0.17       2.02 f
+  EXE/Src/sub_40_S2/U70/O (NR2P)                          0.15       2.17 r
+  EXE/Src/sub_40_S2/U142/O (INV1S)                        0.18       2.35 f
+  EXE/Src/sub_40_S2/U68/O (NR2P)                          0.15       2.50 r
+  EXE/Src/sub_40_S2/U143/O (INV1S)                        0.18       2.67 f
+  EXE/Src/sub_40_S2/U65/O (NR2P)                          0.15       2.82 r
+  EXE/Src/sub_40_S2/U144/O (INV1S)                        0.18       3.00 f
+  EXE/Src/sub_40_S2/U62/O (NR2P)                          0.15       3.15 r
+  EXE/Src/sub_40_S2/U145/O (INV1S)                        0.18       3.32 f
+  EXE/Src/sub_40_S2/U56/O (NR2P)                          0.15       3.47 r
+  EXE/Src/sub_40_S2/U146/O (INV1S)                        0.18       3.65 f
+  EXE/Src/sub_40_S2/U6/O (NR2P)                           0.15       3.80 r
+  EXE/Src/sub_40_S2/U8/O (INV1S)                          0.20       4.00 f
+  EXE/Src/sub_40_S2/U17/O (NR2T)                          0.17       4.18 r
+  EXE/Src/sub_40_S2/U16/O (ND2P)                          0.09       4.26 f
+  EXE/Src/sub_40_S2/U20/O (NR2P)                          0.14       4.40 r
+  EXE/Src/sub_40_S2/U175/O (INV1S)                        0.18       4.58 f
+  EXE/Src/sub_40_S2/U24/O (NR2P)                          0.15       4.73 r
+  EXE/Src/sub_40_S2/U147/O (INV1S)                        0.18       4.90 f
+  EXE/Src/sub_40_S2/U21/O (NR2P)                          0.15       5.05 r
+  EXE/Src/sub_40_S2/U133/O (INV1S)                        0.18       5.23 f
+  EXE/Src/sub_40_S2/U22/O (NR2P)                          0.15       5.38 r
+  EXE/Src/sub_40_S2/U165/O (INV1S)                        0.18       5.55 f
+  EXE/Src/sub_40_S2/U23/O (NR2P)                          0.15       5.70 r
+  EXE/Src/sub_40_S2/U176/O (INV1S)                        0.18       5.88 f
+  EXE/Src/sub_40_S2/U25/O (NR2P)                          0.15       6.03 r
+  EXE/Src/sub_40_S2/U148/O (INV1S)                        0.18       6.21 f
+  EXE/Src/sub_40_S2/U26/O (NR2P)                          0.15       6.36 r
+  EXE/Src/sub_40_S2/U149/O (INV1S)                        0.18       6.53 f
+  EXE/Src/sub_40_S2/U27/O (NR2P)                          0.15       6.68 r
+  EXE/Src/sub_40_S2/U134/O (INV1S)                        0.18       6.86 f
+  EXE/Src/sub_40_S2/U28/O (NR2P)                          0.15       7.01 r
+  EXE/Src/sub_40_S2/U166/O (INV1S)                        0.18       7.19 f
+  EXE/Src/sub_40_S2/U29/O (NR2P)                          0.15       7.34 r
+  EXE/Src/sub_40_S2/U177/O (INV1S)                        0.18       7.51 f
+  EXE/Src/sub_40_S2/U30/O (NR2P)                          0.15       7.66 r
+  EXE/Src/sub_40_S2/U150/O (INV1S)                        0.18       7.84 f
+  EXE/Src/sub_40_S2/U31/O (NR2P)                          0.15       7.99 r
+  EXE/Src/sub_40_S2/U151/O (INV1S)                        0.18       8.17 f
+  EXE/Src/sub_40_S2/U32/O (NR2P)                          0.15       8.32 r
+  EXE/Src/sub_40_S2/U135/O (INV1S)                        0.18       8.49 f
+  EXE/Src/sub_40_S2/U33/O (NR2P)                          0.15       8.64 r
+  EXE/Src/sub_40_S2/U167/O (INV1S)                        0.18       8.82 f
+  EXE/Src/sub_40_S2/U34/O (NR2P)                          0.15       8.97 r
+  EXE/Src/sub_40_S2/U178/O (INV1S)                        0.18       9.15 f
+  EXE/Src/sub_40_S2/U35/O (NR2P)                          0.15       9.30 r
+  EXE/Src/sub_40_S2/U152/O (INV1S)                        0.18       9.47 f
+  EXE/Src/sub_40_S2/U36/O (NR2P)                          0.15       9.62 r
+  EXE/Src/sub_40_S2/U153/O (INV1S)                        0.18       9.80 f
+  EXE/Src/sub_40_S2/U37/O (NR2P)                          0.15       9.95 r
+  EXE/Src/sub_40_S2/U136/O (INV1S)                        0.18      10.13 f
+  EXE/Src/sub_40_S2/U38/O (NR2P)                          0.15      10.28 r
+  EXE/Src/sub_40_S2/U168/O (INV1S)                        0.18      10.45 f
+  EXE/Src/sub_40_S2/U39/O (NR2P)                          0.15      10.60 r
+  EXE/Src/sub_40_S2/U179/O (INV1S)                        0.18      10.78 f
+  EXE/Src/sub_40_S2/U40/O (NR2P)                          0.15      10.93 r
+  EXE/Src/sub_40_S2/U154/O (INV1S)                        0.18      11.10 f
+  EXE/Src/sub_40_S2/U41/O (NR2P)                          0.15      11.25 r
+  EXE/Src/sub_40_S2/U155/O (INV1S)                        0.18      11.43 f
+  EXE/Src/sub_40_S2/U42/O (NR2P)                          0.15      11.58 r
+  EXE/Src/sub_40_S2/U137/O (INV1S)                        0.18      11.76 f
+  EXE/Src/sub_40_S2/U43/O (NR2P)                          0.15      11.91 r
+  EXE/Src/sub_40_S2/U169/O (INV1S)                        0.18      12.08 f
+  EXE/Src/sub_40_S2/U44/O (NR2P)                          0.15      12.23 r
+  EXE/Src/sub_40_S2/U180/O (INV1S)                        0.18      12.41 f
+  EXE/Src/sub_40_S2/U45/O (NR2P)                          0.15      12.56 r
+  EXE/Src/sub_40_S2/U156/O (INV1S)                        0.18      12.74 f
+  EXE/Src/sub_40_S2/U46/O (NR2P)                          0.15      12.89 r
+  EXE/Src/sub_40_S2/U157/O (INV1S)                        0.18      13.06 f
+  EXE/Src/sub_40_S2/U47/O (NR2P)                          0.15      13.21 r
+  EXE/Src/sub_40_S2/U138/O (INV1S)                        0.18      13.39 f
+  EXE/Src/sub_40_S2/U48/O (NR2P)                          0.15      13.54 r
+  EXE/Src/sub_40_S2/U170/O (INV1S)                        0.18      13.72 f
+  EXE/Src/sub_40_S2/U49/O (NR2P)                          0.15      13.87 r
+  EXE/Src/sub_40_S2/U181/O (INV1S)                        0.18      14.04 f
+  EXE/Src/sub_40_S2/U50/O (NR2P)                          0.15      14.19 r
+  EXE/Src/sub_40_S2/U158/O (INV1S)                        0.18      14.37 f
+  EXE/Src/sub_40_S2/U51/O (NR2P)                          0.15      14.52 r
+  EXE/Src/sub_40_S2/U159/O (INV1S)                        0.18      14.70 f
+  EXE/Src/sub_40_S2/U52/O (NR2P)                          0.15      14.85 r
+  EXE/Src/sub_40_S2/U139/O (INV1S)                        0.18      15.02 f
+  EXE/Src/sub_40_S2/U53/O (NR2P)                          0.15      15.17 r
+  EXE/Src/sub_40_S2/U171/O (INV1S)                        0.18      15.35 f
+  EXE/Src/sub_40_S2/U54/O (NR2P)                          0.15      15.50 r
+  EXE/Src/sub_40_S2/U182/O (INV1S)                        0.18      15.68 f
+  EXE/Src/sub_40_S2/U55/O (NR2P)                          0.15      15.83 r
+  EXE/Src/sub_40_S2/U160/O (INV1S)                        0.18      16.00 f
+  EXE/Src/sub_40_S2/U57/O (NR2P)                          0.15      16.15 r
+  EXE/Src/sub_40_S2/U161/O (INV1S)                        0.18      16.33 f
+  EXE/Src/sub_40_S2/U58/O (NR2P)                          0.15      16.48 r
+  EXE/Src/sub_40_S2/U140/O (INV1S)                        0.18      16.66 f
+  EXE/Src/sub_40_S2/U59/O (NR2P)                          0.15      16.81 r
+  EXE/Src/sub_40_S2/U172/O (INV1S)                        0.18      16.98 f
+  EXE/Src/sub_40_S2/U60/O (NR2P)                          0.15      17.13 r
+  EXE/Src/sub_40_S2/U183/O (INV1S)                        0.18      17.31 f
+  EXE/Src/sub_40_S2/U61/O (NR2P)                          0.15      17.46 r
+  EXE/Src/sub_40_S2/U7/O (INV1S)                          0.18      17.63 f
+  EXE/Src/sub_40_S2/U5/O (NR2P)                           0.15      17.78 r
+  EXE/Src/sub_40_S2/U162/O (INV1S)                        0.18      17.96 f
+  EXE/Src/sub_40_S2/U63/O (NR2P)                          0.15      18.11 r
+  EXE/Src/sub_40_S2/U141/O (INV1S)                        0.18      18.29 f
+  EXE/Src/sub_40_S2/U64/O (NR2P)                          0.15      18.44 r
+  EXE/Src/sub_40_S2/U173/O (INV1S)                        0.18      18.61 f
+  EXE/Src/sub_40_S2/U66/O (NR2P)                          0.15      18.76 r
+  EXE/Src/sub_40_S2/U184/O (INV1S)                        0.18      18.94 f
+  EXE/Src/sub_40_S2/U67/O (NR2P)                          0.15      19.09 r
+  EXE/Src/sub_40_S2/U163/O (INV1S)                        0.18      19.27 f
+  EXE/Src/sub_40_S2/U69/O (NR2P)                          0.20      19.47 r
+  EXE/Src/sub_40_S2/U9/O (ND2P)                           0.12      19.59 f
+  EXE/Src/sub_40_S2/U14/O (OR2)                           0.27      19.85 f
+  EXE/Src/sub_40_S2/U1/O (NR2P)                           0.18      20.03 r
+  EXE/Src/sub_40_S2/U2/O (ND2)                            0.13      20.17 f
+  EXE/Src/sub_40_S2/U11/O (XOR2HS)                        0.17      20.34 f
+  EXE/Src/sub_40_S2/SUM[63] (Src_DW01_dec_0)              0.00      20.34 f
+  EXE/Src/U67/O (AO222)                                   0.43      20.77 f
+  EXE/Src/rdinstreth_reg_31_/D (QDFFRBS)                  0.00      20.77 f
+  data arrival time                                                 20.77
+
+  clock clk (rise edge)                                  20.00      20.00
+  clock network delay (ideal)                             1.00      21.00
+  clock uncertainty                                      -0.10      20.90
+  EXE/Src/rdinstreth_reg_31_/CK (QDFFRBS)                 0.00      20.90 r
+  library setup time                                     -0.11      20.79
+  data required time                                                20.79
+  --------------------------------------------------------------------------
+  data required time                                                20.79
+  data arrival time                                                -20.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1

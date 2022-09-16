@@ -10,7 +10,8 @@ module ControlUnit(
     output logic MemWrite,
     output logic MemtoReg,              //(0: ALU result; 1: data from Mem)
     output logic RegWrite,              //(0: can't write data into reg; 1: can write data into reg)
-    output logic [1:0] branch
+    output logic [1:0] branch,
+    output logic csr_web
 );
     
 parameter [1:0] No_branch = 2'b00;      //PC for normal
@@ -35,6 +36,7 @@ parameter [2:0] J_imm = 3'b100;
 
 
 always_comb begin
+    csr_web = 1'b0;
     case (OPcode)
         7'b0110011 : begin  //R-type
             ImmType = I_imm;  // X
@@ -154,6 +156,7 @@ always_comb begin
             MemWrite = 1'b0;
             MemtoReg = 1'b0;
             RegWrite = 1'b1;
+            csr_web = 1'b1;
             branch = No_branch;
         end
         default : begin

@@ -2,97 +2,80 @@ module Src(
     input clk,rst,
 
     input [4:0] ALUCtrl,
-    input EXEMEM_RegWrite,
-
-    // input [2:0] Funct3,      //already seperate at ALUCtrl
-    input [6:0] Funct7,
+    input [1:0] state,
 
     input [31:0] Imm,
     input [31:0] rs1,
     input [4:0] rs1addr,
 
-    input [11:0] Csraddr,
-    input Csrweb,
+    input [11:0] csraddr,
+    input csrweb,
 
-    output logic [31:0] Csrrdata,
+    output logic [31:0] csrrdata
 );
 
 parameter [4:0] ALU_CsrRW = 5'b10010;
-parameter [4:0] ALU_CsrR = 5'b10011;
+parameter [4:0] ALU_CsrRS = 5'b10011;
 parameter [4:0] ALU_CsrRC = 5'b10100;
 parameter [4:0] ALU_CsrRWI = 5'b10101;
 parameter [4:0] ALU_CsrRSI = 5'b10110;
 parameter [4:0] ALU_CsrRCI = 5'b10111;
 
-logic [31:0] csr;
-logic [31:0] rdcycle;
-logic [31:0] rdinstret;
-logic [31:0] rdcycleh;
-logic [31:0] rdinstreth;
+parameter [1:0] Branch = 2'b01,
+                Loaduse = 2'b10;
+
+logic [31:0] csr, csr_in;
+logic [31:0] rdcycle, rdcycleh;
+logic [31:0] rdinstret, rdinstreth;
 
 always_ff @(posedge clk or posedge rst) begin       //count the cycle and the instruction
     if (rst) begin
         {rdcycleh, rdcycle} <= 64'b0;
         {rdinstreth, rdinstret} <= 64'b0;
     end else begin
+        //cycle
         {rdcycleh, rdcycle} <= {rdcycleh, rdcycle} + 64'b1;
-        {rdinstreth, rdinstret} <= {rdinstreth, rdinstret} + 64'b1;
+        //instre
+        if (rdcycle >1) begin
+            if (state == Branch) {rdinstreth, rdinstret} <= {rdinstreth, rdinstret} - 64'b1;
+            else if (state == Loaduse) {rdinstreth, rdinstret} <= {rdinstreth, rdinstret};
+            else {rdinstreth, rdinstret} <= {rdinstreth, rdinstret} + 64'b1;
+        end
     end
 end
-    
 
-always_ff @(posedge clk or posedge rst) begin           //added
+always_comb begin
+    csr_in = (ALUCtrl[2:0] > 3'b100)? Imm : rs1; //if is XXXI, then input is uimm, else rs1 
+end
+
+always_ff @(posedge clk or posedge rst) begin
     if (rst) begin
-        mstatus    <= 32'b0;
+        csr <= 32'b0;
     end 
     else begin
         case (ALUCtrl)
-        ALU_CsrRW : begin
-            if(rd != 0) ALUout = csr;
-            csr = Srs1;
+        ALU_CsrRW, ALU_CsrRWI : begin   //(csr<=rs1)
+            csr<=rs1;
         end
-        ALU_CsrR : begin                    //need modify
-            if(rd != 0) ALUout = csr;
-            if (rs1!=0 && csrweb) begin
-                csr = csr|Srs1;
-            end
+        ALU_CsrRS, ALU_CsrRSI : begin   //(csr = csr|rs1)
+            csr <= csr|rs1;
         end
-        ALU_CsrRC : begin 
-            if(rd != 0) ALUout = csr;
-            if (rs1!=0 && csrweb) begin
-                csr = csr&(~Srs1);
-            end
-        end
-        //rs1 uimm[4:0]
-        ALU_CsrRWI : begin 
-            if(rd != 0) ALUout = csr;
-            csr = rs1;
-        end
-        ALU_CsrRSI : begin 
-            if(rd != 0) ALUout = csr;
-            if (rs1!=0 && csrweb) begin
-                csr = csr|rs1;
-            end
-        end
-        default: begin      // ALU_CsrRCI 
-            if(rd != 0) ALUout = rs2;
-            if (rs1!=0 && csrweb) begin
-                csr = csr&(~rs1);
-            end
+        default: begin  // ALU_CsrRC, ALU_CsrRCI; (csr = csr|(~rs1))
+            csr <= csr|(~rs1);
         end
         endcase
     end
 end
 
 
-always_comb begin       //give the value out to write back
+always_comb begin       //give the value out to EXE_ALUout (rd<= csr)
     case (csraddr)
-        12'h300: Csrrdata = status;
-        12'hb00: Csrrdata = rdcycle;
-        12'hb02: Csrrdata = rdinstret;
-        12'hb80: Csrrdata = rdcycleh;
-        12'hb82: Csrrdata = rdinstreth;
-        default: Csrrdata = 32'b0;
+        // 12'h300: csrrdata = csr;
+        12'hc00: csrrdata = rdcycle;    //User mode
+        12'hc02: csrrdata = rdinstret;
+        12'hc80: csrrdata = rdcycleh;
+        12'hc82: csrrdata = rdinstreth;
+        default: csrrdata = 32'b0;
     endcase
 end
 endmodule

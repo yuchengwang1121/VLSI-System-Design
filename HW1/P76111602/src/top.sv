@@ -52,11 +52,12 @@ logic [4:0] WB_rdaddr;
 logic WB_RegWrite,IDFlush;
 //ID output wire
 logic [31:0] ID_pcout, ID_rs1data, ID_rs2data, ID_imm;
+logic [11:0] ID_csraddr;
 logic [6:0] ID_Funct7;
 logic [4:0] ID_rdaddr, ID_rs1addr, ID_rs2addr, rs1addr, rs2addr;
 logic [2:0] ID_ALUOP, ID_Funct3;
 logic [1:0] ID_branch;
-logic ID_PCtoRegSrc,ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite, ID_MemtoReg, ID_RegWrite;
+logic ID_PCtoRegSrc,ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite, ID_MemtoReg, ID_RegWrite, ID_csrweb;
 
     ID ID(
         //input already have wire
@@ -89,7 +90,9 @@ logic ID_PCtoRegSrc,ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite, ID_MemtoReg, I
         .ID_rs1addr     (ID_rs1addr),
         .ID_rs2addr     (ID_rs2addr),
         .rs1addr        (rs1addr),
-        .rs2addr        (rs2addr)
+        .rs2addr        (rs2addr),
+        .ID_csraddr     (ID_csraddr),
+        .ID_csrweb      (ID_csrweb)
     );
 
 //EXE input wire
@@ -120,13 +123,16 @@ logic ZeroFlag, EXE_rdsrc,EXE_MemRead, EXE_MemWrite, EXE_MemtoReg, EXE_RegWrite;
         .ID_Funct3      (ID_Funct3),
         .ID_Funct7      (ID_Funct7),
         .ID_rdaddr      (ID_rdaddr),
-        .ID_rs1addr     (ID_rs1addr),
-        .ID_rs2addr     (ID_rs2addr),
+        .rs1addr        (rs1addr),
+        .rs2addr        (rs2addr),
         .WB_rddata      (WB_rddata ),
+        .ID_csraddr     (ID_csraddr),
+        .ID_csrweb      (ID_csrweb),
         //input
         .Forward_Memrddata(Forward_Memrddata),
         .Forward_rs1src (Forward_rs1src),
         .Forward_rs2src (Forward_rs2src),
+        .BranchCtrl     (BranchCtrl),
         //output have wire
         .PC_imm         (PC_imm),
         .PC_jr          (PC_jr),
@@ -194,8 +200,8 @@ logic MEM_MemtoReg,MEM_RegWrite,MEM_CS;
 
     WB WB(
         //input have wire
-        .clk            (clk),
-        .rst            (rst),
+        // .clk            (clk),
+        // .rst            (rst),
         .MEM_rddata     (MEM_rddata),
         .MEM_rdaddr     (MEM_rdaddr),
         .MEM_dout       (MEM_dout),

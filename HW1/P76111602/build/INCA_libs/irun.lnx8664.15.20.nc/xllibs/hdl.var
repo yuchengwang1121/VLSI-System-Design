@@ -1,0 +1,6 @@
+define VIEW_MAP ( $VIEW_MAP \
+, .lib => lib \
+)
+define VIEW_MAP ( $VIEW_MAP \
+, .lib => lib \
+)

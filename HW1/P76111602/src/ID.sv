@@ -30,12 +30,14 @@ module ID(
     output logic ID_RegWrite,
     output logic [1:0] ID_branch,
     output logic [4:0] rs1addr,
-    output logic [4:0] rs2addr
+    output logic [4:0] rs2addr,
+    output logic [11:0] ID_csraddr,
+    output logic ID_csrweb
 );
 
 logic [31:0] Wire_rs1,Wire_rs2,Wire_imm;    //wire's to connect submodule with ID state
 logic [2:0] Wire_ALUOP,Wire_immtype;
-logic Wire_PCtoRegSrc, Wire_ALUSrc, Wire_RDSrc, Wire_MemRead, Wire_MemWrite, Wire_MemtoReg, Wire_RegWrite;
+logic Wire_PCtoRegSrc, Wire_ALUSrc, Wire_RDSrc, Wire_MemRead, Wire_MemWrite, Wire_MemtoReg, Wire_RegWrite, Wire_csrweb;
 logic [1:0] Wire_branch;
 
 assign rs1addr = IF_instrout[19:15];       //assign the address
@@ -70,7 +72,8 @@ ControlUnit CU(
     .MemWrite   (Wire_MemWrite),
     .MemtoReg   (Wire_MemtoReg),
     .RegWrite   (Wire_RegWrite),
-    .branch     (Wire_branch)
+    .branch     (Wire_branch),
+    .csr_web    (Wire_csrweb)
 );
 
 always_ff @(posedge clk or posedge rst) begin
@@ -93,6 +96,8 @@ always_ff @(posedge clk or posedge rst) begin
         ID_MemtoReg <= 1'b0;
         ID_RegWrite <= 1'b0;
         ID_branch <= 2'b0;
+        ID_csraddr <= 12'b0;
+        ID_csrweb <= 1'b0;
     end
     else begin                                  //connect wire to output
         ID_pcout <= IF_pcout;
@@ -115,12 +120,16 @@ always_ff @(posedge clk or posedge rst) begin
             ID_MemWrite <= 1'b0;
             ID_RegWrite <= 1'b0;
             ID_branch <= 2'b0;
+            ID_csraddr <= 12'b0;
+            ID_csrweb <= 1'b0;
         end
         else begin
             ID_MemRead <= Wire_MemRead;
             ID_MemWrite <= Wire_MemWrite;
             ID_RegWrite <= Wire_RegWrite;
             ID_branch <= Wire_branch;
+            ID_csrweb <= Wire_csrweb;
+            ID_csraddr <= IF_instrout[31:20];
         end
     end
 end

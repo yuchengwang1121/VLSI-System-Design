@@ -1,6 +1,6 @@
 module WB(
-    input clk,
-    input rst,
+    // input clk,
+    // input rst,
     input MEM_MemtoReg,
     input MEM_RegWrite,
     input [31:0] MEM_rddata,
