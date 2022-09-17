@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : T-2022.03
-// Date      : Fri Sep 16 19:34:16 2022
+// Date      : Sat Sep 17 17:18:28 2022
 /////////////////////////////////////////////////////////////
 
 
@@ -119,7 +119,9 @@ module ProgramCounter ( clk, rst, PCWrite, PC_in, PC_out );
 endmodule
 
 
-module IF_DW01_add_0_DW01_add_3 ( A, SUM );
+
+    module IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter___DW01_add_0_DW01_add_3 ( 
+        A, SUM );
   input [31:0] A;
   output [31:0] SUM;
   wire   n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16,
@@ -188,16 +190,18 @@ module IF_DW01_add_0_DW01_add_3 ( A, SUM );
 endmodule
 
 
-module IF ( clk, rst, BranchCtrl, PC_imm, PC_jr, InstrFlush, IFID_RegWrite, 
-        PCWrite, Instr_out, IF_pcout, IF_instrout, PC_out );
+module IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__ ( clk, 
+        rst, IFEXEi_PC_imm, IFEXEi_PC_jr, IFHCi_InstrFlush, 
+        IFHCi_IFID_RegWrite, IFHCi_PCWrite, BranchCtrl, Instr_out, 
+        IFIDo_IF_pcout, IFIDo_IF_instrout, PC_out );
+  input [31:0] IFEXEi_PC_imm;
+  input [31:0] IFEXEi_PC_jr;
   input [1:0] BranchCtrl;
-  input [31:0] PC_imm;
-  input [31:0] PC_jr;
   input [31:0] Instr_out;
-  output [31:0] IF_pcout;
-  output [31:0] IF_instrout;
+  output [31:0] IFIDo_IF_pcout;
+  output [31:0] IFIDo_IF_instrout;
   output [31:0] PC_out;
-  input clk, rst, InstrFlush, IFID_RegWrite, PCWrite;
+  input clk, rst, IFHCi_InstrFlush, IFHCi_IFID_RegWrite, IFHCi_PCWrite;
   wire   n_Logic1_, n1, n4, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18,
          n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29, n30, n31, n32,
          n33, n34, n35, n36, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46,
@@ -209,172 +213,204 @@ module IF ( clk, rst, BranchCtrl, PC_imm, PC_jr, InstrFlush, IFID_RegWrite,
   wire   [31:0] PC_4;
   wire   [31:0] PC_in;
 
-  AO222 U71 ( .A1(PC_4[9]), .A2(n84), .B1(PC_imm[9]), .B2(n81), .C1(PC_jr[9]), 
-        .C2(n2), .O(PC_in[9]) );
-  AO222 U72 ( .A1(PC_4[8]), .A2(n84), .B1(PC_imm[8]), .B2(n81), .C1(PC_jr[8]), 
-        .C2(n2), .O(PC_in[8]) );
-  AO222 U73 ( .A1(PC_4[7]), .A2(n84), .B1(PC_imm[7]), .B2(n81), .C1(PC_jr[7]), 
-        .C2(n2), .O(PC_in[7]) );
-  AO222 U74 ( .A1(PC_4[6]), .A2(n84), .B1(PC_imm[6]), .B2(n81), .C1(PC_jr[6]), 
-        .C2(n2), .O(PC_in[6]) );
-  AO222 U75 ( .A1(PC_4[5]), .A2(n84), .B1(PC_imm[5]), .B2(n81), .C1(PC_jr[5]), 
-        .C2(n2), .O(PC_in[5]) );
-  AO222 U76 ( .A1(PC_4[4]), .A2(n84), .B1(PC_imm[4]), .B2(n81), .C1(PC_jr[4]), 
-        .C2(n2), .O(PC_in[4]) );
-  AO222 U77 ( .A1(PC_4[3]), .A2(n84), .B1(PC_imm[3]), .B2(n81), .C1(PC_jr[3]), 
-        .C2(n2), .O(PC_in[3]) );
-  AO222 U78 ( .A1(PC_4[31]), .A2(n84), .B1(PC_imm[31]), .B2(n81), .C1(
-        PC_jr[31]), .C2(n2), .O(PC_in[31]) );
-  AO222 U79 ( .A1(PC_4[30]), .A2(n84), .B1(PC_imm[30]), .B2(n81), .C1(
-        PC_jr[30]), .C2(n2), .O(PC_in[30]) );
-  AO222 U80 ( .A1(PC_4[2]), .A2(n84), .B1(PC_imm[2]), .B2(n81), .C1(PC_jr[2]), 
-        .C2(n2), .O(PC_in[2]) );
-  AO222 U81 ( .A1(PC_4[29]), .A2(n84), .B1(PC_imm[29]), .B2(n81), .C1(
-        PC_jr[29]), .C2(n2), .O(PC_in[29]) );
-  AO222 U82 ( .A1(PC_4[28]), .A2(n85), .B1(PC_imm[28]), .B2(n82), .C1(
-        PC_jr[28]), .C2(n2), .O(PC_in[28]) );
-  AO222 U83 ( .A1(PC_4[27]), .A2(n85), .B1(PC_imm[27]), .B2(n82), .C1(
-        PC_jr[27]), .C2(n2), .O(PC_in[27]) );
-  AO222 U84 ( .A1(PC_4[26]), .A2(n85), .B1(PC_imm[26]), .B2(n82), .C1(
-        PC_jr[26]), .C2(n2), .O(PC_in[26]) );
-  AO222 U85 ( .A1(PC_4[25]), .A2(n85), .B1(PC_imm[25]), .B2(n82), .C1(
-        PC_jr[25]), .C2(n2), .O(PC_in[25]) );
-  AO222 U86 ( .A1(PC_4[24]), .A2(n85), .B1(PC_imm[24]), .B2(n82), .C1(
-        PC_jr[24]), .C2(n2), .O(PC_in[24]) );
-  AO222 U87 ( .A1(PC_4[23]), .A2(n85), .B1(PC_imm[23]), .B2(n82), .C1(
-        PC_jr[23]), .C2(n2), .O(PC_in[23]) );
-  AO222 U88 ( .A1(PC_4[22]), .A2(n85), .B1(PC_imm[22]), .B2(n82), .C1(
-        PC_jr[22]), .C2(n2), .O(PC_in[22]) );
-  AO222 U89 ( .A1(PC_4[21]), .A2(n85), .B1(PC_imm[21]), .B2(n82), .C1(
-        PC_jr[21]), .C2(n2), .O(PC_in[21]) );
-  AO222 U90 ( .A1(PC_4[20]), .A2(n85), .B1(PC_imm[20]), .B2(n82), .C1(
-        PC_jr[20]), .C2(n2), .O(PC_in[20]) );
-  AO222 U91 ( .A1(PC_4[1]), .A2(n85), .B1(PC_imm[1]), .B2(n82), .C1(PC_jr[1]), 
-        .C2(n2), .O(PC_in[1]) );
-  AO222 U92 ( .A1(PC_4[19]), .A2(n85), .B1(PC_imm[19]), .B2(n82), .C1(
-        PC_jr[19]), .C2(n2), .O(PC_in[19]) );
-  AO222 U93 ( .A1(PC_4[18]), .A2(n86), .B1(PC_imm[18]), .B2(n83), .C1(
-        PC_jr[18]), .C2(n2), .O(PC_in[18]) );
-  AO222 U94 ( .A1(PC_4[17]), .A2(n86), .B1(PC_imm[17]), .B2(n83), .C1(
-        PC_jr[17]), .C2(n2), .O(PC_in[17]) );
-  AO222 U95 ( .A1(PC_4[16]), .A2(n86), .B1(PC_imm[16]), .B2(n83), .C1(
-        PC_jr[16]), .C2(n2), .O(PC_in[16]) );
-  AO222 U96 ( .A1(PC_4[15]), .A2(n86), .B1(PC_imm[15]), .B2(n83), .C1(
-        PC_jr[15]), .C2(n2), .O(PC_in[15]) );
-  AO222 U97 ( .A1(PC_4[14]), .A2(n86), .B1(PC_imm[14]), .B2(n83), .C1(
-        PC_jr[14]), .C2(n2), .O(PC_in[14]) );
-  AO222 U98 ( .A1(PC_4[13]), .A2(n86), .B1(PC_imm[13]), .B2(n83), .C1(
-        PC_jr[13]), .C2(n2), .O(PC_in[13]) );
-  AO222 U99 ( .A1(PC_4[12]), .A2(n86), .B1(PC_imm[12]), .B2(n83), .C1(
-        PC_jr[12]), .C2(n2), .O(PC_in[12]) );
-  AO222 U100 ( .A1(PC_4[11]), .A2(n86), .B1(PC_imm[11]), .B2(n83), .C1(
-        PC_jr[11]), .C2(n2), .O(PC_in[11]) );
-  AO222 U101 ( .A1(PC_4[10]), .A2(n86), .B1(PC_imm[10]), .B2(n83), .C1(
-        PC_jr[10]), .C2(n2), .O(PC_in[10]) );
-  AO222 U102 ( .A1(PC_4[0]), .A2(n86), .B1(PC_imm[0]), .B2(n83), .C1(PC_jr[0]), 
-        .C2(n2), .O(PC_in[0]) );
-  QDFFRBN IF_instrout_reg_17_ ( .D(n58), .CK(clk), .RB(n76), .Q(
-        IF_instrout[17]) );
-  QDFFRBN IF_instrout_reg_16_ ( .D(n57), .CK(clk), .RB(n76), .Q(
-        IF_instrout[16]) );
-  QDFFRBN IF_instrout_reg_24_ ( .D(n65), .CK(clk), .RB(n75), .Q(
-        IF_instrout[24]) );
-  QDFFRBN IF_instrout_reg_15_ ( .D(n56), .CK(clk), .RB(n76), .Q(
-        IF_instrout[15]) );
-  QDFFRBN IF_instrout_reg_21_ ( .D(n62), .CK(clk), .RB(n75), .Q(
-        IF_instrout[21]) );
-  QDFFRBN IF_instrout_reg_22_ ( .D(n63), .CK(clk), .RB(n75), .Q(
-        IF_instrout[22]) );
-  QDFFRBN IF_instrout_reg_20_ ( .D(n61), .CK(clk), .RB(n76), .Q(
-        IF_instrout[20]) );
-  QDFFRBS IF_instrout_reg_11_ ( .D(n52), .CK(clk), .RB(n76), .Q(
-        IF_instrout[11]) );
-  QDFFRBS IF_instrout_reg_10_ ( .D(n51), .CK(clk), .RB(n76), .Q(
-        IF_instrout[10]) );
-  QDFFRBS IF_instrout_reg_9_ ( .D(n50), .CK(clk), .RB(n77), .Q(IF_instrout[9])
-         );
-  QDFFRBS IF_instrout_reg_8_ ( .D(n49), .CK(clk), .RB(n77), .Q(IF_instrout[8])
-         );
-  QDFFRBS IF_instrout_reg_14_ ( .D(n55), .CK(clk), .RB(n76), .Q(
-        IF_instrout[14]) );
-  QDFFRBS IF_instrout_reg_13_ ( .D(n54), .CK(clk), .RB(n76), .Q(
-        IF_instrout[13]) );
-  QDFFRBS IF_instrout_reg_12_ ( .D(n53), .CK(clk), .RB(n76), .Q(
-        IF_instrout[12]) );
-  QDFFRBS IF_instrout_reg_29_ ( .D(n70), .CK(clk), .RB(n75), .Q(
-        IF_instrout[29]) );
-  QDFFRBS IF_instrout_reg_28_ ( .D(n69), .CK(clk), .RB(n75), .Q(
-        IF_instrout[28]) );
-  QDFFRBS IF_instrout_reg_27_ ( .D(n68), .CK(clk), .RB(n75), .Q(
-        IF_instrout[27]) );
-  QDFFRBS IF_instrout_reg_26_ ( .D(n67), .CK(clk), .RB(n75), .Q(
-        IF_instrout[26]) );
-  QDFFRBS IF_instrout_reg_25_ ( .D(n66), .CK(clk), .RB(n75), .Q(
-        IF_instrout[25]) );
-  QDFFRBS IF_instrout_reg_30_ ( .D(n71), .CK(clk), .RB(n75), .Q(
-        IF_instrout[30]) );
-  QDFFRBS IF_instrout_reg_7_ ( .D(n48), .CK(clk), .RB(n77), .Q(IF_instrout[7])
-         );
-  QDFFRBS IF_instrout_reg_19_ ( .D(n60), .CK(clk), .RB(n76), .Q(
-        IF_instrout[19]) );
-  QDFFRBS IF_instrout_reg_18_ ( .D(n59), .CK(clk), .RB(n76), .Q(
-        IF_instrout[18]) );
-  QDFFRBS IF_instrout_reg_23_ ( .D(n64), .CK(clk), .RB(n75), .Q(
-        IF_instrout[23]) );
-  QDFFRBS IF_pcout_reg_1_ ( .D(n10), .CK(clk), .RB(n80), .Q(IF_pcout[1]) );
-  QDFFRBS IF_pcout_reg_0_ ( .D(n9), .CK(clk), .RB(n80), .Q(IF_pcout[0]) );
-  QDFFRBS IF_pcout_reg_8_ ( .D(n17), .CK(clk), .RB(n80), .Q(IF_pcout[8]) );
-  QDFFRBS IF_pcout_reg_7_ ( .D(n16), .CK(clk), .RB(n80), .Q(IF_pcout[7]) );
-  QDFFRBS IF_pcout_reg_6_ ( .D(n15), .CK(clk), .RB(n80), .Q(IF_pcout[6]) );
-  QDFFRBS IF_pcout_reg_5_ ( .D(n14), .CK(clk), .RB(n80), .Q(IF_pcout[5]) );
-  QDFFRBS IF_pcout_reg_4_ ( .D(n13), .CK(clk), .RB(n80), .Q(IF_pcout[4]) );
-  QDFFRBS IF_pcout_reg_3_ ( .D(n12), .CK(clk), .RB(n80), .Q(IF_pcout[3]) );
-  QDFFRBS IF_pcout_reg_12_ ( .D(n21), .CK(clk), .RB(n79), .Q(IF_pcout[12]) );
-  QDFFRBS IF_pcout_reg_11_ ( .D(n20), .CK(clk), .RB(n79), .Q(IF_pcout[11]) );
-  QDFFRBS IF_pcout_reg_10_ ( .D(n19), .CK(clk), .RB(n79), .Q(IF_pcout[10]) );
-  QDFFRBS IF_pcout_reg_9_ ( .D(n18), .CK(clk), .RB(n79), .Q(IF_pcout[9]) );
-  QDFFRBS IF_pcout_reg_2_ ( .D(n11), .CK(clk), .RB(n80), .Q(IF_pcout[2]) );
-  QDFFRBS IF_pcout_reg_31_ ( .D(n40), .CK(clk), .RB(n77), .Q(IF_pcout[31]) );
-  QDFFRBS IF_pcout_reg_30_ ( .D(n39), .CK(clk), .RB(n78), .Q(IF_pcout[30]) );
-  QDFFRBS IF_pcout_reg_29_ ( .D(n38), .CK(clk), .RB(n78), .Q(IF_pcout[29]) );
-  QDFFRBS IF_pcout_reg_28_ ( .D(n37), .CK(clk), .RB(n78), .Q(IF_pcout[28]) );
-  QDFFRBS IF_pcout_reg_27_ ( .D(n36), .CK(clk), .RB(n78), .Q(IF_pcout[27]) );
-  QDFFRBS IF_pcout_reg_26_ ( .D(n35), .CK(clk), .RB(n78), .Q(IF_pcout[26]) );
-  QDFFRBS IF_pcout_reg_25_ ( .D(n34), .CK(clk), .RB(n78), .Q(IF_pcout[25]) );
-  QDFFRBS IF_pcout_reg_24_ ( .D(n33), .CK(clk), .RB(n78), .Q(IF_pcout[24]) );
-  QDFFRBS IF_pcout_reg_23_ ( .D(n32), .CK(clk), .RB(n78), .Q(IF_pcout[23]) );
-  QDFFRBS IF_pcout_reg_22_ ( .D(n31), .CK(clk), .RB(n78), .Q(IF_pcout[22]) );
-  QDFFRBS IF_pcout_reg_21_ ( .D(n30), .CK(clk), .RB(n78), .Q(IF_pcout[21]) );
-  QDFFRBS IF_pcout_reg_20_ ( .D(n29), .CK(clk), .RB(n78), .Q(IF_pcout[20]) );
-  QDFFRBS IF_pcout_reg_19_ ( .D(n28), .CK(clk), .RB(n79), .Q(IF_pcout[19]) );
-  QDFFRBS IF_pcout_reg_18_ ( .D(n27), .CK(clk), .RB(n79), .Q(IF_pcout[18]) );
-  QDFFRBS IF_pcout_reg_17_ ( .D(n26), .CK(clk), .RB(n79), .Q(IF_pcout[17]) );
-  QDFFRBS IF_pcout_reg_16_ ( .D(n25), .CK(clk), .RB(n79), .Q(IF_pcout[16]) );
-  QDFFRBS IF_pcout_reg_15_ ( .D(n24), .CK(clk), .RB(n79), .Q(IF_pcout[15]) );
-  QDFFRBS IF_pcout_reg_14_ ( .D(n23), .CK(clk), .RB(n79), .Q(IF_pcout[14]) );
-  QDFFRBS IF_pcout_reg_13_ ( .D(n22), .CK(clk), .RB(n79), .Q(IF_pcout[13]) );
-  QDFFRBN IF_instrout_reg_3_ ( .D(n44), .CK(clk), .RB(n77), .Q(IF_instrout[3])
-         );
-  QDFFRBN IF_instrout_reg_4_ ( .D(n45), .CK(clk), .RB(n77), .Q(IF_instrout[4])
-         );
-  QDFFRBN IF_instrout_reg_1_ ( .D(n42), .CK(clk), .RB(n77), .Q(IF_instrout[1])
-         );
-  QDFFRBN IF_instrout_reg_6_ ( .D(n47), .CK(clk), .RB(n77), .Q(IF_instrout[6])
-         );
-  QDFFRBN IF_instrout_reg_0_ ( .D(n41), .CK(clk), .RB(n77), .Q(IF_instrout[0])
-         );
-  QDFFRBN IF_instrout_reg_2_ ( .D(n43), .CK(clk), .RB(n77), .Q(IF_instrout[2])
-         );
-  QDFFRBN IF_instrout_reg_5_ ( .D(n46), .CK(clk), .RB(n77), .Q(IF_instrout[5])
-         );
-  QDFFRBN IF_instrout_reg_31_ ( .D(n73), .CK(clk), .RB(n75), .Q(
-        IF_instrout[31]) );
+  AO222 U71 ( .A1(PC_4[9]), .A2(n84), .B1(IFEXEi_PC_imm[9]), .B2(n81), .C1(
+        IFEXEi_PC_jr[9]), .C2(n2), .O(PC_in[9]) );
+  AO222 U72 ( .A1(PC_4[8]), .A2(n84), .B1(IFEXEi_PC_imm[8]), .B2(n81), .C1(
+        IFEXEi_PC_jr[8]), .C2(n2), .O(PC_in[8]) );
+  AO222 U73 ( .A1(PC_4[7]), .A2(n84), .B1(IFEXEi_PC_imm[7]), .B2(n81), .C1(
+        IFEXEi_PC_jr[7]), .C2(n2), .O(PC_in[7]) );
+  AO222 U74 ( .A1(PC_4[6]), .A2(n84), .B1(IFEXEi_PC_imm[6]), .B2(n81), .C1(
+        IFEXEi_PC_jr[6]), .C2(n2), .O(PC_in[6]) );
+  AO222 U75 ( .A1(PC_4[5]), .A2(n84), .B1(IFEXEi_PC_imm[5]), .B2(n81), .C1(
+        IFEXEi_PC_jr[5]), .C2(n2), .O(PC_in[5]) );
+  AO222 U76 ( .A1(PC_4[4]), .A2(n84), .B1(IFEXEi_PC_imm[4]), .B2(n81), .C1(
+        IFEXEi_PC_jr[4]), .C2(n2), .O(PC_in[4]) );
+  AO222 U77 ( .A1(PC_4[3]), .A2(n84), .B1(IFEXEi_PC_imm[3]), .B2(n81), .C1(
+        IFEXEi_PC_jr[3]), .C2(n2), .O(PC_in[3]) );
+  AO222 U78 ( .A1(PC_4[31]), .A2(n84), .B1(IFEXEi_PC_imm[31]), .B2(n81), .C1(
+        IFEXEi_PC_jr[31]), .C2(n2), .O(PC_in[31]) );
+  AO222 U79 ( .A1(PC_4[30]), .A2(n84), .B1(IFEXEi_PC_imm[30]), .B2(n81), .C1(
+        IFEXEi_PC_jr[30]), .C2(n2), .O(PC_in[30]) );
+  AO222 U80 ( .A1(PC_4[2]), .A2(n84), .B1(IFEXEi_PC_imm[2]), .B2(n81), .C1(
+        IFEXEi_PC_jr[2]), .C2(n2), .O(PC_in[2]) );
+  AO222 U81 ( .A1(PC_4[29]), .A2(n84), .B1(IFEXEi_PC_imm[29]), .B2(n81), .C1(
+        IFEXEi_PC_jr[29]), .C2(n2), .O(PC_in[29]) );
+  AO222 U82 ( .A1(PC_4[28]), .A2(n85), .B1(IFEXEi_PC_imm[28]), .B2(n82), .C1(
+        IFEXEi_PC_jr[28]), .C2(n2), .O(PC_in[28]) );
+  AO222 U83 ( .A1(PC_4[27]), .A2(n85), .B1(IFEXEi_PC_imm[27]), .B2(n82), .C1(
+        IFEXEi_PC_jr[27]), .C2(n2), .O(PC_in[27]) );
+  AO222 U84 ( .A1(PC_4[26]), .A2(n85), .B1(IFEXEi_PC_imm[26]), .B2(n82), .C1(
+        IFEXEi_PC_jr[26]), .C2(n2), .O(PC_in[26]) );
+  AO222 U85 ( .A1(PC_4[25]), .A2(n85), .B1(IFEXEi_PC_imm[25]), .B2(n82), .C1(
+        IFEXEi_PC_jr[25]), .C2(n2), .O(PC_in[25]) );
+  AO222 U86 ( .A1(PC_4[24]), .A2(n85), .B1(IFEXEi_PC_imm[24]), .B2(n82), .C1(
+        IFEXEi_PC_jr[24]), .C2(n2), .O(PC_in[24]) );
+  AO222 U87 ( .A1(PC_4[23]), .A2(n85), .B1(IFEXEi_PC_imm[23]), .B2(n82), .C1(
+        IFEXEi_PC_jr[23]), .C2(n2), .O(PC_in[23]) );
+  AO222 U88 ( .A1(PC_4[22]), .A2(n85), .B1(IFEXEi_PC_imm[22]), .B2(n82), .C1(
+        IFEXEi_PC_jr[22]), .C2(n2), .O(PC_in[22]) );
+  AO222 U89 ( .A1(PC_4[21]), .A2(n85), .B1(IFEXEi_PC_imm[21]), .B2(n82), .C1(
+        IFEXEi_PC_jr[21]), .C2(n2), .O(PC_in[21]) );
+  AO222 U90 ( .A1(PC_4[20]), .A2(n85), .B1(IFEXEi_PC_imm[20]), .B2(n82), .C1(
+        IFEXEi_PC_jr[20]), .C2(n2), .O(PC_in[20]) );
+  AO222 U91 ( .A1(PC_4[1]), .A2(n85), .B1(IFEXEi_PC_imm[1]), .B2(n82), .C1(
+        IFEXEi_PC_jr[1]), .C2(n2), .O(PC_in[1]) );
+  AO222 U92 ( .A1(PC_4[19]), .A2(n85), .B1(IFEXEi_PC_imm[19]), .B2(n82), .C1(
+        IFEXEi_PC_jr[19]), .C2(n2), .O(PC_in[19]) );
+  AO222 U93 ( .A1(PC_4[18]), .A2(n86), .B1(IFEXEi_PC_imm[18]), .B2(n83), .C1(
+        IFEXEi_PC_jr[18]), .C2(n2), .O(PC_in[18]) );
+  AO222 U94 ( .A1(PC_4[17]), .A2(n86), .B1(IFEXEi_PC_imm[17]), .B2(n83), .C1(
+        IFEXEi_PC_jr[17]), .C2(n2), .O(PC_in[17]) );
+  AO222 U95 ( .A1(PC_4[16]), .A2(n86), .B1(IFEXEi_PC_imm[16]), .B2(n83), .C1(
+        IFEXEi_PC_jr[16]), .C2(n2), .O(PC_in[16]) );
+  AO222 U96 ( .A1(PC_4[15]), .A2(n86), .B1(IFEXEi_PC_imm[15]), .B2(n83), .C1(
+        IFEXEi_PC_jr[15]), .C2(n2), .O(PC_in[15]) );
+  AO222 U97 ( .A1(PC_4[14]), .A2(n86), .B1(IFEXEi_PC_imm[14]), .B2(n83), .C1(
+        IFEXEi_PC_jr[14]), .C2(n2), .O(PC_in[14]) );
+  AO222 U98 ( .A1(PC_4[13]), .A2(n86), .B1(IFEXEi_PC_imm[13]), .B2(n83), .C1(
+        IFEXEi_PC_jr[13]), .C2(n2), .O(PC_in[13]) );
+  AO222 U99 ( .A1(PC_4[12]), .A2(n86), .B1(IFEXEi_PC_imm[12]), .B2(n83), .C1(
+        IFEXEi_PC_jr[12]), .C2(n2), .O(PC_in[12]) );
+  AO222 U100 ( .A1(PC_4[11]), .A2(n86), .B1(IFEXEi_PC_imm[11]), .B2(n83), .C1(
+        IFEXEi_PC_jr[11]), .C2(n2), .O(PC_in[11]) );
+  AO222 U101 ( .A1(PC_4[10]), .A2(n86), .B1(IFEXEi_PC_imm[10]), .B2(n83), .C1(
+        IFEXEi_PC_jr[10]), .C2(n2), .O(PC_in[10]) );
+  AO222 U102 ( .A1(PC_4[0]), .A2(n86), .B1(IFEXEi_PC_imm[0]), .B2(n83), .C1(
+        IFEXEi_PC_jr[0]), .C2(n2), .O(PC_in[0]) );
+  QDFFRBN IFIDo_IF_instrout_reg_17_ ( .D(n58), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[17]) );
+  QDFFRBN IFIDo_IF_instrout_reg_16_ ( .D(n57), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[16]) );
+  QDFFRBN IFIDo_IF_instrout_reg_24_ ( .D(n65), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[24]) );
+  QDFFRBN IFIDo_IF_instrout_reg_15_ ( .D(n56), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[15]) );
+  QDFFRBN IFIDo_IF_instrout_reg_21_ ( .D(n62), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[21]) );
+  QDFFRBN IFIDo_IF_instrout_reg_22_ ( .D(n63), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[22]) );
+  QDFFRBN IFIDo_IF_instrout_reg_20_ ( .D(n61), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[20]) );
+  QDFFRBS IFIDo_IF_instrout_reg_11_ ( .D(n52), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[11]) );
+  QDFFRBS IFIDo_IF_instrout_reg_10_ ( .D(n51), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[10]) );
+  QDFFRBS IFIDo_IF_instrout_reg_9_ ( .D(n50), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[9]) );
+  QDFFRBS IFIDo_IF_instrout_reg_8_ ( .D(n49), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[8]) );
+  QDFFRBS IFIDo_IF_instrout_reg_14_ ( .D(n55), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[14]) );
+  QDFFRBS IFIDo_IF_instrout_reg_13_ ( .D(n54), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[13]) );
+  QDFFRBS IFIDo_IF_instrout_reg_12_ ( .D(n53), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[12]) );
+  QDFFRBS IFIDo_IF_instrout_reg_29_ ( .D(n70), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[29]) );
+  QDFFRBS IFIDo_IF_instrout_reg_28_ ( .D(n69), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[28]) );
+  QDFFRBS IFIDo_IF_instrout_reg_27_ ( .D(n68), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[27]) );
+  QDFFRBS IFIDo_IF_instrout_reg_26_ ( .D(n67), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[26]) );
+  QDFFRBS IFIDo_IF_instrout_reg_25_ ( .D(n66), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[25]) );
+  QDFFRBS IFIDo_IF_instrout_reg_30_ ( .D(n71), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[30]) );
+  QDFFRBS IFIDo_IF_instrout_reg_7_ ( .D(n48), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[7]) );
+  QDFFRBS IFIDo_IF_instrout_reg_19_ ( .D(n60), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[19]) );
+  QDFFRBS IFIDo_IF_instrout_reg_18_ ( .D(n59), .CK(clk), .RB(n76), .Q(
+        IFIDo_IF_instrout[18]) );
+  QDFFRBS IFIDo_IF_instrout_reg_23_ ( .D(n64), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[23]) );
+  QDFFRBS IFIDo_IF_pcout_reg_1_ ( .D(n10), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[1]) );
+  QDFFRBS IFIDo_IF_pcout_reg_0_ ( .D(n9), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[0]) );
+  QDFFRBS IFIDo_IF_pcout_reg_8_ ( .D(n17), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[8]) );
+  QDFFRBS IFIDo_IF_pcout_reg_7_ ( .D(n16), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[7]) );
+  QDFFRBS IFIDo_IF_pcout_reg_6_ ( .D(n15), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[6]) );
+  QDFFRBS IFIDo_IF_pcout_reg_5_ ( .D(n14), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[5]) );
+  QDFFRBS IFIDo_IF_pcout_reg_4_ ( .D(n13), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[4]) );
+  QDFFRBS IFIDo_IF_pcout_reg_3_ ( .D(n12), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[3]) );
+  QDFFRBS IFIDo_IF_pcout_reg_12_ ( .D(n21), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[12]) );
+  QDFFRBS IFIDo_IF_pcout_reg_11_ ( .D(n20), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[11]) );
+  QDFFRBS IFIDo_IF_pcout_reg_10_ ( .D(n19), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[10]) );
+  QDFFRBS IFIDo_IF_pcout_reg_9_ ( .D(n18), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[9]) );
+  QDFFRBS IFIDo_IF_pcout_reg_2_ ( .D(n11), .CK(clk), .RB(n80), .Q(
+        IFIDo_IF_pcout[2]) );
+  QDFFRBS IFIDo_IF_pcout_reg_31_ ( .D(n40), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_pcout[31]) );
+  QDFFRBS IFIDo_IF_pcout_reg_30_ ( .D(n39), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[30]) );
+  QDFFRBS IFIDo_IF_pcout_reg_29_ ( .D(n38), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[29]) );
+  QDFFRBS IFIDo_IF_pcout_reg_28_ ( .D(n37), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[28]) );
+  QDFFRBS IFIDo_IF_pcout_reg_27_ ( .D(n36), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[27]) );
+  QDFFRBS IFIDo_IF_pcout_reg_26_ ( .D(n35), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[26]) );
+  QDFFRBS IFIDo_IF_pcout_reg_25_ ( .D(n34), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[25]) );
+  QDFFRBS IFIDo_IF_pcout_reg_24_ ( .D(n33), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[24]) );
+  QDFFRBS IFIDo_IF_pcout_reg_23_ ( .D(n32), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[23]) );
+  QDFFRBS IFIDo_IF_pcout_reg_22_ ( .D(n31), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[22]) );
+  QDFFRBS IFIDo_IF_pcout_reg_21_ ( .D(n30), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[21]) );
+  QDFFRBS IFIDo_IF_pcout_reg_20_ ( .D(n29), .CK(clk), .RB(n78), .Q(
+        IFIDo_IF_pcout[20]) );
+  QDFFRBS IFIDo_IF_pcout_reg_19_ ( .D(n28), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[19]) );
+  QDFFRBS IFIDo_IF_pcout_reg_18_ ( .D(n27), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[18]) );
+  QDFFRBS IFIDo_IF_pcout_reg_17_ ( .D(n26), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[17]) );
+  QDFFRBS IFIDo_IF_pcout_reg_16_ ( .D(n25), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[16]) );
+  QDFFRBS IFIDo_IF_pcout_reg_15_ ( .D(n24), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[15]) );
+  QDFFRBS IFIDo_IF_pcout_reg_14_ ( .D(n23), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[14]) );
+  QDFFRBS IFIDo_IF_pcout_reg_13_ ( .D(n22), .CK(clk), .RB(n79), .Q(
+        IFIDo_IF_pcout[13]) );
+  QDFFRBN IFIDo_IF_instrout_reg_3_ ( .D(n44), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[3]) );
+  QDFFRBN IFIDo_IF_instrout_reg_4_ ( .D(n45), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[4]) );
+  QDFFRBN IFIDo_IF_instrout_reg_1_ ( .D(n42), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[1]) );
+  QDFFRBN IFIDo_IF_instrout_reg_6_ ( .D(n47), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[6]) );
+  QDFFRBN IFIDo_IF_instrout_reg_0_ ( .D(n41), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[0]) );
+  QDFFRBN IFIDo_IF_instrout_reg_2_ ( .D(n43), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[2]) );
+  QDFFRBN IFIDo_IF_instrout_reg_5_ ( .D(n46), .CK(clk), .RB(n77), .Q(
+        IFIDo_IF_instrout[5]) );
+  QDFFRBN IFIDo_IF_instrout_reg_31_ ( .D(n73), .CK(clk), .RB(n75), .Q(
+        IFIDo_IF_instrout[31]) );
   INV1CK U3 ( .I(n95), .O(n3) );
   BUF1CK U4 ( .I(n91), .O(n95) );
   INV1S U5 ( .I(n96), .O(n92) );
-  BUF1CK U6 ( .I(IFID_RegWrite), .O(n91) );
+  BUF1CK U6 ( .I(IFHCi_IFID_RegWrite), .O(n91) );
   AN2 U7 ( .I1(BranchCtrl[1]), .I2(n98), .O(n2) );
-  BUF1CK U8 ( .I(PCWrite), .O(n90) );
+  BUF1CK U8 ( .I(IFHCi_PCWrite), .O(n90) );
   INV1S U9 ( .I(n95), .O(n93) );
   BUF1CK U10 ( .I(n91), .O(n97) );
   BUF1 U11 ( .I(n4), .O(n87) );
@@ -385,7 +421,7 @@ module IF ( clk, rst, BranchCtrl, PC_imm, PC_jr, InstrFlush, IFID_RegWrite,
   XOR2HS U16 ( .I1(n98), .I2(BranchCtrl[1]), .O(n6) );
   NR2 U17 ( .I1(n98), .I2(BranchCtrl[1]), .O(n7) );
   INV1S U18 ( .I(n95), .O(n94) );
-  NR2 U19 ( .I1(InstrFlush), .I2(n92), .O(n4) );
+  NR2 U19 ( .I1(IFHCi_InstrFlush), .I2(n92), .O(n4) );
   BUF1CK U20 ( .I(n6), .O(n84) );
   BUF1CK U21 ( .I(n6), .O(n85) );
   BUF1CK U22 ( .I(n6), .O(n86) );
@@ -402,125 +438,137 @@ module IF ( clk, rst, BranchCtrl, PC_imm, PC_jr, InstrFlush, IFID_RegWrite,
   BUF1CK U33 ( .I(n99), .O(n74) );
   BUF1CK U34 ( .I(n99), .O(n72) );
   BUF1CK U35 ( .I(n99), .O(n8) );
-  AO22 U36 ( .A1(IF_instrout[20]), .A2(n5), .B1(Instr_out[20]), .B2(n88), .O(
-        n61) );
-  AO22 U37 ( .A1(IF_instrout[15]), .A2(n5), .B1(Instr_out[15]), .B2(n88), .O(
-        n56) );
-  AO22 U38 ( .A1(IF_instrout[21]), .A2(n5), .B1(Instr_out[21]), .B2(n87), .O(
-        n62) );
-  AO22 U39 ( .A1(IF_instrout[22]), .A2(n5), .B1(Instr_out[22]), .B2(n87), .O(
-        n63) );
-  AO22 U40 ( .A1(IF_instrout[24]), .A2(n5), .B1(Instr_out[24]), .B2(n87), .O(
-        n65) );
-  AO22 U41 ( .A1(IF_instrout[16]), .A2(n5), .B1(Instr_out[16]), .B2(n88), .O(
-        n57) );
-  AO22 U42 ( .A1(IF_instrout[17]), .A2(n5), .B1(Instr_out[17]), .B2(n88), .O(
-        n58) );
-  AO22 U43 ( .A1(IF_instrout[31]), .A2(n5), .B1(Instr_out[31]), .B2(n87), .O(
-        n73) );
-  AO22 U44 ( .A1(IF_instrout[19]), .A2(n5), .B1(Instr_out[19]), .B2(n88), .O(
-        n60) );
-  AO22 U45 ( .A1(IF_instrout[25]), .A2(n5), .B1(Instr_out[25]), .B2(n87), .O(
-        n66) );
-  AO22 U46 ( .A1(IF_instrout[26]), .A2(n5), .B1(Instr_out[26]), .B2(n87), .O(
-        n67) );
-  AO22 U47 ( .A1(IF_instrout[27]), .A2(n5), .B1(Instr_out[27]), .B2(n87), .O(
-        n68) );
-  AO22 U48 ( .A1(IF_instrout[28]), .A2(n5), .B1(Instr_out[28]), .B2(n87), .O(
-        n69) );
-  AO22 U49 ( .A1(IF_instrout[29]), .A2(n5), .B1(Instr_out[29]), .B2(n87), .O(
-        n70) );
-  AO22 U50 ( .A1(IF_instrout[30]), .A2(n5), .B1(Instr_out[30]), .B2(n87), .O(
-        n71) );
-  AO22 U51 ( .A1(IF_instrout[12]), .A2(n3), .B1(Instr_out[12]), .B2(n88), .O(
-        n53) );
-  AO22 U52 ( .A1(IF_instrout[13]), .A2(n94), .B1(Instr_out[13]), .B2(n88), .O(
-        n54) );
-  AO22 U53 ( .A1(IF_instrout[14]), .A2(n94), .B1(Instr_out[14]), .B2(n88), .O(
-        n55) );
-  AO22 U54 ( .A1(IF_instrout[10]), .A2(n94), .B1(Instr_out[10]), .B2(n88), .O(
-        n51) );
-  AO22 U55 ( .A1(IF_instrout[11]), .A2(n3), .B1(Instr_out[11]), .B2(n88), .O(
-        n52) );
-  AO22 U56 ( .A1(IF_instrout[18]), .A2(n5), .B1(Instr_out[18]), .B2(n88), .O(
-        n59) );
-  AO22 U57 ( .A1(IF_instrout[23]), .A2(n5), .B1(Instr_out[23]), .B2(n87), .O(
-        n64) );
-  AO22 U58 ( .A1(IF_instrout[2]), .A2(n3), .B1(Instr_out[2]), .B2(n89), .O(n43) );
-  AO22 U59 ( .A1(IF_instrout[4]), .A2(n94), .B1(Instr_out[4]), .B2(n89), .O(
-        n45) );
-  AO22 U60 ( .A1(IF_instrout[3]), .A2(n3), .B1(Instr_out[3]), .B2(n89), .O(n44) );
-  AO22 U61 ( .A1(IF_instrout[6]), .A2(n94), .B1(Instr_out[6]), .B2(n89), .O(
-        n47) );
-  AO22 U62 ( .A1(IF_instrout[5]), .A2(n3), .B1(Instr_out[5]), .B2(n89), .O(n46) );
-  AO22 U63 ( .A1(IF_instrout[7]), .A2(n3), .B1(Instr_out[7]), .B2(n89), .O(n48) );
-  AO22 U64 ( .A1(IF_instrout[8]), .A2(n3), .B1(Instr_out[8]), .B2(n89), .O(n49) );
-  AO22 U65 ( .A1(IF_instrout[9]), .A2(n94), .B1(Instr_out[9]), .B2(n89), .O(
-        n50) );
-  AO22 U66 ( .A1(IF_instrout[0]), .A2(n3), .B1(Instr_out[0]), .B2(n89), .O(n41) );
-  AO22 U67 ( .A1(IF_instrout[1]), .A2(n93), .B1(Instr_out[1]), .B2(n89), .O(
-        n42) );
-  AO22 U68 ( .A1(IF_pcout[9]), .A2(n93), .B1(PC_out[9]), .B2(n96), .O(n18) );
-  AO22 U69 ( .A1(IF_pcout[10]), .A2(n93), .B1(PC_out[10]), .B2(n96), .O(n19)
-         );
-  AO22 U70 ( .A1(IF_pcout[11]), .A2(n93), .B1(PC_out[11]), .B2(n96), .O(n20)
-         );
-  AO22 U103 ( .A1(IF_pcout[12]), .A2(n93), .B1(PC_out[12]), .B2(n96), .O(n21)
-         );
-  AO22 U104 ( .A1(IF_pcout[13]), .A2(n93), .B1(PC_out[13]), .B2(n97), .O(n22)
-         );
-  AO22 U105 ( .A1(IF_pcout[14]), .A2(n93), .B1(PC_out[14]), .B2(n97), .O(n23)
-         );
-  AO22 U106 ( .A1(IF_pcout[15]), .A2(n93), .B1(PC_out[15]), .B2(n97), .O(n24)
-         );
-  AO22 U107 ( .A1(IF_pcout[16]), .A2(n93), .B1(PC_out[16]), .B2(n97), .O(n25)
-         );
-  AO22 U108 ( .A1(IF_pcout[17]), .A2(n93), .B1(PC_out[17]), .B2(n97), .O(n26)
-         );
-  AO22 U109 ( .A1(IF_pcout[18]), .A2(n5), .B1(PC_out[18]), .B2(n97), .O(n27)
-         );
-  AO22 U110 ( .A1(IF_pcout[19]), .A2(n94), .B1(PC_out[19]), .B2(n97), .O(n28)
-         );
-  AO22 U111 ( .A1(IF_pcout[20]), .A2(n3), .B1(PC_out[20]), .B2(n97), .O(n29)
-         );
-  AO22 U112 ( .A1(IF_pcout[21]), .A2(n93), .B1(PC_out[21]), .B2(n97), .O(n30)
-         );
-  AO22 U113 ( .A1(IF_pcout[22]), .A2(n94), .B1(PC_out[22]), .B2(n97), .O(n31)
-         );
-  AO22 U114 ( .A1(IF_pcout[23]), .A2(n94), .B1(PC_out[23]), .B2(n97), .O(n32)
-         );
-  AO22 U115 ( .A1(IF_pcout[24]), .A2(n3), .B1(PC_out[24]), .B2(n97), .O(n33)
-         );
-  AO22 U116 ( .A1(IF_pcout[25]), .A2(n93), .B1(PC_out[25]), .B2(n97), .O(n34)
-         );
-  AO22 U117 ( .A1(IF_pcout[26]), .A2(n3), .B1(PC_out[26]), .B2(n97), .O(n35)
-         );
-  AO22 U118 ( .A1(IF_pcout[27]), .A2(n94), .B1(PC_out[27]), .B2(n97), .O(n36)
-         );
-  AO22 U119 ( .A1(IF_pcout[28]), .A2(n3), .B1(PC_out[28]), .B2(n97), .O(n37)
-         );
-  AO22 U120 ( .A1(IF_pcout[29]), .A2(n3), .B1(PC_out[29]), .B2(n97), .O(n38)
-         );
-  AO22 U121 ( .A1(IF_pcout[30]), .A2(n93), .B1(PC_out[30]), .B2(n97), .O(n39)
-         );
-  AO22 U122 ( .A1(IF_pcout[31]), .A2(n94), .B1(PC_out[31]), .B2(n97), .O(n40)
-         );
-  AO22 U123 ( .A1(IF_pcout[2]), .A2(n94), .B1(PC_out[2]), .B2(n96), .O(n11) );
-  AO22 U124 ( .A1(IF_pcout[3]), .A2(n3), .B1(PC_out[3]), .B2(n96), .O(n12) );
-  AO22 U125 ( .A1(IF_pcout[4]), .A2(n93), .B1(PC_out[4]), .B2(n96), .O(n13) );
-  AO22 U126 ( .A1(IF_pcout[5]), .A2(n5), .B1(PC_out[5]), .B2(n96), .O(n14) );
-  AO22 U127 ( .A1(IF_pcout[6]), .A2(n94), .B1(PC_out[6]), .B2(n96), .O(n15) );
-  AO22 U128 ( .A1(IF_pcout[7]), .A2(n3), .B1(PC_out[7]), .B2(n96), .O(n16) );
-  AO22 U129 ( .A1(IF_pcout[8]), .A2(n93), .B1(PC_out[8]), .B2(n96), .O(n17) );
-  AO22 U130 ( .A1(IF_pcout[0]), .A2(n5), .B1(PC_out[0]), .B2(n96), .O(n9) );
-  AO22 U131 ( .A1(IF_pcout[1]), .A2(n94), .B1(PC_out[1]), .B2(IFID_RegWrite), 
-        .O(n10) );
+  AO22 U36 ( .A1(IFIDo_IF_instrout[20]), .A2(n5), .B1(Instr_out[20]), .B2(n88), 
+        .O(n61) );
+  AO22 U37 ( .A1(IFIDo_IF_instrout[15]), .A2(n5), .B1(Instr_out[15]), .B2(n88), 
+        .O(n56) );
+  AO22 U38 ( .A1(IFIDo_IF_instrout[21]), .A2(n5), .B1(Instr_out[21]), .B2(n87), 
+        .O(n62) );
+  AO22 U39 ( .A1(IFIDo_IF_instrout[22]), .A2(n5), .B1(Instr_out[22]), .B2(n87), 
+        .O(n63) );
+  AO22 U40 ( .A1(IFIDo_IF_instrout[24]), .A2(n5), .B1(Instr_out[24]), .B2(n87), 
+        .O(n65) );
+  AO22 U41 ( .A1(IFIDo_IF_instrout[16]), .A2(n5), .B1(Instr_out[16]), .B2(n88), 
+        .O(n57) );
+  AO22 U42 ( .A1(IFIDo_IF_instrout[17]), .A2(n5), .B1(Instr_out[17]), .B2(n88), 
+        .O(n58) );
+  AO22 U43 ( .A1(IFIDo_IF_instrout[31]), .A2(n5), .B1(Instr_out[31]), .B2(n87), 
+        .O(n73) );
+  AO22 U44 ( .A1(IFIDo_IF_instrout[19]), .A2(n5), .B1(Instr_out[19]), .B2(n88), 
+        .O(n60) );
+  AO22 U45 ( .A1(IFIDo_IF_instrout[25]), .A2(n5), .B1(Instr_out[25]), .B2(n87), 
+        .O(n66) );
+  AO22 U46 ( .A1(IFIDo_IF_instrout[26]), .A2(n5), .B1(Instr_out[26]), .B2(n87), 
+        .O(n67) );
+  AO22 U47 ( .A1(IFIDo_IF_instrout[27]), .A2(n5), .B1(Instr_out[27]), .B2(n87), 
+        .O(n68) );
+  AO22 U48 ( .A1(IFIDo_IF_instrout[28]), .A2(n5), .B1(Instr_out[28]), .B2(n87), 
+        .O(n69) );
+  AO22 U49 ( .A1(IFIDo_IF_instrout[29]), .A2(n5), .B1(Instr_out[29]), .B2(n87), 
+        .O(n70) );
+  AO22 U50 ( .A1(IFIDo_IF_instrout[30]), .A2(n5), .B1(Instr_out[30]), .B2(n87), 
+        .O(n71) );
+  AO22 U51 ( .A1(IFIDo_IF_instrout[12]), .A2(n3), .B1(Instr_out[12]), .B2(n88), 
+        .O(n53) );
+  AO22 U52 ( .A1(IFIDo_IF_instrout[13]), .A2(n94), .B1(Instr_out[13]), .B2(n88), .O(n54) );
+  AO22 U53 ( .A1(IFIDo_IF_instrout[14]), .A2(n94), .B1(Instr_out[14]), .B2(n88), .O(n55) );
+  AO22 U54 ( .A1(IFIDo_IF_instrout[10]), .A2(n94), .B1(Instr_out[10]), .B2(n88), .O(n51) );
+  AO22 U55 ( .A1(IFIDo_IF_instrout[11]), .A2(n3), .B1(Instr_out[11]), .B2(n88), 
+        .O(n52) );
+  AO22 U56 ( .A1(IFIDo_IF_instrout[18]), .A2(n5), .B1(Instr_out[18]), .B2(n88), 
+        .O(n59) );
+  AO22 U57 ( .A1(IFIDo_IF_instrout[23]), .A2(n5), .B1(Instr_out[23]), .B2(n87), 
+        .O(n64) );
+  AO22 U58 ( .A1(IFIDo_IF_instrout[2]), .A2(n3), .B1(Instr_out[2]), .B2(n89), 
+        .O(n43) );
+  AO22 U59 ( .A1(IFIDo_IF_instrout[4]), .A2(n94), .B1(Instr_out[4]), .B2(n89), 
+        .O(n45) );
+  AO22 U60 ( .A1(IFIDo_IF_instrout[3]), .A2(n3), .B1(Instr_out[3]), .B2(n89), 
+        .O(n44) );
+  AO22 U61 ( .A1(IFIDo_IF_instrout[6]), .A2(n94), .B1(Instr_out[6]), .B2(n89), 
+        .O(n47) );
+  AO22 U62 ( .A1(IFIDo_IF_instrout[5]), .A2(n3), .B1(Instr_out[5]), .B2(n89), 
+        .O(n46) );
+  AO22 U63 ( .A1(IFIDo_IF_instrout[7]), .A2(n3), .B1(Instr_out[7]), .B2(n89), 
+        .O(n48) );
+  AO22 U64 ( .A1(IFIDo_IF_instrout[8]), .A2(n3), .B1(Instr_out[8]), .B2(n89), 
+        .O(n49) );
+  AO22 U65 ( .A1(IFIDo_IF_instrout[9]), .A2(n94), .B1(Instr_out[9]), .B2(n89), 
+        .O(n50) );
+  AO22 U66 ( .A1(IFIDo_IF_instrout[0]), .A2(n3), .B1(Instr_out[0]), .B2(n89), 
+        .O(n41) );
+  AO22 U67 ( .A1(IFIDo_IF_instrout[1]), .A2(n93), .B1(Instr_out[1]), .B2(n89), 
+        .O(n42) );
+  AO22 U68 ( .A1(IFIDo_IF_pcout[9]), .A2(n93), .B1(PC_out[9]), .B2(n96), .O(
+        n18) );
+  AO22 U69 ( .A1(IFIDo_IF_pcout[10]), .A2(n93), .B1(PC_out[10]), .B2(n96), .O(
+        n19) );
+  AO22 U70 ( .A1(IFIDo_IF_pcout[11]), .A2(n93), .B1(PC_out[11]), .B2(n96), .O(
+        n20) );
+  AO22 U103 ( .A1(IFIDo_IF_pcout[12]), .A2(n93), .B1(PC_out[12]), .B2(n96), 
+        .O(n21) );
+  AO22 U104 ( .A1(IFIDo_IF_pcout[13]), .A2(n93), .B1(PC_out[13]), .B2(n97), 
+        .O(n22) );
+  AO22 U105 ( .A1(IFIDo_IF_pcout[14]), .A2(n93), .B1(PC_out[14]), .B2(n97), 
+        .O(n23) );
+  AO22 U106 ( .A1(IFIDo_IF_pcout[15]), .A2(n93), .B1(PC_out[15]), .B2(n97), 
+        .O(n24) );
+  AO22 U107 ( .A1(IFIDo_IF_pcout[16]), .A2(n93), .B1(PC_out[16]), .B2(n97), 
+        .O(n25) );
+  AO22 U108 ( .A1(IFIDo_IF_pcout[17]), .A2(n93), .B1(PC_out[17]), .B2(n97), 
+        .O(n26) );
+  AO22 U109 ( .A1(IFIDo_IF_pcout[18]), .A2(n5), .B1(PC_out[18]), .B2(n97), .O(
+        n27) );
+  AO22 U110 ( .A1(IFIDo_IF_pcout[19]), .A2(n94), .B1(PC_out[19]), .B2(n97), 
+        .O(n28) );
+  AO22 U111 ( .A1(IFIDo_IF_pcout[20]), .A2(n3), .B1(PC_out[20]), .B2(n97), .O(
+        n29) );
+  AO22 U112 ( .A1(IFIDo_IF_pcout[21]), .A2(n93), .B1(PC_out[21]), .B2(n97), 
+        .O(n30) );
+  AO22 U113 ( .A1(IFIDo_IF_pcout[22]), .A2(n94), .B1(PC_out[22]), .B2(n97), 
+        .O(n31) );
+  AO22 U114 ( .A1(IFIDo_IF_pcout[23]), .A2(n94), .B1(PC_out[23]), .B2(n97), 
+        .O(n32) );
+  AO22 U115 ( .A1(IFIDo_IF_pcout[24]), .A2(n3), .B1(PC_out[24]), .B2(n97), .O(
+        n33) );
+  AO22 U116 ( .A1(IFIDo_IF_pcout[25]), .A2(n93), .B1(PC_out[25]), .B2(n97), 
+        .O(n34) );
+  AO22 U117 ( .A1(IFIDo_IF_pcout[26]), .A2(n3), .B1(PC_out[26]), .B2(n97), .O(
+        n35) );
+  AO22 U118 ( .A1(IFIDo_IF_pcout[27]), .A2(n94), .B1(PC_out[27]), .B2(n97), 
+        .O(n36) );
+  AO22 U119 ( .A1(IFIDo_IF_pcout[28]), .A2(n3), .B1(PC_out[28]), .B2(n97), .O(
+        n37) );
+  AO22 U120 ( .A1(IFIDo_IF_pcout[29]), .A2(n3), .B1(PC_out[29]), .B2(n97), .O(
+        n38) );
+  AO22 U121 ( .A1(IFIDo_IF_pcout[30]), .A2(n93), .B1(PC_out[30]), .B2(n97), 
+        .O(n39) );
+  AO22 U122 ( .A1(IFIDo_IF_pcout[31]), .A2(n94), .B1(PC_out[31]), .B2(n97), 
+        .O(n40) );
+  AO22 U123 ( .A1(IFIDo_IF_pcout[2]), .A2(n94), .B1(PC_out[2]), .B2(n96), .O(
+        n11) );
+  AO22 U124 ( .A1(IFIDo_IF_pcout[3]), .A2(n3), .B1(PC_out[3]), .B2(n96), .O(
+        n12) );
+  AO22 U125 ( .A1(IFIDo_IF_pcout[4]), .A2(n93), .B1(PC_out[4]), .B2(n96), .O(
+        n13) );
+  AO22 U126 ( .A1(IFIDo_IF_pcout[5]), .A2(n5), .B1(PC_out[5]), .B2(n96), .O(
+        n14) );
+  AO22 U127 ( .A1(IFIDo_IF_pcout[6]), .A2(n94), .B1(PC_out[6]), .B2(n96), .O(
+        n15) );
+  AO22 U128 ( .A1(IFIDo_IF_pcout[7]), .A2(n3), .B1(PC_out[7]), .B2(n96), .O(
+        n16) );
+  AO22 U129 ( .A1(IFIDo_IF_pcout[8]), .A2(n93), .B1(PC_out[8]), .B2(n96), .O(
+        n17) );
+  AO22 U130 ( .A1(IFIDo_IF_pcout[0]), .A2(n5), .B1(PC_out[0]), .B2(n96), .O(n9) );
+  AO22 U131 ( .A1(IFIDo_IF_pcout[1]), .A2(n94), .B1(PC_out[1]), .B2(
+        IFHCi_IFID_RegWrite), .O(n10) );
   INV1S U132 ( .I(rst), .O(n99) );
   TIE1 U133 ( .O(n_Logic1_) );
   TIE0 U134 ( .O(n1) );
   ProgramCounter PC ( .clk(clk), .rst(rst), .PCWrite(n90), .PC_in(PC_in), 
         .PC_out(PC_out) );
-  IF_DW01_add_0_DW01_add_3 add_24 ( .A(PC_out), .SUM(PC_4) );
+  IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter___DW01_add_0_DW01_add_3 add_24 ( 
+        .A(PC_out), .SUM(PC_4) );
 endmodule
 
 
@@ -7259,32 +7307,37 @@ module ControlUnit ( OPcode, ImmType, ALUOP, PCtoRegSrc, ALUSrc, RDSrc,
 endmodule
 
 
-module ID ( clk, rst, IF_instrout, IF_pcout, WB_RegWrite, WB_rdaddr, WB_rddata, 
-        IDFlush, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3, 
-        ID_Funct7, ID_rdaddr, ID_rs1addr, ID_rs2addr, ID_ALUOP, ID_PCtoRegSrc, 
-        ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite, ID_MemtoReg, ID_RegWrite, 
-        ID_branch, rs1addr, rs2addr, ID_csraddr, ID_csrweb );
-  input [31:0] IF_instrout;
-  input [31:0] IF_pcout;
+module ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__ ( clk, rst, 
+        IFIDi_IF_pcout, IFIDi_IF_instrout, WB_RegWrite, WB_rdaddr, WB_rddata, 
+        IDFlush, IDEXEo_ID_pcout, IDEXEo_ID_rs1data, IDEXEo_ID_rs2data, 
+        IDEXEo_ID_imm, IDEXEo_ID_csraddr, IDEXEo_ID_Funct7, IDEXEo_ID_rdaddr, 
+        IDEXEo_rs1addr, IDEXEo_rs2addr, IDEXEo_ID_Funct3, IDEXEo_ID_ALUOP, 
+        IDEXEo_ID_PCtoRegSrc, IDEXEo_ID_ALUSrc, IDEXEo_ID_rdsrc, 
+        IDEXEo_ID_MemRead, IDEXEo_ID_MemWrite, IDEXEo_ID_MemtoReg, 
+        IDEXEo_ID_RegWrite, IDEXEo_ID_csrweb, ID_rs1addr, ID_rs2addr, 
+        ID_branch );
+  input [31:0] IFIDi_IF_pcout;
+  input [31:0] IFIDi_IF_instrout;
   input [4:0] WB_rdaddr;
   input [31:0] WB_rddata;
-  output [31:0] ID_pcout;
-  output [31:0] ID_rs1data;
-  output [31:0] ID_rs2data;
-  output [31:0] ID_imm;
-  output [2:0] ID_Funct3;
-  output [6:0] ID_Funct7;
-  output [4:0] ID_rdaddr;
+  output [31:0] IDEXEo_ID_pcout;
+  output [31:0] IDEXEo_ID_rs1data;
+  output [31:0] IDEXEo_ID_rs2data;
+  output [31:0] IDEXEo_ID_imm;
+  output [11:0] IDEXEo_ID_csraddr;
+  output [6:0] IDEXEo_ID_Funct7;
+  output [4:0] IDEXEo_ID_rdaddr;
+  output [4:0] IDEXEo_rs1addr;
+  output [4:0] IDEXEo_rs2addr;
+  output [2:0] IDEXEo_ID_Funct3;
+  output [2:0] IDEXEo_ID_ALUOP;
   output [4:0] ID_rs1addr;
   output [4:0] ID_rs2addr;
-  output [2:0] ID_ALUOP;
   output [1:0] ID_branch;
-  output [4:0] rs1addr;
-  output [4:0] rs2addr;
-  output [11:0] ID_csraddr;
   input clk, rst, WB_RegWrite, IDFlush;
-  output ID_PCtoRegSrc, ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite,
-         ID_MemtoReg, ID_RegWrite, ID_csrweb;
+  output IDEXEo_ID_PCtoRegSrc, IDEXEo_ID_ALUSrc, IDEXEo_ID_rdsrc,
+         IDEXEo_ID_MemRead, IDEXEo_ID_MemWrite, IDEXEo_ID_MemtoReg,
+         IDEXEo_ID_RegWrite, IDEXEo_ID_csrweb;
   wire   n_0_net_, Wire_PCtoRegSrc, Wire_ALUSrc, Wire_RDSrc, Wire_MemRead,
          Wire_MemWrite, Wire_MemtoReg, Wire_RegWrite, Wire_csrweb, N3, N4, N5,
          N6, N7, N8, N9, N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N20,
@@ -7299,331 +7352,360 @@ module ID ( clk, rst, IF_instrout, IF_pcout, WB_RegWrite, WB_rdaddr, WB_rddata,
   wire   [1:0] Wire_branch;
 
   INV2CK U4 ( .I(clk), .O(n_0_net_) );
-  QDFFRBN ID_PCtoRegSrc_reg ( .D(Wire_PCtoRegSrc), .CK(clk), .RB(n36), .Q(
-        ID_PCtoRegSrc) );
-  QDFFRBN ID_pcout_reg_31_ ( .D(IF_pcout[31]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[31]) );
-  QDFFRBN ID_pcout_reg_30_ ( .D(IF_pcout[30]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[30]) );
-  QDFFRBN ID_pcout_reg_29_ ( .D(IF_pcout[29]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[29]) );
-  QDFFRBN ID_pcout_reg_28_ ( .D(IF_pcout[28]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[28]) );
-  QDFFRBN ID_pcout_reg_27_ ( .D(IF_pcout[27]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[27]) );
-  QDFFRBN ID_rdaddr_reg_4_ ( .D(IF_instrout[11]), .CK(clk), .RB(n34), .Q(
-        ID_rdaddr[4]) );
-  QDFFRBN ID_rdaddr_reg_1_ ( .D(IF_instrout[8]), .CK(clk), .RB(n35), .Q(
-        ID_rdaddr[1]) );
-  QDFFRBN ID_rdaddr_reg_0_ ( .D(IF_instrout[7]), .CK(clk), .RB(n35), .Q(
-        ID_rdaddr[0]) );
-  QDFFRBN ID_rdaddr_reg_2_ ( .D(IF_instrout[9]), .CK(clk), .RB(n35), .Q(
-        ID_rdaddr[2]) );
-  QDFFRBN ID_rdaddr_reg_3_ ( .D(IF_instrout[10]), .CK(clk), .RB(n35), .Q(
-        ID_rdaddr[3]) );
-  QDFFRBN ID_pcout_reg_26_ ( .D(IF_pcout[26]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[26]) );
-  QDFFRBN ID_pcout_reg_25_ ( .D(IF_pcout[25]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[25]) );
-  QDFFRBN ID_pcout_reg_24_ ( .D(IF_pcout[24]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[24]) );
-  QDFFRBN ID_pcout_reg_23_ ( .D(IF_pcout[23]), .CK(clk), .RB(n21), .Q(
-        ID_pcout[23]) );
-  QDFFRBN ID_pcout_reg_22_ ( .D(IF_pcout[22]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[22]) );
-  QDFFRBN ID_pcout_reg_21_ ( .D(IF_pcout[21]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[21]) );
-  QDFFRBN ID_pcout_reg_20_ ( .D(IF_pcout[20]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[20]) );
-  QDFFRBN ID_ALUOP_reg_2_ ( .D(Wire_ALUOP[2]), .CK(clk), .RB(n36), .Q(
-        ID_ALUOP[2]) );
-  QDFFRBN ID_ALUOP_reg_1_ ( .D(Wire_ALUOP[1]), .CK(clk), .RB(n36), .Q(
-        ID_ALUOP[1]) );
-  QDFFRBN ID_Funct7_reg_3_ ( .D(IF_instrout[28]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[3]) );
-  QDFFRBN ID_Funct7_reg_4_ ( .D(IF_instrout[29]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[4]) );
-  QDFFRBN ID_Funct7_reg_5_ ( .D(IF_instrout[30]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[5]) );
-  QDFFRBN ID_Funct7_reg_6_ ( .D(IF_instrout[31]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[6]) );
-  QDFFRBN ID_Funct7_reg_1_ ( .D(IF_instrout[26]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[1]) );
-  QDFFRBN ID_ALUOP_reg_0_ ( .D(Wire_ALUOP[0]), .CK(clk), .RB(n36), .Q(
-        ID_ALUOP[0]) );
-  QDFFRBN ID_Funct7_reg_2_ ( .D(IF_instrout[27]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[2]) );
-  QDFFRBN ID_Funct7_reg_0_ ( .D(IF_instrout[25]), .CK(clk), .RB(n34), .Q(
-        ID_Funct7[0]) );
-  QDFFRBN ID_pcout_reg_19_ ( .D(IF_pcout[19]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[19]) );
-  QDFFRBN ID_pcout_reg_18_ ( .D(IF_pcout[18]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[18]) );
-  QDFFRBN ID_imm_reg_31_ ( .D(Wire_imm[31]), .CK(clk), .RB(n30), .Q(ID_imm[31]) );
-  QDFFRBN ID_rs1data_reg_31_ ( .D(Wire_rs1[31]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[31]) );
-  QDFFRBN ID_Funct3_reg_1_ ( .D(IF_instrout[13]), .CK(clk), .RB(n34), .Q(
-        ID_Funct3[1]) );
-  QDFFRBN ID_Funct3_reg_2_ ( .D(IF_instrout[14]), .CK(clk), .RB(n33), .Q(
-        ID_Funct3[2]) );
-  QDFFRBN ID_rs1data_reg_29_ ( .D(Wire_rs1[29]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[29]) );
-  QDFFRBN ID_rs1data_reg_30_ ( .D(Wire_rs1[30]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[30]) );
-  QDFFRBN ID_imm_reg_29_ ( .D(Wire_imm[29]), .CK(clk), .RB(n30), .Q(ID_imm[29]) );
-  QDFFRBN ID_rs2data_reg_31_ ( .D(Wire_rs2[31]), .CK(clk), .RB(n27), .Q(
-        ID_rs2data[31]) );
-  QDFFRBN ID_imm_reg_30_ ( .D(Wire_imm[30]), .CK(clk), .RB(n30), .Q(ID_imm[30]) );
-  QDFFRBN ID_rs1data_reg_28_ ( .D(Wire_rs1[28]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[28]) );
-  QDFFRBN ID_Funct3_reg_0_ ( .D(IF_instrout[12]), .CK(clk), .RB(n34), .Q(
-        ID_Funct3[0]) );
-  QDFFRBN ID_imm_reg_28_ ( .D(Wire_imm[28]), .CK(clk), .RB(n31), .Q(ID_imm[28]) );
-  QDFFRBN ID_pcout_reg_17_ ( .D(IF_pcout[17]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[17]) );
-  QDFFRBN ID_imm_reg_27_ ( .D(Wire_imm[27]), .CK(clk), .RB(n31), .Q(ID_imm[27]) );
-  QDFFRBN ID_rs2data_reg_29_ ( .D(Wire_rs2[29]), .CK(clk), .RB(n27), .Q(
-        ID_rs2data[29]) );
-  QDFFRBN ID_rs1data_reg_27_ ( .D(Wire_rs1[27]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[27]) );
-  QDFFRBN ID_rs2data_reg_30_ ( .D(Wire_rs2[30]), .CK(clk), .RB(n27), .Q(
-        ID_rs2data[30]) );
-  QDFFRBN ID_rs2data_reg_28_ ( .D(Wire_rs2[28]), .CK(clk), .RB(n27), .Q(
-        ID_rs2data[28]) );
-  QDFFRBN ID_rs2data_reg_27_ ( .D(Wire_rs2[27]), .CK(clk), .RB(n27), .Q(
-        ID_rs2data[27]) );
-  QDFFRBN ID_pcout_reg_16_ ( .D(IF_pcout[16]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[16]) );
-  QDFFRBN ID_imm_reg_26_ ( .D(Wire_imm[26]), .CK(clk), .RB(n31), .Q(ID_imm[26]) );
-  QDFFRBN ID_imm_reg_25_ ( .D(Wire_imm[25]), .CK(clk), .RB(n31), .Q(ID_imm[25]) );
-  QDFFRBN ID_rs1data_reg_26_ ( .D(Wire_rs1[26]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[26]) );
-  QDFFRBN ID_pcout_reg_15_ ( .D(IF_pcout[15]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[15]) );
-  QDFFRBN ID_rs2data_reg_26_ ( .D(Wire_rs2[26]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[26]) );
-  QDFFRBN ID_rs1data_reg_25_ ( .D(Wire_rs1[25]), .CK(clk), .RB(n24), .Q(
-        ID_rs1data[25]) );
-  QDFFRBN ID_rs2data_reg_25_ ( .D(Wire_rs2[25]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[25]) );
-  QDFFRBN ID_pcout_reg_14_ ( .D(IF_pcout[14]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[14]) );
-  QDFFRBN ID_imm_reg_24_ ( .D(Wire_imm[24]), .CK(clk), .RB(n31), .Q(ID_imm[24]) );
-  QDFFRBN ID_imm_reg_23_ ( .D(Wire_imm[23]), .CK(clk), .RB(n31), .Q(ID_imm[23]) );
-  QDFFRBN ID_rs1data_reg_24_ ( .D(Wire_rs1[24]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[24]) );
-  QDFFRBN ID_pcout_reg_13_ ( .D(IF_pcout[13]), .CK(clk), .RB(n22), .Q(
-        ID_pcout[13]) );
-  QDFFRBN ID_rs2data_reg_24_ ( .D(Wire_rs2[24]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[24]) );
-  QDFFRBN ID_rs1data_reg_23_ ( .D(Wire_rs1[23]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[23]) );
-  QDFFRBN ID_rs2data_reg_23_ ( .D(Wire_rs2[23]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[23]) );
-  QDFFRBN ID_imm_reg_22_ ( .D(Wire_imm[22]), .CK(clk), .RB(n31), .Q(ID_imm[22]) );
-  QDFFRBN ID_pcout_reg_12_ ( .D(IF_pcout[12]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[12]) );
-  QDFFRBN ID_imm_reg_21_ ( .D(Wire_imm[21]), .CK(clk), .RB(n31), .Q(ID_imm[21]) );
-  QDFFRBN ID_rs1data_reg_22_ ( .D(Wire_rs1[22]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[22]) );
-  QDFFRBN ID_pcout_reg_11_ ( .D(IF_pcout[11]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[11]) );
-  QDFFRBN ID_rs2data_reg_22_ ( .D(Wire_rs2[22]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[22]) );
-  QDFFRBN ID_rs1data_reg_21_ ( .D(Wire_rs1[21]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[21]) );
-  QDFFRBN ID_rs2data_reg_21_ ( .D(Wire_rs2[21]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[21]) );
-  QDFFRBN ID_imm_reg_20_ ( .D(Wire_imm[20]), .CK(clk), .RB(n31), .Q(ID_imm[20]) );
-  QDFFRBN ID_pcout_reg_10_ ( .D(IF_pcout[10]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[10]) );
-  QDFFRBN ID_imm_reg_19_ ( .D(Wire_imm[19]), .CK(clk), .RB(n31), .Q(ID_imm[19]) );
-  QDFFRBN ID_rs1data_reg_20_ ( .D(Wire_rs1[20]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[20]) );
-  QDFFRBN ID_rs2data_reg_20_ ( .D(Wire_rs2[20]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[20]) );
-  QDFFRBN ID_rs1data_reg_19_ ( .D(Wire_rs1[19]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[19]) );
-  QDFFRBN ID_pcout_reg_9_ ( .D(IF_pcout[9]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[9]) );
-  QDFFRBN ID_rs2data_reg_19_ ( .D(Wire_rs2[19]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[19]) );
-  QDFFRBN ID_imm_reg_18_ ( .D(Wire_imm[18]), .CK(clk), .RB(n32), .Q(ID_imm[18]) );
-  QDFFRBN ID_pcout_reg_8_ ( .D(IF_pcout[8]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[8]) );
-  QDFFRBN ID_imm_reg_17_ ( .D(Wire_imm[17]), .CK(clk), .RB(n32), .Q(ID_imm[17]) );
-  QDFFRBN ID_rs1data_reg_18_ ( .D(Wire_rs1[18]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[18]) );
-  QDFFRBN ID_rs2data_reg_18_ ( .D(Wire_rs2[18]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[18]) );
-  QDFFRBN ID_rs1data_reg_17_ ( .D(Wire_rs1[17]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[17]) );
-  QDFFRBN ID_pcout_reg_7_ ( .D(IF_pcout[7]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[7]) );
-  QDFFRBN ID_rs2data_reg_17_ ( .D(Wire_rs2[17]), .CK(clk), .RB(n28), .Q(
-        ID_rs2data[17]) );
-  QDFFRBN ID_imm_reg_16_ ( .D(Wire_imm[16]), .CK(clk), .RB(n32), .Q(ID_imm[16]) );
-  QDFFRBN ID_imm_reg_15_ ( .D(Wire_imm[15]), .CK(clk), .RB(n32), .Q(ID_imm[15]) );
-  QDFFRBN ID_pcout_reg_6_ ( .D(IF_pcout[6]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[6]) );
-  QDFFRBN ID_rs1data_reg_16_ ( .D(Wire_rs1[16]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[16]) );
-  QDFFRBN ID_rs2data_reg_16_ ( .D(Wire_rs2[16]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[16]) );
-  QDFFRBN ID_rs1data_reg_15_ ( .D(Wire_rs1[15]), .CK(clk), .RB(n25), .Q(
-        ID_rs1data[15]) );
-  QDFFRBN ID_pcout_reg_5_ ( .D(IF_pcout[5]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[5]) );
-  QDFFRBN ID_rs2data_reg_15_ ( .D(Wire_rs2[15]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[15]) );
-  QDFFRBN ID_imm_reg_14_ ( .D(Wire_imm[14]), .CK(clk), .RB(n32), .Q(ID_imm[14]) );
-  QDFFRBN ID_imm_reg_13_ ( .D(Wire_imm[13]), .CK(clk), .RB(n32), .Q(ID_imm[13]) );
-  QDFFRBN ID_pcout_reg_4_ ( .D(IF_pcout[4]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[4]) );
-  QDFFRBN ID_rs1data_reg_14_ ( .D(Wire_rs1[14]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[14]) );
-  QDFFRBN ID_rs2data_reg_14_ ( .D(Wire_rs2[14]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[14]) );
-  QDFFRBN ID_rs1data_reg_13_ ( .D(Wire_rs1[13]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[13]) );
-  QDFFRBN ID_pcout_reg_3_ ( .D(IF_pcout[3]), .CK(clk), .RB(n23), .Q(
-        ID_pcout[3]) );
-  QDFFRBN ID_rs2data_reg_13_ ( .D(Wire_rs2[13]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[13]) );
-  QDFFRBN ID_imm_reg_12_ ( .D(Wire_imm[12]), .CK(clk), .RB(n32), .Q(ID_imm[12]) );
-  QDFFRBN ID_imm_reg_11_ ( .D(Wire_imm[11]), .CK(clk), .RB(n32), .Q(ID_imm[11]) );
-  QDFFRBN ID_rs1data_reg_12_ ( .D(Wire_rs1[12]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[12]) );
-  QDFFRBN ID_pcout_reg_2_ ( .D(IF_pcout[2]), .CK(clk), .RB(n24), .Q(
-        ID_pcout[2]) );
-  QDFFRBN ID_rs2data_reg_12_ ( .D(Wire_rs2[12]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[12]) );
-  QDFFRBN ID_rs1data_reg_11_ ( .D(Wire_rs1[11]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[11]) );
-  QDFFRBN ID_pcout_reg_1_ ( .D(IF_pcout[1]), .CK(clk), .RB(n24), .Q(
-        ID_pcout[1]) );
-  QDFFRBN ID_rs2data_reg_11_ ( .D(Wire_rs2[11]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[11]) );
-  QDFFRBN ID_imm_reg_10_ ( .D(Wire_imm[10]), .CK(clk), .RB(n32), .Q(ID_imm[10]) );
-  QDFFRBN ID_pcout_reg_0_ ( .D(IF_pcout[0]), .CK(clk), .RB(n24), .Q(
-        ID_pcout[0]) );
-  QDFFRBN ID_imm_reg_9_ ( .D(Wire_imm[9]), .CK(clk), .RB(n32), .Q(ID_imm[9])
-         );
-  QDFFRBN ID_rs1data_reg_10_ ( .D(Wire_rs1[10]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[10]) );
-  QDFFRBN ID_rs2data_reg_10_ ( .D(Wire_rs2[10]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[10]) );
-  QDFFRBN ID_rs1data_reg_9_ ( .D(Wire_rs1[9]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[9]) );
-  QDFFRBN ID_rs2data_reg_9_ ( .D(Wire_rs2[9]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[9]) );
-  QDFFRBN ID_imm_reg_8_ ( .D(Wire_imm[8]), .CK(clk), .RB(n33), .Q(ID_imm[8])
-         );
-  QDFFRBN ID_imm_reg_7_ ( .D(Wire_imm[7]), .CK(clk), .RB(n33), .Q(ID_imm[7])
-         );
-  QDFFRBN ID_rs1data_reg_8_ ( .D(Wire_rs1[8]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[8]) );
-  QDFFRBN ID_rs2data_reg_8_ ( .D(Wire_rs2[8]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[8]) );
-  QDFFRBN ID_rs1data_reg_7_ ( .D(Wire_rs1[7]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[7]) );
-  QDFFRBN ID_rs2data_reg_7_ ( .D(Wire_rs2[7]), .CK(clk), .RB(n29), .Q(
-        ID_rs2data[7]) );
-  QDFFRBN ID_imm_reg_6_ ( .D(Wire_imm[6]), .CK(clk), .RB(n33), .Q(ID_imm[6])
-         );
-  QDFFRBN ID_imm_reg_5_ ( .D(Wire_imm[5]), .CK(clk), .RB(n33), .Q(ID_imm[5])
-         );
-  QDFFRBN ID_rs1data_reg_6_ ( .D(Wire_rs1[6]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[6]) );
-  QDFFRBN ID_rs2data_reg_6_ ( .D(Wire_rs2[6]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[6]) );
-  QDFFRBN ID_rs1data_reg_5_ ( .D(Wire_rs1[5]), .CK(clk), .RB(n26), .Q(
-        ID_rs1data[5]) );
-  QDFFRBN ID_rs2data_reg_5_ ( .D(Wire_rs2[5]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[5]) );
-  QDFFRBN ID_imm_reg_4_ ( .D(Wire_imm[4]), .CK(clk), .RB(n33), .Q(ID_imm[4])
-         );
-  QDFFRBN ID_rs1data_reg_4_ ( .D(Wire_rs1[4]), .CK(clk), .RB(n27), .Q(
-        ID_rs1data[4]) );
-  QDFFRBN ID_rs1data_reg_3_ ( .D(Wire_rs1[3]), .CK(clk), .RB(n27), .Q(
-        ID_rs1data[3]) );
-  QDFFRBN ID_imm_reg_3_ ( .D(Wire_imm[3]), .CK(clk), .RB(n33), .Q(ID_imm[3])
-         );
-  QDFFRBN ID_rs2data_reg_4_ ( .D(Wire_rs2[4]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[4]) );
-  QDFFRBN ID_rs1data_reg_2_ ( .D(Wire_rs1[2]), .CK(clk), .RB(n27), .Q(
-        ID_rs1data[2]) );
-  QDFFRBN ID_rs2data_reg_3_ ( .D(Wire_rs2[3]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[3]) );
-  QDFFRBN ID_rs1data_reg_1_ ( .D(Wire_rs1[1]), .CK(clk), .RB(n27), .Q(
-        ID_rs1data[1]) );
-  QDFFRBN ID_rs1data_reg_0_ ( .D(Wire_rs1[0]), .CK(clk), .RB(n27), .Q(
-        ID_rs1data[0]) );
-  QDFFRBN ID_RDSrc_reg ( .D(Wire_RDSrc), .CK(clk), .RB(n36), .Q(ID_RDSrc) );
-  QDFFRBN ID_MemtoReg_reg ( .D(Wire_MemtoReg), .CK(clk), .RB(n37), .Q(
-        ID_MemtoReg) );
-  QDFFRBP ID_rs1addr_reg_0_ ( .D(IF_instrout[15]), .CK(clk), .RB(n35), .Q(
-        ID_rs1addr[0]) );
-  QDFFRBS ID_RegWrite_reg ( .D(N5), .CK(clk), .RB(n37), .Q(ID_RegWrite) );
-  QDFFRBS ID_MemWrite_reg ( .D(N4), .CK(clk), .RB(n37), .Q(ID_MemWrite) );
-  QDFFRBS ID_csrweb_reg ( .D(N20), .CK(clk), .RB(n21), .Q(ID_csrweb) );
-  QDFFRBS ID_csraddr_reg_1_ ( .D(N9), .CK(clk), .RB(n38), .Q(ID_csraddr[1]) );
-  QDFFRBS ID_csraddr_reg_7_ ( .D(N15), .CK(clk), .RB(n38), .Q(ID_csraddr[7])
-         );
-  QDFFRBS ID_csraddr_reg_4_ ( .D(N12), .CK(clk), .RB(n38), .Q(ID_csraddr[4])
-         );
-  QDFFRBS ID_csraddr_reg_5_ ( .D(N13), .CK(clk), .RB(n38), .Q(ID_csraddr[5])
-         );
-  QDFFRBS ID_csraddr_reg_0_ ( .D(N8), .CK(clk), .RB(n38), .Q(ID_csraddr[0]) );
-  QDFFRBS ID_csraddr_reg_8_ ( .D(N16), .CK(clk), .RB(n37), .Q(ID_csraddr[8])
-         );
-  QDFFRBS ID_csraddr_reg_9_ ( .D(N17), .CK(clk), .RB(n37), .Q(ID_csraddr[9])
-         );
-  QDFFRBS ID_csraddr_reg_6_ ( .D(N14), .CK(clk), .RB(n38), .Q(ID_csraddr[6])
-         );
-  QDFFRBS ID_csraddr_reg_11_ ( .D(N19), .CK(clk), .RB(n37), .Q(ID_csraddr[11])
-         );
-  QDFFRBS ID_csraddr_reg_10_ ( .D(N18), .CK(clk), .RB(n37), .Q(ID_csraddr[10])
-         );
-  QDFFRBS ID_MemRead_reg ( .D(N3), .CK(clk), .RB(n37), .Q(ID_MemRead) );
-  QDFFRBN ID_imm_reg_2_ ( .D(Wire_imm[2]), .CK(clk), .RB(n33), .Q(ID_imm[2])
-         );
-  QDFFRBN ID_rs2data_reg_2_ ( .D(Wire_rs2[2]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[2]) );
-  QDFFRBN ID_imm_reg_1_ ( .D(Wire_imm[1]), .CK(clk), .RB(n33), .Q(ID_imm[1])
-         );
-  QDFFRBN ID_imm_reg_0_ ( .D(Wire_imm[0]), .CK(clk), .RB(n33), .Q(ID_imm[0])
-         );
-  QDFFRBN ID_rs2data_reg_1_ ( .D(Wire_rs2[1]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[1]) );
-  QDFFRBN ID_rs2data_reg_0_ ( .D(Wire_rs2[0]), .CK(clk), .RB(n30), .Q(
-        ID_rs2data[0]) );
-  QDFFRBN ID_ALUSrc_reg ( .D(Wire_ALUSrc), .CK(clk), .RB(n36), .Q(ID_ALUSrc)
-         );
-  QDFFRBS ID_csraddr_reg_2_ ( .D(N10), .CK(clk), .RB(n38), .Q(ID_csraddr[2])
-         );
-  QDFFRBS ID_csraddr_reg_3_ ( .D(N11), .CK(clk), .RB(n38), .Q(ID_csraddr[3])
-         );
-  QDFFRBN ID_branch_reg_0_ ( .D(N6), .CK(clk), .RB(n37), .Q(ID_branch[0]) );
-  QDFFRBN ID_branch_reg_1_ ( .D(N7), .CK(clk), .RB(n37), .Q(ID_branch[1]) );
-  QDFFRBP ID_rs1addr_reg_3_ ( .D(rs1addr[3]), .CK(clk), .RB(n35), .Q(
+  QDFFRBN IDEXEo_ID_PCtoRegSrc_reg ( .D(Wire_PCtoRegSrc), .CK(clk), .RB(n35), 
+        .Q(IDEXEo_ID_PCtoRegSrc) );
+  QDFFRBN IDEXEo_ID_pcout_reg_31_ ( .D(IFIDi_IF_pcout[31]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[31]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_30_ ( .D(IFIDi_IF_pcout[30]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[30]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_29_ ( .D(IFIDi_IF_pcout[29]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[29]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_28_ ( .D(IFIDi_IF_pcout[28]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[28]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_27_ ( .D(IFIDi_IF_pcout[27]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[27]) );
+  QDFFRBN IDEXEo_ID_rdaddr_reg_4_ ( .D(IFIDi_IF_instrout[11]), .CK(clk), .RB(
+        n35), .Q(IDEXEo_ID_rdaddr[4]) );
+  QDFFRBN IDEXEo_ID_rdaddr_reg_1_ ( .D(IFIDi_IF_instrout[8]), .CK(clk), .RB(
+        n35), .Q(IDEXEo_ID_rdaddr[1]) );
+  QDFFRBN IDEXEo_ID_rdaddr_reg_0_ ( .D(IFIDi_IF_instrout[7]), .CK(clk), .RB(
+        n35), .Q(IDEXEo_ID_rdaddr[0]) );
+  QDFFRBN IDEXEo_ID_rdaddr_reg_2_ ( .D(IFIDi_IF_instrout[9]), .CK(clk), .RB(
+        n35), .Q(IDEXEo_ID_rdaddr[2]) );
+  QDFFRBN IDEXEo_ID_rdaddr_reg_3_ ( .D(IFIDi_IF_instrout[10]), .CK(clk), .RB(
+        n35), .Q(IDEXEo_ID_rdaddr[3]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_26_ ( .D(IFIDi_IF_pcout[26]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[26]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_25_ ( .D(IFIDi_IF_pcout[25]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[25]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_24_ ( .D(IFIDi_IF_pcout[24]), .CK(clk), .RB(n21), 
+        .Q(IDEXEo_ID_pcout[24]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_23_ ( .D(IFIDi_IF_pcout[23]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[23]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_22_ ( .D(IFIDi_IF_pcout[22]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[22]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_21_ ( .D(IFIDi_IF_pcout[21]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[21]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_20_ ( .D(IFIDi_IF_pcout[20]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[20]) );
+  QDFFRBN IDEXEo_ID_ALUOP_reg_2_ ( .D(Wire_ALUOP[2]), .CK(clk), .RB(n35), .Q(
+        IDEXEo_ID_ALUOP[2]) );
+  QDFFRBN IDEXEo_ID_ALUOP_reg_1_ ( .D(Wire_ALUOP[1]), .CK(clk), .RB(n35), .Q(
+        IDEXEo_ID_ALUOP[1]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_3_ ( .D(IFIDi_IF_instrout[28]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[3]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_4_ ( .D(IFIDi_IF_instrout[29]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[4]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_5_ ( .D(IFIDi_IF_instrout[30]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[5]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_6_ ( .D(IFIDi_IF_instrout[31]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[6]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_1_ ( .D(IFIDi_IF_instrout[26]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[1]) );
+  QDFFRBN IDEXEo_ID_ALUOP_reg_0_ ( .D(Wire_ALUOP[0]), .CK(clk), .RB(n35), .Q(
+        IDEXEo_ID_ALUOP[0]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_2_ ( .D(IFIDi_IF_instrout[27]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[2]) );
+  QDFFRBN IDEXEo_ID_Funct7_reg_0_ ( .D(IFIDi_IF_instrout[25]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct7[0]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_19_ ( .D(IFIDi_IF_pcout[19]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[19]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_18_ ( .D(IFIDi_IF_pcout[18]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[18]) );
+  QDFFRBN IDEXEo_ID_imm_reg_31_ ( .D(Wire_imm[31]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_imm[31]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_31_ ( .D(Wire_rs1[31]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[31]) );
+  QDFFRBN IDEXEo_ID_Funct3_reg_1_ ( .D(IFIDi_IF_instrout[13]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct3[1]) );
+  QDFFRBN IDEXEo_ID_Funct3_reg_2_ ( .D(IFIDi_IF_instrout[14]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct3[2]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_29_ ( .D(Wire_rs1[29]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[29]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_30_ ( .D(Wire_rs1[30]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[30]) );
+  QDFFRBN IDEXEo_ID_imm_reg_29_ ( .D(Wire_imm[29]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[29]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_31_ ( .D(Wire_rs2[31]), .CK(clk), .RB(n27), 
+        .Q(IDEXEo_ID_rs2data[31]) );
+  QDFFRBN IDEXEo_ID_imm_reg_30_ ( .D(Wire_imm[30]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_imm[30]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_28_ ( .D(Wire_rs1[28]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[28]) );
+  QDFFRBN IDEXEo_ID_Funct3_reg_0_ ( .D(IFIDi_IF_instrout[12]), .CK(clk), .RB(
+        n34), .Q(IDEXEo_ID_Funct3[0]) );
+  QDFFRBN IDEXEo_ID_imm_reg_28_ ( .D(Wire_imm[28]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[28]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_17_ ( .D(IFIDi_IF_pcout[17]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[17]) );
+  QDFFRBN IDEXEo_ID_imm_reg_27_ ( .D(Wire_imm[27]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[27]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_29_ ( .D(Wire_rs2[29]), .CK(clk), .RB(n27), 
+        .Q(IDEXEo_ID_rs2data[29]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_27_ ( .D(Wire_rs1[27]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[27]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_30_ ( .D(Wire_rs2[30]), .CK(clk), .RB(n27), 
+        .Q(IDEXEo_ID_rs2data[30]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_28_ ( .D(Wire_rs2[28]), .CK(clk), .RB(n27), 
+        .Q(IDEXEo_ID_rs2data[28]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_27_ ( .D(Wire_rs2[27]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[27]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_16_ ( .D(IFIDi_IF_pcout[16]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[16]) );
+  QDFFRBN IDEXEo_ID_imm_reg_26_ ( .D(Wire_imm[26]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[26]) );
+  QDFFRBN IDEXEo_ID_imm_reg_25_ ( .D(Wire_imm[25]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[25]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_26_ ( .D(Wire_rs1[26]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_rs1data[26]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_15_ ( .D(IFIDi_IF_pcout[15]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[15]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_26_ ( .D(Wire_rs2[26]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[26]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_25_ ( .D(Wire_rs1[25]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[25]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_25_ ( .D(Wire_rs2[25]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[25]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_14_ ( .D(IFIDi_IF_pcout[14]), .CK(clk), .RB(n22), 
+        .Q(IDEXEo_ID_pcout[14]) );
+  QDFFRBN IDEXEo_ID_imm_reg_24_ ( .D(Wire_imm[24]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[24]) );
+  QDFFRBN IDEXEo_ID_imm_reg_23_ ( .D(Wire_imm[23]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[23]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_24_ ( .D(Wire_rs1[24]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[24]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_13_ ( .D(IFIDi_IF_pcout[13]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[13]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_24_ ( .D(Wire_rs2[24]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[24]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_23_ ( .D(Wire_rs1[23]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[23]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_23_ ( .D(Wire_rs2[23]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[23]) );
+  QDFFRBN IDEXEo_ID_imm_reg_22_ ( .D(Wire_imm[22]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[22]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_12_ ( .D(IFIDi_IF_pcout[12]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[12]) );
+  QDFFRBN IDEXEo_ID_imm_reg_21_ ( .D(Wire_imm[21]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[21]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_22_ ( .D(Wire_rs1[22]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[22]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_11_ ( .D(IFIDi_IF_pcout[11]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[11]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_22_ ( .D(Wire_rs2[22]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[22]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_21_ ( .D(Wire_rs1[21]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[21]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_21_ ( .D(Wire_rs2[21]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[21]) );
+  QDFFRBN IDEXEo_ID_imm_reg_20_ ( .D(Wire_imm[20]), .CK(clk), .RB(n31), .Q(
+        IDEXEo_ID_imm[20]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_10_ ( .D(IFIDi_IF_pcout[10]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[10]) );
+  QDFFRBN IDEXEo_ID_imm_reg_19_ ( .D(Wire_imm[19]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[19]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_20_ ( .D(Wire_rs1[20]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[20]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_20_ ( .D(Wire_rs2[20]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[20]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_19_ ( .D(Wire_rs1[19]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[19]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_9_ ( .D(IFIDi_IF_pcout[9]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[9]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_19_ ( .D(Wire_rs2[19]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[19]) );
+  QDFFRBN IDEXEo_ID_imm_reg_18_ ( .D(Wire_imm[18]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[18]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_8_ ( .D(IFIDi_IF_pcout[8]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[8]) );
+  QDFFRBN IDEXEo_ID_imm_reg_17_ ( .D(Wire_imm[17]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[17]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_18_ ( .D(Wire_rs1[18]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[18]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_18_ ( .D(Wire_rs2[18]), .CK(clk), .RB(n28), 
+        .Q(IDEXEo_ID_rs2data[18]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_17_ ( .D(Wire_rs1[17]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[17]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_7_ ( .D(IFIDi_IF_pcout[7]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[7]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_17_ ( .D(Wire_rs2[17]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[17]) );
+  QDFFRBN IDEXEo_ID_imm_reg_16_ ( .D(Wire_imm[16]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[16]) );
+  QDFFRBN IDEXEo_ID_imm_reg_15_ ( .D(Wire_imm[15]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[15]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_6_ ( .D(IFIDi_IF_pcout[6]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[6]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_16_ ( .D(Wire_rs1[16]), .CK(clk), .RB(n25), 
+        .Q(IDEXEo_ID_rs1data[16]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_16_ ( .D(Wire_rs2[16]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[16]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_15_ ( .D(Wire_rs1[15]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[15]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_5_ ( .D(IFIDi_IF_pcout[5]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[5]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_15_ ( .D(Wire_rs2[15]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[15]) );
+  QDFFRBN IDEXEo_ID_imm_reg_14_ ( .D(Wire_imm[14]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[14]) );
+  QDFFRBN IDEXEo_ID_imm_reg_13_ ( .D(Wire_imm[13]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[13]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_4_ ( .D(IFIDi_IF_pcout[4]), .CK(clk), .RB(n23), 
+        .Q(IDEXEo_ID_pcout[4]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_14_ ( .D(Wire_rs1[14]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[14]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_14_ ( .D(Wire_rs2[14]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[14]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_13_ ( .D(Wire_rs1[13]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[13]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_3_ ( .D(IFIDi_IF_pcout[3]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_pcout[3]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_13_ ( .D(Wire_rs2[13]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[13]) );
+  QDFFRBN IDEXEo_ID_imm_reg_12_ ( .D(Wire_imm[12]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[12]) );
+  QDFFRBN IDEXEo_ID_imm_reg_11_ ( .D(Wire_imm[11]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[11]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_12_ ( .D(Wire_rs1[12]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[12]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_2_ ( .D(IFIDi_IF_pcout[2]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_pcout[2]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_12_ ( .D(Wire_rs2[12]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[12]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_11_ ( .D(Wire_rs1[11]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[11]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_1_ ( .D(IFIDi_IF_pcout[1]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_pcout[1]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_11_ ( .D(Wire_rs2[11]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[11]) );
+  QDFFRBN IDEXEo_ID_imm_reg_10_ ( .D(Wire_imm[10]), .CK(clk), .RB(n32), .Q(
+        IDEXEo_ID_imm[10]) );
+  QDFFRBN IDEXEo_ID_pcout_reg_0_ ( .D(IFIDi_IF_pcout[0]), .CK(clk), .RB(n24), 
+        .Q(IDEXEo_ID_pcout[0]) );
+  QDFFRBN IDEXEo_ID_imm_reg_9_ ( .D(Wire_imm[9]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[9]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_10_ ( .D(Wire_rs1[10]), .CK(clk), .RB(n26), 
+        .Q(IDEXEo_ID_rs1data[10]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_10_ ( .D(Wire_rs2[10]), .CK(clk), .RB(n29), 
+        .Q(IDEXEo_ID_rs2data[10]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_9_ ( .D(Wire_rs1[9]), .CK(clk), .RB(n26), .Q(
+        IDEXEo_ID_rs1data[9]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_9_ ( .D(Wire_rs2[9]), .CK(clk), .RB(n29), .Q(
+        IDEXEo_ID_rs2data[9]) );
+  QDFFRBN IDEXEo_ID_imm_reg_8_ ( .D(Wire_imm[8]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[8]) );
+  QDFFRBN IDEXEo_ID_imm_reg_7_ ( .D(Wire_imm[7]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[7]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_8_ ( .D(Wire_rs1[8]), .CK(clk), .RB(n26), .Q(
+        IDEXEo_ID_rs1data[8]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_8_ ( .D(Wire_rs2[8]), .CK(clk), .RB(n29), .Q(
+        IDEXEo_ID_rs2data[8]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_7_ ( .D(Wire_rs1[7]), .CK(clk), .RB(n26), .Q(
+        IDEXEo_ID_rs1data[7]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_7_ ( .D(Wire_rs2[7]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[7]) );
+  QDFFRBN IDEXEo_ID_imm_reg_6_ ( .D(Wire_imm[6]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[6]) );
+  QDFFRBN IDEXEo_ID_imm_reg_5_ ( .D(Wire_imm[5]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[5]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_6_ ( .D(Wire_rs1[6]), .CK(clk), .RB(n26), .Q(
+        IDEXEo_ID_rs1data[6]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_6_ ( .D(Wire_rs2[6]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[6]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_5_ ( .D(Wire_rs1[5]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[5]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_5_ ( .D(Wire_rs2[5]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[5]) );
+  QDFFRBN IDEXEo_ID_imm_reg_4_ ( .D(Wire_imm[4]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[4]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_4_ ( .D(Wire_rs1[4]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[4]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_3_ ( .D(Wire_rs1[3]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[3]) );
+  QDFFRBN IDEXEo_ID_imm_reg_3_ ( .D(Wire_imm[3]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[3]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_4_ ( .D(Wire_rs2[4]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[4]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_2_ ( .D(Wire_rs1[2]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[2]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_3_ ( .D(Wire_rs2[3]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[3]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_1_ ( .D(Wire_rs1[1]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[1]) );
+  QDFFRBN IDEXEo_ID_rs1data_reg_0_ ( .D(Wire_rs1[0]), .CK(clk), .RB(n27), .Q(
+        IDEXEo_ID_rs1data[0]) );
+  QDFFRBN IDEXEo_ID_rdsrc_reg ( .D(Wire_RDSrc), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_rdsrc) );
+  QDFFRBN IDEXEo_ID_MemtoReg_reg ( .D(Wire_MemtoReg), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_MemtoReg) );
+  QDFFRBP ID_rs1addr_reg_0_ ( .D(IFIDi_IF_instrout[15]), .CK(clk), .RB(n38), 
+        .Q(ID_rs1addr[0]) );
+  QDFFRBS IDEXEo_ID_RegWrite_reg ( .D(N5), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_RegWrite) );
+  QDFFRBS IDEXEo_ID_MemWrite_reg ( .D(N4), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_MemWrite) );
+  QDFFRBS IDEXEo_ID_csrweb_reg ( .D(N18), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csrweb) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_1_ ( .D(N7), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[1]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_7_ ( .D(N13), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_csraddr[7]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_4_ ( .D(N10), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[4]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_5_ ( .D(N11), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[5]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_0_ ( .D(N6), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[0]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_8_ ( .D(N14), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_csraddr[8]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_9_ ( .D(N15), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_csraddr[9]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_6_ ( .D(N12), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[6]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_11_ ( .D(N17), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_csraddr[11]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_10_ ( .D(N16), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_csraddr[10]) );
+  QDFFRBS IDEXEo_ID_MemRead_reg ( .D(N3), .CK(clk), .RB(n36), .Q(
+        IDEXEo_ID_MemRead) );
+  QDFFRBN IDEXEo_ID_imm_reg_2_ ( .D(Wire_imm[2]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[2]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_2_ ( .D(Wire_rs2[2]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[2]) );
+  QDFFRBN IDEXEo_ID_imm_reg_1_ ( .D(Wire_imm[1]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[1]) );
+  QDFFRBN IDEXEo_ID_imm_reg_0_ ( .D(Wire_imm[0]), .CK(clk), .RB(n33), .Q(
+        IDEXEo_ID_imm[0]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_1_ ( .D(Wire_rs2[1]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[1]) );
+  QDFFRBN IDEXEo_ID_rs2data_reg_0_ ( .D(Wire_rs2[0]), .CK(clk), .RB(n30), .Q(
+        IDEXEo_ID_rs2data[0]) );
+  QDFFRBN IDEXEo_ID_ALUSrc_reg ( .D(Wire_ALUSrc), .CK(clk), .RB(n35), .Q(
+        IDEXEo_ID_ALUSrc) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_2_ ( .D(N8), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[2]) );
+  QDFFRBS IDEXEo_ID_csraddr_reg_3_ ( .D(N9), .CK(clk), .RB(n37), .Q(
+        IDEXEo_ID_csraddr[3]) );
+  QDFFRBN ID_branch_reg_0_ ( .D(N19), .CK(clk), .RB(n21), .Q(ID_branch[0]) );
+  QDFFRBN ID_branch_reg_1_ ( .D(N20), .CK(clk), .RB(n21), .Q(ID_branch[1]) );
+  QDFFRBP ID_rs1addr_reg_3_ ( .D(IDEXEo_rs1addr[3]), .CK(clk), .RB(n37), .Q(
         ID_rs1addr[3]) );
-  QDFFRBP ID_rs1addr_reg_2_ ( .D(IF_instrout[17]), .CK(clk), .RB(n35), .Q(
-        ID_rs1addr[2]) );
-  QDFFRBN ID_rs2addr_reg_3_ ( .D(rs2addr[3]), .CK(clk), .RB(n36), .Q(
+  QDFFRBP ID_rs1addr_reg_2_ ( .D(IFIDi_IF_instrout[17]), .CK(clk), .RB(n38), 
+        .Q(ID_rs1addr[2]) );
+  QDFFRBN ID_rs2addr_reg_3_ ( .D(IDEXEo_rs2addr[3]), .CK(clk), .RB(n38), .Q(
         ID_rs2addr[3]) );
-  QDFFRBP ID_rs1addr_reg_4_ ( .D(IF_instrout[19]), .CK(clk), .RB(n35), .Q(
-        ID_rs1addr[4]) );
-  QDFFRBN ID_rs2addr_reg_1_ ( .D(IF_instrout[21]), .CK(clk), .RB(n36), .Q(
-        ID_rs2addr[1]) );
-  QDFFRBN ID_rs2addr_reg_4_ ( .D(IF_instrout[24]), .CK(clk), .RB(n35), .Q(
-        ID_rs2addr[4]) );
-  QDFFRBP ID_rs2addr_reg_0_ ( .D(IF_instrout[20]), .CK(clk), .RB(n36), .Q(
-        ID_rs2addr[0]) );
-  QDFFRBP ID_rs1addr_reg_1_ ( .D(IF_instrout[16]), .CK(clk), .RB(n35), .Q(
-        ID_rs1addr[1]) );
-  QDFFRBP ID_rs2addr_reg_2_ ( .D(IF_instrout[22]), .CK(clk), .RB(n36), .Q(
-        ID_rs2addr[2]) );
+  QDFFRBP ID_rs1addr_reg_4_ ( .D(IFIDi_IF_instrout[19]), .CK(clk), .RB(n37), 
+        .Q(ID_rs1addr[4]) );
+  QDFFRBN ID_rs2addr_reg_1_ ( .D(IFIDi_IF_instrout[21]), .CK(clk), .RB(n38), 
+        .Q(ID_rs2addr[1]) );
+  QDFFRBN ID_rs2addr_reg_4_ ( .D(IFIDi_IF_instrout[24]), .CK(clk), .RB(n38), 
+        .Q(ID_rs2addr[4]) );
+  QDFFRBP ID_rs2addr_reg_0_ ( .D(IFIDi_IF_instrout[20]), .CK(clk), .RB(n38), 
+        .Q(ID_rs2addr[0]) );
+  QDFFRBP ID_rs1addr_reg_1_ ( .D(IFIDi_IF_instrout[16]), .CK(clk), .RB(n38), 
+        .Q(ID_rs1addr[1]) );
+  QDFFRBP ID_rs2addr_reg_2_ ( .D(IFIDi_IF_instrout[22]), .CK(clk), .RB(n38), 
+        .Q(ID_rs2addr[2]) );
   INV1S U3 ( .I(IDFlush), .O(n41) );
   BUF1CK U5 ( .I(n170), .O(n37) );
   BUF1CK U6 ( .I(n160), .O(n36) );
@@ -7645,8 +7727,8 @@ module ID ( clk, rst, IF_instrout, IF_pcout, WB_RegWrite, WB_rdaddr, WB_rddata,
   BUF1CK U22 ( .I(n170), .O(n38) );
   AN2 U23 ( .I1(Wire_MemRead), .I2(n41), .O(N3) );
   AN2 U24 ( .I1(Wire_MemWrite), .I2(n41), .O(N4) );
-  AN2 U25 ( .I1(Wire_branch[0]), .I2(n41), .O(N6) );
-  AN2 U26 ( .I1(Wire_branch[1]), .I2(n41), .O(N7) );
+  AN2 U25 ( .I1(Wire_branch[0]), .I2(n41), .O(N19) );
+  AN2 U26 ( .I1(Wire_branch[1]), .I2(n41), .O(N20) );
   BUF1CK U27 ( .I(n180), .O(n170) );
   BUF1CK U28 ( .I(n180), .O(n160) );
   BUF1CK U29 ( .I(n180), .O(n150) );
@@ -7656,55 +7738,59 @@ module ID ( clk, rst, IF_instrout, IF_pcout, WB_RegWrite, WB_rdaddr, WB_rddata,
   BUF1CK U33 ( .I(n200), .O(n110) );
   BUF1CK U34 ( .I(n200), .O(n100) );
   BUF1CK U35 ( .I(n200), .O(n90) );
-  AN2 U36 ( .I1(rs2addr[3]), .I2(n41), .O(N11) );
+  AN2 U36 ( .I1(IDEXEo_rs2addr[3]), .I2(n41), .O(N9) );
   BUF1CK U37 ( .I(n42), .O(n180) );
   BUF1CK U38 ( .I(n42), .O(n190) );
   BUF1CK U39 ( .I(n42), .O(n200) );
-  AN2 U40 ( .I1(IF_instrout[20]), .I2(n41), .O(N8) );
-  AN2 U41 ( .I1(IF_instrout[21]), .I2(n41), .O(N9) );
-  AN2 U42 ( .I1(IF_instrout[22]), .I2(n41), .O(N10) );
-  AN2 U43 ( .I1(IF_instrout[24]), .I2(n41), .O(N12) );
-  AN2 U44 ( .I1(IF_instrout[31]), .I2(n41), .O(N19) );
-  AN2 U45 ( .I1(IF_instrout[25]), .I2(n41), .O(N13) );
-  AN2 U46 ( .I1(IF_instrout[26]), .I2(n41), .O(N14) );
-  AN2 U47 ( .I1(IF_instrout[27]), .I2(n41), .O(N15) );
-  AN2 U48 ( .I1(IF_instrout[28]), .I2(n41), .O(N16) );
-  AN2 U49 ( .I1(IF_instrout[29]), .I2(n41), .O(N17) );
-  AN2 U50 ( .I1(IF_instrout[30]), .I2(n41), .O(N18) );
+  AN2 U40 ( .I1(IFIDi_IF_instrout[20]), .I2(n41), .O(N6) );
+  AN2 U41 ( .I1(IFIDi_IF_instrout[21]), .I2(n41), .O(N7) );
+  AN2 U42 ( .I1(IFIDi_IF_instrout[22]), .I2(n41), .O(N8) );
+  AN2 U43 ( .I1(IFIDi_IF_instrout[24]), .I2(n41), .O(N10) );
+  AN2 U44 ( .I1(IFIDi_IF_instrout[31]), .I2(n41), .O(N17) );
+  AN2 U45 ( .I1(IFIDi_IF_instrout[25]), .I2(n41), .O(N11) );
+  AN2 U46 ( .I1(IFIDi_IF_instrout[26]), .I2(n41), .O(N12) );
+  AN2 U47 ( .I1(IFIDi_IF_instrout[27]), .I2(n41), .O(N13) );
+  AN2 U48 ( .I1(IFIDi_IF_instrout[28]), .I2(n41), .O(N14) );
+  AN2 U49 ( .I1(IFIDi_IF_instrout[29]), .I2(n41), .O(N15) );
+  AN2 U50 ( .I1(IFIDi_IF_instrout[30]), .I2(n41), .O(N16) );
   AN2 U51 ( .I1(Wire_RegWrite), .I2(n41), .O(N5) );
-  AN2 U52 ( .I1(Wire_csrweb), .I2(n41), .O(N20) );
-  BUF1CK U53 ( .I(IF_instrout[23]), .O(rs2addr[3]) );
-  BUF1CK U54 ( .I(IF_instrout[18]), .O(rs1addr[3]) );
+  AN2 U52 ( .I1(Wire_csrweb), .I2(n41), .O(N18) );
+  BUF1CK U53 ( .I(IFIDi_IF_instrout[23]), .O(IDEXEo_rs2addr[3]) );
+  BUF1CK U54 ( .I(IFIDi_IF_instrout[18]), .O(IDEXEo_rs1addr[3]) );
   INV1S U55 ( .I(rst), .O(n42) );
-  BUF1CK U56 ( .I(IF_instrout[24]), .O(rs2addr[4]) );
-  BUF1CK U57 ( .I(IF_instrout[22]), .O(rs2addr[2]) );
-  BUF1CK U58 ( .I(IF_instrout[21]), .O(rs2addr[1]) );
-  BUF1CK U59 ( .I(IF_instrout[20]), .O(rs2addr[0]) );
-  BUF1CK U60 ( .I(IF_instrout[19]), .O(rs1addr[4]) );
-  BUF1CK U61 ( .I(IF_instrout[17]), .O(rs1addr[2]) );
-  BUF1CK U62 ( .I(IF_instrout[16]), .O(rs1addr[1]) );
-  BUF1CK U63 ( .I(IF_instrout[15]), .O(rs1addr[0]) );
+  BUF1CK U56 ( .I(IFIDi_IF_instrout[24]), .O(IDEXEo_rs2addr[4]) );
+  BUF1CK U57 ( .I(IFIDi_IF_instrout[22]), .O(IDEXEo_rs2addr[2]) );
+  BUF1CK U58 ( .I(IFIDi_IF_instrout[21]), .O(IDEXEo_rs2addr[1]) );
+  BUF1CK U59 ( .I(IFIDi_IF_instrout[20]), .O(IDEXEo_rs2addr[0]) );
+  BUF1CK U60 ( .I(IFIDi_IF_instrout[19]), .O(IDEXEo_rs1addr[4]) );
+  BUF1CK U61 ( .I(IFIDi_IF_instrout[17]), .O(IDEXEo_rs1addr[2]) );
+  BUF1CK U62 ( .I(IFIDi_IF_instrout[16]), .O(IDEXEo_rs1addr[1]) );
+  BUF1CK U63 ( .I(IFIDi_IF_instrout[15]), .O(IDEXEo_rs1addr[0]) );
   RegisterFile RF ( .clk(n_0_net_), .rst(rst), .RegWrite(WB_RegWrite), 
-        .rs1_addr({IF_instrout[19], rs1addr[3], IF_instrout[17:15]}), 
-        .rs2_addr({IF_instrout[24], rs2addr[3], IF_instrout[22:20]}), 
-        .WB_rdaddr(WB_rdaddr), .WB_rddata(WB_rddata), .rs1data(Wire_rs1), 
-        .rs2data(Wire_rs2) );
+        .rs1_addr({IFIDi_IF_instrout[19], IDEXEo_rs1addr[3], 
+        IFIDi_IF_instrout[17:15]}), .rs2_addr({IFIDi_IF_instrout[24], 
+        IDEXEo_rs2addr[3], IFIDi_IF_instrout[22:20]}), .WB_rdaddr(WB_rdaddr), 
+        .WB_rddata(WB_rddata), .rs1data(Wire_rs1), .rs2data(Wire_rs2) );
   ImmediateGenerator IG ( .ImmType(Wire_immtype), .Imm(Wire_imm), 
-        .Instr_out_31_(IF_instrout[31]), .Instr_out_30_(IF_instrout[30]), 
-        .Instr_out_29_(IF_instrout[29]), .Instr_out_28_(IF_instrout[28]), 
-        .Instr_out_27_(IF_instrout[27]), .Instr_out_26_(IF_instrout[26]), 
-        .Instr_out_25_(IF_instrout[25]), .Instr_out_24_(IF_instrout[24]), 
-        .Instr_out_23_(rs2addr[3]), .Instr_out_22_(IF_instrout[22]), 
-        .Instr_out_21_(IF_instrout[21]), .Instr_out_20_(IF_instrout[20]), 
-        .Instr_out_19_(IF_instrout[19]), .Instr_out_18_(rs1addr[3]), 
-        .Instr_out_17_(IF_instrout[17]), .Instr_out_16_(IF_instrout[16]), 
-        .Instr_out_15_(IF_instrout[15]), .Instr_out_14_(IF_instrout[14]), 
-        .Instr_out_13_(IF_instrout[13]), .Instr_out_12_(IF_instrout[12]), 
-        .Instr_out_11_(IF_instrout[11]), .Instr_out_10_(IF_instrout[10]), 
-        .Instr_out_9_(IF_instrout[9]), .Instr_out_8_(IF_instrout[8]), 
-        .Instr_out_7_(IF_instrout[7]) );
-  ControlUnit CU ( .OPcode(IF_instrout[6:0]), .ImmType(Wire_immtype), .ALUOP(
-        Wire_ALUOP), .PCtoRegSrc(Wire_PCtoRegSrc), .ALUSrc(Wire_ALUSrc), 
+        .Instr_out_31_(IFIDi_IF_instrout[31]), .Instr_out_30_(
+        IFIDi_IF_instrout[30]), .Instr_out_29_(IFIDi_IF_instrout[29]), 
+        .Instr_out_28_(IFIDi_IF_instrout[28]), .Instr_out_27_(
+        IFIDi_IF_instrout[27]), .Instr_out_26_(IFIDi_IF_instrout[26]), 
+        .Instr_out_25_(IFIDi_IF_instrout[25]), .Instr_out_24_(
+        IFIDi_IF_instrout[24]), .Instr_out_23_(IDEXEo_rs2addr[3]), 
+        .Instr_out_22_(IFIDi_IF_instrout[22]), .Instr_out_21_(
+        IFIDi_IF_instrout[21]), .Instr_out_20_(IFIDi_IF_instrout[20]), 
+        .Instr_out_19_(IFIDi_IF_instrout[19]), .Instr_out_18_(
+        IDEXEo_rs1addr[3]), .Instr_out_17_(IFIDi_IF_instrout[17]), 
+        .Instr_out_16_(IFIDi_IF_instrout[16]), .Instr_out_15_(
+        IFIDi_IF_instrout[15]), .Instr_out_14_(IFIDi_IF_instrout[14]), 
+        .Instr_out_13_(IFIDi_IF_instrout[13]), .Instr_out_12_(
+        IFIDi_IF_instrout[12]), .Instr_out_11_(IFIDi_IF_instrout[11]), 
+        .Instr_out_10_(IFIDi_IF_instrout[10]), .Instr_out_9_(
+        IFIDi_IF_instrout[9]), .Instr_out_8_(IFIDi_IF_instrout[8]), 
+        .Instr_out_7_(IFIDi_IF_instrout[7]) );
+  ControlUnit CU ( .OPcode(IFIDi_IF_instrout[6:0]), .ImmType(Wire_immtype), 
+        .ALUOP(Wire_ALUOP), .PCtoRegSrc(Wire_PCtoRegSrc), .ALUSrc(Wire_ALUSrc), 
         .RDSrc(Wire_RDSrc), .MemRead(Wire_MemRead), .MemWrite(Wire_MemWrite), 
         .MemtoReg(Wire_MemtoReg), .RegWrite(Wire_RegWrite), .branch(
         Wire_branch), .csr_web(Wire_csrweb) );
@@ -10080,13 +10166,15 @@ module Src ( clk, rst, state, csraddr, csrrdata );
 endmodule
 
 
-module EXE_DW01_add_0 ( A_31_, A_30_, A_29_, A_28_, A_27_, A_26_, A_25_, A_24_, 
-        A_23_, A_22_, A_21_, A_20_, A_19_, A_18_, A_17_, A_16_, A_15_, A_14_, 
-        A_13_, A_12_, A_11_, A_10_, A_9_, A_8_, A_7_, A_6_, A_5_, A_4_, A_3_, 
-        A_2_, SUM_31_, SUM_30_, SUM_29_, SUM_28_, SUM_27_, SUM_26_, SUM_25_, 
-        SUM_24_, SUM_23_, SUM_22_, SUM_21_, SUM_20_, SUM_19_, SUM_18_, SUM_17_, 
-        SUM_16_, SUM_15_, SUM_14_, SUM_13_, SUM_12_, SUM_11_, SUM_10_, SUM_9_, 
-        SUM_8_, SUM_7_, SUM_6_, SUM_5_, SUM_4_, SUM_3_ );
+
+    module EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0 ( 
+        A_31_, A_30_, A_29_, A_28_, A_27_, A_26_, A_25_, A_24_, A_23_, A_22_, 
+        A_21_, A_20_, A_19_, A_18_, A_17_, A_16_, A_15_, A_14_, A_13_, A_12_, 
+        A_11_, A_10_, A_9_, A_8_, A_7_, A_6_, A_5_, A_4_, A_3_, A_2_, SUM_31_, 
+        SUM_30_, SUM_29_, SUM_28_, SUM_27_, SUM_26_, SUM_25_, SUM_24_, SUM_23_, 
+        SUM_22_, SUM_21_, SUM_20_, SUM_19_, SUM_18_, SUM_17_, SUM_16_, SUM_15_, 
+        SUM_14_, SUM_13_, SUM_12_, SUM_11_, SUM_10_, SUM_9_, SUM_8_, SUM_7_, 
+        SUM_6_, SUM_5_, SUM_4_, SUM_3_ );
   input A_31_, A_30_, A_29_, A_28_, A_27_, A_26_, A_25_, A_24_, A_23_, A_22_,
          A_21_, A_20_, A_19_, A_18_, A_17_, A_16_, A_15_, A_14_, A_13_, A_12_,
          A_11_, A_10_, A_9_, A_8_, A_7_, A_6_, A_5_, A_4_, A_3_, A_2_;
@@ -10157,7 +10245,9 @@ module EXE_DW01_add_0 ( A_31_, A_30_, A_29_, A_28_, A_27_, A_26_, A_25_, A_24_,
 endmodule
 
 
-module EXE_DW01_add_1 ( A, B, SUM );
+
+    module EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1 ( 
+        A, B, SUM );
   input [31:0] A;
   input [31:0] B;
   output [31:0] SUM;
@@ -10221,40 +10311,47 @@ module EXE_DW01_add_1 ( A, B, SUM );
 endmodule
 
 
-module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3, 
-        ID_Funct7, ID_rdaddr, rs1addr, rs2addr, ID_ALUOP, ID_PCtoRegSrc, 
-        ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite, ID_MemtoReg, ID_RegWrite, 
-        Forward_Memrddata, WB_rddata, Forward_rs1src, Forward_rs2src, 
-        ID_csraddr, ID_csrweb, BranchCtrl, EXE_PCtoReg, EXE_ALUout, 
-        EXE_rs2data, EXE_rdaddr, EXE_Funct3, EXE_rdsrc, EXE_MemRead, 
-        EXE_MemWrite, EXE_MemtoReg, EXE_RegWrite, ZeroFlag, PC_imm, PC_jr );
-  input [31:0] ID_pcout;
-  input [31:0] ID_rs1data;
-  input [31:0] ID_rs2data;
-  input [31:0] ID_imm;
-  input [2:0] ID_Funct3;
-  input [6:0] ID_Funct7;
-  input [4:0] ID_rdaddr;
-  input [4:0] rs1addr;
-  input [4:0] rs2addr;
-  input [2:0] ID_ALUOP;
+
+    module EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__ ( 
+        clk, rst, IDEXEi_ID_pcout, IDEXEi_ID_rs1data, IDEXEi_ID_rs2data, 
+        IDEXEi_ID_imm, IDEXEi_ID_csraddr, IDEXEi_ID_Funct7, IDEXEi_ID_rdaddr, 
+        IDEXEi_rs1addr, IDEXEi_rs2addr, IDEXEi_ID_Funct3, IDEXEi_ID_ALUOP, 
+        IDEXEi_ID_PCtoRegSrc, IDEXEi_ID_ALUSrc, IDEXEi_ID_rdsrc, 
+        IDEXEi_ID_MemRead, IDEXEi_ID_MemWrite, IDEXEi_ID_MemtoReg, 
+        IDEXEi_ID_RegWrite, IDEXEi_ID_csrweb, Forward_Memrddata, WB_rddata, 
+        Forward_rs1src, Forward_rs2src, BranchCtrl, EXEMEMo_EXE_ALUout, 
+        EXEMEMo_EXE_PCtoReg, EXEMEMo_EXE_rs2data, EXEMEMo_EXE_rdaddr, 
+        EXEMEMo_EXE_Funct3, EXEMEMo_EXE_rdsrc, EXEMEMo_EXE_MemRead, 
+        EXEMEMo_EXE_MemWrite, EXEMEMo_EXE_MemtoReg, EXEMEMo_EXE_RegWrite, 
+        IFEXEo_PC_imm, IFEXEo_PC_jr, ZeroFlag );
+  input [31:0] IDEXEi_ID_pcout;
+  input [31:0] IDEXEi_ID_rs1data;
+  input [31:0] IDEXEi_ID_rs2data;
+  input [31:0] IDEXEi_ID_imm;
+  input [11:0] IDEXEi_ID_csraddr;
+  input [6:0] IDEXEi_ID_Funct7;
+  input [4:0] IDEXEi_ID_rdaddr;
+  input [4:0] IDEXEi_rs1addr;
+  input [4:0] IDEXEi_rs2addr;
+  input [2:0] IDEXEi_ID_Funct3;
+  input [2:0] IDEXEi_ID_ALUOP;
   input [31:0] Forward_Memrddata;
   input [31:0] WB_rddata;
   input [1:0] Forward_rs1src;
   input [1:0] Forward_rs2src;
-  input [11:0] ID_csraddr;
   input [1:0] BranchCtrl;
-  output [31:0] EXE_PCtoReg;
-  output [31:0] EXE_ALUout;
-  output [31:0] EXE_rs2data;
-  output [4:0] EXE_rdaddr;
-  output [2:0] EXE_Funct3;
-  output [31:0] PC_imm;
-  output [31:0] PC_jr;
-  input clk, rst, ID_PCtoRegSrc, ID_ALUSrc, ID_RDSrc, ID_MemRead, ID_MemWrite,
-         ID_MemtoReg, ID_RegWrite, ID_csrweb;
-  output EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg, EXE_RegWrite,
-         ZeroFlag;
+  output [31:0] EXEMEMo_EXE_ALUout;
+  output [31:0] EXEMEMo_EXE_PCtoReg;
+  output [31:0] EXEMEMo_EXE_rs2data;
+  output [4:0] EXEMEMo_EXE_rdaddr;
+  output [2:0] EXEMEMo_EXE_Funct3;
+  output [31:0] IFEXEo_PC_imm;
+  output [31:0] IFEXEo_PC_jr;
+  input clk, rst, IDEXEi_ID_PCtoRegSrc, IDEXEi_ID_ALUSrc, IDEXEi_ID_rdsrc,
+         IDEXEi_ID_MemRead, IDEXEi_ID_MemWrite, IDEXEi_ID_MemtoReg,
+         IDEXEi_ID_RegWrite, IDEXEi_ID_csrweb;
+  output EXEMEMo_EXE_rdsrc, EXEMEMo_EXE_MemRead, EXEMEMo_EXE_MemWrite,
+         EXEMEMo_EXE_MemtoReg, EXEMEMo_EXE_RegWrite, ZeroFlag;
   wire   n_Logic1_, n6, Src_state_0_, ALU_rs1_31_, ALU_rs1_30_, ALU_rs1_29_,
          ALU_rs1_28_, ALU_rs1_27_, ALU_rs1_26_, ALU_rs1_25_, ALU_rs1_24_,
          ALU_rs1_23_, ALU_rs1_22_, ALU_rs1_21_, ALU_rs1_20_, ALU_rs1_19_,
@@ -10289,314 +10386,315 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   wire   [31:0] ALU_rs22;
   wire   [31:0] Wire_csrrdata;
 
-  ND2 U217 ( .I1(ID_MemRead), .I2(n113), .O(n112) );
+  ND2 U217 ( .I1(IDEXEi_ID_MemRead), .I2(n113), .O(n112) );
   ND2 U218 ( .I1(n118), .I2(n119), .O(n117) );
   ND2 U219 ( .I1(n123), .I2(n124), .O(n115) );
-  AO222 U229 ( .A1(ID_rs2data[2]), .A2(n1), .B1(Forward_Memrddata[2]), .B2(
-        n360), .C1(WB_rddata[2]), .C2(Forward_rs2src[1]), .O(ALU_rs21[2]) );
-  AO222 U252 ( .A1(ID_rs1data[9]), .A2(n290), .B1(n230), .B2(
+  AO222 U229 ( .A1(IDEXEi_ID_rs2data[2]), .A2(n1), .B1(Forward_Memrddata[2]), 
+        .B2(n360), .C1(WB_rddata[2]), .C2(Forward_rs2src[1]), .O(ALU_rs21[2])
+         );
+  AO222 U252 ( .A1(IDEXEi_ID_rs1data[9]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[9]), .C1(n420), .C2(WB_rddata[9]), .O(ALU_rs1_9_) );
-  AO222 U253 ( .A1(ID_rs1data[8]), .A2(n290), .B1(n230), .B2(
+  AO222 U253 ( .A1(IDEXEi_ID_rs1data[8]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[8]), .C1(n420), .C2(WB_rddata[8]), .O(ALU_rs1_8_) );
-  AO222 U254 ( .A1(ID_rs1data[7]), .A2(n290), .B1(n230), .B2(
+  AO222 U254 ( .A1(IDEXEi_ID_rs1data[7]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[7]), .C1(n420), .C2(WB_rddata[7]), .O(ALU_rs1_7_) );
-  AO222 U255 ( .A1(ID_rs1data[6]), .A2(n290), .B1(n230), .B2(
+  AO222 U255 ( .A1(IDEXEi_ID_rs1data[6]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[6]), .C1(n420), .C2(WB_rddata[6]), .O(ALU_rs1_6_) );
-  AO222 U256 ( .A1(ID_rs1data[5]), .A2(n290), .B1(n230), .B2(
+  AO222 U256 ( .A1(IDEXEi_ID_rs1data[5]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[5]), .C1(n420), .C2(WB_rddata[5]), .O(ALU_rs1_5_) );
-  AO222 U257 ( .A1(ID_rs1data[4]), .A2(n290), .B1(n230), .B2(
+  AO222 U257 ( .A1(IDEXEi_ID_rs1data[4]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[4]), .C1(n420), .C2(WB_rddata[4]), .O(ALU_rs1_4_) );
-  AO222 U258 ( .A1(ID_rs1data[3]), .A2(n290), .B1(n230), .B2(
+  AO222 U258 ( .A1(IDEXEi_ID_rs1data[3]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[3]), .C1(n420), .C2(WB_rddata[3]), .O(ALU_rs1_3_) );
-  AO222 U259 ( .A1(ID_rs1data[31]), .A2(n290), .B1(n230), .B2(
+  AO222 U259 ( .A1(IDEXEi_ID_rs1data[31]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[31]), .C1(n420), .C2(WB_rddata[31]), .O(ALU_rs1_31_)
          );
-  AO222 U260 ( .A1(ID_rs1data[30]), .A2(n290), .B1(n230), .B2(
+  AO222 U260 ( .A1(IDEXEi_ID_rs1data[30]), .A2(n290), .B1(n230), .B2(
         Forward_Memrddata[30]), .C1(n420), .C2(WB_rddata[30]), .O(ALU_rs1_30_)
          );
-  AO222 U261 ( .A1(ID_rs1data[2]), .A2(n300), .B1(n240), .B2(
+  AO222 U261 ( .A1(IDEXEi_ID_rs1data[2]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[2]), .C1(n420), .C2(WB_rddata[2]), .O(ALU_rs1_2_) );
-  AO222 U262 ( .A1(ID_rs1data[29]), .A2(n300), .B1(n240), .B2(
+  AO222 U262 ( .A1(IDEXEi_ID_rs1data[29]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[29]), .C1(n420), .C2(WB_rddata[29]), .O(ALU_rs1_29_)
          );
-  AO222 U263 ( .A1(ID_rs1data[28]), .A2(n300), .B1(n240), .B2(
+  AO222 U263 ( .A1(IDEXEi_ID_rs1data[28]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[28]), .C1(n420), .C2(WB_rddata[28]), .O(ALU_rs1_28_)
          );
-  AO222 U264 ( .A1(ID_rs1data[27]), .A2(n300), .B1(n240), .B2(
+  AO222 U264 ( .A1(IDEXEi_ID_rs1data[27]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[27]), .C1(n420), .C2(WB_rddata[27]), .O(ALU_rs1_27_)
          );
-  AO222 U265 ( .A1(ID_rs1data[26]), .A2(n300), .B1(n240), .B2(
+  AO222 U265 ( .A1(IDEXEi_ID_rs1data[26]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[26]), .C1(n420), .C2(WB_rddata[26]), .O(ALU_rs1_26_)
          );
-  AO222 U266 ( .A1(ID_rs1data[25]), .A2(n300), .B1(n240), .B2(
+  AO222 U266 ( .A1(IDEXEi_ID_rs1data[25]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[25]), .C1(n420), .C2(WB_rddata[25]), .O(ALU_rs1_25_)
          );
-  AO222 U267 ( .A1(ID_rs1data[24]), .A2(n300), .B1(n240), .B2(
+  AO222 U267 ( .A1(IDEXEi_ID_rs1data[24]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[24]), .C1(n420), .C2(WB_rddata[24]), .O(ALU_rs1_24_)
          );
-  AO222 U268 ( .A1(ID_rs1data[23]), .A2(n300), .B1(n240), .B2(
+  AO222 U268 ( .A1(IDEXEi_ID_rs1data[23]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[23]), .C1(n420), .C2(WB_rddata[23]), .O(ALU_rs1_23_)
          );
-  AO222 U269 ( .A1(ID_rs1data[22]), .A2(n300), .B1(n240), .B2(
+  AO222 U269 ( .A1(IDEXEi_ID_rs1data[22]), .A2(n300), .B1(n240), .B2(
         Forward_Memrddata[22]), .C1(n420), .C2(WB_rddata[22]), .O(ALU_rs1_22_)
          );
-  AO222 U270 ( .A1(ID_rs1data[21]), .A2(n310), .B1(n250), .B2(
+  AO222 U270 ( .A1(IDEXEi_ID_rs1data[21]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[21]), .C1(n420), .C2(WB_rddata[21]), .O(ALU_rs1_21_)
          );
-  AO222 U271 ( .A1(ID_rs1data[20]), .A2(n310), .B1(n250), .B2(
+  AO222 U271 ( .A1(IDEXEi_ID_rs1data[20]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[20]), .C1(n420), .C2(WB_rddata[20]), .O(ALU_rs1_20_)
          );
-  AO222 U272 ( .A1(ID_rs1data[1]), .A2(n310), .B1(n250), .B2(
+  AO222 U272 ( .A1(IDEXEi_ID_rs1data[1]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[1]), .C1(n420), .C2(WB_rddata[1]), .O(ALU_rs1_1_) );
-  AO222 U273 ( .A1(ID_rs1data[19]), .A2(n310), .B1(n250), .B2(
+  AO222 U273 ( .A1(IDEXEi_ID_rs1data[19]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[19]), .C1(n420), .C2(WB_rddata[19]), .O(ALU_rs1_19_)
          );
-  AO222 U274 ( .A1(ID_rs1data[18]), .A2(n310), .B1(n250), .B2(
+  AO222 U274 ( .A1(IDEXEi_ID_rs1data[18]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[18]), .C1(n420), .C2(WB_rddata[18]), .O(ALU_rs1_18_)
          );
-  AO222 U275 ( .A1(ID_rs1data[17]), .A2(n310), .B1(n250), .B2(
+  AO222 U275 ( .A1(IDEXEi_ID_rs1data[17]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[17]), .C1(n420), .C2(WB_rddata[17]), .O(ALU_rs1_17_)
          );
-  AO222 U276 ( .A1(ID_rs1data[16]), .A2(n310), .B1(n250), .B2(
+  AO222 U276 ( .A1(IDEXEi_ID_rs1data[16]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[16]), .C1(n420), .C2(WB_rddata[16]), .O(ALU_rs1_16_)
          );
-  AO222 U277 ( .A1(ID_rs1data[15]), .A2(n310), .B1(n250), .B2(
+  AO222 U277 ( .A1(IDEXEi_ID_rs1data[15]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[15]), .C1(n430), .C2(WB_rddata[15]), .O(ALU_rs1_15_)
          );
-  AO222 U278 ( .A1(ID_rs1data[14]), .A2(n310), .B1(n250), .B2(
+  AO222 U278 ( .A1(IDEXEi_ID_rs1data[14]), .A2(n310), .B1(n250), .B2(
         Forward_Memrddata[14]), .C1(n430), .C2(WB_rddata[14]), .O(ALU_rs1_14_)
          );
-  AO222 U279 ( .A1(ID_rs1data[13]), .A2(n320), .B1(n260), .B2(
+  AO222 U279 ( .A1(IDEXEi_ID_rs1data[13]), .A2(n320), .B1(n260), .B2(
         Forward_Memrddata[13]), .C1(n430), .C2(WB_rddata[13]), .O(ALU_rs1_13_)
          );
-  AO222 U280 ( .A1(ID_rs1data[12]), .A2(n320), .B1(n260), .B2(
+  AO222 U280 ( .A1(IDEXEi_ID_rs1data[12]), .A2(n320), .B1(n260), .B2(
         Forward_Memrddata[12]), .C1(n430), .C2(WB_rddata[12]), .O(ALU_rs1_12_)
          );
-  AO222 U281 ( .A1(ID_rs1data[11]), .A2(n320), .B1(n260), .B2(
+  AO222 U281 ( .A1(IDEXEi_ID_rs1data[11]), .A2(n320), .B1(n260), .B2(
         Forward_Memrddata[11]), .C1(n430), .C2(WB_rddata[11]), .O(ALU_rs1_11_)
          );
-  AO222 U282 ( .A1(ID_rs1data[10]), .A2(n320), .B1(n260), .B2(
+  AO222 U282 ( .A1(IDEXEi_ID_rs1data[10]), .A2(n320), .B1(n260), .B2(
         Forward_Memrddata[10]), .C1(n430), .C2(WB_rddata[10]), .O(ALU_rs1_10_)
          );
-  AO222 U283 ( .A1(ID_rs1data[0]), .A2(n320), .B1(n260), .B2(
+  AO222 U283 ( .A1(IDEXEi_ID_rs1data[0]), .A2(n320), .B1(n260), .B2(
         Forward_Memrddata[0]), .C1(n430), .C2(WB_rddata[0]), .O(ALU_rs1_0_) );
-  QDFFRBN EXE_PCtoReg_reg_31_ ( .D(N53), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[31]) );
-  QDFFRBN EXE_PCtoReg_reg_29_ ( .D(N51), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[29]) );
-  QDFFRBN EXE_PCtoReg_reg_30_ ( .D(N52), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[30]) );
-  QDFFRBN EXE_PCtoReg_reg_28_ ( .D(N50), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[28]) );
-  QDFFRBN EXE_PCtoReg_reg_27_ ( .D(N49), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[27]) );
-  QDFFRBN EXE_PCtoReg_reg_26_ ( .D(N48), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[26]) );
-  QDFFRBN EXE_PCtoReg_reg_25_ ( .D(N47), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[25]) );
-  QDFFRBN EXE_PCtoReg_reg_24_ ( .D(N46), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[24]) );
-  QDFFRBN EXE_PCtoReg_reg_23_ ( .D(N45), .CK(clk), .RB(n12), .Q(
-        EXE_PCtoReg[23]) );
-  QDFFRBN EXE_PCtoReg_reg_22_ ( .D(N44), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[22]) );
-  QDFFRBN EXE_ALUout_reg_22_ ( .D(N78), .CK(clk), .RB(n16), .Q(EXE_ALUout[22])
-         );
-  QDFFRBN EXE_PCtoReg_reg_21_ ( .D(N43), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[21]) );
-  QDFFRBN EXE_ALUout_reg_21_ ( .D(N77), .CK(clk), .RB(n16), .Q(EXE_ALUout[21])
-         );
-  QDFFRBN EXE_PCtoReg_reg_20_ ( .D(N42), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[20]) );
-  QDFFRBN EXE_ALUout_reg_20_ ( .D(N76), .CK(clk), .RB(n16), .Q(EXE_ALUout[20])
-         );
-  QDFFRBN EXE_PCtoReg_reg_19_ ( .D(N41), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[19]) );
-  QDFFRBN EXE_ALUout_reg_19_ ( .D(N75), .CK(clk), .RB(n16), .Q(EXE_ALUout[19])
-         );
-  QDFFRBN EXE_PCtoReg_reg_18_ ( .D(N40), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[18]) );
-  QDFFRBN EXE_ALUout_reg_18_ ( .D(N74), .CK(clk), .RB(n16), .Q(EXE_ALUout[18])
-         );
-  QDFFRBN EXE_PCtoReg_reg_17_ ( .D(N39), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[17]) );
-  QDFFRBN EXE_ALUout_reg_17_ ( .D(N73), .CK(clk), .RB(n16), .Q(EXE_ALUout[17])
-         );
-  QDFFRBN EXE_PCtoReg_reg_16_ ( .D(N38), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[16]) );
-  QDFFRBN EXE_rs2data_reg_23_ ( .D(ALU_rs21[23]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[23]) );
-  QDFFRBN EXE_rs2data_reg_22_ ( .D(ALU_rs21[22]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[22]) );
-  QDFFRBN EXE_rs2data_reg_21_ ( .D(ALU_rs21[21]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[21]) );
-  QDFFRBN EXE_rs2data_reg_20_ ( .D(ALU_rs21[20]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[20]) );
-  QDFFRBN EXE_rs2data_reg_19_ ( .D(ALU_rs21[19]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[19]) );
-  QDFFRBN EXE_rs2data_reg_18_ ( .D(ALU_rs21[18]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[18]) );
-  QDFFRBN EXE_rs2data_reg_17_ ( .D(ALU_rs21[17]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[17]) );
-  QDFFRBN EXE_rs2data_reg_16_ ( .D(ALU_rs21[16]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[16]) );
-  QDFFRBN EXE_ALUout_reg_16_ ( .D(N72), .CK(clk), .RB(n16), .Q(EXE_ALUout[16])
-         );
-  QDFFRBN EXE_PCtoReg_reg_15_ ( .D(N37), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[15]) );
-  QDFFRBN EXE_ALUout_reg_15_ ( .D(N71), .CK(clk), .RB(n16), .Q(EXE_ALUout[15])
-         );
-  QDFFRBN EXE_rs2data_reg_31_ ( .D(ALU_rs21[31]), .CK(clk), .RB(n18), .Q(
-        EXE_rs2data[31]) );
-  QDFFRBN EXE_rs2data_reg_30_ ( .D(ALU_rs21[30]), .CK(clk), .RB(n18), .Q(
-        EXE_rs2data[30]) );
-  QDFFRBN EXE_rs2data_reg_29_ ( .D(ALU_rs21[29]), .CK(clk), .RB(n18), .Q(
-        EXE_rs2data[29]) );
-  QDFFRBN EXE_rs2data_reg_28_ ( .D(ALU_rs21[28]), .CK(clk), .RB(n18), .Q(
-        EXE_rs2data[28]) );
-  QDFFRBN EXE_rs2data_reg_27_ ( .D(ALU_rs21[27]), .CK(clk), .RB(n18), .Q(
-        EXE_rs2data[27]) );
-  QDFFRBN EXE_rs2data_reg_26_ ( .D(ALU_rs21[26]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[26]) );
-  QDFFRBN EXE_rs2data_reg_25_ ( .D(ALU_rs21[25]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[25]) );
-  QDFFRBN EXE_rs2data_reg_24_ ( .D(ALU_rs21[24]), .CK(clk), .RB(n19), .Q(
-        EXE_rs2data[24]) );
-  QDFFRBN EXE_rs2data_reg_3_ ( .D(ALU_rs21[3]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[3]) );
-  QDFFRBN EXE_rs2data_reg_1_ ( .D(ALU_rs21[1]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[1]) );
-  QDFFRBN EXE_rs2data_reg_0_ ( .D(ALU_rs21[0]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[0]) );
-  QDFFRBN EXE_MemWrite_reg ( .D(ID_MemWrite), .CK(clk), .RB(n220), .Q(
-        EXE_MemWrite) );
-  QDFFRBN EXE_rs2data_reg_2_ ( .D(ALU_rs21[2]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[2]) );
-  QDFFRBN EXE_rs2data_reg_9_ ( .D(ALU_rs21[9]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[9]) );
-  QDFFRBN EXE_rs2data_reg_8_ ( .D(ALU_rs21[8]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[8]) );
-  QDFFRBN EXE_MemRead_reg ( .D(ID_MemRead), .CK(clk), .RB(n220), .Q(
-        EXE_MemRead) );
-  QDFFRBN EXE_rs2data_reg_15_ ( .D(ALU_rs21[15]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[15]) );
-  QDFFRBN EXE_rs2data_reg_14_ ( .D(ALU_rs21[14]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[14]) );
-  QDFFRBN EXE_rs2data_reg_13_ ( .D(ALU_rs21[13]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[13]) );
-  QDFFRBN EXE_rs2data_reg_12_ ( .D(ALU_rs21[12]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[12]) );
-  QDFFRBN EXE_rs2data_reg_11_ ( .D(ALU_rs21[11]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[11]) );
-  QDFFRBN EXE_rs2data_reg_10_ ( .D(ALU_rs21[10]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[10]) );
-  QDFFRBN EXE_PCtoReg_reg_14_ ( .D(N36), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[14]) );
-  QDFFRBN EXE_PCtoReg_reg_13_ ( .D(N35), .CK(clk), .RB(n13), .Q(
-        EXE_PCtoReg[13]) );
-  QDFFRBN EXE_ALUout_reg_14_ ( .D(N70), .CK(clk), .RB(n17), .Q(EXE_ALUout[14])
-         );
-  QDFFRBN EXE_ALUout_reg_13_ ( .D(N69), .CK(clk), .RB(n17), .Q(EXE_ALUout[13])
-         );
-  QDFFRBN EXE_PCtoReg_reg_12_ ( .D(N34), .CK(clk), .RB(n14), .Q(
-        EXE_PCtoReg[12]) );
-  QDFFRBN EXE_PCtoReg_reg_11_ ( .D(N33), .CK(clk), .RB(n14), .Q(
-        EXE_PCtoReg[11]) );
-  QDFFRBN EXE_ALUout_reg_12_ ( .D(N68), .CK(clk), .RB(n17), .Q(EXE_ALUout[12])
-         );
-  QDFFRBN EXE_Funct3_reg_0_ ( .D(ID_Funct3[0]), .CK(clk), .RB(n220), .Q(
-        EXE_Funct3[0]) );
-  QDFFRBN EXE_ALUout_reg_11_ ( .D(N67), .CK(clk), .RB(n17), .Q(EXE_ALUout[11])
-         );
-  QDFFRBN EXE_PCtoReg_reg_10_ ( .D(N32), .CK(clk), .RB(n14), .Q(
-        EXE_PCtoReg[10]) );
-  QDFFRBN EXE_Funct3_reg_2_ ( .D(ID_Funct3[2]), .CK(clk), .RB(n220), .Q(
-        EXE_Funct3[2]) );
-  QDFFRBN EXE_Funct3_reg_1_ ( .D(ID_Funct3[1]), .CK(clk), .RB(n220), .Q(
-        EXE_Funct3[1]) );
-  QDFFRBN EXE_PCtoReg_reg_9_ ( .D(N31), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[9])
-         );
-  QDFFRBN EXE_ALUout_reg_10_ ( .D(N66), .CK(clk), .RB(n17), .Q(EXE_ALUout[10])
-         );
-  QDFFRBN EXE_ALUout_reg_9_ ( .D(N65), .CK(clk), .RB(n17), .Q(EXE_ALUout[9])
-         );
-  QDFFRBN EXE_PCtoReg_reg_8_ ( .D(N30), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[8])
-         );
-  QDFFRBN EXE_PCtoReg_reg_7_ ( .D(N29), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[7])
-         );
-  QDFFRBN EXE_ALUout_reg_8_ ( .D(N64), .CK(clk), .RB(n17), .Q(EXE_ALUout[8])
-         );
-  QDFFRBN EXE_ALUout_reg_7_ ( .D(N63), .CK(clk), .RB(n17), .Q(EXE_ALUout[7])
-         );
-  QDFFRBN EXE_PCtoReg_reg_6_ ( .D(N28), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[6])
-         );
-  QDFFRBN EXE_PCtoReg_reg_5_ ( .D(N27), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[5])
-         );
-  QDFFRBN EXE_ALUout_reg_6_ ( .D(N62), .CK(clk), .RB(n17), .Q(EXE_ALUout[6])
-         );
-  QDFFRBN EXE_ALUout_reg_5_ ( .D(N61), .CK(clk), .RB(n17), .Q(EXE_ALUout[5])
-         );
-  QDFFRBN EXE_PCtoReg_reg_4_ ( .D(N26), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[4])
-         );
-  QDFFRBN EXE_ALUout_reg_4_ ( .D(N60), .CK(clk), .RB(n18), .Q(EXE_ALUout[4])
-         );
-  QDFFRBN EXE_PCtoReg_reg_3_ ( .D(N25), .CK(clk), .RB(n14), .Q(EXE_PCtoReg[3])
-         );
-  QDFFRBN EXE_MemtoReg_reg ( .D(ID_MemtoReg), .CK(clk), .RB(n220), .Q(
-        EXE_MemtoReg) );
-  QDFFRBN EXE_ALUout_reg_0_ ( .D(N56), .CK(clk), .RB(n18), .Q(EXE_ALUout[0])
-         );
-  QDFFRBS EXE_rs2data_reg_7_ ( .D(ALU_rs21[7]), .CK(clk), .RB(n20), .Q(
-        EXE_rs2data[7]) );
-  QDFFRBS EXE_rs2data_reg_6_ ( .D(ALU_rs21[6]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[6]) );
-  QDFFRBS EXE_rs2data_reg_5_ ( .D(ALU_rs21[5]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[5]) );
-  QDFFRBS EXE_rs2data_reg_4_ ( .D(ALU_rs21[4]), .CK(clk), .RB(n21), .Q(
-        EXE_rs2data[4]) );
-  QDFFRBN EXE_PCtoReg_reg_2_ ( .D(N24), .CK(clk), .RB(n15), .Q(EXE_PCtoReg[2])
-         );
-  QDFFRBN EXE_ALUout_reg_2_ ( .D(N58), .CK(clk), .RB(n18), .Q(EXE_ALUout[2])
-         );
-  QDFFRBN EXE_ALUout_reg_3_ ( .D(N59), .CK(clk), .RB(n18), .Q(EXE_ALUout[3])
-         );
-  QDFFRBN EXE_PCtoReg_reg_0_ ( .D(N22), .CK(clk), .RB(n15), .Q(EXE_PCtoReg[0])
-         );
-  QDFFRBN EXE_PCtoReg_reg_1_ ( .D(N23), .CK(clk), .RB(n15), .Q(EXE_PCtoReg[1])
-         );
-  QDFFRBT EXE_rdaddr_reg_2_ ( .D(ID_rdaddr[2]), .CK(clk), .RB(n21), .Q(
-        EXE_rdaddr[2]) );
-  QDFFRBT EXE_rdaddr_reg_0_ ( .D(ID_rdaddr[0]), .CK(clk), .RB(n220), .Q(
-        EXE_rdaddr[0]) );
-  QDFFRBT EXE_rdaddr_reg_1_ ( .D(ID_rdaddr[1]), .CK(clk), .RB(n220), .Q(
-        EXE_rdaddr[1]) );
-  QDFFRBS EXE_ALUout_reg_31_ ( .D(N87), .CK(clk), .RB(n15), .Q(EXE_ALUout[31])
-         );
-  QDFFRBS EXE_ALUout_reg_29_ ( .D(N85), .CK(clk), .RB(n15), .Q(EXE_ALUout[29])
-         );
-  QDFFRBS EXE_ALUout_reg_30_ ( .D(N86), .CK(clk), .RB(n15), .Q(EXE_ALUout[30])
-         );
-  QDFFRBS EXE_ALUout_reg_28_ ( .D(N84), .CK(clk), .RB(n15), .Q(EXE_ALUout[28])
-         );
-  QDFFRBS EXE_ALUout_reg_27_ ( .D(N83), .CK(clk), .RB(n15), .Q(EXE_ALUout[27])
-         );
-  QDFFRBS EXE_ALUout_reg_26_ ( .D(N82), .CK(clk), .RB(n15), .Q(EXE_ALUout[26])
-         );
-  QDFFRBS EXE_ALUout_reg_25_ ( .D(N81), .CK(clk), .RB(n15), .Q(EXE_ALUout[25])
-         );
-  QDFFRBS EXE_ALUout_reg_24_ ( .D(N80), .CK(clk), .RB(n16), .Q(EXE_ALUout[24])
-         );
-  QDFFRBS EXE_ALUout_reg_23_ ( .D(N79), .CK(clk), .RB(n16), .Q(EXE_ALUout[23])
-         );
-  QDFFRBN EXE_ALUout_reg_1_ ( .D(N57), .CK(clk), .RB(n18), .Q(EXE_ALUout[1])
-         );
-  QDFFRBN EXE_rdsrc_reg ( .D(ID_RDSrc), .CK(clk), .RB(n220), .Q(EXE_rdsrc) );
-  QDFFRBP EXE_rdaddr_reg_3_ ( .D(ID_rdaddr[3]), .CK(clk), .RB(n21), .Q(
-        EXE_rdaddr[3]) );
-  QDFFRBP EXE_RegWrite_reg ( .D(ID_RegWrite), .CK(clk), .RB(n12), .Q(
-        EXE_RegWrite) );
-  QDFFRBP EXE_rdaddr_reg_4_ ( .D(ID_rdaddr[4]), .CK(clk), .RB(n21), .Q(
-        EXE_rdaddr[4]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_31_ ( .D(N53), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[31]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_29_ ( .D(N51), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[29]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_30_ ( .D(N52), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[30]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_28_ ( .D(N50), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[28]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_27_ ( .D(N49), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[27]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_26_ ( .D(N48), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[26]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_25_ ( .D(N47), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[25]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_24_ ( .D(N46), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[24]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_23_ ( .D(N45), .CK(clk), .RB(n12), .Q(
+        EXEMEMo_EXE_PCtoReg[23]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_22_ ( .D(N44), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[22]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_22_ ( .D(N78), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[22]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_21_ ( .D(N43), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[21]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_21_ ( .D(N77), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[21]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_20_ ( .D(N42), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[20]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_20_ ( .D(N76), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[20]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_19_ ( .D(N41), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[19]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_19_ ( .D(N75), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[19]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_18_ ( .D(N40), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[18]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_18_ ( .D(N74), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[18]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_17_ ( .D(N39), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[17]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_17_ ( .D(N73), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[17]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_16_ ( .D(N38), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[16]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_23_ ( .D(ALU_rs21[23]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[23]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_22_ ( .D(ALU_rs21[22]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[22]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_21_ ( .D(ALU_rs21[21]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[21]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_20_ ( .D(ALU_rs21[20]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[20]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_19_ ( .D(ALU_rs21[19]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[19]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_18_ ( .D(ALU_rs21[18]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[18]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_17_ ( .D(ALU_rs21[17]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[17]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_16_ ( .D(ALU_rs21[16]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[16]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_16_ ( .D(N72), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[16]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_15_ ( .D(N37), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[15]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_15_ ( .D(N71), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[15]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_31_ ( .D(ALU_rs21[31]), .CK(clk), .RB(n18), 
+        .Q(EXEMEMo_EXE_rs2data[31]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_30_ ( .D(ALU_rs21[30]), .CK(clk), .RB(n18), 
+        .Q(EXEMEMo_EXE_rs2data[30]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_29_ ( .D(ALU_rs21[29]), .CK(clk), .RB(n18), 
+        .Q(EXEMEMo_EXE_rs2data[29]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_28_ ( .D(ALU_rs21[28]), .CK(clk), .RB(n18), 
+        .Q(EXEMEMo_EXE_rs2data[28]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_27_ ( .D(ALU_rs21[27]), .CK(clk), .RB(n18), 
+        .Q(EXEMEMo_EXE_rs2data[27]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_26_ ( .D(ALU_rs21[26]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[26]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_25_ ( .D(ALU_rs21[25]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[25]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_24_ ( .D(ALU_rs21[24]), .CK(clk), .RB(n19), 
+        .Q(EXEMEMo_EXE_rs2data[24]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_3_ ( .D(ALU_rs21[3]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[3]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_1_ ( .D(ALU_rs21[1]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[1]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_0_ ( .D(ALU_rs21[0]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[0]) );
+  QDFFRBN EXEMEMo_EXE_MemWrite_reg ( .D(IDEXEi_ID_MemWrite), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_MemWrite) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_2_ ( .D(ALU_rs21[2]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[2]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_9_ ( .D(ALU_rs21[9]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[9]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_8_ ( .D(ALU_rs21[8]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[8]) );
+  QDFFRBN EXEMEMo_EXE_MemRead_reg ( .D(IDEXEi_ID_MemRead), .CK(clk), .RB(n220), 
+        .Q(EXEMEMo_EXE_MemRead) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_15_ ( .D(ALU_rs21[15]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[15]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_14_ ( .D(ALU_rs21[14]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[14]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_13_ ( .D(ALU_rs21[13]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[13]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_12_ ( .D(ALU_rs21[12]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[12]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_11_ ( .D(ALU_rs21[11]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[11]) );
+  QDFFRBN EXEMEMo_EXE_rs2data_reg_10_ ( .D(ALU_rs21[10]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[10]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_14_ ( .D(N36), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[14]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_13_ ( .D(N35), .CK(clk), .RB(n13), .Q(
+        EXEMEMo_EXE_PCtoReg[13]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_14_ ( .D(N70), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[14]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_13_ ( .D(N69), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[13]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_12_ ( .D(N34), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[12]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_11_ ( .D(N33), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[11]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_12_ ( .D(N68), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[12]) );
+  QDFFRBN EXEMEMo_EXE_Funct3_reg_0_ ( .D(IDEXEi_ID_Funct3[0]), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_Funct3[0]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_11_ ( .D(N67), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[11]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_10_ ( .D(N32), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[10]) );
+  QDFFRBN EXEMEMo_EXE_Funct3_reg_2_ ( .D(IDEXEi_ID_Funct3[2]), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_Funct3[2]) );
+  QDFFRBN EXEMEMo_EXE_Funct3_reg_1_ ( .D(IDEXEi_ID_Funct3[1]), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_Funct3[1]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_9_ ( .D(N31), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[9]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_10_ ( .D(N66), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[10]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_9_ ( .D(N65), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[9]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_8_ ( .D(N30), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[8]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_7_ ( .D(N29), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[7]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_8_ ( .D(N64), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[8]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_7_ ( .D(N63), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[7]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_6_ ( .D(N28), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[6]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_5_ ( .D(N27), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[5]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_6_ ( .D(N62), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[6]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_5_ ( .D(N61), .CK(clk), .RB(n17), .Q(
+        EXEMEMo_EXE_ALUout[5]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_4_ ( .D(N26), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[4]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_4_ ( .D(N60), .CK(clk), .RB(n18), .Q(
+        EXEMEMo_EXE_ALUout[4]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_3_ ( .D(N25), .CK(clk), .RB(n14), .Q(
+        EXEMEMo_EXE_PCtoReg[3]) );
+  QDFFRBN EXEMEMo_EXE_MemtoReg_reg ( .D(IDEXEi_ID_MemtoReg), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_MemtoReg) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_0_ ( .D(N56), .CK(clk), .RB(n18), .Q(
+        EXEMEMo_EXE_ALUout[0]) );
+  QDFFRBS EXEMEMo_EXE_rs2data_reg_7_ ( .D(ALU_rs21[7]), .CK(clk), .RB(n20), 
+        .Q(EXEMEMo_EXE_rs2data[7]) );
+  QDFFRBS EXEMEMo_EXE_rs2data_reg_6_ ( .D(ALU_rs21[6]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[6]) );
+  QDFFRBS EXEMEMo_EXE_rs2data_reg_5_ ( .D(ALU_rs21[5]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[5]) );
+  QDFFRBS EXEMEMo_EXE_rs2data_reg_4_ ( .D(ALU_rs21[4]), .CK(clk), .RB(n21), 
+        .Q(EXEMEMo_EXE_rs2data[4]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_2_ ( .D(N24), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_PCtoReg[2]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_2_ ( .D(N58), .CK(clk), .RB(n18), .Q(
+        EXEMEMo_EXE_ALUout[2]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_3_ ( .D(N59), .CK(clk), .RB(n18), .Q(
+        EXEMEMo_EXE_ALUout[3]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_0_ ( .D(N22), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_PCtoReg[0]) );
+  QDFFRBN EXEMEMo_EXE_PCtoReg_reg_1_ ( .D(N23), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_PCtoReg[1]) );
+  QDFFRBT EXEMEMo_EXE_rdaddr_reg_2_ ( .D(IDEXEi_ID_rdaddr[2]), .CK(clk), .RB(
+        n21), .Q(EXEMEMo_EXE_rdaddr[2]) );
+  QDFFRBT EXEMEMo_EXE_rdaddr_reg_0_ ( .D(IDEXEi_ID_rdaddr[0]), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_rdaddr[0]) );
+  QDFFRBT EXEMEMo_EXE_rdaddr_reg_1_ ( .D(IDEXEi_ID_rdaddr[1]), .CK(clk), .RB(
+        n220), .Q(EXEMEMo_EXE_rdaddr[1]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_31_ ( .D(N87), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[31]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_29_ ( .D(N85), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[29]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_30_ ( .D(N86), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[30]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_28_ ( .D(N84), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[28]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_27_ ( .D(N83), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[27]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_26_ ( .D(N82), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[26]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_25_ ( .D(N81), .CK(clk), .RB(n15), .Q(
+        EXEMEMo_EXE_ALUout[25]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_24_ ( .D(N80), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[24]) );
+  QDFFRBS EXEMEMo_EXE_ALUout_reg_23_ ( .D(N79), .CK(clk), .RB(n16), .Q(
+        EXEMEMo_EXE_ALUout[23]) );
+  QDFFRBN EXEMEMo_EXE_ALUout_reg_1_ ( .D(N57), .CK(clk), .RB(n18), .Q(
+        EXEMEMo_EXE_ALUout[1]) );
+  QDFFRBN EXEMEMo_EXE_rdsrc_reg ( .D(IDEXEi_ID_rdsrc), .CK(clk), .RB(n220), 
+        .Q(EXEMEMo_EXE_rdsrc) );
+  QDFFRBP EXEMEMo_EXE_rdaddr_reg_3_ ( .D(IDEXEi_ID_rdaddr[3]), .CK(clk), .RB(
+        n21), .Q(EXEMEMo_EXE_rdaddr[3]) );
+  QDFFRBP EXEMEMo_EXE_RegWrite_reg ( .D(IDEXEi_ID_RegWrite), .CK(clk), .RB(n12), .Q(EXEMEMo_EXE_RegWrite) );
+  QDFFRBP EXEMEMo_EXE_rdaddr_reg_4_ ( .D(IDEXEi_ID_rdaddr[4]), .CK(clk), .RB(
+        n21), .Q(EXEMEMo_EXE_rdaddr[4]) );
   BUF2 U3 ( .I(n128), .O(n1) );
   MOAI1H U4 ( .A1(n184), .A2(n590), .B1(ALU_rs21[0]), .B2(n610), .O(
         ALU_rs22[0]) );
@@ -10614,11 +10712,12 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   BUF1CK U13 ( .I(n400), .O(n350) );
   BUF1CK U14 ( .I(n400), .O(n360) );
   INV1S U15 ( .I(Wire_csrrdata[31]), .O(n3) );
-  AO22 U16 ( .A1(ID_imm[2]), .A2(n4), .B1(ALU_rs21[2]), .B2(n600), .O(
+  AO22 U16 ( .A1(IDEXEi_ID_imm[2]), .A2(n4), .B1(ALU_rs21[2]), .B2(n600), .O(
         ALU_rs22[2]) );
   INV1S U17 ( .I(n490), .O(n2) );
-  MOAI1S U18 ( .A1(n3), .A2(n2), .B1(PC_jr[31]), .B2(n2), .O(N87) );
-  AO222 U19 ( .A1(ID_rs2data[0]), .A2(n1), .B1(Forward_Memrddata[0]), .B2(n380), .C1(WB_rddata[0]), .C2(n410), .O(ALU_rs21[0]) );
+  MOAI1S U18 ( .A1(n3), .A2(n2), .B1(IFEXEo_PC_jr[31]), .B2(n2), .O(N87) );
+  AO222 U19 ( .A1(IDEXEi_ID_rs2data[0]), .A2(n1), .B1(Forward_Memrddata[0]), 
+        .B2(n380), .C1(WB_rddata[0]), .C2(n410), .O(ALU_rs21[0]) );
   BUF2 U20 ( .I(n130), .O(n330) );
   BUF2 U21 ( .I(n131), .O(n270) );
   BUF8CK U22 ( .I(Forward_rs1src[1]), .O(n420) );
@@ -10626,10 +10725,10 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   BUF1CK U24 ( .I(n54), .O(n590) );
   BUF1CK U25 ( .I(n530), .O(n560) );
   BUF1CK U26 ( .I(n55), .O(n600) );
-  INV1S U27 ( .I(ID_imm[0]), .O(n184) );
+  INV1S U27 ( .I(IDEXEi_ID_imm[0]), .O(n184) );
   INV1S U28 ( .I(n560), .O(n4) );
-  INV1S U29 ( .I(ID_imm[5]), .O(n180) );
-  INV1S U30 ( .I(ID_imm[6]), .O(n179) );
+  INV1S U29 ( .I(IDEXEi_ID_imm[5]), .O(n180) );
+  INV1S U30 ( .I(IDEXEi_ID_imm[6]), .O(n179) );
   BUF1S U31 ( .I(n130), .O(n340) );
   BUF1S U32 ( .I(n131), .O(n280) );
   BUF1S U33 ( .I(n55), .O(n610) );
@@ -10637,66 +10736,74 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   BUF1S U35 ( .I(n54), .O(n580) );
   BUF1S U36 ( .I(Forward_rs2src[1]), .O(n410) );
   BUF1S U37 ( .I(Forward_rs1src[1]), .O(n430) );
-  AO222S U38 ( .A1(ID_rs2data[1]), .A2(n1), .B1(Forward_Memrddata[1]), .B2(
-        n370), .C1(WB_rddata[1]), .C2(Forward_rs2src[1]), .O(ALU_rs21[1]) );
-  AO222S U39 ( .A1(ID_rs2data[3]), .A2(n1), .B1(Forward_Memrddata[3]), .B2(
-        n350), .C1(WB_rddata[3]), .C2(Forward_rs2src[1]), .O(ALU_rs21[3]) );
-  AO222S U40 ( .A1(ID_rs2data[4]), .A2(n1), .B1(Forward_Memrddata[4]), .B2(
-        n350), .C1(WB_rddata[4]), .C2(Forward_rs2src[1]), .O(ALU_rs21[4]) );
-  AO222S U41 ( .A1(ID_rs2data[5]), .A2(n1), .B1(Forward_Memrddata[5]), .B2(
-        n350), .C1(WB_rddata[5]), .C2(Forward_rs2src[1]), .O(ALU_rs21[5]) );
-  AO222S U42 ( .A1(ID_rs2data[6]), .A2(n1), .B1(Forward_Memrddata[6]), .B2(
-        n350), .C1(WB_rddata[6]), .C2(Forward_rs2src[1]), .O(ALU_rs21[6]) );
-  AO222S U43 ( .A1(ID_rs2data[7]), .A2(n1), .B1(Forward_Memrddata[7]), .B2(
-        n350), .C1(WB_rddata[7]), .C2(Forward_rs2src[1]), .O(ALU_rs21[7]) );
-  AO222S U44 ( .A1(ID_rs2data[8]), .A2(n1), .B1(Forward_Memrddata[8]), .B2(
-        n350), .C1(WB_rddata[8]), .C2(Forward_rs2src[1]), .O(ALU_rs21[8]) );
-  AO222S U45 ( .A1(ID_rs2data[9]), .A2(n1), .B1(Forward_Memrddata[9]), .B2(
-        n350), .C1(WB_rddata[9]), .C2(Forward_rs2src[1]), .O(ALU_rs21[9]) );
-  AO222S U46 ( .A1(ID_rs2data[10]), .A2(n1), .B1(Forward_Memrddata[10]), .B2(
-        n380), .C1(WB_rddata[10]), .C2(n410), .O(ALU_rs21[10]) );
-  AO222S U47 ( .A1(ID_rs2data[11]), .A2(n1), .B1(Forward_Memrddata[11]), .B2(
-        n380), .C1(WB_rddata[11]), .C2(n410), .O(ALU_rs21[11]) );
-  AO222S U48 ( .A1(ID_rs2data[12]), .A2(n1), .B1(Forward_Memrddata[12]), .B2(
-        n380), .C1(WB_rddata[12]), .C2(n410), .O(ALU_rs21[12]) );
-  AO222S U49 ( .A1(ID_rs2data[14]), .A2(n1), .B1(Forward_Memrddata[14]), .B2(
-        n370), .C1(WB_rddata[14]), .C2(n410), .O(ALU_rs21[14]) );
-  AO222S U50 ( .A1(ID_rs2data[13]), .A2(n1), .B1(Forward_Memrddata[13]), .B2(
-        n380), .C1(WB_rddata[13]), .C2(n410), .O(ALU_rs21[13]) );
-  AO222S U51 ( .A1(ID_rs2data[15]), .A2(n1), .B1(Forward_Memrddata[15]), .B2(
-        n370), .C1(WB_rddata[15]), .C2(n410), .O(ALU_rs21[15]) );
-  AO222S U52 ( .A1(ID_rs2data[16]), .A2(n1), .B1(Forward_Memrddata[16]), .B2(
-        n370), .C1(WB_rddata[16]), .C2(n410), .O(ALU_rs21[16]) );
-  AO222S U53 ( .A1(ID_rs2data[17]), .A2(n1), .B1(Forward_Memrddata[17]), .B2(
-        n370), .C1(WB_rddata[17]), .C2(Forward_rs2src[1]), .O(ALU_rs21[17]) );
-  AO222S U54 ( .A1(ID_rs2data[18]), .A2(n1), .B1(Forward_Memrddata[18]), .B2(
-        n370), .C1(WB_rddata[18]), .C2(Forward_rs2src[1]), .O(ALU_rs21[18]) );
-  AO222S U55 ( .A1(ID_rs2data[19]), .A2(n1), .B1(Forward_Memrddata[19]), .B2(
-        n370), .C1(WB_rddata[19]), .C2(Forward_rs2src[1]), .O(ALU_rs21[19]) );
-  AO222S U56 ( .A1(ID_rs2data[20]), .A2(n1), .B1(Forward_Memrddata[20]), .B2(
-        n370), .C1(WB_rddata[20]), .C2(Forward_rs2src[1]), .O(ALU_rs21[20]) );
-  AO222S U57 ( .A1(ID_rs2data[21]), .A2(n1), .B1(Forward_Memrddata[21]), .B2(
-        n370), .C1(WB_rddata[21]), .C2(Forward_rs2src[1]), .O(ALU_rs21[21]) );
-  AO222S U58 ( .A1(ID_rs2data[22]), .A2(n1), .B1(Forward_Memrddata[22]), .B2(
-        n360), .C1(WB_rddata[22]), .C2(Forward_rs2src[1]), .O(ALU_rs21[22]) );
-  AO222S U59 ( .A1(ID_rs2data[23]), .A2(n1), .B1(Forward_Memrddata[23]), .B2(
-        n360), .C1(WB_rddata[23]), .C2(Forward_rs2src[1]), .O(ALU_rs21[23]) );
-  AO222S U60 ( .A1(ID_rs2data[24]), .A2(n1), .B1(Forward_Memrddata[24]), .B2(
-        n360), .C1(WB_rddata[24]), .C2(Forward_rs2src[1]), .O(ALU_rs21[24]) );
-  AO222S U61 ( .A1(ID_rs2data[25]), .A2(n1), .B1(Forward_Memrddata[25]), .B2(
-        n360), .C1(WB_rddata[25]), .C2(Forward_rs2src[1]), .O(ALU_rs21[25]) );
-  AO222S U62 ( .A1(ID_rs2data[26]), .A2(n1), .B1(Forward_Memrddata[26]), .B2(
-        n360), .C1(WB_rddata[26]), .C2(Forward_rs2src[1]), .O(ALU_rs21[26]) );
-  AO222S U63 ( .A1(ID_rs2data[27]), .A2(n1), .B1(Forward_Memrddata[27]), .B2(
-        n360), .C1(WB_rddata[27]), .C2(Forward_rs2src[1]), .O(ALU_rs21[27]) );
-  AO222S U64 ( .A1(ID_rs2data[28]), .A2(n1), .B1(Forward_Memrddata[28]), .B2(
-        n360), .C1(WB_rddata[28]), .C2(Forward_rs2src[1]), .O(ALU_rs21[28]) );
-  AO222S U65 ( .A1(ID_rs2data[29]), .A2(n1), .B1(Forward_Memrddata[29]), .B2(
-        n360), .C1(WB_rddata[29]), .C2(Forward_rs2src[1]), .O(ALU_rs21[29]) );
-  AO222S U66 ( .A1(ID_rs2data[30]), .A2(n1), .B1(Forward_Memrddata[30]), .B2(
-        n350), .C1(WB_rddata[30]), .C2(Forward_rs2src[1]), .O(ALU_rs21[30]) );
-  AO222S U67 ( .A1(ID_rs2data[31]), .A2(n1), .B1(Forward_Memrddata[31]), .B2(
-        n350), .C1(WB_rddata[31]), .C2(Forward_rs2src[1]), .O(ALU_rs21[31]) );
+  AO222S U38 ( .A1(IDEXEi_ID_rs2data[1]), .A2(n1), .B1(Forward_Memrddata[1]), 
+        .B2(n370), .C1(WB_rddata[1]), .C2(Forward_rs2src[1]), .O(ALU_rs21[1])
+         );
+  AO222S U39 ( .A1(IDEXEi_ID_rs2data[3]), .A2(n1), .B1(Forward_Memrddata[3]), 
+        .B2(n350), .C1(WB_rddata[3]), .C2(Forward_rs2src[1]), .O(ALU_rs21[3])
+         );
+  AO222S U40 ( .A1(IDEXEi_ID_rs2data[4]), .A2(n1), .B1(Forward_Memrddata[4]), 
+        .B2(n350), .C1(WB_rddata[4]), .C2(Forward_rs2src[1]), .O(ALU_rs21[4])
+         );
+  AO222S U41 ( .A1(IDEXEi_ID_rs2data[5]), .A2(n1), .B1(Forward_Memrddata[5]), 
+        .B2(n350), .C1(WB_rddata[5]), .C2(Forward_rs2src[1]), .O(ALU_rs21[5])
+         );
+  AO222S U42 ( .A1(IDEXEi_ID_rs2data[6]), .A2(n1), .B1(Forward_Memrddata[6]), 
+        .B2(n350), .C1(WB_rddata[6]), .C2(Forward_rs2src[1]), .O(ALU_rs21[6])
+         );
+  AO222S U43 ( .A1(IDEXEi_ID_rs2data[7]), .A2(n1), .B1(Forward_Memrddata[7]), 
+        .B2(n350), .C1(WB_rddata[7]), .C2(Forward_rs2src[1]), .O(ALU_rs21[7])
+         );
+  AO222S U44 ( .A1(IDEXEi_ID_rs2data[8]), .A2(n1), .B1(Forward_Memrddata[8]), 
+        .B2(n350), .C1(WB_rddata[8]), .C2(Forward_rs2src[1]), .O(ALU_rs21[8])
+         );
+  AO222S U45 ( .A1(IDEXEi_ID_rs2data[9]), .A2(n1), .B1(Forward_Memrddata[9]), 
+        .B2(n350), .C1(WB_rddata[9]), .C2(Forward_rs2src[1]), .O(ALU_rs21[9])
+         );
+  AO222S U46 ( .A1(IDEXEi_ID_rs2data[10]), .A2(n1), .B1(Forward_Memrddata[10]), 
+        .B2(n380), .C1(WB_rddata[10]), .C2(n410), .O(ALU_rs21[10]) );
+  AO222S U47 ( .A1(IDEXEi_ID_rs2data[11]), .A2(n1), .B1(Forward_Memrddata[11]), 
+        .B2(n380), .C1(WB_rddata[11]), .C2(n410), .O(ALU_rs21[11]) );
+  AO222S U48 ( .A1(IDEXEi_ID_rs2data[12]), .A2(n1), .B1(Forward_Memrddata[12]), 
+        .B2(n380), .C1(WB_rddata[12]), .C2(n410), .O(ALU_rs21[12]) );
+  AO222S U49 ( .A1(IDEXEi_ID_rs2data[14]), .A2(n1), .B1(Forward_Memrddata[14]), 
+        .B2(n370), .C1(WB_rddata[14]), .C2(n410), .O(ALU_rs21[14]) );
+  AO222S U50 ( .A1(IDEXEi_ID_rs2data[13]), .A2(n1), .B1(Forward_Memrddata[13]), 
+        .B2(n380), .C1(WB_rddata[13]), .C2(n410), .O(ALU_rs21[13]) );
+  AO222S U51 ( .A1(IDEXEi_ID_rs2data[15]), .A2(n1), .B1(Forward_Memrddata[15]), 
+        .B2(n370), .C1(WB_rddata[15]), .C2(n410), .O(ALU_rs21[15]) );
+  AO222S U52 ( .A1(IDEXEi_ID_rs2data[16]), .A2(n1), .B1(Forward_Memrddata[16]), 
+        .B2(n370), .C1(WB_rddata[16]), .C2(n410), .O(ALU_rs21[16]) );
+  AO222S U53 ( .A1(IDEXEi_ID_rs2data[17]), .A2(n1), .B1(Forward_Memrddata[17]), 
+        .B2(n370), .C1(WB_rddata[17]), .C2(Forward_rs2src[1]), .O(ALU_rs21[17]) );
+  AO222S U54 ( .A1(IDEXEi_ID_rs2data[18]), .A2(n1), .B1(Forward_Memrddata[18]), 
+        .B2(n370), .C1(WB_rddata[18]), .C2(Forward_rs2src[1]), .O(ALU_rs21[18]) );
+  AO222S U55 ( .A1(IDEXEi_ID_rs2data[19]), .A2(n1), .B1(Forward_Memrddata[19]), 
+        .B2(n370), .C1(WB_rddata[19]), .C2(Forward_rs2src[1]), .O(ALU_rs21[19]) );
+  AO222S U56 ( .A1(IDEXEi_ID_rs2data[20]), .A2(n1), .B1(Forward_Memrddata[20]), 
+        .B2(n370), .C1(WB_rddata[20]), .C2(Forward_rs2src[1]), .O(ALU_rs21[20]) );
+  AO222S U57 ( .A1(IDEXEi_ID_rs2data[21]), .A2(n1), .B1(Forward_Memrddata[21]), 
+        .B2(n370), .C1(WB_rddata[21]), .C2(Forward_rs2src[1]), .O(ALU_rs21[21]) );
+  AO222S U58 ( .A1(IDEXEi_ID_rs2data[22]), .A2(n1), .B1(Forward_Memrddata[22]), 
+        .B2(n360), .C1(WB_rddata[22]), .C2(Forward_rs2src[1]), .O(ALU_rs21[22]) );
+  AO222S U59 ( .A1(IDEXEi_ID_rs2data[23]), .A2(n1), .B1(Forward_Memrddata[23]), 
+        .B2(n360), .C1(WB_rddata[23]), .C2(Forward_rs2src[1]), .O(ALU_rs21[23]) );
+  AO222S U60 ( .A1(IDEXEi_ID_rs2data[24]), .A2(n1), .B1(Forward_Memrddata[24]), 
+        .B2(n360), .C1(WB_rddata[24]), .C2(Forward_rs2src[1]), .O(ALU_rs21[24]) );
+  AO222S U61 ( .A1(IDEXEi_ID_rs2data[25]), .A2(n1), .B1(Forward_Memrddata[25]), 
+        .B2(n360), .C1(WB_rddata[25]), .C2(Forward_rs2src[1]), .O(ALU_rs21[25]) );
+  AO222S U62 ( .A1(IDEXEi_ID_rs2data[26]), .A2(n1), .B1(Forward_Memrddata[26]), 
+        .B2(n360), .C1(WB_rddata[26]), .C2(Forward_rs2src[1]), .O(ALU_rs21[26]) );
+  AO222S U63 ( .A1(IDEXEi_ID_rs2data[27]), .A2(n1), .B1(Forward_Memrddata[27]), 
+        .B2(n360), .C1(WB_rddata[27]), .C2(Forward_rs2src[1]), .O(ALU_rs21[27]) );
+  AO222S U64 ( .A1(IDEXEi_ID_rs2data[28]), .A2(n1), .B1(Forward_Memrddata[28]), 
+        .B2(n360), .C1(WB_rddata[28]), .C2(Forward_rs2src[1]), .O(ALU_rs21[28]) );
+  AO222S U65 ( .A1(IDEXEi_ID_rs2data[29]), .A2(n1), .B1(Forward_Memrddata[29]), 
+        .B2(n360), .C1(WB_rddata[29]), .C2(Forward_rs2src[1]), .O(ALU_rs21[29]) );
+  AO222S U66 ( .A1(IDEXEi_ID_rs2data[30]), .A2(n1), .B1(Forward_Memrddata[30]), 
+        .B2(n350), .C1(WB_rddata[30]), .C2(Forward_rs2src[1]), .O(ALU_rs21[30]) );
+  AO222S U67 ( .A1(IDEXEi_ID_rs2data[31]), .A2(n1), .B1(Forward_Memrddata[31]), 
+        .B2(n350), .C1(WB_rddata[31]), .C2(Forward_rs2src[1]), .O(ALU_rs21[31]) );
   BUF1CK U68 ( .I(n390), .O(n380) );
   BUF1CK U69 ( .I(n390), .O(n370) );
   BUF1CK U70 ( .I(n270), .O(n260) );
@@ -10730,16 +10837,16 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   BUF1CK U98 ( .I(n7), .O(n14) );
   BUF1CK U99 ( .I(n5), .O(n13) );
   BUF1CK U100 ( .I(n5), .O(n12) );
-  BUF1CK U101 ( .I(ID_ALUSrc), .O(n55) );
-  BUF1CK U102 ( .I(ID_ALUSrc), .O(n54) );
-  BUF1CK U103 ( .I(ID_ALUSrc), .O(n530) );
+  BUF1CK U101 ( .I(IDEXEi_ID_ALUSrc), .O(n55) );
+  BUF1CK U102 ( .I(IDEXEi_ID_ALUSrc), .O(n54) );
+  BUF1CK U103 ( .I(IDEXEi_ID_ALUSrc), .O(n530) );
   INV1S U104 ( .I(n112), .O(n111) );
-  BUF1CK U105 ( .I(ID_PCtoRegSrc), .O(n640) );
-  BUF1CK U106 ( .I(ID_csrweb), .O(n460) );
-  BUF1CK U107 ( .I(ID_csrweb), .O(n450) );
-  BUF1CK U108 ( .I(ID_PCtoRegSrc), .O(n630) );
-  BUF1CK U109 ( .I(ID_csrweb), .O(n440) );
-  BUF1CK U110 ( .I(ID_PCtoRegSrc), .O(n620) );
+  BUF1CK U105 ( .I(IDEXEi_ID_PCtoRegSrc), .O(n640) );
+  BUF1CK U106 ( .I(IDEXEi_ID_csrweb), .O(n460) );
+  BUF1CK U107 ( .I(IDEXEi_ID_csrweb), .O(n450) );
+  BUF1CK U108 ( .I(IDEXEi_ID_PCtoRegSrc), .O(n630) );
+  BUF1CK U109 ( .I(IDEXEi_ID_csrweb), .O(n440) );
+  BUF1CK U110 ( .I(IDEXEi_ID_PCtoRegSrc), .O(n620) );
   BUF1CK U111 ( .I(n11), .O(n220) );
   BUF1CK U112 ( .I(n185), .O(n11) );
   BUF1CK U113 ( .I(n185), .O(n10) );
@@ -10747,251 +10854,274 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
   BUF1CK U115 ( .I(n185), .O(n8) );
   BUF1CK U116 ( .I(n185), .O(n7) );
   BUF1CK U117 ( .I(n185), .O(n5) );
-  INV1S U118 ( .I(ID_imm[1]), .O(n183) );
+  INV1S U118 ( .I(IDEXEi_ID_imm[1]), .O(n183) );
   MOAI1S U119 ( .A1(n182), .A2(n560), .B1(ALU_rs21[3]), .B2(n600), .O(
         ALU_rs22[3]) );
-  INV1S U120 ( .I(ID_imm[3]), .O(n182) );
+  INV1S U120 ( .I(IDEXEi_ID_imm[3]), .O(n182) );
   MOAI1S U121 ( .A1(n181), .A2(n560), .B1(ALU_rs21[4]), .B2(n600), .O(
         ALU_rs22[4]) );
-  INV1S U122 ( .I(ID_imm[4]), .O(n181) );
+  INV1S U122 ( .I(IDEXEi_ID_imm[4]), .O(n181) );
   MOAI1 U123 ( .A1(n178), .A2(n560), .B1(ALU_rs21[7]), .B2(n610), .O(
         ALU_rs22[7]) );
-  INV1S U124 ( .I(ID_imm[7]), .O(n178) );
+  INV1S U124 ( .I(IDEXEi_ID_imm[7]), .O(n178) );
   MOAI1S U125 ( .A1(n710), .A2(n470), .B1(Wire_csrrdata[30]), .B2(n520), .O(
         N86) );
-  INV1S U126 ( .I(PC_jr[30]), .O(n710) );
+  INV1S U126 ( .I(IFEXEo_PC_jr[30]), .O(n710) );
   MOAI1 U127 ( .A1(n177), .A2(n560), .B1(ALU_rs21[8]), .B2(n610), .O(
         ALU_rs22[8]) );
-  INV1S U128 ( .I(ID_imm[8]), .O(n177) );
+  INV1S U128 ( .I(IDEXEi_ID_imm[8]), .O(n177) );
   MOAI1S U129 ( .A1(n101), .A2(n500), .B1(Wire_csrrdata[0]), .B2(n520), .O(N56) );
-  INV1S U130 ( .I(PC_jr[0]), .O(n101) );
+  INV1S U130 ( .I(IFEXEo_PC_jr[0]), .O(n101) );
   MOAI1S U131 ( .A1(n720), .A2(n470), .B1(Wire_csrrdata[29]), .B2(n520), .O(
         N85) );
-  INV1S U132 ( .I(PC_jr[29]), .O(n720) );
+  INV1S U132 ( .I(IFEXEo_PC_jr[29]), .O(n720) );
   MOAI1 U133 ( .A1(n176), .A2(n570), .B1(ALU_rs21[9]), .B2(n610), .O(
         ALU_rs22[9]) );
-  INV1S U134 ( .I(ID_imm[9]), .O(n176) );
+  INV1S U134 ( .I(IDEXEi_ID_imm[9]), .O(n176) );
   MOAI1S U135 ( .A1(n730), .A2(n470), .B1(Wire_csrrdata[28]), .B2(n510), .O(
         N84) );
-  INV1S U136 ( .I(PC_jr[28]), .O(n730) );
+  INV1S U136 ( .I(IFEXEo_PC_jr[28]), .O(n730) );
   MOAI1 U137 ( .A1(n175), .A2(n580), .B1(ALU_rs21[10]), .B2(n610), .O(
         ALU_rs22[10]) );
-  INV1S U138 ( .I(ID_imm[10]), .O(n175) );
+  INV1S U138 ( .I(IDEXEi_ID_imm[10]), .O(n175) );
   MOAI1S U139 ( .A1(n740), .A2(n470), .B1(Wire_csrrdata[27]), .B2(n510), .O(
         N83) );
-  INV1S U140 ( .I(PC_jr[27]), .O(n740) );
+  INV1S U140 ( .I(IFEXEo_PC_jr[27]), .O(n740) );
   MOAI1 U141 ( .A1(n174), .A2(n590), .B1(ALU_rs21[11]), .B2(n600), .O(
         ALU_rs22[11]) );
-  INV1S U142 ( .I(ID_imm[11]), .O(n174) );
+  INV1S U142 ( .I(IDEXEi_ID_imm[11]), .O(n174) );
   MOAI1S U143 ( .A1(n750), .A2(n470), .B1(Wire_csrrdata[26]), .B2(n510), .O(
         N82) );
-  INV1S U144 ( .I(PC_jr[26]), .O(n750) );
+  INV1S U144 ( .I(IFEXEo_PC_jr[26]), .O(n750) );
   MOAI1 U145 ( .A1(n173), .A2(n580), .B1(ALU_rs21[12]), .B2(n600), .O(
         ALU_rs22[12]) );
-  INV1S U146 ( .I(ID_imm[12]), .O(n173) );
+  INV1S U146 ( .I(IDEXEi_ID_imm[12]), .O(n173) );
   MOAI1S U147 ( .A1(n760), .A2(n470), .B1(Wire_csrrdata[25]), .B2(n510), .O(
         N81) );
-  INV1S U148 ( .I(PC_jr[25]), .O(n760) );
+  INV1S U148 ( .I(IFEXEo_PC_jr[25]), .O(n760) );
   MOAI1 U149 ( .A1(n172), .A2(n580), .B1(ALU_rs21[13]), .B2(n600), .O(
         ALU_rs22[13]) );
-  INV1S U150 ( .I(ID_imm[13]), .O(n172) );
+  INV1S U150 ( .I(IDEXEi_ID_imm[13]), .O(n172) );
   MOAI1 U151 ( .A1(n171), .A2(n580), .B1(ALU_rs21[14]), .B2(n600), .O(
         ALU_rs22[14]) );
-  INV1S U152 ( .I(ID_imm[14]), .O(n171) );
+  INV1S U152 ( .I(IDEXEi_ID_imm[14]), .O(n171) );
   MOAI1S U153 ( .A1(n770), .A2(n470), .B1(Wire_csrrdata[24]), .B2(n510), .O(
         N80) );
-  INV1S U154 ( .I(PC_jr[24]), .O(n770) );
+  INV1S U154 ( .I(IFEXEo_PC_jr[24]), .O(n770) );
   MOAI1S U155 ( .A1(n780), .A2(n470), .B1(Wire_csrrdata[23]), .B2(n510), .O(
         N79) );
-  INV1S U156 ( .I(PC_jr[23]), .O(n780) );
+  INV1S U156 ( .I(IFEXEo_PC_jr[23]), .O(n780) );
   MOAI1 U157 ( .A1(n170), .A2(n580), .B1(ALU_rs21[15]), .B2(n600), .O(
         ALU_rs22[15]) );
-  INV1S U158 ( .I(ID_imm[15]), .O(n170) );
+  INV1S U158 ( .I(IDEXEi_ID_imm[15]), .O(n170) );
   MOAI1 U159 ( .A1(n169), .A2(n580), .B1(ALU_rs21[16]), .B2(n590), .O(
         ALU_rs22[16]) );
-  INV1S U160 ( .I(ID_imm[16]), .O(n169) );
+  INV1S U160 ( .I(IDEXEi_ID_imm[16]), .O(n169) );
   MOAI1S U161 ( .A1(n790), .A2(n470), .B1(Wire_csrrdata[22]), .B2(n510), .O(
         N78) );
-  INV1S U162 ( .I(PC_jr[22]), .O(n790) );
+  INV1S U162 ( .I(IFEXEo_PC_jr[22]), .O(n790) );
   MOAI1S U163 ( .A1(n800), .A2(n470), .B1(Wire_csrrdata[21]), .B2(n510), .O(
         N77) );
-  INV1S U164 ( .I(PC_jr[21]), .O(n800) );
+  INV1S U164 ( .I(IFEXEo_PC_jr[21]), .O(n800) );
   MOAI1 U165 ( .A1(n168), .A2(n580), .B1(ALU_rs21[17]), .B2(n590), .O(
         ALU_rs22[17]) );
-  INV1S U166 ( .I(ID_imm[17]), .O(n168) );
+  INV1S U166 ( .I(IDEXEi_ID_imm[17]), .O(n168) );
   MOAI1 U167 ( .A1(n167), .A2(n580), .B1(ALU_rs21[18]), .B2(n590), .O(
         ALU_rs22[18]) );
-  INV1S U168 ( .I(ID_imm[18]), .O(n167) );
+  INV1S U168 ( .I(IDEXEi_ID_imm[18]), .O(n167) );
   MOAI1S U169 ( .A1(n810), .A2(n480), .B1(Wire_csrrdata[20]), .B2(n510), .O(
         N76) );
-  INV1S U170 ( .I(PC_jr[20]), .O(n810) );
+  INV1S U170 ( .I(IFEXEo_PC_jr[20]), .O(n810) );
   MOAI1S U171 ( .A1(n820), .A2(n480), .B1(Wire_csrrdata[19]), .B2(n500), .O(
         N75) );
-  INV1S U172 ( .I(PC_jr[19]), .O(n820) );
+  INV1S U172 ( .I(IFEXEo_PC_jr[19]), .O(n820) );
   MOAI1 U173 ( .A1(n166), .A2(n580), .B1(ALU_rs21[19]), .B2(n590), .O(
         ALU_rs22[19]) );
-  INV1S U174 ( .I(ID_imm[19]), .O(n166) );
+  INV1S U174 ( .I(IDEXEi_ID_imm[19]), .O(n166) );
   MOAI1 U175 ( .A1(n165), .A2(n570), .B1(ALU_rs21[20]), .B2(n590), .O(
         ALU_rs22[20]) );
-  INV1S U176 ( .I(ID_imm[20]), .O(n165) );
-  MOAI1S U177 ( .A1(n102), .A2(n660), .B1(n700), .B2(PC_imm[31]), .O(N53) );
+  INV1S U176 ( .I(IDEXEi_ID_imm[20]), .O(n165) );
+  MOAI1S U177 ( .A1(n102), .A2(n660), .B1(n700), .B2(IFEXEo_PC_imm[31]), .O(
+        N53) );
   INV1S U178 ( .I(ALU_pc4[31]), .O(n102) );
   MOAI1S U179 ( .A1(n830), .A2(n480), .B1(Wire_csrrdata[18]), .B2(n510), .O(
         N74) );
-  INV1S U180 ( .I(PC_jr[18]), .O(n830) );
-  MOAI1S U181 ( .A1(n103), .A2(n650), .B1(PC_imm[30]), .B2(n700), .O(N52) );
+  INV1S U180 ( .I(IFEXEo_PC_jr[18]), .O(n830) );
+  MOAI1S U181 ( .A1(n103), .A2(n650), .B1(IFEXEo_PC_imm[30]), .B2(n700), .O(
+        N52) );
   INV1S U182 ( .I(ALU_pc4[30]), .O(n103) );
   MOAI1S U183 ( .A1(n840), .A2(n480), .B1(Wire_csrrdata[17]), .B2(n500), .O(
         N73) );
-  INV1S U184 ( .I(PC_jr[17]), .O(n840) );
+  INV1S U184 ( .I(IFEXEo_PC_jr[17]), .O(n840) );
   MOAI1 U185 ( .A1(n164), .A2(n570), .B1(ALU_rs21[21]), .B2(n590), .O(
         ALU_rs22[21]) );
-  INV1S U186 ( .I(ID_imm[21]), .O(n164) );
+  INV1S U186 ( .I(IDEXEi_ID_imm[21]), .O(n164) );
   MOAI1 U187 ( .A1(n163), .A2(n570), .B1(ALU_rs21[22]), .B2(n590), .O(
         ALU_rs22[22]) );
-  INV1S U188 ( .I(ID_imm[22]), .O(n163) );
-  MOAI1S U189 ( .A1(n104), .A2(n650), .B1(PC_imm[29]), .B2(n700), .O(N51) );
+  INV1S U188 ( .I(IDEXEi_ID_imm[22]), .O(n163) );
+  MOAI1S U189 ( .A1(n104), .A2(n650), .B1(IFEXEo_PC_imm[29]), .B2(n700), .O(
+        N51) );
   INV1S U190 ( .I(ALU_pc4[29]), .O(n104) );
   MOAI1S U191 ( .A1(n850), .A2(n480), .B1(Wire_csrrdata[16]), .B2(n500), .O(
         N72) );
-  INV1S U192 ( .I(PC_jr[16]), .O(n850) );
-  MOAI1S U193 ( .A1(n105), .A2(n650), .B1(PC_imm[28]), .B2(n690), .O(N50) );
+  INV1S U192 ( .I(IFEXEo_PC_jr[16]), .O(n850) );
+  MOAI1S U193 ( .A1(n105), .A2(n650), .B1(IFEXEo_PC_imm[28]), .B2(n690), .O(
+        N50) );
   INV1S U194 ( .I(ALU_pc4[28]), .O(n105) );
   MOAI1 U195 ( .A1(n162), .A2(n580), .B1(ALU_rs21[23]), .B2(n590), .O(
         ALU_rs22[23]) );
-  INV1S U196 ( .I(ID_imm[23]), .O(n162) );
+  INV1S U196 ( .I(IDEXEi_ID_imm[23]), .O(n162) );
   MOAI1S U197 ( .A1(n860), .A2(n480), .B1(Wire_csrrdata[15]), .B2(n500), .O(
         N71) );
-  INV1S U198 ( .I(PC_jr[15]), .O(n860) );
+  INV1S U198 ( .I(IFEXEo_PC_jr[15]), .O(n860) );
   MOAI1 U199 ( .A1(n161), .A2(n570), .B1(ALU_rs21[24]), .B2(n590), .O(
         ALU_rs22[24]) );
-  INV1S U200 ( .I(ID_imm[24]), .O(n161) );
-  MOAI1S U201 ( .A1(n106), .A2(n650), .B1(PC_imm[27]), .B2(n690), .O(N49) );
+  INV1S U200 ( .I(IDEXEi_ID_imm[24]), .O(n161) );
+  MOAI1S U201 ( .A1(n106), .A2(n650), .B1(IFEXEo_PC_imm[27]), .B2(n690), .O(
+        N49) );
   INV1S U202 ( .I(ALU_pc4[27]), .O(n106) );
   MOAI1S U203 ( .A1(n870), .A2(n480), .B1(Wire_csrrdata[14]), .B2(n500), .O(
         N70) );
-  INV1S U204 ( .I(PC_jr[14]), .O(n870) );
-  MOAI1S U205 ( .A1(n107), .A2(n650), .B1(PC_imm[26]), .B2(n690), .O(N48) );
+  INV1S U204 ( .I(IFEXEo_PC_jr[14]), .O(n870) );
+  MOAI1S U205 ( .A1(n107), .A2(n650), .B1(IFEXEo_PC_imm[26]), .B2(n690), .O(
+        N48) );
   INV1S U206 ( .I(ALU_pc4[26]), .O(n107) );
   MOAI1 U207 ( .A1(n160), .A2(n570), .B1(ALU_rs21[25]), .B2(n590), .O(
         ALU_rs22[25]) );
-  INV1S U208 ( .I(ID_imm[25]), .O(n160) );
+  INV1S U208 ( .I(IDEXEi_ID_imm[25]), .O(n160) );
   MOAI1S U209 ( .A1(n88), .A2(n480), .B1(Wire_csrrdata[13]), .B2(n500), .O(N69) );
-  INV1S U210 ( .I(PC_jr[13]), .O(n88) );
+  INV1S U210 ( .I(IFEXEo_PC_jr[13]), .O(n88) );
   MOAI1 U211 ( .A1(n159), .A2(n570), .B1(ALU_rs21[26]), .B2(n600), .O(
         ALU_rs22[26]) );
-  INV1S U212 ( .I(ID_imm[26]), .O(n159) );
-  MOAI1S U213 ( .A1(n108), .A2(n650), .B1(PC_imm[25]), .B2(n690), .O(N47) );
+  INV1S U212 ( .I(IDEXEi_ID_imm[26]), .O(n159) );
+  MOAI1S U213 ( .A1(n108), .A2(n650), .B1(IFEXEo_PC_imm[25]), .B2(n690), .O(
+        N47) );
   INV1S U214 ( .I(ALU_pc4[25]), .O(n108) );
   MOAI1S U215 ( .A1(n89), .A2(n480), .B1(Wire_csrrdata[12]), .B2(n500), .O(N68) );
-  INV1S U216 ( .I(PC_jr[12]), .O(n89) );
+  INV1S U216 ( .I(IFEXEo_PC_jr[12]), .O(n89) );
   MOAI1 U220 ( .A1(n158), .A2(n570), .B1(ALU_rs21[27]), .B2(n590), .O(
         ALU_rs22[27]) );
-  INV1S U221 ( .I(ID_imm[27]), .O(n158) );
+  INV1S U221 ( .I(IDEXEi_ID_imm[27]), .O(n158) );
   MOAI1 U222 ( .A1(n157), .A2(n570), .B1(ALU_rs21[28]), .B2(n600), .O(
         ALU_rs22[28]) );
-  INV1S U223 ( .I(ID_imm[28]), .O(n157) );
-  MOAI1S U224 ( .A1(n109), .A2(n650), .B1(PC_imm[24]), .B2(n690), .O(N46) );
+  INV1S U223 ( .I(IDEXEi_ID_imm[28]), .O(n157) );
+  MOAI1S U224 ( .A1(n109), .A2(n650), .B1(IFEXEo_PC_imm[24]), .B2(n690), .O(
+        N46) );
   INV1S U225 ( .I(ALU_pc4[24]), .O(n109) );
   MOAI1 U226 ( .A1(n155), .A2(n560), .B1(ALU_rs21[30]), .B2(n600), .O(
         ALU_rs22[30]) );
-  INV1S U227 ( .I(ID_imm[30]), .O(n155) );
+  INV1S U227 ( .I(IDEXEi_ID_imm[30]), .O(n155) );
   MOAI1 U228 ( .A1(n156), .A2(n560), .B1(ALU_rs21[29]), .B2(n600), .O(
         ALU_rs22[29]) );
-  INV1S U230 ( .I(ID_imm[29]), .O(n156) );
+  INV1S U230 ( .I(IDEXEi_ID_imm[29]), .O(n156) );
   MOAI1S U231 ( .A1(n90), .A2(n480), .B1(Wire_csrrdata[11]), .B2(n500), .O(N67) );
-  INV1S U232 ( .I(PC_jr[11]), .O(n90) );
+  INV1S U232 ( .I(IFEXEo_PC_jr[11]), .O(n90) );
   MOAI1 U233 ( .A1(n154), .A2(n560), .B1(ALU_rs21[31]), .B2(n600), .O(
         ALU_rs22[31]) );
-  INV1S U234 ( .I(ID_imm[31]), .O(n154) );
-  MOAI1S U235 ( .A1(n110), .A2(n650), .B1(PC_imm[23]), .B2(n690), .O(N45) );
+  INV1S U234 ( .I(IDEXEi_ID_imm[31]), .O(n154) );
+  MOAI1S U235 ( .A1(n110), .A2(n650), .B1(IFEXEo_PC_imm[23]), .B2(n690), .O(
+        N45) );
   INV1S U236 ( .I(ALU_pc4[23]), .O(n110) );
   MOAI1S U237 ( .A1(n91), .A2(n490), .B1(Wire_csrrdata[10]), .B2(n500), .O(N66) );
-  INV1S U238 ( .I(PC_jr[10]), .O(n91) );
-  MOAI1S U239 ( .A1(n132), .A2(n650), .B1(PC_imm[22]), .B2(n690), .O(N44) );
+  INV1S U238 ( .I(IFEXEo_PC_jr[10]), .O(n91) );
+  MOAI1S U239 ( .A1(n132), .A2(n650), .B1(IFEXEo_PC_imm[22]), .B2(n690), .O(
+        N44) );
   INV1S U240 ( .I(ALU_pc4[22]), .O(n132) );
   MOAI1S U241 ( .A1(n92), .A2(n490), .B1(Wire_csrrdata[9]), .B2(n500), .O(N65)
          );
-  INV1S U242 ( .I(PC_jr[9]), .O(n92) );
-  MOAI1S U243 ( .A1(n133), .A2(n650), .B1(PC_imm[21]), .B2(n690), .O(N43) );
+  INV1S U242 ( .I(IFEXEo_PC_jr[9]), .O(n92) );
+  MOAI1S U243 ( .A1(n133), .A2(n650), .B1(IFEXEo_PC_imm[21]), .B2(n690), .O(
+        N43) );
   INV1S U244 ( .I(ALU_pc4[21]), .O(n133) );
   MOAI1S U245 ( .A1(n93), .A2(n490), .B1(Wire_csrrdata[8]), .B2(n500), .O(N64)
          );
-  INV1S U246 ( .I(PC_jr[8]), .O(n93) );
-  MOAI1S U247 ( .A1(n134), .A2(n660), .B1(PC_imm[20]), .B2(n690), .O(N42) );
+  INV1S U246 ( .I(IFEXEo_PC_jr[8]), .O(n93) );
+  MOAI1S U247 ( .A1(n134), .A2(n660), .B1(IFEXEo_PC_imm[20]), .B2(n690), .O(
+        N42) );
   INV1S U248 ( .I(ALU_pc4[20]), .O(n134) );
   MOAI1S U249 ( .A1(n94), .A2(n490), .B1(Wire_csrrdata[7]), .B2(n510), .O(N63)
          );
-  INV1S U250 ( .I(PC_jr[7]), .O(n94) );
-  MOAI1S U251 ( .A1(n135), .A2(n660), .B1(PC_imm[19]), .B2(n680), .O(N41) );
+  INV1S U250 ( .I(IFEXEo_PC_jr[7]), .O(n94) );
+  MOAI1S U251 ( .A1(n135), .A2(n660), .B1(IFEXEo_PC_imm[19]), .B2(n680), .O(
+        N41) );
   INV1S U284 ( .I(ALU_pc4[19]), .O(n135) );
   MOAI1S U285 ( .A1(n95), .A2(n490), .B1(Wire_csrrdata[6]), .B2(n500), .O(N62)
          );
-  INV1S U286 ( .I(PC_jr[6]), .O(n95) );
-  MOAI1S U287 ( .A1(n136), .A2(n660), .B1(PC_imm[18]), .B2(n690), .O(N40) );
+  INV1S U286 ( .I(IFEXEo_PC_jr[6]), .O(n95) );
+  MOAI1S U287 ( .A1(n136), .A2(n660), .B1(IFEXEo_PC_imm[18]), .B2(n690), .O(
+        N40) );
   INV1S U288 ( .I(ALU_pc4[18]), .O(n136) );
   MOAI1S U289 ( .A1(n96), .A2(n490), .B1(Wire_csrrdata[5]), .B2(n510), .O(N61)
          );
-  INV1S U290 ( .I(PC_jr[5]), .O(n96) );
-  MOAI1S U291 ( .A1(n137), .A2(n660), .B1(PC_imm[17]), .B2(n680), .O(N39) );
+  INV1S U290 ( .I(IFEXEo_PC_jr[5]), .O(n96) );
+  MOAI1S U291 ( .A1(n137), .A2(n660), .B1(IFEXEo_PC_imm[17]), .B2(n680), .O(
+        N39) );
   INV1S U292 ( .I(ALU_pc4[17]), .O(n137) );
   MOAI1S U293 ( .A1(n100), .A2(n500), .B1(Wire_csrrdata[1]), .B2(n520), .O(N57) );
-  INV1S U294 ( .I(PC_jr[1]), .O(n100) );
+  INV1S U294 ( .I(IFEXEo_PC_jr[1]), .O(n100) );
   MOAI1S U295 ( .A1(n99), .A2(n490), .B1(Wire_csrrdata[2]), .B2(n510), .O(N58)
          );
-  INV1S U296 ( .I(PC_jr[2]), .O(n99) );
+  INV1S U296 ( .I(IFEXEo_PC_jr[2]), .O(n99) );
   MOAI1S U297 ( .A1(n98), .A2(n490), .B1(Wire_csrrdata[3]), .B2(n510), .O(N59)
          );
-  INV1S U298 ( .I(PC_jr[3]), .O(n98) );
+  INV1S U298 ( .I(IFEXEo_PC_jr[3]), .O(n98) );
   MOAI1S U299 ( .A1(n97), .A2(n490), .B1(Wire_csrrdata[4]), .B2(n510), .O(N60)
          );
-  INV1S U300 ( .I(PC_jr[4]), .O(n97) );
-  MOAI1S U301 ( .A1(n138), .A2(n660), .B1(PC_imm[16]), .B2(n680), .O(N38) );
+  INV1S U300 ( .I(IFEXEo_PC_jr[4]), .O(n97) );
+  MOAI1S U301 ( .A1(n138), .A2(n660), .B1(IFEXEo_PC_imm[16]), .B2(n680), .O(
+        N38) );
   INV1S U302 ( .I(ALU_pc4[16]), .O(n138) );
-  MOAI1S U303 ( .A1(n139), .A2(n670), .B1(PC_imm[15]), .B2(n680), .O(N37) );
+  MOAI1S U303 ( .A1(n139), .A2(n670), .B1(IFEXEo_PC_imm[15]), .B2(n680), .O(
+        N37) );
   INV1S U304 ( .I(ALU_pc4[15]), .O(n139) );
-  MOAI1S U305 ( .A1(n140), .A2(n660), .B1(PC_imm[14]), .B2(n680), .O(N36) );
+  MOAI1S U305 ( .A1(n140), .A2(n660), .B1(IFEXEo_PC_imm[14]), .B2(n680), .O(
+        N36) );
   INV1S U306 ( .I(ALU_pc4[14]), .O(n140) );
-  MOAI1S U307 ( .A1(n141), .A2(n660), .B1(PC_imm[13]), .B2(n680), .O(N35) );
+  MOAI1S U307 ( .A1(n141), .A2(n660), .B1(IFEXEo_PC_imm[13]), .B2(n680), .O(
+        N35) );
   INV1S U308 ( .I(ALU_pc4[13]), .O(n141) );
-  MOAI1S U309 ( .A1(n142), .A2(n660), .B1(PC_imm[12]), .B2(n680), .O(N34) );
+  MOAI1S U309 ( .A1(n142), .A2(n660), .B1(IFEXEo_PC_imm[12]), .B2(n680), .O(
+        N34) );
   INV1S U310 ( .I(ALU_pc4[12]), .O(n142) );
-  MOAI1S U311 ( .A1(n143), .A2(n660), .B1(PC_imm[11]), .B2(n680), .O(N33) );
+  MOAI1S U311 ( .A1(n143), .A2(n660), .B1(IFEXEo_PC_imm[11]), .B2(n680), .O(
+        N33) );
   INV1S U312 ( .I(ALU_pc4[11]), .O(n143) );
-  MOAI1S U313 ( .A1(n144), .A2(n670), .B1(PC_imm[10]), .B2(n680), .O(N32) );
+  MOAI1S U313 ( .A1(n144), .A2(n670), .B1(IFEXEo_PC_imm[10]), .B2(n680), .O(
+        N32) );
   INV1S U314 ( .I(ALU_pc4[10]), .O(n144) );
-  MOAI1S U315 ( .A1(n145), .A2(n670), .B1(PC_imm[9]), .B2(n680), .O(N31) );
+  MOAI1S U315 ( .A1(n145), .A2(n670), .B1(IFEXEo_PC_imm[9]), .B2(n680), .O(N31) );
   INV1S U316 ( .I(ALU_pc4[9]), .O(n145) );
-  MOAI1S U317 ( .A1(n146), .A2(n670), .B1(PC_imm[8]), .B2(n680), .O(N30) );
+  MOAI1S U317 ( .A1(n146), .A2(n670), .B1(IFEXEo_PC_imm[8]), .B2(n680), .O(N30) );
   INV1S U318 ( .I(ALU_pc4[8]), .O(n146) );
-  MOAI1S U319 ( .A1(n147), .A2(n670), .B1(PC_imm[7]), .B2(n680), .O(N29) );
+  MOAI1S U319 ( .A1(n147), .A2(n670), .B1(IFEXEo_PC_imm[7]), .B2(n680), .O(N29) );
   INV1S U320 ( .I(ALU_pc4[7]), .O(n147) );
   ND3 U321 ( .I1(n120), .I2(n121), .I3(n122), .O(n116) );
-  XNR2HS U322 ( .I1(ID_rdaddr[4]), .I2(rs2addr[4]), .O(n120) );
-  XNR2HS U323 ( .I1(ID_rdaddr[1]), .I2(rs2addr[1]), .O(n121) );
-  XNR2HS U324 ( .I1(ID_rdaddr[0]), .I2(rs2addr[0]), .O(n122) );
+  XNR2HS U322 ( .I1(IDEXEi_ID_rdaddr[4]), .I2(IDEXEi_rs2addr[4]), .O(n120) );
+  XNR2HS U323 ( .I1(IDEXEi_ID_rdaddr[1]), .I2(IDEXEi_rs2addr[1]), .O(n121) );
+  XNR2HS U324 ( .I1(IDEXEi_ID_rdaddr[0]), .I2(IDEXEi_rs2addr[0]), .O(n122) );
   OAI22S U325 ( .A1(n114), .A2(n115), .B1(n116), .B2(n117), .O(n113) );
   ND3 U326 ( .I1(n125), .I2(n126), .I3(n127), .O(n114) );
-  XNR2HS U327 ( .I1(ID_rdaddr[3]), .I2(rs2addr[3]), .O(n119) );
-  XNR2HS U328 ( .I1(ID_rdaddr[2]), .I2(rs2addr[2]), .O(n118) );
-  XNR2HS U329 ( .I1(ID_rdaddr[0]), .I2(rs1addr[0]), .O(n127) );
-  XNR2HS U330 ( .I1(ID_rdaddr[1]), .I2(rs1addr[1]), .O(n126) );
-  MOAI1S U331 ( .A1(n148), .A2(n670), .B1(PC_imm[6]), .B2(n690), .O(N28) );
+  XNR2HS U327 ( .I1(IDEXEi_ID_rdaddr[3]), .I2(IDEXEi_rs2addr[3]), .O(n119) );
+  XNR2HS U328 ( .I1(IDEXEi_ID_rdaddr[2]), .I2(IDEXEi_rs2addr[2]), .O(n118) );
+  XNR2HS U329 ( .I1(IDEXEi_ID_rdaddr[0]), .I2(IDEXEi_rs1addr[0]), .O(n127) );
+  XNR2HS U330 ( .I1(IDEXEi_ID_rdaddr[1]), .I2(IDEXEi_rs1addr[1]), .O(n126) );
+  MOAI1S U331 ( .A1(n148), .A2(n670), .B1(IFEXEo_PC_imm[6]), .B2(n690), .O(N28) );
   INV1S U332 ( .I(ALU_pc4[6]), .O(n148) );
-  XNR2HS U333 ( .I1(ID_rdaddr[2]), .I2(rs1addr[2]), .O(n123) );
-  XNR2HS U334 ( .I1(ID_rdaddr[4]), .I2(rs1addr[4]), .O(n125) );
-  XNR2HS U335 ( .I1(ID_rdaddr[3]), .I2(rs1addr[3]), .O(n124) );
-  MOAI1S U336 ( .A1(n149), .A2(n670), .B1(PC_imm[5]), .B2(n690), .O(N27) );
+  XNR2HS U333 ( .I1(IDEXEi_ID_rdaddr[2]), .I2(IDEXEi_rs1addr[2]), .O(n123) );
+  XNR2HS U334 ( .I1(IDEXEi_ID_rdaddr[4]), .I2(IDEXEi_rs1addr[4]), .O(n125) );
+  XNR2HS U335 ( .I1(IDEXEi_ID_rdaddr[3]), .I2(IDEXEi_rs1addr[3]), .O(n124) );
+  MOAI1S U336 ( .A1(n149), .A2(n670), .B1(IFEXEo_PC_imm[5]), .B2(n690), .O(N27) );
   INV1S U337 ( .I(ALU_pc4[5]), .O(n149) );
-  MOAI1S U338 ( .A1(n150), .A2(n670), .B1(PC_imm[4]), .B2(n690), .O(N26) );
+  MOAI1S U338 ( .A1(n150), .A2(n670), .B1(IFEXEo_PC_imm[4]), .B2(n690), .O(N26) );
   INV1S U339 ( .I(ALU_pc4[4]), .O(n150) );
-  MOAI1S U340 ( .A1(n151), .A2(n670), .B1(PC_imm[3]), .B2(n690), .O(N25) );
+  MOAI1S U340 ( .A1(n151), .A2(n670), .B1(IFEXEo_PC_imm[3]), .B2(n690), .O(N25) );
   INV1S U341 ( .I(ALU_pc4[3]), .O(n151) );
-  MOAI1S U342 ( .A1(ID_pcout[2]), .A2(n680), .B1(PC_imm[2]), .B2(n690), .O(N24) );
-  MOAI1S U343 ( .A1(n152), .A2(n670), .B1(PC_imm[1]), .B2(n700), .O(N23) );
-  INV1S U344 ( .I(ID_pcout[1]), .O(n152) );
-  MOAI1S U345 ( .A1(n153), .A2(n680), .B1(PC_imm[0]), .B2(n700), .O(N22) );
-  INV1S U346 ( .I(ID_pcout[0]), .O(n153) );
+  MOAI1S U342 ( .A1(IDEXEi_ID_pcout[2]), .A2(n680), .B1(IFEXEo_PC_imm[2]), 
+        .B2(n690), .O(N24) );
+  MOAI1S U343 ( .A1(n152), .A2(n670), .B1(IFEXEo_PC_imm[1]), .B2(n700), .O(N23) );
+  INV1S U344 ( .I(IDEXEi_ID_pcout[1]), .O(n152) );
+  MOAI1S U345 ( .A1(n153), .A2(n680), .B1(IFEXEo_PC_imm[0]), .B2(n700), .O(N22) );
+  INV1S U346 ( .I(IDEXEi_ID_pcout[0]), .O(n153) );
   INV1S U347 ( .I(rst), .O(n185) );
   TIE1 U348 ( .O(n_Logic1_) );
   TIE0 U349 ( .O(n6) );
@@ -11003,56 +11133,65 @@ module EXE ( clk, rst, ID_pcout, ID_rs1data, ID_rs2data, ID_imm, ID_Funct3,
         ALU_rs1_7_, ALU_rs1_6_, ALU_rs1_5_, ALU_rs1_4_, ALU_rs1_3_, ALU_rs1_2_, 
         ALU_rs1_1_, ALU_rs1_0_}), .rs2(ALU_rs22), .ALUCtrl({Wire_ALUCtrl_4_, 
         Wire_ALUCtrl_3_, Wire_ALUCtrl_2_, Wire_ALUCtrl_1_, Wire_ALUCtrl_0_}), 
-        .ZeroFlag(ZeroFlag), .ALUout(PC_jr) );
-  ALUCtrl ALUCtrl ( .ALUOP(ID_ALUOP), .Funct3(ID_Funct3), .Funct7(ID_Funct7), 
-        .ALUCtrl({Wire_ALUCtrl_4_, Wire_ALUCtrl_3_, Wire_ALUCtrl_2_, 
-        Wire_ALUCtrl_1_, Wire_ALUCtrl_0_}) );
+        .ZeroFlag(ZeroFlag), .ALUout(IFEXEo_PC_jr) );
+  ALUCtrl ALUCtrl ( .ALUOP(IDEXEi_ID_ALUOP), .Funct3(IDEXEi_ID_Funct3), 
+        .Funct7(IDEXEi_ID_Funct7), .ALUCtrl({Wire_ALUCtrl_4_, Wire_ALUCtrl_3_, 
+        Wire_ALUCtrl_2_, Wire_ALUCtrl_1_, Wire_ALUCtrl_0_}) );
   Src Src ( .clk(clk), .rst(rst), .state({n111, Src_state_0_}), .csraddr(
-        ID_csraddr), .csrrdata(Wire_csrrdata) );
-  EXE_DW01_add_0 add_57 ( .A_31_(ID_pcout[31]), .A_30_(ID_pcout[30]), .A_29_(
-        ID_pcout[29]), .A_28_(ID_pcout[28]), .A_27_(ID_pcout[27]), .A_26_(
-        ID_pcout[26]), .A_25_(ID_pcout[25]), .A_24_(ID_pcout[24]), .A_23_(
-        ID_pcout[23]), .A_22_(ID_pcout[22]), .A_21_(ID_pcout[21]), .A_20_(
-        ID_pcout[20]), .A_19_(ID_pcout[19]), .A_18_(ID_pcout[18]), .A_17_(
-        ID_pcout[17]), .A_16_(ID_pcout[16]), .A_15_(ID_pcout[15]), .A_14_(
-        ID_pcout[14]), .A_13_(ID_pcout[13]), .A_12_(ID_pcout[12]), .A_11_(
-        ID_pcout[11]), .A_10_(ID_pcout[10]), .A_9_(ID_pcout[9]), .A_8_(
-        ID_pcout[8]), .A_7_(ID_pcout[7]), .A_6_(ID_pcout[6]), .A_5_(
-        ID_pcout[5]), .A_4_(ID_pcout[4]), .A_3_(ID_pcout[3]), .A_2_(
-        ID_pcout[2]), .SUM_31_(ALU_pc4[31]), .SUM_30_(ALU_pc4[30]), .SUM_29_(
-        ALU_pc4[29]), .SUM_28_(ALU_pc4[28]), .SUM_27_(ALU_pc4[27]), .SUM_26_(
-        ALU_pc4[26]), .SUM_25_(ALU_pc4[25]), .SUM_24_(ALU_pc4[24]), .SUM_23_(
-        ALU_pc4[23]), .SUM_22_(ALU_pc4[22]), .SUM_21_(ALU_pc4[21]), .SUM_20_(
-        ALU_pc4[20]), .SUM_19_(ALU_pc4[19]), .SUM_18_(ALU_pc4[18]), .SUM_17_(
-        ALU_pc4[17]), .SUM_16_(ALU_pc4[16]), .SUM_15_(ALU_pc4[15]), .SUM_14_(
-        ALU_pc4[14]), .SUM_13_(ALU_pc4[13]), .SUM_12_(ALU_pc4[12]), .SUM_11_(
-        ALU_pc4[11]), .SUM_10_(ALU_pc4[10]), .SUM_9_(ALU_pc4[9]), .SUM_8_(
-        ALU_pc4[8]), .SUM_7_(ALU_pc4[7]), .SUM_6_(ALU_pc4[6]), .SUM_5_(
-        ALU_pc4[5]), .SUM_4_(ALU_pc4[4]), .SUM_3_(ALU_pc4[3]) );
-  EXE_DW01_add_1 r372 ( .A(ID_pcout), .B(ID_imm), .SUM(PC_imm) );
+        IDEXEi_ID_csraddr), .csrrdata(Wire_csrrdata) );
+  EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0 add_57 ( 
+        .A_31_(IDEXEi_ID_pcout[31]), .A_30_(IDEXEi_ID_pcout[30]), .A_29_(
+        IDEXEi_ID_pcout[29]), .A_28_(IDEXEi_ID_pcout[28]), .A_27_(
+        IDEXEi_ID_pcout[27]), .A_26_(IDEXEi_ID_pcout[26]), .A_25_(
+        IDEXEi_ID_pcout[25]), .A_24_(IDEXEi_ID_pcout[24]), .A_23_(
+        IDEXEi_ID_pcout[23]), .A_22_(IDEXEi_ID_pcout[22]), .A_21_(
+        IDEXEi_ID_pcout[21]), .A_20_(IDEXEi_ID_pcout[20]), .A_19_(
+        IDEXEi_ID_pcout[19]), .A_18_(IDEXEi_ID_pcout[18]), .A_17_(
+        IDEXEi_ID_pcout[17]), .A_16_(IDEXEi_ID_pcout[16]), .A_15_(
+        IDEXEi_ID_pcout[15]), .A_14_(IDEXEi_ID_pcout[14]), .A_13_(
+        IDEXEi_ID_pcout[13]), .A_12_(IDEXEi_ID_pcout[12]), .A_11_(
+        IDEXEi_ID_pcout[11]), .A_10_(IDEXEi_ID_pcout[10]), .A_9_(
+        IDEXEi_ID_pcout[9]), .A_8_(IDEXEi_ID_pcout[8]), .A_7_(
+        IDEXEi_ID_pcout[7]), .A_6_(IDEXEi_ID_pcout[6]), .A_5_(
+        IDEXEi_ID_pcout[5]), .A_4_(IDEXEi_ID_pcout[4]), .A_3_(
+        IDEXEi_ID_pcout[3]), .A_2_(IDEXEi_ID_pcout[2]), .SUM_31_(ALU_pc4[31]), 
+        .SUM_30_(ALU_pc4[30]), .SUM_29_(ALU_pc4[29]), .SUM_28_(ALU_pc4[28]), 
+        .SUM_27_(ALU_pc4[27]), .SUM_26_(ALU_pc4[26]), .SUM_25_(ALU_pc4[25]), 
+        .SUM_24_(ALU_pc4[24]), .SUM_23_(ALU_pc4[23]), .SUM_22_(ALU_pc4[22]), 
+        .SUM_21_(ALU_pc4[21]), .SUM_20_(ALU_pc4[20]), .SUM_19_(ALU_pc4[19]), 
+        .SUM_18_(ALU_pc4[18]), .SUM_17_(ALU_pc4[17]), .SUM_16_(ALU_pc4[16]), 
+        .SUM_15_(ALU_pc4[15]), .SUM_14_(ALU_pc4[14]), .SUM_13_(ALU_pc4[13]), 
+        .SUM_12_(ALU_pc4[12]), .SUM_11_(ALU_pc4[11]), .SUM_10_(ALU_pc4[10]), 
+        .SUM_9_(ALU_pc4[9]), .SUM_8_(ALU_pc4[8]), .SUM_7_(ALU_pc4[7]), 
+        .SUM_6_(ALU_pc4[6]), .SUM_5_(ALU_pc4[5]), .SUM_4_(ALU_pc4[4]), 
+        .SUM_3_(ALU_pc4[3]) );
+  EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1 r372 ( 
+        .A(IDEXEi_ID_pcout), .B(IDEXEi_ID_imm), .SUM(IFEXEo_PC_imm) );
 endmodule
 
 
-module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg, 
-        EXE_RegWrite, EXE_ALUout, EXE_PCtoReg, EXE_rs2data, EXE_rdaddr, 
-        EXE_Funct3, MEM_rddata, MEM_dout, MEM_rdaddr, MEM_MemtoReg, 
-        MEM_RegWrite, Forward_Memrddata, DM_dataout, MEM_CS, MEM_WEB, MEM_din
- );
-  input [31:0] EXE_ALUout;
-  input [31:0] EXE_PCtoReg;
-  input [31:0] EXE_rs2data;
-  input [4:0] EXE_rdaddr;
-  input [2:0] EXE_Funct3;
-  output [31:0] MEM_rddata;
-  output [31:0] MEM_dout;
-  output [4:0] MEM_rdaddr;
+module MEM_I_EXEMEMi_EXEMEM_inter__I_MEMWBo_MEMWB_inter__ ( clk, rst, 
+        EXEMEMi_EXE_ALUout, EXEMEMi_EXE_PCtoReg, EXEMEMi_EXE_rs2data, 
+        EXEMEMi_EXE_rdaddr, EXEMEMi_EXE_Funct3, EXEMEMi_EXE_rdsrc, 
+        EXEMEMi_EXE_MemRead, EXEMEMi_EXE_MemWrite, EXEMEMi_EXE_MemtoReg, 
+        EXEMEMi_EXE_RegWrite, MEMWBo_MEM_dout, MEMWBo_MEM_rddata, 
+        MEMWBo_MEM_rdaddr, MEMWBo_MEM_MemtoReg, MEMWBo_MEM_RegWrite, 
+        Forward_Memrddata, DM_dataout, MEM_CS, MEM_WEB, MEM_din );
+  input [31:0] EXEMEMi_EXE_ALUout;
+  input [31:0] EXEMEMi_EXE_PCtoReg;
+  input [31:0] EXEMEMi_EXE_rs2data;
+  input [4:0] EXEMEMi_EXE_rdaddr;
+  input [2:0] EXEMEMi_EXE_Funct3;
+  output [31:0] MEMWBo_MEM_dout;
+  output [31:0] MEMWBo_MEM_rddata;
+  output [4:0] MEMWBo_MEM_rdaddr;
   output [31:0] Forward_Memrddata;
   input [31:0] DM_dataout;
   output [3:0] MEM_WEB;
   output [31:0] MEM_din;
-  input clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
-         EXE_RegWrite;
-  output MEM_MemtoReg, MEM_RegWrite, MEM_CS;
+  input clk, rst, EXEMEMi_EXE_rdsrc, EXEMEMi_EXE_MemRead, EXEMEMi_EXE_MemWrite,
+         EXEMEMi_EXE_MemtoReg, EXEMEMi_EXE_RegWrite;
+  output MEMWBo_MEM_MemtoReg, MEMWBo_MEM_RegWrite, MEM_CS;
   wire   N195, N196, N197, N198, N199, N200, N201, N202, N203, N204, N205,
          N206, N207, N208, N209, N210, N211, N212, N213, N214, N215, N216,
          N217, N218, N219, N220, N221, N222, N223, N224, N225, N226, n45, n46,
@@ -11063,163 +11202,203 @@ module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
          n41, n42, n43, n44, n65, n66, n67, n68, n69, n70, n71, n72, n73, n74,
          n75, n76, n77, n78, n79, n80, n81, n82;
 
-  MOAI1H U41 ( .A1(n51), .A2(n77), .B1(n52), .B2(EXE_rs2data[9]), .O(
+  MOAI1H U41 ( .A1(n51), .A2(n77), .B1(n52), .B2(EXEMEMi_EXE_rs2data[9]), .O(
         MEM_din[9]) );
-  MOAI1H U42 ( .A1(n51), .A2(n78), .B1(n52), .B2(EXE_rs2data[8]), .O(
+  MOAI1H U42 ( .A1(n51), .A2(n78), .B1(n52), .B2(EXEMEMi_EXE_rs2data[8]), .O(
         MEM_din[8]) );
   AOI12H U59 ( .B1(n49), .B2(n59), .A1(n54), .O(n58) );
-  MOAI1H U60 ( .A1(n51), .A2(n71), .B1(n52), .B2(EXE_rs2data[15]), .O(
+  MOAI1H U60 ( .A1(n51), .A2(n71), .B1(n52), .B2(EXEMEMi_EXE_rs2data[15]), .O(
         MEM_din[15]) );
-  MOAI1H U61 ( .A1(n51), .A2(n72), .B1(n52), .B2(EXE_rs2data[14]), .O(
+  MOAI1H U61 ( .A1(n51), .A2(n72), .B1(n52), .B2(EXEMEMi_EXE_rs2data[14]), .O(
         MEM_din[14]) );
-  MOAI1H U62 ( .A1(n51), .A2(n73), .B1(n52), .B2(EXE_rs2data[13]), .O(
+  MOAI1H U62 ( .A1(n51), .A2(n73), .B1(n52), .B2(EXEMEMi_EXE_rs2data[13]), .O(
         MEM_din[13]) );
-  MOAI1H U63 ( .A1(n51), .A2(n74), .B1(n52), .B2(EXE_rs2data[12]), .O(
+  MOAI1H U63 ( .A1(n51), .A2(n74), .B1(n52), .B2(EXEMEMi_EXE_rs2data[12]), .O(
         MEM_din[12]) );
-  MOAI1H U64 ( .A1(n51), .A2(n75), .B1(n52), .B2(EXE_rs2data[11]), .O(
+  MOAI1H U64 ( .A1(n51), .A2(n75), .B1(n52), .B2(EXEMEMi_EXE_rs2data[11]), .O(
         MEM_din[11]) );
-  MOAI1H U65 ( .A1(n51), .A2(n76), .B1(n52), .B2(EXE_rs2data[10]), .O(
+  MOAI1H U65 ( .A1(n51), .A2(n76), .B1(n52), .B2(EXEMEMi_EXE_rs2data[10]), .O(
         MEM_din[10]) );
-  AO222 U158 ( .A1(EXE_rs2data[15]), .A2(n54), .B1(n55), .B2(EXE_rs2data[7]), 
-        .C1(EXE_rs2data[31]), .C2(n56), .O(MEM_din[31]) );
-  AO222 U159 ( .A1(EXE_rs2data[14]), .A2(n54), .B1(n55), .B2(EXE_rs2data[6]), 
-        .C1(EXE_rs2data[30]), .C2(n56), .O(MEM_din[30]) );
-  AO222 U160 ( .A1(EXE_rs2data[13]), .A2(n54), .B1(n55), .B2(EXE_rs2data[5]), 
-        .C1(EXE_rs2data[29]), .C2(n56), .O(MEM_din[29]) );
-  AO222 U161 ( .A1(EXE_rs2data[12]), .A2(n54), .B1(n55), .B2(EXE_rs2data[4]), 
-        .C1(EXE_rs2data[28]), .C2(n56), .O(MEM_din[28]) );
-  AO222 U162 ( .A1(EXE_rs2data[11]), .A2(n54), .B1(n55), .B2(EXE_rs2data[3]), 
-        .C1(EXE_rs2data[27]), .C2(n56), .O(MEM_din[27]) );
-  AO222 U163 ( .A1(EXE_rs2data[10]), .A2(n54), .B1(EXE_rs2data[2]), .B2(n55), 
-        .C1(EXE_rs2data[26]), .C2(n56), .O(MEM_din[26]) );
-  AO222 U164 ( .A1(n54), .A2(EXE_rs2data[9]), .B1(n55), .B2(EXE_rs2data[1]), 
-        .C1(EXE_rs2data[25]), .C2(n56), .O(MEM_din[25]) );
-  AO222 U165 ( .A1(n54), .A2(EXE_rs2data[8]), .B1(n55), .B2(EXE_rs2data[0]), 
-        .C1(EXE_rs2data[24]), .C2(n56), .O(MEM_din[24]) );
+  AO222 U158 ( .A1(EXEMEMi_EXE_rs2data[15]), .A2(n54), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[7]), .C1(EXEMEMi_EXE_rs2data[31]), .C2(n56), .O(
+        MEM_din[31]) );
+  AO222 U159 ( .A1(EXEMEMi_EXE_rs2data[14]), .A2(n54), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[6]), .C1(EXEMEMi_EXE_rs2data[30]), .C2(n56), .O(
+        MEM_din[30]) );
+  AO222 U160 ( .A1(EXEMEMi_EXE_rs2data[13]), .A2(n54), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[5]), .C1(EXEMEMi_EXE_rs2data[29]), .C2(n56), .O(
+        MEM_din[29]) );
+  AO222 U161 ( .A1(EXEMEMi_EXE_rs2data[12]), .A2(n54), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[4]), .C1(EXEMEMi_EXE_rs2data[28]), .C2(n56), .O(
+        MEM_din[28]) );
+  AO222 U162 ( .A1(EXEMEMi_EXE_rs2data[11]), .A2(n54), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[3]), .C1(EXEMEMi_EXE_rs2data[27]), .C2(n56), .O(
+        MEM_din[27]) );
+  AO222 U163 ( .A1(EXEMEMi_EXE_rs2data[10]), .A2(n54), .B1(
+        EXEMEMi_EXE_rs2data[2]), .B2(n55), .C1(EXEMEMi_EXE_rs2data[26]), .C2(
+        n56), .O(MEM_din[26]) );
+  AO222 U164 ( .A1(n54), .A2(EXEMEMi_EXE_rs2data[9]), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[1]), .C1(EXEMEMi_EXE_rs2data[25]), .C2(n56), .O(
+        MEM_din[25]) );
+  AO222 U165 ( .A1(n54), .A2(EXEMEMi_EXE_rs2data[8]), .B1(n55), .B2(
+        EXEMEMi_EXE_rs2data[0]), .C1(EXEMEMi_EXE_rs2data[24]), .C2(n56), .O(
+        MEM_din[24]) );
   ND2 U166 ( .I1(n60), .I2(n49), .O(n51) );
-  OR2B1S U167 ( .I1(n56), .B1(EXE_Funct3[0]), .O(n62) );
-  QDFFRBN MEM_dout_reg_31_ ( .D(N226), .CK(clk), .RB(n8), .Q(MEM_dout[31]) );
-  QDFFRBN MEM_dout_reg_30_ ( .D(N225), .CK(clk), .RB(n8), .Q(MEM_dout[30]) );
-  QDFFRBN MEM_dout_reg_29_ ( .D(N224), .CK(clk), .RB(n8), .Q(MEM_dout[29]) );
-  QDFFRBN MEM_dout_reg_28_ ( .D(N223), .CK(clk), .RB(n8), .Q(MEM_dout[28]) );
-  QDFFRBN MEM_dout_reg_27_ ( .D(N222), .CK(clk), .RB(n8), .Q(MEM_dout[27]) );
-  QDFFRBN MEM_dout_reg_26_ ( .D(N221), .CK(clk), .RB(n8), .Q(MEM_dout[26]) );
-  QDFFRBN MEM_dout_reg_25_ ( .D(N220), .CK(clk), .RB(n8), .Q(MEM_dout[25]) );
-  QDFFRBN MEM_dout_reg_24_ ( .D(N219), .CK(clk), .RB(n8), .Q(MEM_dout[24]) );
-  QDFFRBN MEM_dout_reg_23_ ( .D(N218), .CK(clk), .RB(n8), .Q(MEM_dout[23]) );
-  QDFFRBN MEM_dout_reg_22_ ( .D(N217), .CK(clk), .RB(n8), .Q(MEM_dout[22]) );
-  QDFFRBN MEM_dout_reg_21_ ( .D(N216), .CK(clk), .RB(n8), .Q(MEM_dout[21]) );
-  QDFFRBN MEM_dout_reg_20_ ( .D(N215), .CK(clk), .RB(n9), .Q(MEM_dout[20]) );
-  QDFFRBN MEM_dout_reg_19_ ( .D(N214), .CK(clk), .RB(n9), .Q(MEM_dout[19]) );
-  QDFFRBN MEM_dout_reg_18_ ( .D(N213), .CK(clk), .RB(n9), .Q(MEM_dout[18]) );
-  QDFFRBN MEM_dout_reg_17_ ( .D(N212), .CK(clk), .RB(n9), .Q(MEM_dout[17]) );
-  QDFFRBN MEM_dout_reg_16_ ( .D(N211), .CK(clk), .RB(n9), .Q(MEM_dout[16]) );
-  QDFFRBN MEM_dout_reg_15_ ( .D(N210), .CK(clk), .RB(n9), .Q(MEM_dout[15]) );
-  QDFFRBN MEM_rddata_reg_31_ ( .D(Forward_Memrddata[31]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[31]) );
-  QDFFRBN MEM_rddata_reg_30_ ( .D(Forward_Memrddata[30]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[30]) );
-  QDFFRBN MEM_rddata_reg_29_ ( .D(Forward_Memrddata[29]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[29]) );
-  QDFFRBN MEM_rddata_reg_28_ ( .D(Forward_Memrddata[28]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[28]) );
-  QDFFRBN MEM_rddata_reg_27_ ( .D(Forward_Memrddata[27]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[27]) );
-  QDFFRBN MEM_rddata_reg_26_ ( .D(Forward_Memrddata[26]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[26]) );
-  QDFFRBN MEM_rddata_reg_25_ ( .D(Forward_Memrddata[25]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[25]) );
-  QDFFRBN MEM_rddata_reg_24_ ( .D(Forward_Memrddata[24]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[24]) );
-  QDFFRBN MEM_rddata_reg_23_ ( .D(Forward_Memrddata[23]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[23]) );
-  QDFFRBN MEM_rddata_reg_22_ ( .D(Forward_Memrddata[22]), .CK(clk), .RB(n5), 
-        .Q(MEM_rddata[22]) );
-  QDFFRBN MEM_rddata_reg_21_ ( .D(Forward_Memrddata[21]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[21]) );
-  QDFFRBN MEM_rddata_reg_20_ ( .D(Forward_Memrddata[20]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[20]) );
-  QDFFRBN MEM_rddata_reg_19_ ( .D(Forward_Memrddata[19]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[19]) );
-  QDFFRBN MEM_rddata_reg_18_ ( .D(Forward_Memrddata[18]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[18]) );
-  QDFFRBN MEM_rddata_reg_17_ ( .D(Forward_Memrddata[17]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[17]) );
-  QDFFRBN MEM_rddata_reg_16_ ( .D(Forward_Memrddata[16]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[16]) );
-  QDFFRBN MEM_rddata_reg_15_ ( .D(Forward_Memrddata[15]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[15]) );
-  QDFFRBN MEM_dout_reg_14_ ( .D(N209), .CK(clk), .RB(n9), .Q(MEM_dout[14]) );
-  QDFFRBN MEM_rddata_reg_14_ ( .D(Forward_Memrddata[14]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[14]) );
-  QDFFRBN MEM_dout_reg_13_ ( .D(N208), .CK(clk), .RB(n9), .Q(MEM_dout[13]) );
-  QDFFRBN MEM_rddata_reg_13_ ( .D(Forward_Memrddata[13]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[13]) );
-  QDFFRBN MEM_dout_reg_12_ ( .D(N207), .CK(clk), .RB(n9), .Q(MEM_dout[12]) );
-  QDFFRBN MEM_rddata_reg_12_ ( .D(Forward_Memrddata[12]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[12]) );
-  QDFFRBN MEM_dout_reg_11_ ( .D(N206), .CK(clk), .RB(n9), .Q(MEM_dout[11]) );
-  QDFFRBN MEM_rddata_reg_11_ ( .D(Forward_Memrddata[11]), .CK(clk), .RB(n6), 
-        .Q(MEM_rddata[11]) );
-  QDFFRBN MEM_dout_reg_10_ ( .D(N205), .CK(clk), .RB(n9), .Q(MEM_dout[10]) );
-  QDFFRBN MEM_rddata_reg_10_ ( .D(Forward_Memrddata[10]), .CK(clk), .RB(n7), 
-        .Q(MEM_rddata[10]) );
-  QDFFRBN MEM_dout_reg_9_ ( .D(N204), .CK(clk), .RB(n10), .Q(MEM_dout[9]) );
-  QDFFRBN MEM_rddata_reg_9_ ( .D(Forward_Memrddata[9]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[9]) );
-  QDFFRBN MEM_dout_reg_8_ ( .D(N203), .CK(clk), .RB(n10), .Q(MEM_dout[8]) );
-  QDFFRBN MEM_rddata_reg_8_ ( .D(Forward_Memrddata[8]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[8]) );
-  QDFFRBN MEM_dout_reg_7_ ( .D(N202), .CK(clk), .RB(n10), .Q(MEM_dout[7]) );
-  QDFFRBN MEM_rddata_reg_7_ ( .D(Forward_Memrddata[7]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[7]) );
-  QDFFRBN MEM_dout_reg_6_ ( .D(N201), .CK(clk), .RB(n10), .Q(MEM_dout[6]) );
-  QDFFRBN MEM_rddata_reg_6_ ( .D(Forward_Memrddata[6]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[6]) );
-  QDFFRBN MEM_dout_reg_5_ ( .D(N200), .CK(clk), .RB(n10), .Q(MEM_dout[5]) );
-  QDFFRBN MEM_rddata_reg_5_ ( .D(Forward_Memrddata[5]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[5]) );
-  QDFFRBN MEM_dout_reg_4_ ( .D(N199), .CK(clk), .RB(n10), .Q(MEM_dout[4]) );
-  QDFFRBN MEM_dout_reg_3_ ( .D(N198), .CK(clk), .RB(n10), .Q(MEM_dout[3]) );
-  QDFFRBS MEM_rddata_reg_4_ ( .D(Forward_Memrddata[4]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[4]) );
-  QDFFRBS MEM_rddata_reg_3_ ( .D(Forward_Memrddata[3]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[3]) );
-  QDFFRBS MEM_rddata_reg_2_ ( .D(Forward_Memrddata[2]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[2]) );
-  QDFFRBS MEM_rddata_reg_0_ ( .D(Forward_Memrddata[0]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[0]) );
-  QDFFRBS MEM_rdaddr_reg_2_ ( .D(EXE_rdaddr[2]), .CK(clk), .RB(n11), .Q(
-        MEM_rdaddr[2]) );
-  QDFFRBN MEM_dout_reg_2_ ( .D(N197), .CK(clk), .RB(n10), .Q(MEM_dout[2]) );
-  QDFFRBN MEM_dout_reg_0_ ( .D(N195), .CK(clk), .RB(n10), .Q(MEM_dout[0]) );
-  QDFFRBN MEM_dout_reg_1_ ( .D(N196), .CK(clk), .RB(n10), .Q(MEM_dout[1]) );
-  QDFFRBS MEM_rddata_reg_1_ ( .D(Forward_Memrddata[1]), .CK(clk), .RB(n7), .Q(
-        MEM_rddata[1]) );
-  QDFFRBN MEM_rdaddr_reg_0_ ( .D(EXE_rdaddr[0]), .CK(clk), .RB(n11), .Q(
-        MEM_rdaddr[0]) );
-  QDFFRBN MEM_RegWrite_reg ( .D(EXE_RegWrite), .CK(clk), .RB(n5), .Q(
-        MEM_RegWrite) );
-  QDFFRBN MEM_rdaddr_reg_3_ ( .D(EXE_rdaddr[3]), .CK(clk), .RB(n11), .Q(
-        MEM_rdaddr[3]) );
-  QDFFRBN MEM_rdaddr_reg_1_ ( .D(EXE_rdaddr[1]), .CK(clk), .RB(n11), .Q(
-        MEM_rdaddr[1]) );
-  QDFFRBN MEM_MemtoReg_reg ( .D(EXE_MemtoReg), .CK(clk), .RB(n11), .Q(
-        MEM_MemtoReg) );
-  QDFFRBN MEM_rdaddr_reg_4_ ( .D(EXE_rdaddr[4]), .CK(clk), .RB(n10), .Q(
-        MEM_rdaddr[4]) );
-  INV1S U3 ( .I(EXE_ALUout[1]), .O(n69) );
-  MOAI1 U4 ( .A1(n16), .A2(n70), .B1(EXE_PCtoReg[0]), .B2(n18), .O(
+  OR2B1S U167 ( .I1(n56), .B1(EXEMEMi_EXE_Funct3[0]), .O(n62) );
+  QDFFRBN MEMWBo_MEM_dout_reg_31_ ( .D(N226), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[31]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_30_ ( .D(N225), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[30]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_29_ ( .D(N224), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[29]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_28_ ( .D(N223), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[28]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_27_ ( .D(N222), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[27]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_26_ ( .D(N221), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[26]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_25_ ( .D(N220), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[25]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_24_ ( .D(N219), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[24]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_23_ ( .D(N218), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[23]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_22_ ( .D(N217), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[22]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_21_ ( .D(N216), .CK(clk), .RB(n8), .Q(
+        MEMWBo_MEM_dout[21]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_20_ ( .D(N215), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[20]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_19_ ( .D(N214), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[19]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_18_ ( .D(N213), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[18]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_17_ ( .D(N212), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[17]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_16_ ( .D(N211), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[16]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_15_ ( .D(N210), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[15]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_31_ ( .D(Forward_Memrddata[31]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[31]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_30_ ( .D(Forward_Memrddata[30]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[30]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_29_ ( .D(Forward_Memrddata[29]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[29]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_28_ ( .D(Forward_Memrddata[28]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[28]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_27_ ( .D(Forward_Memrddata[27]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[27]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_26_ ( .D(Forward_Memrddata[26]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[26]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_25_ ( .D(Forward_Memrddata[25]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[25]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_24_ ( .D(Forward_Memrddata[24]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[24]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_23_ ( .D(Forward_Memrddata[23]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[23]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_22_ ( .D(Forward_Memrddata[22]), .CK(clk), 
+        .RB(n5), .Q(MEMWBo_MEM_rddata[22]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_21_ ( .D(Forward_Memrddata[21]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[21]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_20_ ( .D(Forward_Memrddata[20]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[20]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_19_ ( .D(Forward_Memrddata[19]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[19]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_18_ ( .D(Forward_Memrddata[18]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[18]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_17_ ( .D(Forward_Memrddata[17]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[17]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_16_ ( .D(Forward_Memrddata[16]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[16]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_15_ ( .D(Forward_Memrddata[15]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[15]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_14_ ( .D(N209), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[14]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_14_ ( .D(Forward_Memrddata[14]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[14]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_13_ ( .D(N208), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[13]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_13_ ( .D(Forward_Memrddata[13]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[13]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_12_ ( .D(N207), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[12]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_12_ ( .D(Forward_Memrddata[12]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[12]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_11_ ( .D(N206), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[11]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_11_ ( .D(Forward_Memrddata[11]), .CK(clk), 
+        .RB(n6), .Q(MEMWBo_MEM_rddata[11]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_10_ ( .D(N205), .CK(clk), .RB(n9), .Q(
+        MEMWBo_MEM_dout[10]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_10_ ( .D(Forward_Memrddata[10]), .CK(clk), 
+        .RB(n7), .Q(MEMWBo_MEM_rddata[10]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_9_ ( .D(N204), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[9]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_9_ ( .D(Forward_Memrddata[9]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[9]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_8_ ( .D(N203), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[8]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_8_ ( .D(Forward_Memrddata[8]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[8]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_7_ ( .D(N202), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[7]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_7_ ( .D(Forward_Memrddata[7]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[7]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_6_ ( .D(N201), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[6]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_6_ ( .D(Forward_Memrddata[6]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[6]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_5_ ( .D(N200), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[5]) );
+  QDFFRBN MEMWBo_MEM_rddata_reg_5_ ( .D(Forward_Memrddata[5]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[5]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_4_ ( .D(N199), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[4]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_3_ ( .D(N198), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[3]) );
+  QDFFRBS MEMWBo_MEM_rddata_reg_4_ ( .D(Forward_Memrddata[4]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[4]) );
+  QDFFRBS MEMWBo_MEM_rddata_reg_3_ ( .D(Forward_Memrddata[3]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[3]) );
+  QDFFRBS MEMWBo_MEM_rddata_reg_2_ ( .D(Forward_Memrddata[2]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[2]) );
+  QDFFRBS MEMWBo_MEM_rddata_reg_0_ ( .D(Forward_Memrddata[0]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[0]) );
+  QDFFRBS MEMWBo_MEM_rdaddr_reg_2_ ( .D(EXEMEMi_EXE_rdaddr[2]), .CK(clk), .RB(
+        n11), .Q(MEMWBo_MEM_rdaddr[2]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_2_ ( .D(N197), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[2]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_0_ ( .D(N195), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[0]) );
+  QDFFRBN MEMWBo_MEM_dout_reg_1_ ( .D(N196), .CK(clk), .RB(n10), .Q(
+        MEMWBo_MEM_dout[1]) );
+  QDFFRBS MEMWBo_MEM_rddata_reg_1_ ( .D(Forward_Memrddata[1]), .CK(clk), .RB(
+        n7), .Q(MEMWBo_MEM_rddata[1]) );
+  QDFFRBN MEMWBo_MEM_rdaddr_reg_0_ ( .D(EXEMEMi_EXE_rdaddr[0]), .CK(clk), .RB(
+        n11), .Q(MEMWBo_MEM_rdaddr[0]) );
+  QDFFRBN MEMWBo_MEM_RegWrite_reg ( .D(EXEMEMi_EXE_RegWrite), .CK(clk), .RB(n5), .Q(MEMWBo_MEM_RegWrite) );
+  QDFFRBN MEMWBo_MEM_rdaddr_reg_3_ ( .D(EXEMEMi_EXE_rdaddr[3]), .CK(clk), .RB(
+        n11), .Q(MEMWBo_MEM_rdaddr[3]) );
+  QDFFRBN MEMWBo_MEM_rdaddr_reg_1_ ( .D(EXEMEMi_EXE_rdaddr[1]), .CK(clk), .RB(
+        n11), .Q(MEMWBo_MEM_rdaddr[1]) );
+  QDFFRBN MEMWBo_MEM_MemtoReg_reg ( .D(EXEMEMi_EXE_MemtoReg), .CK(clk), .RB(
+        n11), .Q(MEMWBo_MEM_MemtoReg) );
+  QDFFRBN MEMWBo_MEM_rdaddr_reg_4_ ( .D(EXEMEMi_EXE_rdaddr[4]), .CK(clk), .RB(
+        n10), .Q(MEMWBo_MEM_rdaddr[4]) );
+  INV1S U3 ( .I(EXEMEMi_EXE_ALUout[1]), .O(n69) );
+  MOAI1 U4 ( .A1(n16), .A2(n70), .B1(EXEMEMi_EXE_PCtoReg[0]), .B2(n18), .O(
         Forward_Memrddata[0]) );
   BUF1CK U5 ( .I(n12), .O(n16) );
   BUF1 U6 ( .I(n13), .O(n14) );
-  MOAI1 U7 ( .A1(n68), .A2(n14), .B1(EXE_PCtoReg[2]), .B2(n17), .O(
+  MOAI1 U7 ( .A1(n68), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[2]), .B2(n17), .O(
         Forward_Memrddata[2]) );
-  INV1S U8 ( .I(EXE_ALUout[2]), .O(n68) );
-  INV1S U9 ( .I(EXE_ALUout[0]), .O(n70) );
+  INV1S U8 ( .I(EXEMEMi_EXE_ALUout[2]), .O(n68) );
+  INV1S U9 ( .I(EXEMEMi_EXE_ALUout[0]), .O(n70) );
   BUF1S U10 ( .I(n12), .O(n17) );
   BUF1S U11 ( .I(n16), .O(n15) );
-  OA12S U12 ( .B1(n62), .B2(EXE_ALUout[1]), .A1(EXE_MemWrite), .O(n63) );
+  OA12S U12 ( .B1(n62), .B2(EXEMEMi_EXE_ALUout[1]), .A1(EXEMEMi_EXE_MemWrite), 
+        .O(n63) );
   BUF1CK U13 ( .I(n3), .O(n10) );
   BUF1CK U14 ( .I(n3), .O(n9) );
   BUF1CK U15 ( .I(n2), .O(n8) );
@@ -11227,8 +11406,8 @@ module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
   BUF1CK U17 ( .I(n1), .O(n6) );
   BUF1CK U18 ( .I(n1), .O(n5) );
   BUF1CK U19 ( .I(n13), .O(n18) );
-  BUF1CK U20 ( .I(EXE_rdsrc), .O(n13) );
-  BUF1CK U21 ( .I(EXE_rdsrc), .O(n12) );
+  BUF1CK U20 ( .I(EXEMEMi_EXE_rdsrc), .O(n13) );
+  BUF1CK U21 ( .I(EXEMEMi_EXE_rdsrc), .O(n12) );
   NR2 U22 ( .I1(n52), .I2(n61), .O(n53) );
   NR2P U23 ( .I1(n53), .I2(n71), .O(MEM_din[7]) );
   NR2P U24 ( .I1(n53), .I2(n72), .O(MEM_din[6]) );
@@ -11254,7 +11433,7 @@ module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
   BUF1CK U46 ( .I(n82), .O(n1) );
   BUF1CK U47 ( .I(n4), .O(n11) );
   BUF1CK U48 ( .I(n82), .O(n4) );
-  MOAI1 U49 ( .A1(n16), .A2(n69), .B1(EXE_PCtoReg[1]), .B2(n16), .O(
+  MOAI1 U49 ( .A1(n16), .A2(n69), .B1(EXEMEMi_EXE_PCtoReg[1]), .B2(n16), .O(
         Forward_Memrddata[1]) );
   AO12 U50 ( .B1(n80), .B2(DM_dataout[7]), .A1(n47), .O(n46) );
   AN2 U51 ( .I1(n49), .I2(DM_dataout[7]), .O(n47) );
@@ -11274,12 +11453,12 @@ module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
   AO12 U72 ( .B1(DM_dataout[29]), .B2(n45), .A1(n46), .O(N224) );
   AO12 U73 ( .B1(DM_dataout[30]), .B2(n45), .A1(n46), .O(N225) );
   AO12 U74 ( .B1(DM_dataout[31]), .B2(n45), .A1(n46), .O(N226) );
-  MOAI1 U75 ( .A1(n67), .A2(n14), .B1(EXE_PCtoReg[3]), .B2(n18), .O(
+  MOAI1 U75 ( .A1(n67), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[3]), .B2(n18), .O(
         Forward_Memrddata[3]) );
-  INV1S U76 ( .I(EXE_ALUout[3]), .O(n67) );
-  MOAI1 U77 ( .A1(n66), .A2(n14), .B1(EXE_PCtoReg[4]), .B2(n18), .O(
+  INV1S U76 ( .I(EXEMEMi_EXE_ALUout[3]), .O(n67) );
+  MOAI1 U77 ( .A1(n66), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[4]), .B2(n18), .O(
         Forward_Memrddata[4]) );
-  INV1S U78 ( .I(EXE_ALUout[4]), .O(n66) );
+  INV1S U78 ( .I(EXEMEMi_EXE_ALUout[4]), .O(n66) );
   AO12 U79 ( .B1(DM_dataout[8]), .B2(n48), .A1(n47), .O(N203) );
   AO12 U80 ( .B1(DM_dataout[9]), .B2(n48), .A1(n47), .O(N204) );
   AO12 U81 ( .B1(DM_dataout[10]), .B2(n48), .A1(n47), .O(N205) );
@@ -11296,121 +11475,125 @@ module MEM ( clk, rst, EXE_rdsrc, EXE_MemRead, EXE_MemWrite, EXE_MemtoReg,
   AN2 U92 ( .I1(DM_dataout[4]), .I2(n50), .O(N199) );
   AN2 U93 ( .I1(DM_dataout[5]), .I2(n50), .O(N200) );
   AN2 U94 ( .I1(DM_dataout[6]), .I2(n50), .O(N201) );
-  MOAI1 U95 ( .A1(n65), .A2(n14), .B1(EXE_PCtoReg[5]), .B2(n18), .O(
+  MOAI1 U95 ( .A1(n65), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[5]), .B2(n18), .O(
         Forward_Memrddata[5]) );
-  INV1S U96 ( .I(EXE_ALUout[5]), .O(n65) );
-  MOAI1 U97 ( .A1(n44), .A2(n14), .B1(EXE_PCtoReg[6]), .B2(n18), .O(
+  INV1S U96 ( .I(EXEMEMi_EXE_ALUout[5]), .O(n65) );
+  MOAI1 U97 ( .A1(n44), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[6]), .B2(n18), .O(
         Forward_Memrddata[6]) );
-  INV1S U98 ( .I(EXE_ALUout[6]), .O(n44) );
-  MOAI1 U99 ( .A1(n43), .A2(n14), .B1(EXE_PCtoReg[7]), .B2(n18), .O(
+  INV1S U98 ( .I(EXEMEMi_EXE_ALUout[6]), .O(n44) );
+  MOAI1 U99 ( .A1(n43), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[7]), .B2(n18), .O(
         Forward_Memrddata[7]) );
-  INV1S U100 ( .I(EXE_ALUout[7]), .O(n43) );
-  MOAI1 U101 ( .A1(n42), .A2(n14), .B1(EXE_PCtoReg[8]), .B2(n18), .O(
+  INV1S U100 ( .I(EXEMEMi_EXE_ALUout[7]), .O(n43) );
+  MOAI1 U101 ( .A1(n42), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[8]), .B2(n18), .O(
         Forward_Memrddata[8]) );
-  INV1S U102 ( .I(EXE_ALUout[8]), .O(n42) );
-  MOAI1 U103 ( .A1(n41), .A2(n15), .B1(EXE_PCtoReg[9]), .B2(n18), .O(
+  INV1S U102 ( .I(EXEMEMi_EXE_ALUout[8]), .O(n42) );
+  MOAI1 U103 ( .A1(n41), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[9]), .B2(n18), .O(
         Forward_Memrddata[9]) );
-  INV1S U104 ( .I(EXE_ALUout[9]), .O(n41) );
-  MOAI1 U105 ( .A1(n40), .A2(n16), .B1(EXE_PCtoReg[10]), .B2(n18), .O(
+  INV1S U104 ( .I(EXEMEMi_EXE_ALUout[9]), .O(n41) );
+  MOAI1 U105 ( .A1(n40), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[10]), .B2(n18), .O(
         Forward_Memrddata[10]) );
-  INV1S U106 ( .I(EXE_ALUout[10]), .O(n40) );
-  MOAI1 U107 ( .A1(n39), .A2(n16), .B1(EXE_PCtoReg[11]), .B2(n18), .O(
+  INV1S U106 ( .I(EXEMEMi_EXE_ALUout[10]), .O(n40) );
+  MOAI1 U107 ( .A1(n39), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[11]), .B2(n18), .O(
         Forward_Memrddata[11]) );
-  INV1S U108 ( .I(EXE_ALUout[11]), .O(n39) );
-  OR2 U109 ( .I1(EXE_Funct3[1]), .I2(EXE_Funct3[2]), .O(n56) );
-  MOAI1 U110 ( .A1(n38), .A2(n16), .B1(EXE_PCtoReg[12]), .B2(n18), .O(
+  INV1S U108 ( .I(EXEMEMi_EXE_ALUout[11]), .O(n39) );
+  OR2 U109 ( .I1(EXEMEMi_EXE_Funct3[1]), .I2(EXEMEMi_EXE_Funct3[2]), .O(n56)
+         );
+  MOAI1 U110 ( .A1(n38), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[12]), .B2(n18), .O(
         Forward_Memrddata[12]) );
-  INV1S U111 ( .I(EXE_ALUout[12]), .O(n38) );
-  MOAI1 U112 ( .A1(n58), .A2(n71), .B1(EXE_rs2data[23]), .B2(n56), .O(
+  INV1S U111 ( .I(EXEMEMi_EXE_ALUout[12]), .O(n38) );
+  MOAI1 U112 ( .A1(n58), .A2(n71), .B1(EXEMEMi_EXE_rs2data[23]), .B2(n56), .O(
         MEM_din[23]) );
-  MOAI1 U113 ( .A1(n58), .A2(n72), .B1(EXE_rs2data[22]), .B2(n56), .O(
+  MOAI1 U113 ( .A1(n58), .A2(n72), .B1(EXEMEMi_EXE_rs2data[22]), .B2(n56), .O(
         MEM_din[22]) );
-  MOAI1 U114 ( .A1(n58), .A2(n73), .B1(EXE_rs2data[21]), .B2(n56), .O(
+  MOAI1 U114 ( .A1(n58), .A2(n73), .B1(EXEMEMi_EXE_rs2data[21]), .B2(n56), .O(
         MEM_din[21]) );
-  MOAI1 U115 ( .A1(n58), .A2(n74), .B1(EXE_rs2data[20]), .B2(n56), .O(
+  MOAI1 U115 ( .A1(n58), .A2(n74), .B1(EXEMEMi_EXE_rs2data[20]), .B2(n56), .O(
         MEM_din[20]) );
-  MOAI1 U116 ( .A1(n58), .A2(n75), .B1(EXE_rs2data[19]), .B2(n56), .O(
+  MOAI1 U116 ( .A1(n58), .A2(n75), .B1(EXEMEMi_EXE_rs2data[19]), .B2(n56), .O(
         MEM_din[19]) );
-  MOAI1 U117 ( .A1(n58), .A2(n76), .B1(EXE_rs2data[18]), .B2(n56), .O(
+  MOAI1 U117 ( .A1(n58), .A2(n76), .B1(EXEMEMi_EXE_rs2data[18]), .B2(n56), .O(
         MEM_din[18]) );
-  MOAI1 U118 ( .A1(n58), .A2(n77), .B1(EXE_rs2data[17]), .B2(n56), .O(
+  MOAI1 U118 ( .A1(n58), .A2(n77), .B1(EXEMEMi_EXE_rs2data[17]), .B2(n56), .O(
         MEM_din[17]) );
-  MOAI1 U119 ( .A1(n58), .A2(n78), .B1(EXE_rs2data[16]), .B2(n56), .O(
+  MOAI1 U119 ( .A1(n58), .A2(n78), .B1(EXEMEMi_EXE_rs2data[16]), .B2(n56), .O(
         MEM_din[16]) );
-  NR2 U120 ( .I1(n56), .I2(EXE_Funct3[0]), .O(n49) );
-  NR2 U121 ( .I1(n70), .I2(EXE_ALUout[1]), .O(n60) );
-  MOAI1 U122 ( .A1(n37), .A2(n16), .B1(EXE_PCtoReg[13]), .B2(n18), .O(
+  NR2 U120 ( .I1(n56), .I2(EXEMEMi_EXE_Funct3[0]), .O(n49) );
+  NR2 U121 ( .I1(n70), .I2(EXEMEMi_EXE_ALUout[1]), .O(n60) );
+  MOAI1 U122 ( .A1(n37), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[13]), .B2(n18), .O(
         Forward_Memrddata[13]) );
-  INV1S U123 ( .I(EXE_ALUout[13]), .O(n37) );
-  NR2 U124 ( .I1(n69), .I2(EXE_ALUout[0]), .O(n59) );
-  MOAI1 U125 ( .A1(n36), .A2(n16), .B1(EXE_PCtoReg[14]), .B2(n17), .O(
+  INV1S U123 ( .I(EXEMEMi_EXE_ALUout[13]), .O(n37) );
+  NR2 U124 ( .I1(n69), .I2(EXEMEMi_EXE_ALUout[0]), .O(n59) );
+  MOAI1 U125 ( .A1(n36), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[14]), .B2(n17), .O(
         Forward_Memrddata[14]) );
-  INV1S U126 ( .I(EXE_ALUout[14]), .O(n36) );
-  AN2B1S U127 ( .I1(EXE_MemWrite), .B1(n54), .O(n64) );
-  NR2 U128 ( .I1(EXE_ALUout[0]), .I2(EXE_ALUout[1]), .O(n61) );
-  MOAI1 U129 ( .A1(n35), .A2(n16), .B1(EXE_PCtoReg[15]), .B2(n17), .O(
+  INV1S U126 ( .I(EXEMEMi_EXE_ALUout[14]), .O(n36) );
+  AN2B1S U127 ( .I1(EXEMEMi_EXE_MemWrite), .B1(n54), .O(n64) );
+  NR2 U128 ( .I1(EXEMEMi_EXE_ALUout[0]), .I2(EXEMEMi_EXE_ALUout[1]), .O(n61)
+         );
+  MOAI1 U129 ( .A1(n35), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[15]), .B2(n17), .O(
         Forward_Memrddata[15]) );
-  INV1S U130 ( .I(EXE_ALUout[15]), .O(n35) );
-  MOAI1 U131 ( .A1(n34), .A2(n15), .B1(EXE_PCtoReg[16]), .B2(n17), .O(
+  INV1S U130 ( .I(EXEMEMi_EXE_ALUout[15]), .O(n35) );
+  MOAI1 U131 ( .A1(n34), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[16]), .B2(n17), .O(
         Forward_Memrddata[16]) );
-  INV1S U132 ( .I(EXE_ALUout[16]), .O(n34) );
-  OR2 U133 ( .I1(EXE_MemRead), .I2(EXE_MemWrite), .O(MEM_CS) );
-  INV1S U134 ( .I(EXE_rs2data[7]), .O(n71) );
-  INV1S U135 ( .I(EXE_rs2data[6]), .O(n72) );
-  INV1S U136 ( .I(EXE_rs2data[5]), .O(n73) );
-  INV1S U137 ( .I(EXE_rs2data[4]), .O(n74) );
-  INV1S U138 ( .I(EXE_rs2data[3]), .O(n75) );
-  INV1S U139 ( .I(EXE_rs2data[1]), .O(n77) );
-  INV1S U140 ( .I(EXE_rs2data[0]), .O(n78) );
-  INV1S U141 ( .I(EXE_rs2data[2]), .O(n76) );
-  MOAI1 U142 ( .A1(n33), .A2(n16), .B1(EXE_PCtoReg[17]), .B2(n17), .O(
+  INV1S U132 ( .I(EXEMEMi_EXE_ALUout[16]), .O(n34) );
+  OR2 U133 ( .I1(EXEMEMi_EXE_MemRead), .I2(EXEMEMi_EXE_MemWrite), .O(MEM_CS)
+         );
+  INV1S U134 ( .I(EXEMEMi_EXE_rs2data[7]), .O(n71) );
+  INV1S U135 ( .I(EXEMEMi_EXE_rs2data[6]), .O(n72) );
+  INV1S U136 ( .I(EXEMEMi_EXE_rs2data[5]), .O(n73) );
+  INV1S U137 ( .I(EXEMEMi_EXE_rs2data[4]), .O(n74) );
+  INV1S U138 ( .I(EXEMEMi_EXE_rs2data[3]), .O(n75) );
+  INV1S U139 ( .I(EXEMEMi_EXE_rs2data[1]), .O(n77) );
+  INV1S U140 ( .I(EXEMEMi_EXE_rs2data[0]), .O(n78) );
+  INV1S U141 ( .I(EXEMEMi_EXE_rs2data[2]), .O(n76) );
+  MOAI1 U142 ( .A1(n33), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[17]), .B2(n17), .O(
         Forward_Memrddata[17]) );
-  INV1S U143 ( .I(EXE_ALUout[17]), .O(n33) );
-  MOAI1 U144 ( .A1(n32), .A2(n16), .B1(EXE_PCtoReg[18]), .B2(n17), .O(
+  INV1S U143 ( .I(EXEMEMi_EXE_ALUout[17]), .O(n33) );
+  MOAI1 U144 ( .A1(n32), .A2(n16), .B1(EXEMEMi_EXE_PCtoReg[18]), .B2(n17), .O(
         Forward_Memrddata[18]) );
-  INV1S U145 ( .I(EXE_ALUout[18]), .O(n32) );
-  MOAI1 U146 ( .A1(n31), .A2(n15), .B1(EXE_PCtoReg[19]), .B2(n17), .O(
+  INV1S U145 ( .I(EXEMEMi_EXE_ALUout[18]), .O(n32) );
+  MOAI1 U146 ( .A1(n31), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[19]), .B2(n17), .O(
         Forward_Memrddata[19]) );
-  INV1S U147 ( .I(EXE_ALUout[19]), .O(n31) );
-  MOAI1 U148 ( .A1(n30), .A2(n15), .B1(EXE_PCtoReg[20]), .B2(n17), .O(
+  INV1S U147 ( .I(EXEMEMi_EXE_ALUout[19]), .O(n31) );
+  MOAI1 U148 ( .A1(n30), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[20]), .B2(n17), .O(
         Forward_Memrddata[20]) );
-  INV1S U149 ( .I(EXE_ALUout[20]), .O(n30) );
-  MOAI1 U150 ( .A1(n29), .A2(n15), .B1(EXE_PCtoReg[21]), .B2(n16), .O(
+  INV1S U149 ( .I(EXEMEMi_EXE_ALUout[20]), .O(n30) );
+  MOAI1 U150 ( .A1(n29), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[21]), .B2(n16), .O(
         Forward_Memrddata[21]) );
-  INV1S U151 ( .I(EXE_ALUout[21]), .O(n29) );
-  MOAI1 U152 ( .A1(n28), .A2(n15), .B1(EXE_PCtoReg[22]), .B2(n17), .O(
+  INV1S U151 ( .I(EXEMEMi_EXE_ALUout[21]), .O(n29) );
+  MOAI1 U152 ( .A1(n28), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[22]), .B2(n17), .O(
         Forward_Memrddata[22]) );
-  INV1S U153 ( .I(EXE_ALUout[22]), .O(n28) );
-  MOAI1 U154 ( .A1(n27), .A2(n15), .B1(EXE_PCtoReg[23]), .B2(n17), .O(
+  INV1S U153 ( .I(EXEMEMi_EXE_ALUout[22]), .O(n28) );
+  MOAI1 U154 ( .A1(n27), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[23]), .B2(n17), .O(
         Forward_Memrddata[23]) );
-  INV1S U155 ( .I(EXE_ALUout[23]), .O(n27) );
-  MOAI1 U156 ( .A1(n26), .A2(n15), .B1(EXE_PCtoReg[24]), .B2(n17), .O(
+  INV1S U155 ( .I(EXEMEMi_EXE_ALUout[23]), .O(n27) );
+  MOAI1 U156 ( .A1(n26), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[24]), .B2(n17), .O(
         Forward_Memrddata[24]) );
-  INV1S U157 ( .I(EXE_ALUout[24]), .O(n26) );
-  MOAI1 U168 ( .A1(n25), .A2(n15), .B1(EXE_PCtoReg[25]), .B2(n17), .O(
+  INV1S U157 ( .I(EXEMEMi_EXE_ALUout[24]), .O(n26) );
+  MOAI1 U168 ( .A1(n25), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[25]), .B2(n17), .O(
         Forward_Memrddata[25]) );
-  INV1S U169 ( .I(EXE_ALUout[25]), .O(n25) );
-  MOAI1 U170 ( .A1(n24), .A2(n15), .B1(EXE_PCtoReg[26]), .B2(n17), .O(
+  INV1S U169 ( .I(EXEMEMi_EXE_ALUout[25]), .O(n25) );
+  MOAI1 U170 ( .A1(n24), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[26]), .B2(n17), .O(
         Forward_Memrddata[26]) );
-  INV1S U171 ( .I(EXE_ALUout[26]), .O(n24) );
-  MOAI1 U172 ( .A1(n23), .A2(n15), .B1(EXE_PCtoReg[27]), .B2(n17), .O(
+  INV1S U171 ( .I(EXEMEMi_EXE_ALUout[26]), .O(n24) );
+  MOAI1 U172 ( .A1(n23), .A2(n15), .B1(EXEMEMi_EXE_PCtoReg[27]), .B2(n17), .O(
         Forward_Memrddata[27]) );
-  INV1S U173 ( .I(EXE_ALUout[27]), .O(n23) );
-  MOAI1 U174 ( .A1(n22), .A2(n14), .B1(EXE_PCtoReg[28]), .B2(n17), .O(
+  INV1S U173 ( .I(EXEMEMi_EXE_ALUout[27]), .O(n23) );
+  MOAI1 U174 ( .A1(n22), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[28]), .B2(n17), .O(
         Forward_Memrddata[28]) );
-  INV1S U175 ( .I(EXE_ALUout[28]), .O(n22) );
-  MOAI1 U176 ( .A1(n20), .A2(n14), .B1(EXE_PCtoReg[30]), .B2(n17), .O(
+  INV1S U175 ( .I(EXEMEMi_EXE_ALUout[28]), .O(n22) );
+  MOAI1 U176 ( .A1(n20), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[30]), .B2(n17), .O(
         Forward_Memrddata[30]) );
-  INV1S U177 ( .I(EXE_ALUout[30]), .O(n20) );
-  MOAI1 U178 ( .A1(n21), .A2(n14), .B1(EXE_PCtoReg[29]), .B2(n18), .O(
+  INV1S U177 ( .I(EXEMEMi_EXE_ALUout[30]), .O(n20) );
+  MOAI1 U178 ( .A1(n21), .A2(n14), .B1(EXEMEMi_EXE_PCtoReg[29]), .B2(n18), .O(
         Forward_Memrddata[29]) );
-  INV1S U179 ( .I(EXE_ALUout[29]), .O(n21) );
-  MOAI1 U180 ( .A1(n19), .A2(n14), .B1(n18), .B2(EXE_PCtoReg[31]), .O(
+  INV1S U179 ( .I(EXEMEMi_EXE_ALUout[29]), .O(n21) );
+  MOAI1 U180 ( .A1(n19), .A2(n14), .B1(n18), .B2(EXEMEMi_EXE_PCtoReg[31]), .O(
         Forward_Memrddata[31]) );
-  INV1S U181 ( .I(EXE_ALUout[31]), .O(n19) );
-  NR3H U182 ( .I1(n81), .I2(EXE_Funct3[0]), .I3(EXE_Funct3[2]), .O(n45) );
-  AO12 U183 ( .B1(n81), .B2(EXE_Funct3[0]), .A1(n45), .O(n48) );
-  INV1S U184 ( .I(EXE_Funct3[1]), .O(n81) );
+  INV1S U181 ( .I(EXEMEMi_EXE_ALUout[31]), .O(n19) );
+  NR3H U182 ( .I1(n81), .I2(EXEMEMi_EXE_Funct3[0]), .I3(EXEMEMi_EXE_Funct3[2]), 
+        .O(n45) );
+  AO12 U183 ( .B1(n81), .B2(EXEMEMi_EXE_Funct3[0]), .A1(n45), .O(n48) );
+  INV1S U184 ( .I(EXEMEMi_EXE_Funct3[1]), .O(n81) );
   INV1S U185 ( .I(rst), .O(n82) );
 endmodule
 
@@ -11442,124 +11625,129 @@ module SRAM_wrapper_0 ( CK, CS, OE, WEB, A, DI, DO );
 endmodule
 
 
-module WB ( MEM_MemtoReg, MEM_RegWrite, MEM_rddata, MEM_dout, MEM_rdaddr, 
-        WB_rddata, WB_rdaddr, WB_RegWrite );
-  input [31:0] MEM_rddata;
-  input [31:0] MEM_dout;
-  input [4:0] MEM_rdaddr;
+module WB_I_MEMWBi_MEMWB_inter__ ( MEMWBi_MEM_dout, MEMWBi_MEM_rddata, 
+        MEMWBi_MEM_rdaddr, MEMWBi_MEM_MemtoReg, MEMWBi_MEM_RegWrite, WB_rddata, 
+        WB_rdaddr, WB_RegWrite );
+  input [31:0] MEMWBi_MEM_dout;
+  input [31:0] MEMWBi_MEM_rddata;
+  input [4:0] MEMWBi_MEM_rdaddr;
   output [31:0] WB_rddata;
   output [4:0] WB_rdaddr;
-  input MEM_MemtoReg, MEM_RegWrite;
+  input MEMWBi_MEM_MemtoReg, MEMWBi_MEM_RegWrite;
   output WB_RegWrite;
   wire   n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20,
          n21, n22, n23, n24, n25, n26, n27, n28, n29, n30, n31, n32, n33, n34,
          n35, n36, n37, n38, n39, n40, n41, n42, n43, n44, n45;
 
-  BUF1CK U1 ( .I(MEM_MemtoReg), .O(n11) );
+  BUF1CK U1 ( .I(MEMWBi_MEM_MemtoReg), .O(n11) );
   BUF1CK U2 ( .I(n7), .O(n9) );
   BUF1 U3 ( .I(n7), .O(n10) );
-  MOAI1 U4 ( .A1(n45), .A2(n11), .B1(MEM_dout[0]), .B2(n13), .O(WB_rddata[0])
-         );
-  INV1S U5 ( .I(MEM_rddata[0]), .O(n45) );
-  MOAI1 U6 ( .A1(n43), .A2(n9), .B1(MEM_dout[2]), .B2(n12), .O(WB_rddata[2])
-         );
-  INV1S U7 ( .I(MEM_rddata[2]), .O(n43) );
-  BUF1S U8 ( .I(MEM_MemtoReg), .O(n12) );
-  BUF1S U9 ( .I(MEM_rdaddr[3]), .O(WB_rdaddr[3]) );
-  BUF1 U10 ( .I(MEM_rdaddr[0]), .O(WB_rdaddr[0]) );
-  BUF1 U11 ( .I(MEM_rdaddr[1]), .O(WB_rdaddr[1]) );
-  BUF1 U12 ( .I(MEM_rdaddr[2]), .O(WB_rdaddr[2]) );
-  BUF1 U13 ( .I(MEM_RegWrite), .O(WB_RegWrite) );
-  BUF1 U14 ( .I(MEM_rdaddr[4]), .O(WB_rdaddr[4]) );
+  MOAI1 U4 ( .A1(n45), .A2(n11), .B1(MEMWBi_MEM_dout[0]), .B2(n13), .O(
+        WB_rddata[0]) );
+  INV1S U5 ( .I(MEMWBi_MEM_rddata[0]), .O(n45) );
+  MOAI1 U6 ( .A1(n43), .A2(n9), .B1(MEMWBi_MEM_dout[2]), .B2(n12), .O(
+        WB_rddata[2]) );
+  INV1S U7 ( .I(MEMWBi_MEM_rddata[2]), .O(n43) );
+  BUF1S U8 ( .I(MEMWBi_MEM_MemtoReg), .O(n12) );
+  BUF1S U9 ( .I(MEMWBi_MEM_rdaddr[3]), .O(WB_rdaddr[3]) );
+  BUF1 U10 ( .I(MEMWBi_MEM_rdaddr[0]), .O(WB_rdaddr[0]) );
+  BUF1 U11 ( .I(MEMWBi_MEM_rdaddr[1]), .O(WB_rdaddr[1]) );
+  BUF1 U12 ( .I(MEMWBi_MEM_rdaddr[2]), .O(WB_rdaddr[2]) );
+  BUF1 U13 ( .I(MEMWBi_MEM_RegWrite), .O(WB_RegWrite) );
+  BUF1 U14 ( .I(MEMWBi_MEM_rdaddr[4]), .O(WB_rdaddr[4]) );
   BUF1CK U15 ( .I(n8), .O(n13) );
-  BUF1CK U16 ( .I(MEM_MemtoReg), .O(n8) );
-  BUF1CK U17 ( .I(MEM_MemtoReg), .O(n7) );
-  MOAI1 U18 ( .A1(n44), .A2(n10), .B1(MEM_dout[1]), .B2(n11), .O(WB_rddata[1])
-         );
-  INV1S U19 ( .I(MEM_rddata[1]), .O(n44) );
-  MOAI1 U20 ( .A1(n42), .A2(n9), .B1(MEM_dout[3]), .B2(n13), .O(WB_rddata[3])
-         );
-  INV1S U21 ( .I(MEM_rddata[3]), .O(n42) );
-  MOAI1 U22 ( .A1(n41), .A2(n9), .B1(MEM_dout[4]), .B2(n13), .O(WB_rddata[4])
-         );
-  INV1S U23 ( .I(MEM_rddata[4]), .O(n41) );
-  MOAI1 U24 ( .A1(n40), .A2(n9), .B1(MEM_dout[5]), .B2(n13), .O(WB_rddata[5])
-         );
-  INV1S U25 ( .I(MEM_rddata[5]), .O(n40) );
-  MOAI1 U26 ( .A1(n39), .A2(n9), .B1(MEM_dout[6]), .B2(n13), .O(WB_rddata[6])
-         );
-  INV1S U27 ( .I(MEM_rddata[6]), .O(n39) );
-  MOAI1 U28 ( .A1(n38), .A2(n9), .B1(MEM_dout[7]), .B2(n13), .O(WB_rddata[7])
-         );
-  INV1S U29 ( .I(MEM_rddata[7]), .O(n38) );
-  MOAI1 U30 ( .A1(n37), .A2(n9), .B1(MEM_dout[8]), .B2(n13), .O(WB_rddata[8])
-         );
-  INV1S U31 ( .I(MEM_rddata[8]), .O(n37) );
-  MOAI1 U32 ( .A1(n36), .A2(n10), .B1(MEM_dout[9]), .B2(n13), .O(WB_rddata[9])
-         );
-  INV1S U33 ( .I(MEM_rddata[9]), .O(n36) );
-  MOAI1 U34 ( .A1(n35), .A2(n11), .B1(MEM_dout[10]), .B2(n13), .O(
+  BUF1CK U16 ( .I(MEMWBi_MEM_MemtoReg), .O(n8) );
+  BUF1CK U17 ( .I(MEMWBi_MEM_MemtoReg), .O(n7) );
+  MOAI1 U18 ( .A1(n44), .A2(n10), .B1(MEMWBi_MEM_dout[1]), .B2(n11), .O(
+        WB_rddata[1]) );
+  INV1S U19 ( .I(MEMWBi_MEM_rddata[1]), .O(n44) );
+  MOAI1 U20 ( .A1(n42), .A2(n9), .B1(MEMWBi_MEM_dout[3]), .B2(n13), .O(
+        WB_rddata[3]) );
+  INV1S U21 ( .I(MEMWBi_MEM_rddata[3]), .O(n42) );
+  MOAI1 U22 ( .A1(n41), .A2(n9), .B1(MEMWBi_MEM_dout[4]), .B2(n13), .O(
+        WB_rddata[4]) );
+  INV1S U23 ( .I(MEMWBi_MEM_rddata[4]), .O(n41) );
+  MOAI1 U24 ( .A1(n40), .A2(n9), .B1(MEMWBi_MEM_dout[5]), .B2(n13), .O(
+        WB_rddata[5]) );
+  INV1S U25 ( .I(MEMWBi_MEM_rddata[5]), .O(n40) );
+  MOAI1 U26 ( .A1(n39), .A2(n9), .B1(MEMWBi_MEM_dout[6]), .B2(n13), .O(
+        WB_rddata[6]) );
+  INV1S U27 ( .I(MEMWBi_MEM_rddata[6]), .O(n39) );
+  MOAI1 U28 ( .A1(n38), .A2(n9), .B1(MEMWBi_MEM_dout[7]), .B2(n13), .O(
+        WB_rddata[7]) );
+  INV1S U29 ( .I(MEMWBi_MEM_rddata[7]), .O(n38) );
+  MOAI1 U30 ( .A1(n37), .A2(n9), .B1(MEMWBi_MEM_dout[8]), .B2(n13), .O(
+        WB_rddata[8]) );
+  INV1S U31 ( .I(MEMWBi_MEM_rddata[8]), .O(n37) );
+  MOAI1 U32 ( .A1(n36), .A2(n10), .B1(MEMWBi_MEM_dout[9]), .B2(n13), .O(
+        WB_rddata[9]) );
+  INV1S U33 ( .I(MEMWBi_MEM_rddata[9]), .O(n36) );
+  MOAI1 U34 ( .A1(n35), .A2(n11), .B1(MEMWBi_MEM_dout[10]), .B2(n13), .O(
         WB_rddata[10]) );
-  INV1S U35 ( .I(MEM_rddata[10]), .O(n35) );
-  MOAI1 U36 ( .A1(n34), .A2(n11), .B1(MEM_dout[11]), .B2(n13), .O(
+  INV1S U35 ( .I(MEMWBi_MEM_rddata[10]), .O(n35) );
+  MOAI1 U36 ( .A1(n34), .A2(n11), .B1(MEMWBi_MEM_dout[11]), .B2(n13), .O(
         WB_rddata[11]) );
-  INV1S U37 ( .I(MEM_rddata[11]), .O(n34) );
-  MOAI1 U38 ( .A1(n33), .A2(n11), .B1(MEM_dout[12]), .B2(n13), .O(
+  INV1S U37 ( .I(MEMWBi_MEM_rddata[11]), .O(n34) );
+  MOAI1 U38 ( .A1(n33), .A2(n11), .B1(MEMWBi_MEM_dout[12]), .B2(n13), .O(
         WB_rddata[12]) );
-  INV1S U39 ( .I(MEM_rddata[12]), .O(n33) );
-  MOAI1 U40 ( .A1(n32), .A2(n11), .B1(MEM_dout[13]), .B2(n13), .O(
+  INV1S U39 ( .I(MEMWBi_MEM_rddata[12]), .O(n33) );
+  MOAI1 U40 ( .A1(n32), .A2(n11), .B1(MEMWBi_MEM_dout[13]), .B2(n13), .O(
         WB_rddata[13]) );
-  INV1S U41 ( .I(MEM_rddata[13]), .O(n32) );
-  MOAI1 U42 ( .A1(n31), .A2(n11), .B1(MEM_dout[14]), .B2(n12), .O(
+  INV1S U41 ( .I(MEMWBi_MEM_rddata[13]), .O(n32) );
+  MOAI1 U42 ( .A1(n31), .A2(n11), .B1(MEMWBi_MEM_dout[14]), .B2(n12), .O(
         WB_rddata[14]) );
-  INV1S U43 ( .I(MEM_rddata[14]), .O(n31) );
-  MOAI1 U44 ( .A1(n30), .A2(n11), .B1(MEM_dout[15]), .B2(n12), .O(
+  INV1S U43 ( .I(MEMWBi_MEM_rddata[14]), .O(n31) );
+  MOAI1 U44 ( .A1(n30), .A2(n11), .B1(MEMWBi_MEM_dout[15]), .B2(n12), .O(
         WB_rddata[15]) );
-  INV1S U45 ( .I(MEM_rddata[15]), .O(n30) );
-  MOAI1 U46 ( .A1(n29), .A2(n11), .B1(MEM_dout[16]), .B2(n12), .O(
+  INV1S U45 ( .I(MEMWBi_MEM_rddata[15]), .O(n30) );
+  MOAI1 U46 ( .A1(n29), .A2(n11), .B1(MEMWBi_MEM_dout[16]), .B2(n12), .O(
         WB_rddata[16]) );
-  INV1S U47 ( .I(MEM_rddata[16]), .O(n29) );
-  MOAI1 U48 ( .A1(n28), .A2(n11), .B1(MEM_dout[17]), .B2(n12), .O(
+  INV1S U47 ( .I(MEMWBi_MEM_rddata[16]), .O(n29) );
+  MOAI1 U48 ( .A1(n28), .A2(n11), .B1(MEMWBi_MEM_dout[17]), .B2(n12), .O(
         WB_rddata[17]) );
-  INV1S U49 ( .I(MEM_rddata[17]), .O(n28) );
-  MOAI1 U50 ( .A1(n27), .A2(n11), .B1(MEM_dout[18]), .B2(n12), .O(
+  INV1S U49 ( .I(MEMWBi_MEM_rddata[17]), .O(n28) );
+  MOAI1 U50 ( .A1(n27), .A2(n11), .B1(MEMWBi_MEM_dout[18]), .B2(n12), .O(
         WB_rddata[18]) );
-  INV1S U51 ( .I(MEM_rddata[18]), .O(n27) );
-  MOAI1 U52 ( .A1(n26), .A2(n10), .B1(MEM_dout[19]), .B2(n11), .O(
+  INV1S U51 ( .I(MEMWBi_MEM_rddata[18]), .O(n27) );
+  MOAI1 U52 ( .A1(n26), .A2(n10), .B1(MEMWBi_MEM_dout[19]), .B2(n11), .O(
         WB_rddata[19]) );
-  INV1S U53 ( .I(MEM_rddata[19]), .O(n26) );
-  MOAI1 U54 ( .A1(n25), .A2(n10), .B1(MEM_dout[20]), .B2(n12), .O(
+  INV1S U53 ( .I(MEMWBi_MEM_rddata[19]), .O(n26) );
+  MOAI1 U54 ( .A1(n25), .A2(n10), .B1(MEMWBi_MEM_dout[20]), .B2(n12), .O(
         WB_rddata[20]) );
-  INV1S U55 ( .I(MEM_rddata[20]), .O(n25) );
-  MOAI1 U56 ( .A1(n24), .A2(n10), .B1(MEM_dout[21]), .B2(n12), .O(
+  INV1S U55 ( .I(MEMWBi_MEM_rddata[20]), .O(n25) );
+  MOAI1 U56 ( .A1(n24), .A2(n10), .B1(MEMWBi_MEM_dout[21]), .B2(n12), .O(
         WB_rddata[21]) );
-  INV1S U57 ( .I(MEM_rddata[21]), .O(n24) );
-  MOAI1 U58 ( .A1(n23), .A2(n10), .B1(MEM_dout[22]), .B2(n12), .O(
+  INV1S U57 ( .I(MEMWBi_MEM_rddata[21]), .O(n24) );
+  MOAI1 U58 ( .A1(n23), .A2(n10), .B1(MEMWBi_MEM_dout[22]), .B2(n12), .O(
         WB_rddata[22]) );
-  INV1S U59 ( .I(MEM_rddata[22]), .O(n23) );
-  MOAI1 U60 ( .A1(n22), .A2(n10), .B1(MEM_dout[23]), .B2(n12), .O(
+  INV1S U59 ( .I(MEMWBi_MEM_rddata[22]), .O(n23) );
+  MOAI1 U60 ( .A1(n22), .A2(n10), .B1(MEMWBi_MEM_dout[23]), .B2(n12), .O(
         WB_rddata[23]) );
-  INV1S U61 ( .I(MEM_rddata[23]), .O(n22) );
-  MOAI1 U62 ( .A1(n21), .A2(n10), .B1(MEM_dout[24]), .B2(n12), .O(
+  INV1S U61 ( .I(MEMWBi_MEM_rddata[23]), .O(n22) );
+  MOAI1 U62 ( .A1(n21), .A2(n10), .B1(MEMWBi_MEM_dout[24]), .B2(n12), .O(
         WB_rddata[24]) );
-  INV1S U63 ( .I(MEM_rddata[24]), .O(n21) );
-  MOAI1 U64 ( .A1(n20), .A2(n10), .B1(MEM_dout[25]), .B2(n12), .O(
+  INV1S U63 ( .I(MEMWBi_MEM_rddata[24]), .O(n21) );
+  MOAI1 U64 ( .A1(n20), .A2(n10), .B1(MEMWBi_MEM_dout[25]), .B2(n12), .O(
         WB_rddata[25]) );
-  INV1S U65 ( .I(MEM_rddata[25]), .O(n20) );
-  MOAI1 U66 ( .A1(n19), .A2(n10), .B1(MEM_dout[26]), .B2(n12), .O(
+  INV1S U65 ( .I(MEMWBi_MEM_rddata[25]), .O(n20) );
+  MOAI1 U66 ( .A1(n19), .A2(n10), .B1(MEMWBi_MEM_dout[26]), .B2(n12), .O(
         WB_rddata[26]) );
-  INV1S U67 ( .I(MEM_rddata[26]), .O(n19) );
-  MOAI1 U68 ( .A1(n18), .A2(n10), .B1(MEM_dout[27]), .B2(n12), .O(
+  INV1S U67 ( .I(MEMWBi_MEM_rddata[26]), .O(n19) );
+  MOAI1 U68 ( .A1(n18), .A2(n10), .B1(MEMWBi_MEM_dout[27]), .B2(n12), .O(
         WB_rddata[27]) );
-  INV1S U69 ( .I(MEM_rddata[27]), .O(n18) );
-  MOAI1 U70 ( .A1(n17), .A2(n9), .B1(MEM_dout[28]), .B2(n12), .O(WB_rddata[28]) );
-  INV1S U71 ( .I(MEM_rddata[28]), .O(n17) );
-  MOAI1 U72 ( .A1(n16), .A2(n9), .B1(MEM_dout[29]), .B2(n13), .O(WB_rddata[29]) );
-  INV1S U73 ( .I(MEM_rddata[29]), .O(n16) );
-  MOAI1 U74 ( .A1(n15), .A2(n9), .B1(MEM_dout[30]), .B2(n12), .O(WB_rddata[30]) );
-  INV1S U75 ( .I(MEM_rddata[30]), .O(n15) );
-  MOAI1 U76 ( .A1(n14), .A2(n9), .B1(MEM_dout[31]), .B2(n13), .O(WB_rddata[31]) );
-  INV1S U77 ( .I(MEM_rddata[31]), .O(n14) );
+  INV1S U69 ( .I(MEMWBi_MEM_rddata[27]), .O(n18) );
+  MOAI1 U70 ( .A1(n17), .A2(n9), .B1(MEMWBi_MEM_dout[28]), .B2(n12), .O(
+        WB_rddata[28]) );
+  INV1S U71 ( .I(MEMWBi_MEM_rddata[28]), .O(n17) );
+  MOAI1 U72 ( .A1(n16), .A2(n9), .B1(MEMWBi_MEM_dout[29]), .B2(n13), .O(
+        WB_rddata[29]) );
+  INV1S U73 ( .I(MEMWBi_MEM_rddata[29]), .O(n16) );
+  MOAI1 U74 ( .A1(n15), .A2(n9), .B1(MEMWBi_MEM_dout[30]), .B2(n12), .O(
+        WB_rddata[30]) );
+  INV1S U75 ( .I(MEMWBi_MEM_rddata[30]), .O(n15) );
+  MOAI1 U76 ( .A1(n14), .A2(n9), .B1(MEMWBi_MEM_dout[31]), .B2(n13), .O(
+        WB_rddata[31]) );
+  INV1S U77 ( .I(MEMWBi_MEM_rddata[31]), .O(n14) );
 endmodule
 
 
@@ -11630,26 +11818,27 @@ module ForwardUnit ( ID_rs1addr, ID_rs2addr, EXE_rdaddr, EXE_RegWrite,
 endmodule
 
 
-module HazardCtrl ( BranchCtrl, ID_MemRead, rs1addr, rs2addr, ID_rdaddr, 
-        PCWrite, InstrFlush, IFID_RegWrite, IDFlush );
+module HazardCtrl_I_IFHCo_IFHC_inter__ ( BranchCtrl, ID_MemRead, rs1addr, 
+        rs2addr, ID_rdaddr, IFHCo_InstrFlush, IFHCo_IFID_RegWrite, 
+        IFHCo_PCWrite, IDFlush );
   input [1:0] BranchCtrl;
   input [4:0] rs1addr;
   input [4:0] rs2addr;
   input [4:0] ID_rdaddr;
   input ID_MemRead;
-  output PCWrite, InstrFlush, IFID_RegWrite, IDFlush;
+  output IFHCo_InstrFlush, IFHCo_IFID_RegWrite, IFHCo_PCWrite, IDFlush;
   wire   n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24,
          n25, n26, n27, n3;
 
   ND2 U21 ( .I1(ID_MemRead), .I2(n13), .O(n11) );
   ND2 U22 ( .I1(n18), .I2(n19), .O(n17) );
   ND2 U23 ( .I1(n23), .I2(n24), .O(n15) );
-  OR2P U3 ( .I1(n11), .I2(n3), .O(IFID_RegWrite) );
-  BUF1CK U4 ( .I(IFID_RegWrite), .O(PCWrite) );
+  OR2P U3 ( .I1(n11), .I2(n3), .O(IFHCo_IFID_RegWrite) );
+  BUF1CK U4 ( .I(IFHCo_IFID_RegWrite), .O(IFHCo_PCWrite) );
   INV2 U5 ( .I(n12), .O(n3) );
   ND2S U6 ( .I1(n11), .I2(n12), .O(IDFlush) );
   NR2F U7 ( .I1(BranchCtrl[0]), .I2(BranchCtrl[1]), .O(n12) );
-  INV1S U8 ( .I(n12), .O(InstrFlush) );
+  INV1S U8 ( .I(n12), .O(IFHCo_InstrFlush) );
   OAI22S U9 ( .A1(n14), .A2(n15), .B1(n16), .B2(n17), .O(n13) );
   ND3 U10 ( .I1(n25), .I2(n26), .I3(n27), .O(n14) );
   ND3 U11 ( .I1(n20), .I2(n21), .I3(n22), .O(n16) );
@@ -11668,12 +11857,16 @@ endmodule
 
 module top ( clk, rst );
   input clk, rst;
-  wire   n_Logic1_, n_Logic0_, InstrFlush, IFID_RegWrite, PCWrite, n_0_net_,
-         WB_RegWrite, IDFlush, ID_PCtoRegSrc, ID_ALUSrc, ID_RDSrc, ID_MemRead,
-         ID_MemWrite, ID_MemtoReg, ID_RegWrite, ID_csrweb, ZeroFlag, EXE_rdsrc,
-         EXE_MemRead, EXE_MemWrite, EXE_MemtoReg, EXE_RegWrite, MEM_MemtoReg,
-         MEM_RegWrite, MEM_CS, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13,
-         n14, n15, n16, n17, n18, n19, SYNOPSYS_UNCONNECTED_1,
+  wire   n_Logic1_, n_Logic0_, Wire_IFHC_InstrFlush, Wire_IFHC_IFID_RegWrite,
+         Wire_IFHC_PCWrite, n_0_net_, WB_RegWrite, IDFlush,
+         Wire_IDEXE_ID_PCtoRegSrc, Wire_IDEXE_ID_ALUSrc, Wire_IDEXE_ID_rdsrc,
+         Wire_IDEXE_ID_MemRead, Wire_IDEXE_ID_MemWrite, Wire_IDEXE_ID_MemtoReg,
+         Wire_IDEXE_ID_RegWrite, Wire_IDEXE_ID_csrweb, ZeroFlag,
+         Wire_EXEMEM_EXE_rdsrc, Wire_EXEMEM_EXE_MemRead,
+         Wire_EXEMEM_EXE_MemWrite, Wire_EXEMEM_EXE_MemtoReg,
+         Wire_EXEMEM_EXE_RegWrite, Wire_MEMWB_MEM_MemtoReg,
+         Wire_MEMWB_MEM_RegWrite, MEM_CS, n3, n4, n5, n6, n7, n8, n9, n10, n11,
+         n12, n13, n14, n15, n16, n17, n18, n19, SYNOPSYS_UNCONNECTED_1,
          SYNOPSYS_UNCONNECTED_2, SYNOPSYS_UNCONNECTED_3,
          SYNOPSYS_UNCONNECTED_4, SYNOPSYS_UNCONNECTED_5,
          SYNOPSYS_UNCONNECTED_6, SYNOPSYS_UNCONNECTED_7,
@@ -11683,75 +11876,77 @@ module top ( clk, rst );
          SYNOPSYS_UNCONNECTED_14, SYNOPSYS_UNCONNECTED_15,
          SYNOPSYS_UNCONNECTED_16, SYNOPSYS_UNCONNECTED_17,
          SYNOPSYS_UNCONNECTED_18;
+  wire   [31:0] Wire_IFEXE_PC_imm;
+  wire   [31:0] Wire_IFEXE_PC_jr;
   wire   [1:0] BranchCtrl;
-  wire   [31:0] PC_imm;
-  wire   [31:0] PC_jr;
   wire   [31:0] Instr_out;
-  wire   [31:0] IF_pcout;
-  wire   [31:0] IF_instrout;
+  wire   [31:0] Wire_IFID_IF_pcout;
+  wire   [31:0] Wire_IFID_IF_instrout;
   wire   [15:2] PC_out;
   wire   [4:0] WB_rdaddr;
   wire   [31:0] WB_rddata;
-  wire   [31:0] ID_pcout;
-  wire   [31:0] ID_rs1data;
-  wire   [31:0] ID_rs2data;
-  wire   [31:0] ID_imm;
-  wire   [2:0] ID_ALUOP;
-  wire   [1:0] ID_branch;
-  wire   [2:0] ID_Funct3;
-  wire   [6:0] ID_Funct7;
-  wire   [4:0] ID_rdaddr;
+  wire   [31:0] Wire_IDEXE_ID_pcout;
+  wire   [31:0] Wire_IDEXE_ID_rs1data;
+  wire   [31:0] Wire_IDEXE_ID_rs2data;
+  wire   [31:0] Wire_IDEXE_ID_imm;
+  wire   [11:0] Wire_IDEXE_ID_csraddr;
+  wire   [6:0] Wire_IDEXE_ID_Funct7;
+  wire   [4:0] Wire_IDEXE_ID_rdaddr;
+  wire   [4:0] Wire_IDEXE_rs1addr;
+  wire   [4:0] Wire_IDEXE_rs2addr;
+  wire   [2:0] Wire_IDEXE_ID_Funct3;
+  wire   [2:0] Wire_IDEXE_ID_ALUOP;
   wire   [4:0] ID_rs1addr;
   wire   [4:0] ID_rs2addr;
-  wire   [4:0] rs1addr;
-  wire   [4:0] rs2addr;
-  wire   [11:0] ID_csraddr;
+  wire   [1:0] ID_branch;
   wire   [31:0] Forward_Memrddata;
   wire   [1:0] Forward_rs1src;
   wire   [1:0] Forward_rs2src;
-  wire   [31:0] EXE_ALUout;
-  wire   [4:0] EXE_rdaddr;
-  wire   [31:0] EXE_PCtoReg;
-  wire   [31:0] EXE_rs2data;
-  wire   [2:0] EXE_Funct3;
+  wire   [31:0] Wire_EXEMEM_EXE_ALUout;
+  wire   [31:0] Wire_EXEMEM_EXE_PCtoReg;
+  wire   [31:0] Wire_EXEMEM_EXE_rs2data;
+  wire   [4:0] Wire_EXEMEM_EXE_rdaddr;
+  wire   [2:0] Wire_EXEMEM_EXE_Funct3;
   wire   [31:0] DM_dataout;
-  wire   [31:0] MEM_rddata;
-  wire   [4:0] MEM_rdaddr;
-  wire   [31:0] MEM_dout;
+  wire   [31:0] Wire_MEMWB_MEM_dout;
+  wire   [31:0] Wire_MEMWB_MEM_rddata;
+  wire   [4:0] Wire_MEMWB_MEM_rdaddr;
   wire   [3:0] MEM_WEB;
   wire   [31:0] MEM_din;
 
   INV2CK U3 ( .I(clk), .O(n_0_net_) );
   BUF2 U4 ( .I(Forward_rs1src[1]), .O(n10) );
   BUF6 U5 ( .I(Forward_rs2src[1]), .O(n9) );
-  BUF1CK U6 ( .I(MEM_MemtoReg), .O(n7) );
-  BUF1CK U7 ( .I(EXE_rdsrc), .O(n8) );
+  BUF1CK U6 ( .I(Wire_MEMWB_MEM_MemtoReg), .O(n7) );
+  BUF1CK U7 ( .I(Wire_EXEMEM_EXE_rdsrc), .O(n8) );
   INV1S U8 ( .I(rst), .O(n3) );
   INV1S U9 ( .I(n3), .O(n4) );
   INV1S U10 ( .I(n3), .O(n5) );
   INV1S U11 ( .I(n3), .O(n6) );
-  BUF1CK U12 ( .I(IFID_RegWrite), .O(n19) );
-  BUF1CK U13 ( .I(PCWrite), .O(n18) );
-  BUF1CK U14 ( .I(ID_ALUSrc), .O(n12) );
-  BUF1CK U15 ( .I(rs2addr[3]), .O(n17) );
-  BUF1CK U16 ( .I(rs1addr[3]), .O(n15) );
-  BUF1CK U17 ( .I(IF_instrout[23]), .O(n16) );
-  BUF1CK U18 ( .I(IF_instrout[18]), .O(n14) );
-  BUF1CK U19 ( .I(ID_PCtoRegSrc), .O(n13) );
-  BUF1CK U20 ( .I(ID_csrweb), .O(n11) );
+  BUF1CK U12 ( .I(Wire_IFHC_IFID_RegWrite), .O(n19) );
+  BUF1CK U13 ( .I(Wire_IFHC_PCWrite), .O(n18) );
+  BUF1CK U14 ( .I(Wire_IDEXE_ID_ALUSrc), .O(n12) );
+  BUF1CK U15 ( .I(Wire_IDEXE_rs2addr[3]), .O(n17) );
+  BUF1CK U16 ( .I(Wire_IDEXE_rs1addr[3]), .O(n15) );
+  BUF1CK U17 ( .I(Wire_IFID_IF_instrout[23]), .O(n16) );
+  BUF1CK U18 ( .I(Wire_IFID_IF_instrout[18]), .O(n14) );
+  BUF1CK U19 ( .I(Wire_IDEXE_ID_PCtoRegSrc), .O(n13) );
+  BUF1CK U20 ( .I(Wire_IDEXE_ID_csrweb), .O(n11) );
   TIE1 U21 ( .O(n_Logic1_) );
   TIE0 U22 ( .O(n_Logic0_) );
-  IF IF ( .clk(clk), .rst(n4), .BranchCtrl(BranchCtrl), .PC_imm(PC_imm), 
-        .PC_jr(PC_jr), .InstrFlush(InstrFlush), .IFID_RegWrite(n19), .PCWrite(
-        n18), .Instr_out(Instr_out), .IF_pcout(IF_pcout), .IF_instrout(
-        IF_instrout), .PC_out({SYNOPSYS_UNCONNECTED_1, SYNOPSYS_UNCONNECTED_2, 
-        SYNOPSYS_UNCONNECTED_3, SYNOPSYS_UNCONNECTED_4, SYNOPSYS_UNCONNECTED_5, 
-        SYNOPSYS_UNCONNECTED_6, SYNOPSYS_UNCONNECTED_7, SYNOPSYS_UNCONNECTED_8, 
-        SYNOPSYS_UNCONNECTED_9, SYNOPSYS_UNCONNECTED_10, 
-        SYNOPSYS_UNCONNECTED_11, SYNOPSYS_UNCONNECTED_12, 
-        SYNOPSYS_UNCONNECTED_13, SYNOPSYS_UNCONNECTED_14, 
-        SYNOPSYS_UNCONNECTED_15, SYNOPSYS_UNCONNECTED_16, PC_out, 
-        SYNOPSYS_UNCONNECTED_17, SYNOPSYS_UNCONNECTED_18}) );
+  IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__ IF ( .clk(
+        clk), .rst(n4), .IFEXEi_PC_imm(Wire_IFEXE_PC_imm), .IFEXEi_PC_jr(
+        Wire_IFEXE_PC_jr), .IFHCi_InstrFlush(Wire_IFHC_InstrFlush), 
+        .IFHCi_IFID_RegWrite(n19), .IFHCi_PCWrite(n18), .BranchCtrl(BranchCtrl), .Instr_out(Instr_out), .IFIDo_IF_pcout(Wire_IFID_IF_pcout), 
+        .IFIDo_IF_instrout(Wire_IFID_IF_instrout), .PC_out({
+        SYNOPSYS_UNCONNECTED_1, SYNOPSYS_UNCONNECTED_2, SYNOPSYS_UNCONNECTED_3, 
+        SYNOPSYS_UNCONNECTED_4, SYNOPSYS_UNCONNECTED_5, SYNOPSYS_UNCONNECTED_6, 
+        SYNOPSYS_UNCONNECTED_7, SYNOPSYS_UNCONNECTED_8, SYNOPSYS_UNCONNECTED_9, 
+        SYNOPSYS_UNCONNECTED_10, SYNOPSYS_UNCONNECTED_11, 
+        SYNOPSYS_UNCONNECTED_12, SYNOPSYS_UNCONNECTED_13, 
+        SYNOPSYS_UNCONNECTED_14, SYNOPSYS_UNCONNECTED_15, 
+        SYNOPSYS_UNCONNECTED_16, PC_out, SYNOPSYS_UNCONNECTED_17, 
+        SYNOPSYS_UNCONNECTED_18}) );
   SRAM_wrapper_1 IM1 ( .CK(n_0_net_), .CS(n_Logic1_), .OE(n_Logic1_), .WEB({
         n_Logic1_, n_Logic1_, n_Logic1_, n_Logic1_}), .A(PC_out), .DI({
         n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, 
@@ -11760,55 +11955,83 @@ module top ( clk, rst );
         n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, 
         n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, n_Logic0_, 
         n_Logic0_, n_Logic0_}), .DO(Instr_out) );
-  ID ID ( .clk(clk), .rst(n6), .IF_instrout({IF_instrout[31:24], n16, 
-        IF_instrout[22:19], n14, IF_instrout[17:0]}), .IF_pcout(IF_pcout), 
-        .WB_RegWrite(WB_RegWrite), .WB_rdaddr(WB_rdaddr), .WB_rddata(WB_rddata), .IDFlush(IDFlush), .ID_pcout(ID_pcout), .ID_rs1data(ID_rs1data), 
-        .ID_rs2data(ID_rs2data), .ID_imm(ID_imm), .ID_Funct3(ID_Funct3), 
-        .ID_Funct7(ID_Funct7), .ID_rdaddr(ID_rdaddr), .ID_rs1addr(ID_rs1addr), 
-        .ID_rs2addr(ID_rs2addr), .ID_ALUOP(ID_ALUOP), .ID_PCtoRegSrc(
-        ID_PCtoRegSrc), .ID_ALUSrc(ID_ALUSrc), .ID_RDSrc(ID_RDSrc), 
-        .ID_MemRead(ID_MemRead), .ID_MemWrite(ID_MemWrite), .ID_MemtoReg(
-        ID_MemtoReg), .ID_RegWrite(ID_RegWrite), .ID_branch(ID_branch), 
-        .rs1addr(rs1addr), .rs2addr(rs2addr), .ID_csraddr(ID_csraddr), 
-        .ID_csrweb(ID_csrweb) );
-  EXE EXE ( .clk(clk), .rst(n5), .ID_pcout(ID_pcout), .ID_rs1data(ID_rs1data), 
-        .ID_rs2data(ID_rs2data), .ID_imm(ID_imm), .ID_Funct3(ID_Funct3), 
-        .ID_Funct7(ID_Funct7), .ID_rdaddr(ID_rdaddr), .rs1addr({rs1addr[4], 
-        n15, rs1addr[2:0]}), .rs2addr({rs2addr[4], n17, rs2addr[2:0]}), 
-        .ID_ALUOP(ID_ALUOP), .ID_PCtoRegSrc(n13), .ID_ALUSrc(n12), .ID_RDSrc(
-        ID_RDSrc), .ID_MemRead(ID_MemRead), .ID_MemWrite(ID_MemWrite), 
-        .ID_MemtoReg(ID_MemtoReg), .ID_RegWrite(ID_RegWrite), 
-        .Forward_Memrddata(Forward_Memrddata), .WB_rddata(WB_rddata), 
-        .Forward_rs1src({n10, Forward_rs1src[0]}), .Forward_rs2src({n9, 
-        Forward_rs2src[0]}), .ID_csraddr(ID_csraddr), .ID_csrweb(n11), 
-        .BranchCtrl(BranchCtrl), .EXE_PCtoReg(EXE_PCtoReg), .EXE_ALUout(
-        EXE_ALUout), .EXE_rs2data(EXE_rs2data), .EXE_rdaddr(EXE_rdaddr), 
-        .EXE_Funct3(EXE_Funct3), .EXE_rdsrc(EXE_rdsrc), .EXE_MemRead(
-        EXE_MemRead), .EXE_MemWrite(EXE_MemWrite), .EXE_MemtoReg(EXE_MemtoReg), 
-        .EXE_RegWrite(EXE_RegWrite), .ZeroFlag(ZeroFlag), .PC_imm(PC_imm), 
-        .PC_jr(PC_jr) );
-  MEM MEM ( .clk(clk), .rst(n4), .EXE_rdsrc(n8), .EXE_MemRead(EXE_MemRead), 
-        .EXE_MemWrite(EXE_MemWrite), .EXE_MemtoReg(EXE_MemtoReg), 
-        .EXE_RegWrite(EXE_RegWrite), .EXE_ALUout(EXE_ALUout), .EXE_PCtoReg(
-        EXE_PCtoReg), .EXE_rs2data(EXE_rs2data), .EXE_rdaddr(EXE_rdaddr), 
-        .EXE_Funct3(EXE_Funct3), .MEM_rddata(MEM_rddata), .MEM_dout(MEM_dout), 
-        .MEM_rdaddr(MEM_rdaddr), .MEM_MemtoReg(MEM_MemtoReg), .MEM_RegWrite(
-        MEM_RegWrite), .Forward_Memrddata(Forward_Memrddata), .DM_dataout(
-        DM_dataout), .MEM_CS(MEM_CS), .MEM_WEB(MEM_WEB), .MEM_din(MEM_din) );
-  SRAM_wrapper_0 DM1 ( .CK(n_0_net_), .CS(MEM_CS), .OE(EXE_MemRead), .WEB(
-        MEM_WEB), .A(EXE_ALUout[15:2]), .DI(MEM_din), .DO(DM_dataout) );
-  WB WB ( .MEM_MemtoReg(n7), .MEM_RegWrite(MEM_RegWrite), .MEM_rddata(
-        MEM_rddata), .MEM_dout(MEM_dout), .MEM_rdaddr(MEM_rdaddr), .WB_rddata(
-        WB_rddata), .WB_rdaddr(WB_rdaddr), .WB_RegWrite(WB_RegWrite) );
+  ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__ ID ( .clk(clk), .rst(n6), 
+        .IFIDi_IF_pcout(Wire_IFID_IF_pcout), .IFIDi_IF_instrout({
+        Wire_IFID_IF_instrout[31:24], n16, Wire_IFID_IF_instrout[22:19], n14, 
+        Wire_IFID_IF_instrout[17:0]}), .WB_RegWrite(WB_RegWrite), .WB_rdaddr(
+        WB_rdaddr), .WB_rddata(WB_rddata), .IDFlush(IDFlush), 
+        .IDEXEo_ID_pcout(Wire_IDEXE_ID_pcout), .IDEXEo_ID_rs1data(
+        Wire_IDEXE_ID_rs1data), .IDEXEo_ID_rs2data(Wire_IDEXE_ID_rs2data), 
+        .IDEXEo_ID_imm(Wire_IDEXE_ID_imm), .IDEXEo_ID_csraddr(
+        Wire_IDEXE_ID_csraddr), .IDEXEo_ID_Funct7(Wire_IDEXE_ID_Funct7), 
+        .IDEXEo_ID_rdaddr(Wire_IDEXE_ID_rdaddr), .IDEXEo_rs1addr(
+        Wire_IDEXE_rs1addr), .IDEXEo_rs2addr(Wire_IDEXE_rs2addr), 
+        .IDEXEo_ID_Funct3(Wire_IDEXE_ID_Funct3), .IDEXEo_ID_ALUOP(
+        Wire_IDEXE_ID_ALUOP), .IDEXEo_ID_PCtoRegSrc(Wire_IDEXE_ID_PCtoRegSrc), 
+        .IDEXEo_ID_ALUSrc(Wire_IDEXE_ID_ALUSrc), .IDEXEo_ID_rdsrc(
+        Wire_IDEXE_ID_rdsrc), .IDEXEo_ID_MemRead(Wire_IDEXE_ID_MemRead), 
+        .IDEXEo_ID_MemWrite(Wire_IDEXE_ID_MemWrite), .IDEXEo_ID_MemtoReg(
+        Wire_IDEXE_ID_MemtoReg), .IDEXEo_ID_RegWrite(Wire_IDEXE_ID_RegWrite), 
+        .IDEXEo_ID_csrweb(Wire_IDEXE_ID_csrweb), .ID_rs1addr(ID_rs1addr), 
+        .ID_rs2addr(ID_rs2addr), .ID_branch(ID_branch) );
+  EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__ EXE ( 
+        .clk(clk), .rst(n5), .IDEXEi_ID_pcout(Wire_IDEXE_ID_pcout), 
+        .IDEXEi_ID_rs1data(Wire_IDEXE_ID_rs1data), .IDEXEi_ID_rs2data(
+        Wire_IDEXE_ID_rs2data), .IDEXEi_ID_imm(Wire_IDEXE_ID_imm), 
+        .IDEXEi_ID_csraddr(Wire_IDEXE_ID_csraddr), .IDEXEi_ID_Funct7(
+        Wire_IDEXE_ID_Funct7), .IDEXEi_ID_rdaddr(Wire_IDEXE_ID_rdaddr), 
+        .IDEXEi_rs1addr({Wire_IDEXE_rs1addr[4], n15, Wire_IDEXE_rs1addr[2:0]}), 
+        .IDEXEi_rs2addr({Wire_IDEXE_rs2addr[4], n17, Wire_IDEXE_rs2addr[2:0]}), 
+        .IDEXEi_ID_Funct3(Wire_IDEXE_ID_Funct3), .IDEXEi_ID_ALUOP(
+        Wire_IDEXE_ID_ALUOP), .IDEXEi_ID_PCtoRegSrc(n13), .IDEXEi_ID_ALUSrc(
+        n12), .IDEXEi_ID_rdsrc(Wire_IDEXE_ID_rdsrc), .IDEXEi_ID_MemRead(
+        Wire_IDEXE_ID_MemRead), .IDEXEi_ID_MemWrite(Wire_IDEXE_ID_MemWrite), 
+        .IDEXEi_ID_MemtoReg(Wire_IDEXE_ID_MemtoReg), .IDEXEi_ID_RegWrite(
+        Wire_IDEXE_ID_RegWrite), .IDEXEi_ID_csrweb(n11), .Forward_Memrddata(
+        Forward_Memrddata), .WB_rddata(WB_rddata), .Forward_rs1src({n10, 
+        Forward_rs1src[0]}), .Forward_rs2src({n9, Forward_rs2src[0]}), 
+        .BranchCtrl(BranchCtrl), .EXEMEMo_EXE_ALUout(Wire_EXEMEM_EXE_ALUout), 
+        .EXEMEMo_EXE_PCtoReg(Wire_EXEMEM_EXE_PCtoReg), .EXEMEMo_EXE_rs2data(
+        Wire_EXEMEM_EXE_rs2data), .EXEMEMo_EXE_rdaddr(Wire_EXEMEM_EXE_rdaddr), 
+        .EXEMEMo_EXE_Funct3(Wire_EXEMEM_EXE_Funct3), .EXEMEMo_EXE_rdsrc(
+        Wire_EXEMEM_EXE_rdsrc), .EXEMEMo_EXE_MemRead(Wire_EXEMEM_EXE_MemRead), 
+        .EXEMEMo_EXE_MemWrite(Wire_EXEMEM_EXE_MemWrite), 
+        .EXEMEMo_EXE_MemtoReg(Wire_EXEMEM_EXE_MemtoReg), 
+        .EXEMEMo_EXE_RegWrite(Wire_EXEMEM_EXE_RegWrite), .IFEXEo_PC_imm(
+        Wire_IFEXE_PC_imm), .IFEXEo_PC_jr(Wire_IFEXE_PC_jr), .ZeroFlag(
+        ZeroFlag) );
+  MEM_I_EXEMEMi_EXEMEM_inter__I_MEMWBo_MEMWB_inter__ MEM ( .clk(clk), .rst(n4), 
+        .EXEMEMi_EXE_ALUout(Wire_EXEMEM_EXE_ALUout), .EXEMEMi_EXE_PCtoReg(
+        Wire_EXEMEM_EXE_PCtoReg), .EXEMEMi_EXE_rs2data(Wire_EXEMEM_EXE_rs2data), .EXEMEMi_EXE_rdaddr(Wire_EXEMEM_EXE_rdaddr), .EXEMEMi_EXE_Funct3(
+        Wire_EXEMEM_EXE_Funct3), .EXEMEMi_EXE_rdsrc(n8), .EXEMEMi_EXE_MemRead(
+        Wire_EXEMEM_EXE_MemRead), .EXEMEMi_EXE_MemWrite(
+        Wire_EXEMEM_EXE_MemWrite), .EXEMEMi_EXE_MemtoReg(
+        Wire_EXEMEM_EXE_MemtoReg), .EXEMEMi_EXE_RegWrite(
+        Wire_EXEMEM_EXE_RegWrite), .MEMWBo_MEM_dout(Wire_MEMWB_MEM_dout), 
+        .MEMWBo_MEM_rddata(Wire_MEMWB_MEM_rddata), .MEMWBo_MEM_rdaddr(
+        Wire_MEMWB_MEM_rdaddr), .MEMWBo_MEM_MemtoReg(Wire_MEMWB_MEM_MemtoReg), 
+        .MEMWBo_MEM_RegWrite(Wire_MEMWB_MEM_RegWrite), .Forward_Memrddata(
+        Forward_Memrddata), .DM_dataout(DM_dataout), .MEM_CS(MEM_CS), 
+        .MEM_WEB(MEM_WEB), .MEM_din(MEM_din) );
+  SRAM_wrapper_0 DM1 ( .CK(n_0_net_), .CS(MEM_CS), .OE(Wire_EXEMEM_EXE_MemRead), .WEB(MEM_WEB), .A(Wire_EXEMEM_EXE_ALUout[15:2]), .DI(MEM_din), .DO(
+        DM_dataout) );
+  WB_I_MEMWBi_MEMWB_inter__ WB ( .MEMWBi_MEM_dout(Wire_MEMWB_MEM_dout), 
+        .MEMWBi_MEM_rddata(Wire_MEMWB_MEM_rddata), .MEMWBi_MEM_rdaddr(
+        Wire_MEMWB_MEM_rdaddr), .MEMWBi_MEM_MemtoReg(n7), 
+        .MEMWBi_MEM_RegWrite(Wire_MEMWB_MEM_RegWrite), .WB_rddata(WB_rddata), 
+        .WB_rdaddr(WB_rdaddr), .WB_RegWrite(WB_RegWrite) );
   BranchCtrl BC ( .ID_branch(ID_branch), .ZeroFlag(ZeroFlag), .BranchCtrl(
         BranchCtrl) );
   ForwardUnit FU ( .ID_rs1addr(ID_rs1addr), .ID_rs2addr(ID_rs2addr), 
-        .EXE_rdaddr(EXE_rdaddr), .EXE_RegWrite(EXE_RegWrite), .MEM_rdaddr(
-        MEM_rdaddr), .MEM_RegWrite(MEM_RegWrite), .Forward_rs1src(
-        Forward_rs1src), .Forward_rs2src(Forward_rs2src) );
-  HazardCtrl HC ( .BranchCtrl(BranchCtrl), .ID_MemRead(ID_MemRead), .rs1addr({
-        rs1addr[4], n15, rs1addr[2:0]}), .rs2addr({rs2addr[4], n17, 
-        rs2addr[2:0]}), .ID_rdaddr(ID_rdaddr), .PCWrite(PCWrite), .InstrFlush(
-        InstrFlush), .IFID_RegWrite(IFID_RegWrite), .IDFlush(IDFlush) );
+        .EXE_rdaddr(Wire_EXEMEM_EXE_rdaddr), .EXE_RegWrite(
+        Wire_EXEMEM_EXE_RegWrite), .MEM_rdaddr(Wire_MEMWB_MEM_rdaddr), 
+        .MEM_RegWrite(Wire_MEMWB_MEM_RegWrite), .Forward_rs1src(Forward_rs1src), .Forward_rs2src(Forward_rs2src) );
+  HazardCtrl_I_IFHCo_IFHC_inter__ HC ( .BranchCtrl(BranchCtrl), .ID_MemRead(
+        Wire_IDEXE_ID_MemRead), .rs1addr({Wire_IDEXE_rs1addr[4], n15, 
+        Wire_IDEXE_rs1addr[2:0]}), .rs2addr({Wire_IDEXE_rs2addr[4], n17, 
+        Wire_IDEXE_rs2addr[2:0]}), .ID_rdaddr(Wire_IDEXE_ID_rdaddr), 
+        .IFHCo_InstrFlush(Wire_IFHC_InstrFlush), .IFHCo_IFID_RegWrite(
+        Wire_IFHC_IFID_RegWrite), .IFHCo_PCWrite(Wire_IFHC_PCWrite), .IDFlush(
+        IDFlush) );
 endmodule
 

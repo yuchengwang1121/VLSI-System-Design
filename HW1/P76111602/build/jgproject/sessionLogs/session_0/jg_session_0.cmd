@@ -5,10 +5,10 @@
 # version   : 2021.03 FCS 64 bits
 # build date: 2021.03.23 02:50:43 UTC
 # ----------------------------------------
-# started   : 2022-09-16 18:53:11 CST
+# started   : 2022-09-17 17:16:05 CST
 # hostname  : caidcpuserver1.(none)
-# pid       : 2078122
-# arguments : '-label' 'session_0' '-console' '//127.0.0.1:44325' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
+# pid       : 2109793
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:40567' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
 check_superlint -init
 clear -all
 

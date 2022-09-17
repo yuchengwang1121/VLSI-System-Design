@@ -5,10 +5,10 @@
 # version   : 2021.03 FCS 64 bits
 # build date: 2021.03.23 02:50:43 UTC
 # ----------------------------------------
-# started   : 2022-09-16 18:52:36 CST
+# started   : 2022-09-16 18:53:11 CST
 # hostname  : caidcpuserver1.(none)
-# pid       : 2077576
-# arguments : '-label' 'session_0' '-console' '//127.0.0.1:36873' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
+# pid       : 2078122
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:44325' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
 
 Any disclosure about the Cadence Design Systems software or its use
 model to any third party violates the written Non-Disclosure Agreement
@@ -164,7 +164,6 @@ WARNING (WSL054): "superlint_prove_parallel_tasks" is enabled, overriding the fo
 Ncustom1: Custom engine code is hT3Ng7hPPfiYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSl+CwjiTMAQA
 AMcustom2: Custom engine code is hT3Ng7hP/feYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSmmqwm7g9AQA
 INFO (IPF036): Starting proof on task: "<SL_AUTO_FORMAL_OUT_OF_BOUND_INDEXING>", 3 properties to prove with 0 already proven/unreachable
-background 0
 INFO (IRS029): Starting reset analysis: phase 1 of 4.
 INFO (IRS030): Running reset analysis: phase 2 of 4.
 INFO (IRS031): Running reset analysis: phase 3 of 4.
@@ -219,10 +218,11 @@ SUMMARY
                   - undetermined              : 0
                   - unknown                   : 0
                   - error                     : 0
+background 0
 INFO (IPL005): Received request to exit from the console.
 INFO (IPL014): Waiting for the Tcl-thread to exit.
 INFO: Waiting for proof threads to stop...
 INFO: Proof threads stopped.
-INFO (IPL018): The peak resident set memory use for this session was 0.416 GB.
+INFO (IPL018): The peak resident set memory use for this session was 0.407 GB.
 INFO (IPL015): The Tcl-thread exited with status 0.
 INFO (IPL016): Exiting the analysis session with status 0.

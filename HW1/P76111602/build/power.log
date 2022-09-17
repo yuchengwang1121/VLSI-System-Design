@@ -10,7 +10,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: T-2022.03
-Date   : Fri Sep 16 19:34:19 2022
+Date   : Sat Sep 17 17:18:30 2022
 ****************************************
 
 
@@ -26,17 +26,23 @@ Wire Load Model Mode: enclosed
 Design        Wire Load Model            Library
 ------------------------------------------------
 top                    enG1000K          fsa0m_a_generic_core_ss1p62v125c
-IF                     enG5K             fsa0m_a_generic_core_ss1p62v125c
+IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
 SRAM_wrapper_1         enG500K           fsa0m_a_generic_core_ss1p62v125c
-ID                     enG30K            fsa0m_a_generic_core_ss1p62v125c
-EXE                    enG10K            fsa0m_a_generic_core_ss1p62v125c
-MEM                    enG5K             fsa0m_a_generic_core_ss1p62v125c
-WB                     enG5K             fsa0m_a_generic_core_ss1p62v125c
+ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__
+                       enG30K            fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__
+                       enG10K            fsa0m_a_generic_core_ss1p62v125c
+MEM_I_EXEMEMi_EXEMEM_inter__I_MEMWBo_MEMWB_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+WB_I_MEMWBi_MEMWB_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
 BranchCtrl             enG5K             fsa0m_a_generic_core_ss1p62v125c
 ForwardUnit            enG5K             fsa0m_a_generic_core_ss1p62v125c
-HazardCtrl             enG5K             fsa0m_a_generic_core_ss1p62v125c
+HazardCtrl_I_IFHCo_IFHC_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
 ProgramCounter         enG5K             fsa0m_a_generic_core_ss1p62v125c
-IF_DW01_add_0_DW01_add_3
+IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter___DW01_add_0_DW01_add_3
                        enG5K             fsa0m_a_generic_core_ss1p62v125c
 RegisterFile           enG30K            fsa0m_a_generic_core_ss1p62v125c
 ImmediateGenerator     enG5K             fsa0m_a_generic_core_ss1p62v125c
@@ -44,8 +50,10 @@ ControlUnit            enG5K             fsa0m_a_generic_core_ss1p62v125c
 ALU                    enG5K             fsa0m_a_generic_core_ss1p62v125c
 ALUCtrl                enG5K             fsa0m_a_generic_core_ss1p62v125c
 Src                    enG5K             fsa0m_a_generic_core_ss1p62v125c
-EXE_DW01_add_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
-EXE_DW01_add_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
 ALU_DW01_sub_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
 ALU_DW01_add_0_DW01_add_2
                        enG5K             fsa0m_a_generic_core_ss1p62v125c

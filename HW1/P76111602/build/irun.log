@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 16, 2022 at 19:34:28 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 17, 2022 at 17:19:52 CST
 irun
 	/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 	-sdf_file /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./syn/top_syn.sdf
@@ -16,9 +16,6 @@ irun
 	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
 	+rdcycle=1
 
-Recompiling... reason: file '../syn/top_syn.sdf' is newer than expected.
-	expected: Fri Sep 16 19:14:25 2022
-	actual:   Fri Sep 16 19:34:18 2022
 file: /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 `define CYCLE 20.0 // Cycle time
                                 |
@@ -26,9 +23,23 @@ ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+	module worklib.IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter___DW01_add_0_DW01_add_3:v
+		errors: 0, warnings: 0
+	module worklib.IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__:v
+		errors: 0, warnings: 0
 	module worklib.SRAM_wrapper_1:v
 		errors: 0, warnings: 0
+	module worklib.RegisterFile:v
+		errors: 0, warnings: 0
+	module worklib.ImmediateGenerator:v
+		errors: 0, warnings: 0
+	module worklib.ControlUnit:v
+		errors: 0, warnings: 0
+	module worklib.ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__:v
+		errors: 0, warnings: 0
 	module worklib.ALU_DW01_sub_0:v
+		errors: 0, warnings: 0
+	module worklib.ALU_DW01_add_0_DW01_add_2:v
 		errors: 0, warnings: 0
 	module worklib.ALU_DW01_cmp6_0:v
 		errors: 0, warnings: 0
@@ -36,7 +47,33 @@ ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_
 		errors: 0, warnings: 0
 	module worklib.ALU:v
 		errors: 0, warnings: 0
+	module worklib.ALUCtrl:v
+		errors: 0, warnings: 0
+	module worklib.Src_DW01_inc_0:v
+		errors: 0, warnings: 0
+	module worklib.Src_DW01_dec_0:v
+		errors: 0, warnings: 0
+	module worklib.Src_DW01_inc_1:v
+		errors: 0, warnings: 0
+	module worklib.Src:v
+		errors: 0, warnings: 0
+	module worklib.EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0:v
+		errors: 0, warnings: 0
+	module worklib.EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1:v
+		errors: 0, warnings: 0
+	module worklib.EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__:v
+		errors: 0, warnings: 0
+	module worklib.MEM_I_EXEMEMi_EXEMEM_inter__I_MEMWBo_MEMWB_inter__:v
+		errors: 0, warnings: 0
 	module worklib.SRAM_wrapper_0:v
+		errors: 0, warnings: 0
+	module worklib.WB_I_MEMWBi_MEMWB_inter__:v
+		errors: 0, warnings: 0
+	module worklib.BranchCtrl:v
+		errors: 0, warnings: 0
+	module worklib.ForwardUnit:v
+		errors: 0, warnings: 0
+	module worklib.HazardCtrl_I_IFHCo_IFHC_inter__:v
 		errors: 0, warnings: 0
 	module worklib.top:v
 		errors: 0, warnings: 0
@@ -49,6 +86,8 @@ ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
 ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv,58|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:sv
+		errors: 0, warnings: 3
 ncvlog: *W,SPDUSD: Include directory /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 3
@@ -1409,8 +1448,16 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,53|67): $readmem default memory order incomp
 	Generating native compiled code:
 		worklib.ALU:v <0x33fbe6a8>
 			streams:   0, words:     0
+		worklib.EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__:v <0x3a6ede85>
+			streams:   0, words:     0
+		worklib.ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__:v <0x1904a99d>
+			streams:   0, words:     0
+		worklib.Src:v <0x4fc19a02>
+			streams:   0, words:     0
 		worklib.top:v <0x62a76b8d>
 			streams:   0, words:     0
+		worklib.top_tb:sv <0x7071069b>
+			streams:   9, words: 47144
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -1427,7 +1474,7 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,53|67): $readmem default memory order incomp
 		Initial blocks:              8       7
 		Cont. assignments:          12      36
 		Pseudo assignments:          2       2
-		Timing checks:           15385    1698
+		Timing checks:           15385    1696
 		Interconnect:            23150    8138
 		Delayed tcheck signals:   4969    1788
 		Simulation timescale:      1ps
@@ -1521,4 +1568,4 @@ rdcycle is correct
 Simulation complete via $finish(1) at time 146340 NS + 4
 ../sim/top_tb.sv:118     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 16, 2022 at 19:34:32 CST  (total: 00:00:04)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 17, 2022 at 17:19:56 CST  (total: 00:00:04)

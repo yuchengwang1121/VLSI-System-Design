@@ -322,9 +322,9 @@ FileName = test.ps
 PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
-openFileDlg = 2579,350,602,483
-qWaveSignalDialog = 2446,568,800,479
 QwWarnMsgDlg = 2570,435,600,250
+openFileDlg = 2579,350,602,483
+qWaveSignalDialog = 2480,352,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -535,8 +535,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 560 352 800 479 164 381 390 89
-viewPort = 8 31 893 202 377 247
+getSignalForm = 2480 352 800 479 276 381 278 89
+viewPort = 0 0 893 202 377 247
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98

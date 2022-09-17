@@ -5,10 +5,10 @@
 # version   : 2021.03 FCS 64 bits
 # build date: 2021.03.23 02:50:43 UTC
 # ----------------------------------------
-# started   : 2022-09-16 18:53:11 CST
+# started   : 2022-09-17 17:16:05 CST
 # hostname  : caidcpuserver1.(none)
-# pid       : 2078122
-# arguments : '-label' 'session_0' '-console' '//127.0.0.1:44325' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
+# pid       : 2109793
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:40567' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/YuChengWang/VLSI-System-Design/HW1/P76111602/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
 
 Any disclosure about the Cadence Design Systems software or its use
 model to any third party violates the written Non-Disclosure Agreement
@@ -80,33 +80,34 @@ WARNING (WRTL017): Unable to find a matching tag for IDN_NR_SVKY,IDN_NR_AMKY,VAR
 [INFO (VERI-1328)] ../src/top.sv(7): analyzing included file '../src/BranchCtrl.sv'
 [INFO (VERI-1328)] ../src/top.sv(8): analyzing included file '../src/HazardCtrl.sv'
 [INFO (VERI-1328)] ../src/top.sv(9): analyzing included file '../src/SRAM_wrapper.sv'
+[INFO (VERI-1328)] ../src/top.sv(10): analyzing included file '../src/Interface.sv'
 % elaborate -bbox true -top top
 INFO (ISW003): Top module name is "top".
-[INFO (HIER-8002)] ../src/top.sv(251): Disabling old hierarchical reference handler
+[INFO (HIER-8002)] ../src/top.sv(172): Disabling old hierarchical reference handler
 [INFO (VERI-1018)] ../src/ProgramCounter.sv(1): compiling module 'ProgramCounter'
-[INFO (VERI-1018)] ../src/IF.sv(2): compiling module 'IF'
 [INFO (VERI-1018)] ../src/SRAM_wrapper.sv(1): compiling module 'SRAM_wrapper'
 [INFO (VERI-1018)] ../src/RegisterFile.sv(1): compiling module 'RegisterFile'
 [INFO (VERI-1018)] ../src/ImmediateGenerator.sv(1): compiling module 'ImmediateGenerator'
 [INFO (VERI-1018)] ../src/ControlUnit.sv(1): compiling module 'ControlUnit'
-[INFO (VERI-1018)] ../src/ID.sv(4): compiling module 'ID'
 [INFO (VERI-1018)] ../src/ALU.sv(1): compiling module 'ALU'
 [INFO (VERI-1018)] ../src/ALUCtrl.sv(1): compiling module 'ALUCtrl'
 [INFO (VERI-1018)] ../src/Src.sv(1): compiling module 'Src'
-[INFO (VERI-1018)] ../src/EXE.sv(4): compiling module 'EXE'
-[INFO (VERI-1018)] ../src/MEM.sv(1): compiling module 'MEM'
-[INFO (VERI-1018)] ../src/WB.sv(1): compiling module 'WB'
 [INFO (VERI-1018)] ../src/BranchCtrl.sv(1): compiling module 'BranchCtrl'
 [INFO (VERI-1018)] ../src/ForwardUnit.sv(1): compiling module 'ForwardUnit'
-[INFO (VERI-1018)] ../src/HazardCtrl.sv(1): compiling module 'HazardCtrl'
-[INFO (VERI-1018)] ../src/top.sv(10): compiling module 'top'
+[INFO (VERI-1018)] ../src/top.sv(11): compiling module 'top'
+[INFO (VERI-1018)] ../src/IF.sv(2): compiling module 'IF:(IFEXEi=IFEXE_inter_IFEXEi,IFHCi=IFHC_inter_IFHCi,IFIDo=IFID_inter_IFIDo)'
+[INFO (VERI-1018)] ../src/ID.sv(4): compiling module 'ID:(IFIDi=IFID_inter_IFIDi,IDEXEo=IDEXE_inter_IDEXEo)'
+[INFO (VERI-1018)] ../src/EXE.sv(4): compiling module 'EXE:(IDEXEi=IDEXE_inter_IDEXEi,EXEMEMo=EXEMEM_inter_EXEMEMo,IFEXEo=IFEXE_inter_IFEXEo)'
+[INFO (VERI-1018)] ../src/MEM.sv(1): compiling module 'MEM:(EXEMEMi=EXEMEM_inter_EXEMEMi,MEMWBo=MEMWB_inter_MEMWBo)'
+[INFO (VERI-1018)] ../src/WB.sv(1): compiling module 'WB:(MEMWBi=MEMWB_inter_MEMWBi)'
+[INFO (VERI-1018)] ../src/HazardCtrl.sv(1): compiling module 'HazardCtrl:(IFHCo=IFHC_inter_IFHCo)'
 WARNING (WNL008): Module "SRAM" is undefined. All instances will be black boxed.
 INFO (INL208): Elaboration synthesis summary:
   Number of synthesized netlists          18 (0 packages)
   Single run mode                         On
   Pipeline                                On (17 pipelined netlists)
   Late hierarchical reference connection  On
-  Number of analyzed Verilog modules      17 (17 synthesized)
+  Number of analyzed Verilog modules      23 (17 synthesized)
   Number of analyzed VHDL entities        0 (1 synthesized)
 INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
 top
@@ -150,8 +151,8 @@ INFO (ISL018): Started building clock tree
 INFO (ISL018): Finished building clock tree
 INFO (ISL018): Started building reset tree
 INFO (ISL018): Finished building reset tree
-INFO (ISL018): Violation Count: Errors = 4 Warnings = 228 Info = 1
-236
+INFO (ISL018): Violation Count: Errors = 4 Warnings = 231 Info = 1
+239
 [<embedded>] % 
 [<embedded>] % # Prove
 [<embedded>] % set_superlint_prove_parallel_tasks on
@@ -223,6 +224,6 @@ INFO (IPL005): Received request to exit from the console.
 INFO (IPL014): Waiting for the Tcl-thread to exit.
 INFO: Waiting for proof threads to stop...
 INFO: Proof threads stopped.
-INFO (IPL018): The peak resident set memory use for this session was 0.407 GB.
+INFO (IPL018): The peak resident set memory use for this session was 0.408 GB.
 INFO (IPL015): The Tcl-thread exited with status 0.
 INFO (IPL016): Exiting the analysis session with status 0.
