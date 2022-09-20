@@ -78,7 +78,6 @@ always_ff @(posedge clk or posedge rst) begin
                 MEMWBo.MEM_dout <= 32'b0;
             end
         endcase
-        // MEM_dout <= DM_dataout;        //only SW, may need to modify after?
 
     end
 end

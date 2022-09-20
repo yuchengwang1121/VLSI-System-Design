@@ -1,6 +1,6 @@
 `include "ALUCtrl.sv"
 `include "ALU.sv"
-`include "Src.sv"
+`include "Csr.sv"
 module EXE(
     input clk,
     input rst,
@@ -93,7 +93,7 @@ ALUCtrl ALUCtrl(
     .ALUCtrl    (Wire_ALUCtrl)
 );
 
-Src Src(
+Csr Csr(
     .clk        (clk),
     .rst        (rst),
     .ALUCtrl    (Wire_ALUCtrl),
