@@ -4,9 +4,9 @@
 ### ID stage
 ![Untitled Diagram-WB (1)](https://user-images.githubusercontent.com/73687292/191699364-55e77b50-05b1-4338-91f0-c700ce4e4a97.jpg)
 ### EXE stage
-![VLSIHW1-WB](https://user-images.githubusercontent.com/73687292/191699385-0e7b123e-e08c-49d3-aefc-0707de7c3426.jpg)
-### MEM stage
 ![VLSIHW1-EXE](https://user-images.githubusercontent.com/73687292/191699420-2088f38f-7069-4860-b06e-1303086b715c.jpg)
+### MEM stage
+![VLSIHW1-WB](https://user-images.githubusercontent.com/73687292/191699385-0e7b123e-e08c-49d3-aefc-0707de7c3426.jpg)
 ### WB stage
 ![VLSIHW1-MEM](https://user-images.githubusercontent.com/73687292/191699440-f32932c7-ce59-43d0-8d8c-c833d4ad3779.jpg)
 ### BC stage
