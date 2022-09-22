@@ -1,19 +1,17 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 20, 2022 at 16:41:33 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 22, 2022 at 18:06:16 CST
 irun
 	/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 	+incdir+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
-	+define+prog0
+	+define+prog3
 	-define CYCLE=20.0
 	-define MAX=100000
 	+access+r
 	+nc64bit
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
-	+rdcycle=1
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3
 
    User defined plus("+") options:
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
-	+rdcycle=1
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3
 
 file: /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 `define CYCLE 20.0 // Cycle time
@@ -88,71 +86,7 @@ ncsim> run
 
 Done
 
-DM[8192] = fffffff0, pass
-DM[8193] = fffffff8, pass
-DM[8194] = 00000008, pass
-DM[8195] = 00000001, pass
-DM[8196] = 00000001, pass
-DM[8197] = 78787878, pass
-DM[8198] = 000091a2, pass
-DM[8199] = 00000003, pass
-DM[8200] = fefcfefd, pass
-DM[8201] = 10305070, pass
-DM[8202] = cccccccc, pass
-DM[8203] = ffffffcc, pass
-DM[8204] = ffffcccc, pass
-DM[8205] = 000000cc, pass
-DM[8206] = 0000cccc, pass
-DM[8207] = 00000d9d, pass
-DM[8208] = 00000004, pass
-DM[8209] = 00000003, pass
-DM[8210] = 000001a6, pass
-DM[8211] = 00000ec6, pass
-DM[8212] = 2468b7a8, pass
-DM[8213] = 5dbf9f00, pass
-DM[8214] = 00012b38, pass
-DM[8215] = fa2817b7, pass
-DM[8216] = ff000000, pass
-DM[8217] = 12345678, pass
-DM[8218] = 0000f000, pass
-DM[8219] = 00000f00, pass
-DM[8220] = 000000f0, pass
-DM[8221] = 0000000f, pass
-DM[8222] = 56780000, pass
-DM[8223] = 78000000, pass
-DM[8224] = 00005678, pass
-DM[8225] = 00000078, pass
-DM[8226] = 12345678, pass
-DM[8227] = ce780000, pass
-DM[8228] = fffff000, pass
-DM[8229] = fffff000, pass
-DM[8230] = fffff000, pass
-DM[8231] = fffff000, pass
-DM[8232] = fffff000, pass
-DM[8233] = fffff000, pass
-DM[8234] = 1357a064, pass
-DM[8235] = 13578000, pass
-DM[8236] = fffff004, pass
-DM[8237] = 00000000, pass
-DM[8238] = 000013a1, pass
-golden total cycle is 7316.000000 
-your total cycle is 0.000000 
-your total cycle is 7300.000000 
-num of cycle error is 16.000000 
-rdcycle is correct 
-
-
-
-
-        ****************************  o(〃’▽’〃)o
-        **                        **  o(〃’▽’〃)o
-        **  Congratulations !!    **  o(〃’▽’〃)o
-        **                        **  o(〃’▽’〃)o
-        **Simulation RDCYCLE PASS **  o(〃’▽’〃)o
-        **                        **  o(〃’▽’〃)o
-        ****************************  o(〃’▽’〃)o
-
-
+DM[8192] = 00000003, pass
 
 
 
@@ -166,7 +100,7 @@ rdcycle is correct
         ****************************   \m___m__|_|
 
 
-Simulation complete via $finish(1) at time 146340 NS + 3
+Simulation complete via $finish(1) at time 146740 NS + 3
 ../sim/top_tb.sv:118     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 20, 2022 at 16:41:34 CST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 22, 2022 at 18:06:17 CST  (total: 00:00:01)

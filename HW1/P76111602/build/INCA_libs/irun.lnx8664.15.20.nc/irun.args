@@ -4,12 +4,11 @@
 //
 /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 +incdir+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
-+define+prog0
++define+prog3
 -define
 CYCLE=20.0
 -define
 MAX=100000
 +access+r
 +nc64bit
-+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
-+rdcycle=1
++prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3

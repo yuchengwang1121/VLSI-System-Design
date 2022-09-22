@@ -2,17 +2,16 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog0
-+rdcycle=1
++prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3
 +incdir+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
-+define+prog0
++define+prog3
 +access+r
 +nc64bit
 -MESSAGES
 +EMGRLOG
 irun.log
 -XLSTIME
-1663663293
+1663841176
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
@@ -26,4 +25,4 @@ irun
 -XLVERSION
 "TOOL:	irun(64)	15.20-s084"
 -XLNAME
-./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver1_2141739
+./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver1_2172712
