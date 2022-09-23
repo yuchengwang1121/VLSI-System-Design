@@ -4,40 +4,29 @@ int main(void ){
     extern int array_size;
     extern int array_addr; 
     int i,j;
-    int min_idx, tmp;
+    int min, tmp;
     
-    for (i = 0; i < array_size - 1; i++)
+    for (i=0; i<array_size-1; i++)      //for each element
     {
-        min_idx = i;
+        min = i;                        //let A[i] be head
 
-        for(j = i + 1; j < array_size; j++)
+        for(j=i+1; j<array_size; j++)   //for each element after head
         {
-            if((&array_addr)[j] < (&array_addr)[min_idx])
-                min_idx = j;
+            if((&array_addr)[j] < (&array_addr)[min])   //if A[j] < A[min]
+                min = j;                                //change min to j
         }
 
-        tmp = (&array_addr)[min_idx];
-        (&array_addr)[min_idx] = (&array_addr)[i];
+        //SWAP
+        tmp = (&array_addr)[min];
+        (&array_addr)[min] = (&array_addr)[i];
         (&array_addr)[i] = tmp;
 
+        //put the A[i] to test[i]
         (&_test_start)[i] = (&array_addr)[i];
     }
 
+    //give last element to test list
     (&_test_start)[array_size - 1] = (&array_addr)[array_size - 1];
-
-    /*
-    for(i=0;i<array_size-1 ;i=i+1){
-        for(j=0;j<array_size-1-i;j++){
-            if((&array_addr)[j+1]<(&array_addr)[j]){
-                (&array_addr)[j+1] ^= (&array_addr)[j];
-                (&array_addr)[j] ^= (&array_addr)[j+1];
-                (&array_addr)[j+1] ^= (&array_addr)[j];
-            }
-        }
-        (&_test_start)[j] = (&array_addr)[j];
-    } 
-        (&_test_start)[0] = (&array_addr)[0];
-    */
 
     return 0;
 }

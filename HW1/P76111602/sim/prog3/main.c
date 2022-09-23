@@ -1,11 +1,11 @@
-int gcd(int m, int n) {
+int gcd(int m, int n) {		//the GCD function
 	int r;
-	while(n != 0) {
+	while(n != 0) {			//if quotient !=0
 		r = m % n;
 		m = n;
 		n = r;
 	}
-	return m;
+	return m;				//return remainder
 }
 
 int main(void)
