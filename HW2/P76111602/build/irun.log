@@ -1,0 +1,41 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Oct 18, 2022 at 10:21:42 CST
+irun
+	/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim/top_tb.sv
+	+incdir+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim
+	+define+prog3
+	-define CYCLE=10.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim/prog3
+
+   User defined plus("+") options:
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim/prog3
+
+Loading snapshot worklib.inter_Decoder:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Done
+
+DM[   0] = 00000003, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 173565 NS + 3
+../sim/top_tb.sv:87     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Oct 18, 2022 at 10:21:44 CST  (total: 00:00:02)
