@@ -15,7 +15,7 @@ module top(
 
 //IF input wire
 logic [1:0] BranchCtrl;
-logic [31:0] PC_imm, PC_jr, Instr_out;
+logic [31:0] Instr_out;
 //IF output wire
 logic [31:0] PC_out;
 IFID_inter Wire_IFID();

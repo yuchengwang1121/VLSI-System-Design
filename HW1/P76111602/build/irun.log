@@ -1,17 +1,17 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 23, 2022 at 16:32:48 CST
+TOOL:	irun(64)	15.20-s084: Started on Oct 18, 2022 at 08:03:40 CST
 irun
 	/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 	+incdir+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
-	+define+prog3
+	+define+prog1+FSDB_ALL
 	-define CYCLE=20.0
 	-define MAX=100000
 	+access+r
 	+nc64bit
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog1
 
    User defined plus("+") options:
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog3
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/prog1
 
 file: /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv
 `define CYCLE 20.0 // Cycle time
@@ -29,6 +29,8 @@ ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
 ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim/top_tb.sv,58|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:sv
+		errors: 0, warnings: 3
 ncvlog: *W,SPDUSD: Include directory /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./include given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 3
@@ -62,13 +64,16 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,52|67): $readmem default memory order incomp
                                                                    |
 ncelab: *W,MEMODR (../sim/top_tb.sv,53|67): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top_tb:sv <0x25f850cb>
+			streams:   8, words: 47091
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 21      19
 		Interfaces:               6       6
-		Registers:              163     155
+		Registers:              161     153
 		Scalar wires:           202       -
 		Expanded wires:         164       8
 		Vectored wires:          98       -
@@ -83,10 +88,47 @@ ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 *Verdi* Loading libsscore_ius152.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
 ncsim> run
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
 
 Done
 
-DM[8192] = 00000003, pass
+DM[8192] = 8649ecbe, pass
+DM[8193] = 891356b5, pass
+DM[8194] = 9ef8965a, pass
+DM[8195] = a5adad14, pass
+DM[8196] = ac1c9aa9, pass
+DM[8197] = b1327c91, pass
+DM[8198] = c2c287dc, pass
+DM[8199] = c5707a3d, pass
+DM[8200] = d6186134, pass
+DM[8201] = db2764d5, pass
+DM[8202] = e611dbc0, pass
+DM[8203] = e912d024, pass
+DM[8204] = e93d369e, pass
+DM[8205] = f06cb80b, pass
+DM[8206] = f1929166, pass
+DM[8207] = fe884149, pass
+DM[8208] = 02cd65b5, pass
+DM[8209] = 16c5d5af, pass
+DM[8210] = 1e0bf7e8, pass
+DM[8211] = 3ac18e4f, pass
+DM[8212] = 3dfce9a2, pass
+DM[8213] = 423b1f26, pass
+DM[8214] = 42e38aa1, pass
+DM[8215] = 43eb84d8, pass
+DM[8216] = 4b57f8af, pass
+DM[8217] = 4c9f24fa, pass
+DM[8218] = 5d50f3a8, pass
+DM[8219] = 608dc931, pass
+DM[8220] = 66290483, pass
+DM[8221] = 73902c5d, pass
+DM[8222] = 7a27c66f, pass
+DM[8223] = 7b1ed6e1, pass
 
 
 
@@ -100,7 +142,7 @@ DM[8192] = 00000003, pass
         ****************************   \m___m__|_|
 
 
-Simulation complete via $finish(1) at time 146740 NS + 3
+Simulation complete via $finish(1) at time 435180 NS + 3
 ../sim/top_tb.sv:118     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 23, 2022 at 16:32:49 CST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s084: Exiting on Oct 18, 2022 at 08:03:41 CST  (total: 00:00:01)

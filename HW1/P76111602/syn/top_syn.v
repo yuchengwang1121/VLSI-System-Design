@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : T-2022.03
-// Date      : Sat Sep 17 17:18:28 2022
+// Date      : Mon Sep 26 15:35:34 2022
 /////////////////////////////////////////////////////////////
 
 
@@ -9171,7 +9171,7 @@ module ALUCtrl ( ALUOP, Funct3, Funct7, ALUCtrl );
 endmodule
 
 
-module Src_DW01_inc_0 ( A, SUM );
+module Csr_DW01_inc_0 ( A, SUM );
   input [63:0] A;
   output [63:0] SUM;
 
@@ -9244,7 +9244,7 @@ module Src_DW01_inc_0 ( A, SUM );
 endmodule
 
 
-module Src_DW01_dec_0 ( A, SUM );
+module Csr_DW01_dec_0 ( A, SUM );
   input [63:0] A;
   output [63:0] SUM;
   wire   n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16,
@@ -9450,7 +9450,7 @@ module Src_DW01_dec_0 ( A, SUM );
 endmodule
 
 
-module Src_DW01_inc_1 ( A, SUM );
+module Csr_DW01_inc_1 ( A, SUM );
   input [63:0] A;
   output [63:0] SUM;
 
@@ -9523,7 +9523,7 @@ module Src_DW01_inc_1 ( A, SUM );
 endmodule
 
 
-module Src ( clk, rst, state, csraddr, csrrdata );
+module Csr ( clk, rst, state, csraddr, csrrdata );
   input [1:0] state;
   input [11:0] csraddr;
   output [31:0] csrrdata;
@@ -10144,20 +10144,20 @@ module Src ( clk, rst, state, csraddr, csrrdata );
   ND3 U253 ( .I1(n212), .I2(n211), .I3(n2101), .O(n213) );
   AN4B1S U254 ( .I1(n216), .I2(n215), .I3(n214), .B1(n213), .O(n217) );
   ND2 U255 ( .I1(n218), .I2(n217), .O(N74) );
-  Src_DW01_inc_0 add_42 ( .A({rdinstreth, rdinstret[31:2], n3, n9}), .SUM({
+  Csr_DW01_inc_0 add_42 ( .A({rdinstreth, rdinstret[31:2], n3, n9}), .SUM({
         N204, N203, N202, N201, N200, N199, N198, N197, N196, N195, N194, N193, 
         N192, N191, N190, N189, N188, N187, N186, N185, N184, N183, N182, N181, 
         N180, N179, N178, N177, N176, N175, N174, N173, N172, N171, N170, N169, 
         N168, N167, N166, N165, N164, N163, N162, N161, N160, N159, N158, N157, 
         N156, N155, N154, N153, N152, N151, N150, N149, N148, N147, N146, N145, 
         N144, N143, N142, N141}) );
-  Src_DW01_dec_0 sub_40_S2 ( .A({rdinstreth, rdinstret, n8}), .SUM({N140, N139, 
+  Csr_DW01_dec_0 sub_40_S2 ( .A({rdinstreth, rdinstret, n8}), .SUM({N140, N139, 
         N138, N137, N136, N135, N134, N133, N132, N131, N130, N129, N128, N127, 
         N126, N125, N124, N123, N122, N121, N120, N119, N118, N117, N116, N115, 
         N114, N113, N112, N111, N110, N109, N108, N107, N106, N105, N104, N103, 
         N102, N101, N100, N99, N98, N97, N96, N95, N94, N93, N92, N91, N90, 
         N89, N88, N87, N86, N85, N84, N83, N82, N81, N80, N79, N78, N77}) );
-  Src_DW01_inc_1 add_37 ( .A({rdcycleh, rdcycle}), .SUM({N73, N72, N71, N70, 
+  Csr_DW01_inc_1 add_37 ( .A({rdcycleh, rdcycle}), .SUM({N73, N72, N71, N70, 
         N69, N68, N67, N66, N65, N64, N63, N62, N61, N60, N59, N58, N57, N56, 
         N55, N54, N53, N52, N51, N50, N49, N48, N47, N46, N45, N44, N43, N42, 
         N41, N40, N39, N38, N37, N36, N35, N34, N33, N32, N31, N30, N29, N28, 
@@ -11137,7 +11137,7 @@ endmodule
   ALUCtrl ALUCtrl ( .ALUOP(IDEXEi_ID_ALUOP), .Funct3(IDEXEi_ID_Funct3), 
         .Funct7(IDEXEi_ID_Funct7), .ALUCtrl({Wire_ALUCtrl_4_, Wire_ALUCtrl_3_, 
         Wire_ALUCtrl_2_, Wire_ALUCtrl_1_, Wire_ALUCtrl_0_}) );
-  Src Src ( .clk(clk), .rst(rst), .state({n111, Src_state_0_}), .csraddr(
+  Csr Csr ( .clk(clk), .rst(rst), .state({n111, Src_state_0_}), .csraddr(
         IDEXEi_ID_csraddr), .csrrdata(Wire_csrrdata) );
   EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0 add_57 ( 
         .A_31_(IDEXEi_ID_pcout[31]), .A_30_(IDEXEi_ID_pcout[30]), .A_29_(

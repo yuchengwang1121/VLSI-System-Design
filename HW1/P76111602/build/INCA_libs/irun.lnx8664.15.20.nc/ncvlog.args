@@ -13,7 +13,9 @@
 -INCDIR
 /home/YuChengWang/VLSI-System-Design/HW1/P76111602/./sim
 -DEFINE
-prog3
+prog1
+-DEFINE
+FSDB_ALL
 -DEFINE
 CYCLE=20.0
 -DEFINE
