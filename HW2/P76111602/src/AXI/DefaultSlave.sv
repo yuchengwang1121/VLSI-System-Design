@@ -1,13 +1,13 @@
 `include "../../include/AXI_define.svh"
-// `include "Interface.sv"
+`include "Interface.sv"
 module DefaultSlave(
     input clk,
     input rst,
-    inter_RA.SDEFAULT SD_RA,
-    inter_RD.SDEFAULT SD_RD,
-    inter_WA.SDEFAULT SD_WA,
-    inter_WD.SDEFAULT SD_WD,
-    inter_WR.SDEFAULT SD_WR
+    inter_RA.SD SD_RA,
+    inter_RD.SD SD_RD,
+    inter_WA.SD SD_WA,
+    inter_WD.SD SD_WD,
+    inter_WR.SD SD_WR
 );
 
 parameter [1:0] S_addr = 2'b00,

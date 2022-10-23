@@ -15,7 +15,7 @@ inter_WD Wire();
 
 logic wire_READY;
 logic reg_WVALID_S0, reg_WVALID_S1, reg_WVALID_SD;
-logic [1:0] slave;
+logic [2:0] slave;
     
 assign Wire.WDATA = M1.WDATA;
 assign Wire.WSTRB = M1.WSTRB;

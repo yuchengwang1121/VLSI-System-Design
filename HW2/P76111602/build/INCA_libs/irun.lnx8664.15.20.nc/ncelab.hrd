@@ -2,5 +2,7 @@
 // File created by:  irun
 // Do not modify this file
 //
+-SDF_FILE
+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./syn/top_syn.sdf
 -ACCESS
 +r

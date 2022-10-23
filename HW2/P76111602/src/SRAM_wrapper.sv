@@ -1,3 +1,4 @@
+`include "../include/AXI_define.svh"
 module SRAM_wrapper (
   input clk,
   input rst,
@@ -108,6 +109,7 @@ always_ff @(posedge clk or negedge rst) begin
           reg_AWID <= (AW_done)? S_AW.S_AWID:reg_AWID;
       end
 end
+logic [`AXI_IDS_BITS-1:0]RID_temp;
 
 assign S_R.S_RID = reg_ARID;
 assign S_B.S_BID = reg_AWID;
@@ -169,7 +171,7 @@ assign CS = (s_slave == S_addr)?(S_AW.AWVALID|S_AR.ARVALID):1'b1;
 logic [13:0] reg_RADDR, reg_WADDR;
 always_ff @(posedge clk or negedge rst) begin
   if (~rst) begin
-    {reg_RADDR, reg_WADDR} = 28'b0;
+    {reg_RADDR, reg_WADDR} <= 28'b0;
   end
   else begin
     reg_RADDR <= AR_done?S_AR.ARADDR[15:2]:reg_RADDR;

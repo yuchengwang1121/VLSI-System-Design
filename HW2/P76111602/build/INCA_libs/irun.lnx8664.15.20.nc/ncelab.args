@@ -3,10 +3,12 @@
 // Do not modify this file
 //
 +prog_path=/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim/prog3
-+incdir+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim
-+define+prog3
++incdir+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./syn+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim
++define+SYN+prog3
 +access+r
 +nc64bit
+-SDF_FILE
+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./syn/top_syn.sdf
 -ACCESS
 +r
 -MESSAGES

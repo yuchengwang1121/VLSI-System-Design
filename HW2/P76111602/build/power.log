@@ -1,0 +1,129 @@
+Loading db file '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/home/YuChengWang/VLSI-System-Design/HW2/P76111602/sim/SRAM/SRAM_WC.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: T-2022.03
+Date   : Sun Oct 23 17:58:07 2022
+****************************************
+
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db)
+    SRAM_WC (File: /home/YuChengWang/VLSI-System-Design/HW2/P76111602/sim/SRAM/SRAM_WC.db)
+
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top                    enG1000K          fsa0m_a_generic_core_ss1p62v125c
+AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+CPU_wrapper_I_M0_AW_inter_WA__I_M0_W_inter_WD__I_M0_B_inter_WR__I_M0_AR_inter_RA__I_M0_R_inter_RD__I_M1_AW_inter_WA__I_M1_W_inter_WD__I_M1_B_inter_WR__I_M1_AR_inter_RA__I_M1_R_inter_RD__
+                       enG30K            fsa0m_a_generic_core_ss1p62v125c
+SRAM_wrapper_I_S_AW_inter_WA__I_S_W_inter_WD__I_S_B_inter_WR__I_S_AR_inter_RA__I_S_R_inter_RD___1
+                       enG500K           fsa0m_a_generic_core_ss1p62v125c
+SRAM_wrapper_I_S_AW_inter_WA__I_S_W_inter_WD__I_S_B_inter_WR__I_S_AR_inter_RA__I_S_R_inter_RD___0
+                       enG500K           fsa0m_a_generic_core_ss1p62v125c
+DefaultSlave_I_SD_RA_inter_RA__I_SD_RD_inter_RD__I_SD_WA_inter_WA__I_SD_WD_inter_WD__I_SD_WR_inter_WR__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ReadAddr_I_M0_inter_RA_M0_I_M1_inter_RA_M1_I_S0_inter_RA_S0_I_S1_inter_RA_S1_I_SD_inter_RA__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_SD_inter_RD__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+WriteAddr_I_M1_inter_WA_M1_I_S0_inter_WA_S0_I_S1_inter_WA_S1_I_SD_inter_WA__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+WriteData_I_M1_inter_WD_M1_I_S0_inter_WD_S0_I_S1_inter_WD_S1_I_SD_inter_WD__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+WriteRespon_I_M1_inter_WR_M1_I_S0_inter_WR_S0_I_S1_inter_WR_S1_I_SD_inter_WR__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+CPU                    enG30K            fsa0m_a_generic_core_ss1p62v125c
+Master_1               enG5K             fsa0m_a_generic_core_ss1p62v125c
+Master_0               enG5K             fsa0m_a_generic_core_ss1p62v125c
+Arbiter_1              enG5K             fsa0m_a_generic_core_ss1p62v125c
+Decoder_1              enG5K             fsa0m_a_generic_core_ss1p62v125c
+Arbiter_0              enG5K             fsa0m_a_generic_core_ss1p62v125c
+Decoder_0              enG5K             fsa0m_a_generic_core_ss1p62v125c
+IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ID_I_IFIDi_IFID_inter__I_IDEXEo_IDEXE_inter__
+                       enG30K            fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__
+                       enG10K            fsa0m_a_generic_core_ss1p62v125c
+MEM_I_EXEMEMi_EXEMEM_inter__I_MEMWBo_MEMWB_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+WB_I_MEMWBi_MEMWB_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+BranchCtrl             enG5K             fsa0m_a_generic_core_ss1p62v125c
+ForwardUnit            enG5K             fsa0m_a_generic_core_ss1p62v125c
+HazardCtrl_I_IFHCo_IFHC_inter__
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ProgramCounter         enG5K             fsa0m_a_generic_core_ss1p62v125c
+IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter___DW01_add_0_DW01_add_3
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+RegisterFile           enG30K            fsa0m_a_generic_core_ss1p62v125c
+ImmediateGenerator     enG5K             fsa0m_a_generic_core_ss1p62v125c
+ControlUnit            enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALUCtrl                enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_sub_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_add_0_DW01_add_2
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp6_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp2_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr_DW01_inc_0_DW01_inc_1
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr_DW01_inc_1_DW01_inc_2
+                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr_DW01_dec_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  23.2283 mW   (94%)
+  Net Switching Power  =   1.5570 mW    (6%)
+                         ---------
+Total Dynamic Power    =  24.7853 mW  (100%)
+
+Cell Leakage Power     =   1.2317 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory            17.9710        3.9689e-02        1.2171e+09           19.2278  (  73.91%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      4.7679            0.0000          387.8000        6.3470e-04  (   0.00%)  i
+register           0.1321        7.1440e-02        6.1523e+06            4.9770  (  19.13%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.3572            1.4459        8.3954e+06            1.8115  (   6.96%)
+--------------------------------------------------------------------------------------------------
+Total             23.2282 mW         1.5570 mW     1.2317e+09 pW        26.0169 mW
+1

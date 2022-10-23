@@ -4,7 +4,8 @@
 // Description: Top module of AXI master VIP                
 // Version:     1.0 
 //================================================
-
+`include "../../src/AXI/Interface.sv"
+`include "../../include/AXI_define.svh"
 module top #(parameter bit COVERAGE_ON = 0) ();
 
     // user defined AXI parameters
@@ -37,56 +38,32 @@ module top #(parameter bit COVERAGE_ON = 0) ();
     reg                        aclk;
     reg                        aresetn;
 
+    inter_WA wire_S1AW();
+    inter_WD wire_S1W();
+    inter_WR wire_S1B();
+    inter_RA wire_S1AR();
+    inter_RD wire_S1R();
     // Write address channel signals
-    wire    [ID_WIDTH-1:0]      awid;      // Write address ID tag
-    wire    [ADDR_WIDTH-1:0]    awaddr;    // Write address
-    wire    [LEN_WIDTH-1:0]     awlen;     // Write address burst length
-    wire    [SIZE_WIDTH-1:0]    awsize;    // Write address burst size
-    wire    [BURST_WIDTH-1:0]   awburst;   // Write address burst type
     wire                        awlock;    // Write address lock type
     wire    [PROT_WIDTH-1:0]    awprot;    // Write address protection level
     wire    [CACHE_WIDTH-1:0]   awcache;   // Write address cache type
-    wire                        awvalid;   // Write address valid
-    wire                        awready;   // Write address ready
     wire    [QOS_WIDTH-1:0]     awqos;     // Write address Quality of service
     wire    [REGION_WIDTH-1:0]  awregion;  // Write address slave address region
     wire    [AWUSER_WIDTH-1:0]  awuser;    // Write address user signal
 
     // Write data channel signals
-    wire    [DATA_WIDTH-1:0]    wdata;     // Write data
-    wire    [DATA_WIDTH/8-1:0]  wstrb;     // Write strobe
-    wire                        wlast;     // Write last
-    wire                        wvalid;    // Write valid
-    wire                        wready;    // Write ready
     wire    [WUSER_WIDTH-1:0]   wuser;     // Write user signal
     // Write response channel signals
-    wire    [ID_WIDTH-1:0]      bid;       // Write response ID tag
-    wire    [BRESP_WIDTH-1:0]    bresp;     // Write response
-    wire                        bvalid;    // Write response valid
-    wire                       bready;    // Write response ready
     wire    [BUSER_WIDTH-1:0]   buser;     // Write response user signal
     // Read address channel signals
-    wire    [ID_WIDTH-1:0]      arid;      // Read address ID tag
-    wire    [ADDR_WIDTH-1:0]    araddr;    // Read address
-    wire    [LEN_WIDTH-1:0]     arlen;     // Read address burst length
-    wire    [SIZE_WIDTH-1:0]    arsize;    // Read address burst size
-    wire    [BURST_WIDTH-1:0]   arburst;   // Read address burst type
     wire                        arlock;    // Read address lock type
     wire    [PROT_WIDTH-1:0]    arprot;    // Read address protection level
     wire    [CACHE_WIDTH-1:0]   arcache;   // Read address cache type
-    wire                        arvalid;   // Read address valid
-    wire                        arready;   // Read address ready
     wire    [QOS_WIDTH-1:0]     arqos;     // Read address Quality of service
     wire    [REGION_WIDTH-1:0]  arregion;  // Read address slave address region
     wire    [ARUSER_WIDTH-1:0]  aruser;    // Read address user signal
 
     // Read data channel signals
-    wire    [ID_WIDTH-1:0]      rid;       // Read ID tag
-    wire    [DATA_WIDTH-1:0]    rdata;     // Read data
-    wire                       rlast;     // Read last
-    wire                       rvalid;    // Read valid
-    wire                        rready;    // Read ready
-    wire    [RRESP_WIDTH-1:0]    rresp;     // Read response
     wire    [RUSER_WIDTH-1:0]   ruser;     // Read address user signal
 
     // AXI 4 Bridge GLobal Interface (connects to low power controller)
@@ -101,58 +78,66 @@ module top #(parameter bit COVERAGE_ON = 0) ();
     //-------------------------------------------//
     //----- you should put your design here -----//
     //-------------------------------------------//
-
-     axi4_master axi_monitor (
+    SRAM_wrapper axi_duv_slave(
+    .clk    (aclk),
+    .rst    (aresetn),
+    .S_AW   (wire_S1AW),
+    .S_W    (wire_S1W),
+    .S_B    (wire_S1B),
+    .S_AR   (wire_S1AR),
+    .S_R    (wire_S1R)
+    );
+    axi4_master axi_monitor (
         .aclk            (aclk),
         .aresetn         (aresetn),
-        .awid            (awid),
-        .awaddr          (awaddr),
-        .awlen           (awlen),
-        .awsize          (awsize),
-        .awburst         (awburst),
+        .awid            (wire_S1AW.S_AWID),
+        .awaddr          (wire_S1AW.AWADDR),
+        .awlen           (wire_S1AW.AWLEN),
+        .awsize          (wire_S1AW.AWSIZE),
+        .awburst         (wire_S1AW.AWBURST),
         .awlock          (awlock),
         .awcache         (awcache),
         .awprot          (awprot),
-        .awvalid         (awvalid),
-        .awready         (awready),
-        .awqos          (awqos),  
+        .awvalid         (wire_S1AW.AWVALID),
+        .awready         (wire_S1AW.AWREADY),
+        .awqos           (awqos),  
         .awregion        (awregion),  
         .awuser          (awuser),   
-	.ruser           (ruser),
+	    .ruser           (ruser),
         .arqos           (arqos),  
         .arregion        (arregion),  
         .aruser          (aruser),
         .buser           (buser),
-	.wuser           (wuser),
+	    .wuser           (wuser),
      
-        .wdata           (wdata),
-        .wstrb           (wstrb),
-        .wlast           (wlast),
-        .wvalid          (wvalid),
-        .wready          (wready),
+        .wdata           (wire_S1W.WDATA),
+        .wstrb           (wire_S1W.WSTRB),
+        .wlast           (wire_S1W.WLAST),
+        .wvalid          (wire_S1W.WVALID),
+        .wready          (wire_S1W.WREADY),
         
-        .bid             (bid),
-        .bresp           (bresp),
-        .bvalid          (bvalid),
-        .bready          (bready),
+        .bid             (wire_S1B.S_BID),
+        .bresp           (wire_S1B.BRESP),
+        .bvalid          (wire_S1B.BVALID),
+        .bready          (wire_S1B.BREADY),
         
-        .arid            (arid),
-        .araddr          (araddr),
-        .arlen           (arlen),
-        .arsize          (arsize),
-        .arburst         (arburst),
+        .arid            (wire_S1AR.S_ARID),
+        .araddr          (wire_S1AR.ARADDR),
+        .arlen           (wire_S1AR.ARLEN),
+        .arsize          (wire_S1AR.ARSIZE),
+        .arburst         (wire_S1AR.ARBURST),
         .arlock          (arlock),
         .arcache         (arcache),
         .arprot          (arprot),
-        .arvalid         (arvalid),
-        .arready         (arready),
+        .arvalid         (wire_S1AR.ARVALID),
+        .arready         (wire_S1AR.ARREADY),
         
-        .rid             (rid),
-        .rdata           (rdata),
-        .rresp           (rresp),
-        .rlast           (rlast),
-        .rvalid          (rvalid),
-        .rready          (rready),
+        .rid             (wire_S1R.S_RID),
+        .rdata           (wire_S1R.RDATA),
+        .rresp           (wire_S1R.RRESP),
+        .rlast           (wire_S1R.RLAST),
+        .rvalid          (wire_S1R.RVALID),
+        .rready          (wire_S1R.RREADY),
         
         .csysreq         (csysreq),
         .csysack         (csysack),

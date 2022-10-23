@@ -16,11 +16,12 @@ interface inter_RA;
     logic[1:0] ARBURST;
     logic ARVALID,ARREADY;
 
-    //for AXI's RD
+    //for AXI's RA
     modport M0(input ARID, input ARADDR, input ARLEN, input ARSIZE, input ARBURST, input ARVALID, output ARREADY);
     modport M1(input ARID, input ARADDR, input ARLEN, input ARSIZE, input ARBURST, input ARVALID, output ARREADY);
     modport S0(output S_ARID, output ARADDR, output ARLEN, output ARSIZE, output ARBURST, output ARVALID, input ARREADY);
     modport S1(output S_ARID, output ARADDR, output ARLEN, output ARSIZE, output ARBURST, output ARVALID, input ARREADY);
+    modport SD(input S_ARID, input ARADDR, input ARLEN, input ARSIZE, input ARBURST, input ARVALID, output ARREADY);
     modport SDEFAULT(output S_ARID, output ARADDR, output ARLEN, output ARSIZE, output ARBURST, output ARVALID, input ARREADY);
     //for CPU_wrapper
     modport M0_AR(output ARID, output ARADDR, output ARLEN, output ARSIZE, output ARBURST, output ARVALID, input ARREADY);
@@ -43,6 +44,7 @@ interface inter_RD;
     modport M1(input RREADY, output RID, output RDATA, output RRESP, output RLAST,output RVALID);
     modport S0(output RREADY, input S_RID, input RDATA, input RRESP, input RLAST,input RVALID);
     modport S1(output RREADY, input S_RID, input RDATA, input RRESP, input RLAST,input RVALID);
+    modport SD(input RREADY, output S_RID, output RDATA, output RRESP, output RLAST,output RVALID);
     modport SDEFAULT(output RREADY, input S_RID, input RDATA, input RRESP, input RLAST,input RVALID);
     //for CPU_wrapper
     modport M0_R(output RREADY, input RID, input RDATA, input RRESP, input RLAST,input RVALID);
@@ -66,6 +68,7 @@ interface inter_WA;
     modport M1(input AWID, input AWADDR, input AWLEN, input AWSIZE, input AWBURST, input AWVALID, output AWREADY);
     modport S0(output S_AWID, output AWADDR, output AWLEN, output AWSIZE, output AWBURST, output AWVALID, input AWREADY);
     modport S1(output S_AWID, output AWADDR, output AWLEN, output AWSIZE, output AWBURST, output AWVALID, input AWREADY);
+    modport SD(input S_AWID, input AWADDR, input AWLEN, input AWSIZE, input AWBURST, input AWVALID, output AWREADY);
     modport SDEFAULT(output S_AWID, output AWADDR, output AWLEN, output AWSIZE, output AWBURST, output AWVALID, input AWREADY);
     //for CPU_wrapper
     modport M0_AW(output AWID, output AWADDR, output AWLEN, output AWSIZE, output AWBURST, output AWVALID, input AWREADY);
@@ -86,6 +89,7 @@ interface inter_WD;
     modport M1(input WDATA, input WSTRB, input WLAST, input WVALID, output WREADY);
     modport S0(output WDATA, output WSTRB, output WLAST, output WVALID, input WREADY);
     modport S1(output WDATA, output WSTRB, output WLAST, output WVALID, input WREADY);
+    modport SD(input WDATA, input WSTRB, input WLAST, input WVALID, output WREADY);
     modport SDEFAULT(output WDATA, output WSTRB, output WLAST, output WVALID, input WREADY);
     //for CPU_wrapper
     modport M0_W(output WDATA, output WSTRB, output WLAST, output WVALID, input WREADY);
@@ -106,6 +110,7 @@ interface inter_WR;
     modport M1(output BID, output BRESP, output BVALID, input BREADY);
     modport S0(input S_BID, input BRESP, input BVALID, output BREADY);
     modport S1(input S_BID, input BRESP, input BVALID, output BREADY);
+    modport SD(output S_BID, output BRESP, output BVALID, input BREADY);
     modport SDEFAULT(input S_BID, input BRESP, input BVALID, output BREADY);
     //for CPU_wrapper
     modport M0_B(input BID, input BRESP, input BVALID, output BREADY);
