@@ -3,7 +3,7 @@
 Report : area
 Design : top
 Version: T-2022.03
-Date   : Sun Oct 23 17:58:06 2022
+Date   : Sun Oct 23 18:23:46 2022
 ****************************************
 
 Library(s) Used:
@@ -12,20 +12,20 @@ Library(s) Used:
     SRAM_WC (File: /home/YuChengWang/VLSI-System-Design/HW2/P76111602/sim/SRAM/SRAM_WC.db)
 
 Number of ports:                         6046
-Number of nets:                         16268
-Number of cells:                        10492
-Number of combinational cells:           8592
+Number of nets:                         16935
+Number of cells:                        11299
+Number of combinational cells:           9399
 Number of sequential cells:              1856
 Number of macros/black boxes:               2
-Number of buf/inv:                       2681
+Number of buf/inv:                       2901
 Number of references:                       8
 
-Combinational area:             152012.145532
-Buf/Inv area:                    28020.081307
-Noncombinational area:          110242.945030
+Combinational area:             160192.871757
+Buf/Inv area:                    31413.614099
+Noncombinational area:          110199.197838
 Macro/Black Box area:          5344494.500000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:               5606749.590562
+Total cell area:               5614886.569594
 Total area:                 undefined
 1

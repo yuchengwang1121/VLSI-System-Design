@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Sun Oct 23 17:58:06 2022
+# Created by write_sdc on Sun Oct 23 18:23:46 2022
 
 ###################################################################
 set sdc_version 2.0
@@ -17,8 +17,8 @@ set_driving_cell -lib_cell XMD -library fsa0m_a_t33_generic_io_ss1p62v125c     \
 set_max_fanout 6 [get_ports clk]
 set_max_fanout 6 [get_ports rst]
 set_ideal_network [get_ports clk]
-create_clock [get_ports clk]  -period 15  -waveform {0 7.5}
+create_clock [get_ports clk]  -period 10  -waveform {0 5}
 set_clock_latency 1  [get_clocks clk]
 set_clock_uncertainty 0.1  [get_clocks clk]
-set_input_delay -clock clk  -max 7.5  [get_ports rst]
+set_input_delay -clock clk  -max 5  [get_ports rst]
 set_input_delay -clock clk  -min 0  [get_ports rst]

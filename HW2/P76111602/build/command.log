@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
-#@ # Date:   Sun Oct 23 17:57:18 2022
+#@ # Date:   Sun Oct 23 18:22:58 2022
 #@ # Run by: YuChengWang@caidcpuserver1
 #@ 
 
@@ -8629,7 +8629,7 @@ source -echo -verbose /home/YuChengWang/VLSI-System-Design/HW2/P76111602/build/.
 #@ # -- Starting source ../script/DC.sdc
 
 #@ #####CLK PERIOD CAN BE ADJUSTED UP TO 20.0 IF SYNTHESIS GOES WRONG#####
-#@ create_clock -name clk -period 15.0 [get_ports clk]
+#@ create_clock -name clk -period 10.0 [get_ports clk]
 #@ set_dont_touch_network      [all_clocks]
 #@ set_fix_hold                [all_clocks]
 #@ set_clock_uncertainty  0.1  [all_clocks]
@@ -8637,7 +8637,7 @@ source -echo -verbose /home/YuChengWang/VLSI-System-Design/HW2/P76111602/build/.
 #@ set_ideal_network           [get_ports clk]
 #@ 
 #@ #####REMEMBER TO SET THIS MAX DELAY TO 1/2 CLK PERIOD#####
-#@ set_input_delay  -max 7.5   -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_input_delay  -max 5.0   -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
 #@ set_input_delay  -min 0.0   -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
 #@ #set_output_delay  -max 5.0   -clock clk [all_outputs]
 #@ #set_output_delay  -min 0.0   -clock clk [all_outputs]

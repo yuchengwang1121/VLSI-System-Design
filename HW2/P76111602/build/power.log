@@ -10,7 +10,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: T-2022.03
-Date   : Sun Oct 23 17:58:07 2022
+Date   : Sun Oct 23 18:23:47 2022
 ****************************************
 
 
@@ -78,18 +78,15 @@ ALUCtrl                enG5K             fsa0m_a_generic_core_ss1p62v125c
 Csr                    enG5K             fsa0m_a_generic_core_ss1p62v125c
 EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_0
                        enG5K             fsa0m_a_generic_core_ss1p62v125c
-EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_1
+EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter___DW01_add_2
                        enG5K             fsa0m_a_generic_core_ss1p62v125c
-ALU_DW01_sub_0         enG5K             fsa0m_a_generic_core_ss1p62v125c
-ALU_DW01_add_0_DW01_add_2
-                       enG5K             fsa0m_a_generic_core_ss1p62v125c
-ALU_DW01_cmp6_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
-ALU_DW01_cmp2_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
-Csr_DW01_inc_0_DW01_inc_1
-                       enG5K             fsa0m_a_generic_core_ss1p62v125c
-Csr_DW01_inc_1_DW01_inc_2
-                       enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp2_1        enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_sub_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_add_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+ALU_DW01_cmp6_1        enG5K             fsa0m_a_generic_core_ss1p62v125c
 Csr_DW01_dec_1         enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr_DW01_inc_2         enG5K             fsa0m_a_generic_core_ss1p62v125c
+Csr_DW01_inc_3         enG5K             fsa0m_a_generic_core_ss1p62v125c
 
 
 Global Operating Voltage = 1.62 
@@ -106,24 +103,24 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  23.2283 mW   (94%)
-  Net Switching Power  =   1.5570 mW    (6%)
+  Cell Internal Power  =  34.9530 mW   (94%)
+  Net Switching Power  =   2.3650 mW    (6%)
                          ---------
-Total Dynamic Power    =  24.7853 mW  (100%)
+Total Dynamic Power    =  37.3180 mW  (100%)
 
-Cell Leakage Power     =   1.2317 mW
+Cell Leakage Power     =   1.2324 mW
 
 
                  Internal         Switching           Leakage            Total
 Power Group      Power            Power               Power              Power   (   %    )  Attrs
 --------------------------------------------------------------------------------------------------
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-memory            17.9710        3.9689e-02        1.2171e+09           19.2278  (  73.91%)
+memory            26.9566        6.1728e-02        1.2171e+09           28.2354  (  73.24%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      4.7679            0.0000          387.8000        6.3470e-04  (   0.00%)  i
-register           0.1321        7.1440e-02        6.1523e+06            4.9770  (  19.13%)
+clock_network      7.1517            0.0000          387.8000        9.5186e-04  (   0.00%)  i
+register           0.1921            0.1072        6.0756e+06            7.4561  (  19.34%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.3572            1.4459        8.3954e+06            1.8115  (   6.96%)
+combinational      0.6527            2.1961        9.1749e+06            2.8580  (   7.41%)
 --------------------------------------------------------------------------------------------------
-Total             23.2282 mW         1.5570 mW     1.2317e+09 pW        26.0169 mW
+Total             34.9531 mW         2.3650 mW     1.2324e+09 pW        38.5504 mW
 1
