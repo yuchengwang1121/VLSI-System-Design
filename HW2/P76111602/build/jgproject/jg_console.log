@@ -1,0 +1,53 @@
+2022-10-25 17:12:38.415381 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.415654 (14544) main____ INFO    JasperGold version info
+2022-10-25 17:12:38.415687 (14544) main____ INFO      tool      : JasperGold 2018.03
+2022-10-25 17:12:38.415720 (14544) main____ INFO      version   : 2018.03p001 64 bits
+2022-10-25 17:12:38.415747 (14544) main____ INFO      build date: 2018.04.24 18:13:05 PDT
+2022-10-25 17:12:38.415769 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.415789 (14544) main____ INFO    Runtime info:
+2022-10-25 17:12:38.415813 (14544) main____ INFO      platform  : Linux 3.10.0-957.21.3.el7.x86_64 x86_64
+2022-10-25 17:12:38.415843 (14544) main____ INFO      hostname  : vlsicad9
+2022-10-25 17:12:38.415865 (14544) main____ INFO      pid       : 14544
+2022-10-25 17:12:38.415888 (14544) main____ INFO      arguments : '-style' 'windows' '../script/jg_slave.tcl'
+2022-10-25 17:12:38.416426 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.416452 (14544) main____ INFO    System resource limits info:
+2022-10-25 17:12:38.416477 (14544) main____ INFO      virtual memory: unlimited
+2022-10-25 17:12:38.416502 (14544) main____ INFO      cpu time      : unlimited
+2022-10-25 17:12:38.416543 (14544) main____ INFO      stack size    : 8388608 B
+2022-10-25 17:12:38.416580 (14544) main____ INFO      core file size: 0 B
+2022-10-25 17:12:38.416615 (14544) main____ INFO      open files    : 1024
+2022-10-25 17:12:38.416641 (14544) main____ INFO      file size     : unlimited
+2022-10-25 17:12:38.416662 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.416681 (14544) main____ INFO    Memory statistics:
+2022-10-25 17:12:38.416702 (14544) main____ INFO      total physical memory  : 24509252 kB
+2022-10-25 17:12:38.416722 (14544) main____ INFO      free physical memory   : 14512212 kB
+2022-10-25 17:12:38.416743 (14544) main____ INFO      committed address space: 17449800 kB
+2022-10-25 17:12:38.416762 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.416842 (14544) main____ INFO    Important environment variables:
+2022-10-25 17:12:38.416880 (14544) main____ INFO      DISPLAY        : 'localhost:16.0'
+2022-10-25 17:12:38.416911 (14544) main____ INFO      EDITOR         : '/usr/bin/vim'
+2022-10-25 17:12:38.416954 (14544) main____ INFO      LM_LICENSE_FILE: '5280@vlsicad8:26000@lscic:1717@lstn:5280@lstn:26585@lstn:26585@lstc:26585@lshc:26585@lsncku:26585@lscic:'
+2022-10-25 17:12:38.416978 (14544) main____ INFO    ----------------------------------------
+2022-10-25 17:12:38.419879 (14544) lic_core INFO    Initializing license system ...
+2022-10-25 17:12:38.421968 (14544) lic_core INFO    ... license system initialized.
+2022-10-25 17:12:38.424937 (14544) lic__man INFO    Claim 'main' for <ui>.
+2022-10-25 17:12:38.425049 (14544) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2022-10-25 17:12:38.527181 (14544) lic_core INFO    ... (1) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2022-10-25 17:12:38.527272 (14544) lic_core INFO    (2) checking out 'jasper_pint' ...
+2022-10-25 17:12:38.666397 (14544) lic_core INFO    ... (2) checkout succeeded
+2022-10-25 17:12:38.666593 (14544) lic__man INFO    Claim 'fpv' for <ui>.
+2022-10-25 17:12:38.666668 (14544) lic_core INFO    (3) checking out 'jasper_fpv' ...
+2022-10-25 17:12:38.765981 (14544) lic_core INFO    ... (3) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2022-10-25 17:12:38.766060 (14544) lic_core INFO    (4) checking out 'jasper_fao' ...
+2022-10-25 17:12:38.908596 (14544) lic_core INFO    ... (4) checkout succeeded
+2022-10-25 17:12:40.593652 (14544) lic__man INFO    Claim 'fpv' for <ui>.
+2022-10-25 17:12:41.038063 (14544) lic__man INFO    Unclaim 'fpv' for <ui>.
+2022-10-25 17:12:41.038167 (14544) lic__man INFO    Claim 'fpv' for <ui>.
+2022-10-25 17:12:41.048353 (14544) session_ INFO    Starting analysis session with session id 'session_0' ...
+2022-10-25 17:12:41.051633 (14544) session_ INFO    Analysis session with session id 'session_0' started (pid: 14562)
+2022-10-25 17:12:47.901288 (14544) session_ INFO    Analysis session 'session_0' connected to the console (host: 192.168.100.10:36068)
+2022-10-25 17:12:51.146389 (14544) lic__man INFO    Unclaim everything for 'session_0'.
+2022-10-25 17:12:51.855796 (14544) lic__man INFO    Claim 'fpv' for 'session_0/prove-0'.
+2022-10-25 17:12:54.343597 (14544) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2022-10-25 17:13:13.036317 (14544) main____ INFO    About to exit: requested from GUI
+2022-10-25 17:13:13.340134 (14544) main____ INFO    Exiting with status 0.

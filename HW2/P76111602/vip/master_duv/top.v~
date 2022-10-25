@@ -56,7 +56,8 @@ module top #(parameter bit COVERAGE_ON = 0) ();
     wire                        arlock_m0;    // Read address lock type
     wire    [PROT_WIDTH-1:0]    arprot_m0;    // Read address protection level
     wire    [CACHE_WIDTH-1:0]   arcache_m0;   // Read address cache type
-    
+    wire    [DATA_WIDTH-1:0] rdata_m0;
+    wire    [DATA_WIDTH-1:0] rdata_m1;
     wire    [QOS_WIDTH-1:0]     arqos_m0;     // Read address Quality of service
     wire    [REGION_WIDTH-1:0]  arregion_m0;  // Read address slave address region
     wire    [ARUSER_WIDTH-1:0]  aruser_m0;    // Read address user signal
@@ -111,7 +112,9 @@ module top #(parameter bit COVERAGE_ON = 0) ();
     .M1_W   (wire_M1W),
     .M1_B   (wire_M1B),
     .M1_AR  (wire_M1AR),
-    .M1_R   (wire_M1R)
+    .M1_R   (wire_M1R),
+    .rdata_m0(rdata_m0),
+    .rdata_m1(rdata_m1)
     );
     
     //-------------------------------------------//
@@ -130,15 +133,15 @@ module top #(parameter bit COVERAGE_ON = 0) ();
         .awprot          (awprot_m0),
         .awvalid         (0),
         .awready         (wire_M0AW.AWREADY),
-        .awqos          (awqos_m0),  
+        .awqos           (awqos_m0),  
         .awregion        (awregion_m0),  
         .awuser          (awuser_m0),   
-	    .ruser           (ruser_m0),
+	  .ruser           (ruser_m0),
         .arqos           (arqos_m0),  
         .arregion        (arregion_m0),  
         .aruser          (aruser_m0),
         .buser           (buser_m0),
-	    .wuser           (wuser_m0),
+	  .wuser           (wuser_m0),
      
         .wdata           (wire_M0W.WDATA),
         .wstrb           (wire_M0W.WSTRB),
@@ -163,7 +166,7 @@ module top #(parameter bit COVERAGE_ON = 0) ();
         .arready         (wire_M0AR.ARREADY),
         
         .rid             (wire_M0R.RID),
-        .rdata_m0           (wire_M0R.RDATA),
+        .rdata           (rdata_m0),
         .rresp           (wire_M0R.RRESP),
         .rlast           (wire_M0R.RLAST),
         .rvalid          (wire_M0R.RVALID),
@@ -200,15 +203,15 @@ module top #(parameter bit COVERAGE_ON = 0) ();
         .awprot          (awprot_m1),
         .awvalid         (wire_M1AW.AWVALID),
         .awready         (wire_M1AW.AWREADY),
-        .awqos          (awqos_m1),  
+        .awqos           (awqos_m1),  
         .awregion        (awregion_m1),  
         .awuser          (awuser_m1),   
-	    .ruser           (ruser_m1),
+	  .ruser           (ruser_m1),
         .arqos           (arqos_m1),  
         .arregion        (arregion_m1),  
         .aruser          (aruser_m1),
         .buser           (buser_m1),
-	    .wuser           (wuser_m1),
+	  .wuser           (wuser_m1),
      
         .wdata           (wire_M1W.WDATA),
         .wstrb           (wire_M1W.WSTRB),
@@ -233,7 +236,7 @@ module top #(parameter bit COVERAGE_ON = 0) ();
         .arready         (wire_M1AR.ARREADY),
         
         .rid             (wire_M1R.RID),
-        .rdata           (wire_M1R.RDATA),
+        .rdata           (rdata_m1),
         .rresp           (wire_M1R.RRESP),
         .rlast           (wire_M1R.RLAST),
         .rvalid          (wire_M1R.RVALID),

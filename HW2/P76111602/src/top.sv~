@@ -32,9 +32,7 @@ inter_RD wire_M0R();
 inter_RD wire_M1R();
 inter_RD wire_S0R();
 inter_RD wire_S1R();
-logic [`AXI_DATA_BITS-1:0]rdata_m0;
-logic [`AXI_DATA_BITS-1:0]rdata_m1;
- 
+    
 AXI AXI(
     .ACLK    (clk),
     .ARESETn (~rst),
@@ -72,9 +70,7 @@ CPU_wrapper CPU_wrapper(
     .M1_W   (wire_M1W),
     .M1_B   (wire_M1B),
     .M1_AR  (wire_M1AR),
-    .M1_R   (wire_M1R),
-    .rdata_m0(wire_M0R.RDATA),
-    .rdata_m1(wire_M1R.RDATA)
+    .M1_R   (wire_M1R)
 );
 SRAM_wrapper IM1(
     .clk    (clk),

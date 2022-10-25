@@ -1,0 +1,627 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2018.03
+# platform  : Linux 3.10.0-957.21.3.el7.x86_64
+# version   : 2018.03p001 64 bits
+# build date: 2018.04.24 18:13:05 PDT
+#----------------------------------------
+# started Tue Oct 25 17:12:42 CST 2022
+# hostname  : vlsicad9
+# pid       : 14562
+# arguments : '-label' 'session_0' '-console' 'vlsicad9:38124' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/user2/Vsd22/Vsd22113/Desktop/HW2/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/user2/Vsd22/Vsd22113/Desktop/HW2/build/jgproject/.tmp/.initCmds.tcl' '../script/jg_slave.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2018 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/user2/Vsd22/Vsd22113/Desktop/HW2/build/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_pint" and "jasper_fao".
+INFO: reading configuration file "/home/user2/Vsd22/Vsd22113/.config/jasper/jaspergold.conf".
+% #DO NOT MODIFY THIS FILE
+% set ABVIP_INST_DIR /usr/cad/cadence/VIPCAT/cur/tools/abvip
+/usr/cad/cadence/VIPCAT/cur/tools/abvip
+% set vip_dir $::env(vip_dir)
+/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip
+% 
+% abvip -set_location $ABVIP_INST_DIR
+% set_visualize_auto_load_debugging_tables on
+% analyze -f $vip_dir/slave_duv/jg.f -sv09
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/JASPER/jasper_2018.03p001/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../src/SRAM_wrapper.sv'
+[INFO (VERI-1328)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../src/SRAM_wrapper.sv(1): analyzing included file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../src/../include/AXI_define.svh'
+[-- (VERI-1482)] Analyzing Verilog file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv'
+[-- (VERI-1482)] Analyzing Verilog file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v'
+[INFO (VERI-1328)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(7): analyzing included file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv'
+[INFO (VERI-1328)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(1): analyzing included file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(8): analyzing included file '/home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../include/AXI_define.svh'
+[WARN (VERI-9025)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(9): Empty Port in Module Declaration
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/axi4_master.sv'
+[INFO (VERI-1328)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/axi4_master.sv(35): analyzing included file '/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp'
+[INFO (VERI-1328)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(30): analyzing included file '/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/amba4_defines.svh'
+[INFO (VERI-1328)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(1796): analyzing included file '/usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/abviplib.v'
+[-- (VERI-1489)]       Resolving module 'axi4_master'
+[INFO (VERI-1508)] The default veri library search path is now "/usr/cad/cadence/JASPER/jasper_2018.03p001/lib/Linux64/verilog/jasper_package/jasper_csr_extended_checker"
+[-- (VERI-1503)] Restoring Verilog parse-tree 'work.jasper_csr_extended_checker' from '/usr/cad/cadence/JASPER/jasper_2018.03p001/lib/Linux64/verilog/jasper_package/jasper_csr_extended_checker/work/jasper_csr_extended_checker.sdb'
+% elaborate -top top -param axi_monitor.MAX_PENDING 1
+INFO (ISW003): Top module name is "top".
+[INFO (VERI-1018)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(9): compiling module 'top'
+[INFO (VERI-1018)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../src/SRAM_wrapper.sv(2): compiling module 'SRAM_wrapper:(S_AW=inter_WA_SRAM,S_W=inter_WD_SRAM,S_B=inter_WR_SRAM,S_AR=inter_RA_SRAM,S_R=inter_RD_SRAM)'
+[INFO (VERI-1018)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv(1): compiling module 'SRAM'
+[WARN (VERI-9033)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv(32): array Memory_byte0 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv(33): array Memory_byte1 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv(34): array Memory_byte2 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/../sim/SRAM/SRAM_rtl.sv(35): array Memory_byte3 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-1018)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(162): compiling module 'axi4_master:(ID_WIDTH=8,ADDR_WIDTH=16,DATA_WIDTH=32,LEN_WIDTH=4,COVERAGE_ON=1'b0,DATA_BEFORE_CONTROL_ON=1'b0,MAX_PENDING=1,MAXLEN=4,READ_INTERLEAVE_ON=1'b0)'
+[WARN (VERI-1060)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/version.v(3): 'initial' construct ignored
+[WARN (VERI-1060)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(2401): 'initial' construct ignored
+[WARN (VERI-1209)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(2698): expression size 32 truncated to fit in target size 16
+[WARN (VERI-1209)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(2701): expression size 32 truncated to fit in target size 4
+[WARN (VERI-1209)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(2704): expression size 32 truncated to fit in target size 3
+[WARN (VERI-1209)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(2707): expression size 32 truncated to fit in target size 2
+[WARN (VERI-1330)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(94): actual bit length 32 differs from formal bit length 16 for port 'awaddr'
+[WARN (VERI-1330)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(125): actual bit length 32 differs from formal bit length 16 for port 'araddr'
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(761): net 'rd_arid_nondvm_match_bm[0]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(763): net 'rd_wr_addr_overlap_bm[0]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(944): net 'rndmAWADDR[15]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(945): net 'rndmAWBURST[1]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(946): net 'rndmAWSIZE[2]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(947): net 'rndmAWLEN[3]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(969): net 'wr_rd_addr_overlap_bm[0]' does not have a driver
+[WARN (VDB-1002)] /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(970): net 'wr_wr_addr_overlap_bm[0]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(38): net 'aclk' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(39): net 'aresetn' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(60): net 'wire_S1AW.S_AWID[7]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(61): net 'wire_S1AW.AWADDR[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(62): net 'wire_S1AW.AWLEN[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(63): net 'wire_S1AW.AWSIZE[2]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(64): net 'wire_S1AW.AWBURST[1]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(65): net 'wire_S1AW.AWVALID' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(84): net 'wire_S1W.WDATA[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(85): net 'wire_S1W.WSTRB[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(86): net 'wire_S1W.WLAST' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(86): net 'wire_S1W.WVALID' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(107): net 'wire_S1B.BREADY' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(12): net 'wire_S1AR.S_ARID[7]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(13): net 'wire_S1AR.ARADDR[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(14): net 'wire_S1AR.ARLEN[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(15): net 'wire_S1AR.ARSIZE[2]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(16): net 'wire_S1AR.ARBURST[1]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(17): net 'wire_S1AR.ARVALID' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/../../src/AXI/Interface.sv(40): net 'wire_S1R.RREADY' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(47): net 'awlock' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(48): net 'awprot[2]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(49): net 'awcache[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(50): net 'awqos[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(51): net 'awregion[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(52): net 'awuser[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(55): net 'wuser[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(57): net 'buser[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(59): net 'arlock' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(60): net 'arprot[2]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(61): net 'arcache[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(62): net 'arqos[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(63): net 'arregion[3]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(64): net 'aruser[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(67): net 'ruser[31]' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(72): net 'csysreq' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(73): net 'csysack' does not have a driver
+[WARN (VDB-1002)] /home/user2/Vsd22/Vsd22113/Desktop/HW2/vip/slave_duv/top.v(74): net 'cactive' does not have a driver
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(7378): Weakly embedded unbounded sequence in a ASSERT directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(7387): Weakly embedded unbounded sequence in a ASSERT directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(7416): Weakly embedded unbounded sequence in a ASSUME directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(9578): Weakly embedded unbounded sequence in a ASSERT directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(9585): Weakly embedded unbounded sequence in a ASSERT directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(9594): Weakly embedded unbounded sequence in a ASSUME directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(9602): Weakly embedded unbounded sequence in a ASSERT directive..
+WARNING (WOBS002): /usr/cad/cadence/VIPCAT/cur/tools/abvip/axi4/rtl/cdn_abvip_axi4_master.svp(9631): Weakly embedded unbounded sequence in a ASSUME directive..
+top
+[<embedded>] % 
+[<embedded>] % clock aclk
+[<embedded>] % reset ~aresetn
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "aresetn".
+[<embedded>] % 
+[<embedded>] % ##Removing Slave Table no overflow checks as slave example design is not self capable to prevent table overflow
+[<embedded>] % assert -disable top.axi_monitor.*slave_aw_wr_tbl_no_overflow
+<embedded>::top.axi_monitor.genPropChksWRInf.genNoWrTblOverflow.genSlv.slave_aw_wr_tbl_no_overflow
+[<embedded>] % assert -disable top.axi_monitor.*slave_ar_rd_tbl_no_overflow
+<embedded>::top.axi_monitor.genPropChksRDInf.genNoRdTblOverflow.genSlv.slave_ar_rd_tbl_no_overflow
+[<embedded>] % assert -disable top.axi_monitor.*slave_w_wr_tbl_no_overflow
+<embedded>::top.axi_monitor.genPropChksWRInf.genNoWrDatTblOverflow.genSlv.slave_w_wr_tbl_no_overflow
+[<embedded>] % ##################################################################################
+[<embedded>] % assert -disable top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.slave_b_buser_stable
+<embedded>::top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.slave_b_buser_stable
+[<embedded>] % assert -disable top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_ruser_stable
+<embedded>::top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_ruser_stable
+[<embedded>] % assert -disable top.axi_monitor.genPropChksRDInf.genAXI4Full.genRdIlOff.slave_r_ar_rid_no_interleave
+<embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.genRdIlOff.slave_r_ar_rid_no_interleave
+[<embedded>] % assume -disable top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_aligned
+<embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_aligned <embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_aligned:precondition1
+[<embedded>] % assume -disable top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_arlen
+<embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_arlen <embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_wrap_arlen:precondition1
+[<embedded>] % assume -disable top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_fixed_arlen
+<embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_fixed_arlen <embedded>::top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_araddr_fixed_arlen:precondition1
+[<embedded>] % assume -disable top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_aligned
+<embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_aligned <embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_aligned:precondition1
+[<embedded>] % assume -disable top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_awlen
+<embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_awlen <embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_wrap_awlen:precondition1
+[<embedded>] % assume -disable top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_fixed_awlen
+<embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_fixed_awlen <embedded>::top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awaddr_fixed_awlen:precondition1
+[<embedded>] % 
+[<embedded>] % #data integrity
+[<embedded>] % assume {(axi_duv_slave.A == $past(axi_duv_slave.A) && (axi_duv_slave.WEB == 4'hf)) |=> $stable(axi_duv_slave.DO)}
+INFO (IPM005): The name "<embedded>::assume:0" is assigned to assumption "(axi_duv_slave.A == $past(axi_duv_slave.A) && (axi_duv_slave.WEB == 4'hf)) |=> $stable(axi_duv_slave.DO)".
+assume:0
+[<embedded>] % 
+[<embedded>] % # Disable FIXED & WRAP Burst
+[<embedded>] % assume {axi_monitor.arburst!=0}
+INFO (IPM005): The name "<embedded>::assume:1" is assigned to assumption "axi_monitor.arburst!=0".
+assume:1
+[<embedded>] % assume {axi_monitor.arburst!=2}
+INFO (IPM005): The name "<embedded>::assume:2" is assigned to assumption "axi_monitor.arburst!=2".
+assume:2
+[<embedded>] % assume {axi_monitor.awburst!=0}
+INFO (IPM005): The name "<embedded>::assume:3" is assigned to assumption "axi_monitor.awburst!=0".
+assume:3
+[<embedded>] % assume {axi_monitor.awburst!=2}
+INFO (IPM005): The name "<embedded>::assume:4" is assigned to assumption "axi_monitor.awburst!=2".
+assume:4
+[<embedded>] % 
+[<embedded>] % prove -all
+INFO (IPF036): Starting proof on task: "<embedded>", 110 properties to prove with 0 already proven/unreachable
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 4 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 494 of 526 design flops, 0 of 0 design latches, 480 of 829 internal elements.
+INFO (IPF031): Settings used for proof thread 0:
+    orchestration                 = on (auto)
+    time_limit                    = 86400s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = auto
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = auto
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.genAXI4.assert_param_DATA_WIDTH_legal" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.assert_param_ALL_STROBES_HIGH_ON_limitation" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.assert_param_MAX_WAIT_CYCLES_ON_legal" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.assert_param_READONLY_INTERFACE_WRITEONLY_INTERFACE_limitation" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.assert_param_EXCL_ACCESS_ON_limitation" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genParamChk.assert_param_EXCL_ACCESS_ON_with_AXI4_LITE_limitation" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_excl_rresp_no_exokay" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksRDInf.genLiveSlaveChksArready.slave_ar_arready_eventually" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksRDInf.slave_r_ar_rvalid_eventually" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksWRInf.slave_b_excl_bresp_no_exokay_supported" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksWRInf.genLiveSlaveChksReady.slave_aw_awready_eventually" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksWRInf.genLiveSlaveChksReady.slave_w_wready_eventually" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genPropChksWRInf.slave_b_bvalid_eventually" was proven in 0.00 s.
+0: Found proofs for 13 properties in preprocessing
+0: Using multistage preprocessing
+0: Starting reduce
+0: Finished reduce in 0.016s
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rresp_stable" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genStableChks.genStableChksWRInf.slave_b_bresp_stable" was proven in 0.00 s.
+0: Found proofs for 2 properties in preprocessing
+0.0.PRE: Performing Proof Simplification...
+0.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Proof Simplification Iteration 1	[0.00 s]
+0.0.N: Proof Simplification Iteration 2	[0.01 s]
+0.0.N: Proof Simplification Iteration 3	[0.01 s]
+0.0.N: Proof Simplification Iteration 4	[0.02 s]
+0.0.N: Proof Simplification Iteration 5	[0.02 s]
+0.0.N: Proof Simplification Iteration 6	[0.03 s]
+0.0.N: Proof Simplification Iteration 7	[0.03 s]
+0.0.N: Proof Simplification Iteration 8	[0.04 s]
+0.0.N: Proof Simplification Iteration 9	[0.04 s]
+0.0.N: Proof Simplification Iteration 10	[0.05 s]
+0.0.N: Proof Simplification Iteration 11	[0.05 s]
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genRstChksRDInf.slave_rst_rvalid_low_reset_released" was proven in 0.00 s.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property "top.axi_monitor.genRstChksWDInf.slave_rst_bvalid_low_reset_released" was proven in 0.00 s.
+0.0.PRE: Proof Simplification completed in 0.12 s
+0.0.N: Identified and disabled 51 duplicated targets.
+0: About to start centralized ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+0: =============================== ProofGrid start ===============================
+0: ProofGrid usable level: 42
+0: ProofGrid is starting event handling
+0.0.N: Proofgrid shell started at 14734@vlsicad9(local) jg_14562_vlsicad9_1
+0.0.Hp: Proofgrid shell started at 14735@vlsicad9(local) jg_14562_vlsicad9_1
+0.0.N: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Hp: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_araddr_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arprot_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arid_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlen_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arsize_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arburst_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlock_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arcache_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arqos_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arregion_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_aruser_stable:precondition1"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  2	[0.02 s]
+0.0.N: A trace with 2 cycles was found. [0.02 s]
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_w_wvalid_stable:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genRstChksRDInf.master_rst_arvalid_low_reset_released:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_arlen_less_than_TRANS_COUNT:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awlen_less_than_maxlen:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.master_w_aw_wlast_exact_len:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.master_w_aw_wlast_exact_len:precondition3" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genNoDbcWChks.master_w_aw_wvalid_no_dbc_throttle_cnstr:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genLiveSlaveChksReady.slave_aw_awready_eventually:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genLiveSlaveChksReady.slave_w_wready_eventually:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.master_w_wvalid_eventually:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_araddr_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arprot_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arid_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlen_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arsize_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arburst_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlock_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arcache_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arqos_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arregion_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_aruser_stable:precondition1" was covered in 2 cycles in 0.08 s.
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_w_wdata_stable:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_w_wstrb_stable:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_w_wuser_stable:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_w_wlast_stable:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genRstChksRDInf.slave_rst_rvalid_low_reset_released:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genRstChksWDInf.master_rst_awvalid_low_reset_released:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genRstChksWDInf.master_rst_wvalid_low_reset_released:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genRstChksWDInf.slave_rst_bvalid_low_reset_released:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.gen4KaraddrChk.master_ar_araddr_never_cross_4K_boundary:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_arburst_no_reserved:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_arsize_lte_datawidth:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksRDInf.genLiveSlaveChksArready.slave_ar_arready_eventually:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genNoExChks.master_ar_arlock_no_excl_access_throttle_cnstr:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4Full.gen4KawaddrChk.master_aw_awaddr_never_cross_4K_boundary:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awburst_no_reserved:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awsize_lte_datawidth:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genNoExChks.master_aw_awlock_no_excl_access_throttle_cnstr:precondition1" was covered in 2 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+INFO (IPF047): 0.0.N: The cover property "top.axi_monitor.genPropChksWRInf.genNoDbcWChks.assert_w_aw_no_dbc:precondition1" was covered in 1 cycles in 0.08 s by the incidental trace "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1".
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arvalid_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_araddr_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.master_ar_arprot_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arid_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlen_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arsize_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arburst_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arlock_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arcache_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arqos_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_arregion_stable:precondition1"	[0.10 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.master_ar_aruser_stable:precondition1"	[0.10 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable"	[0.00 s].
+0.0.Hp: A proof was found: No trace exists. [0.03 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genPropChksRDInf.assert_ar_rd_tbl_no_overflow" was proven in 0.10 s.
+0.0.Hp: A proof was found: No trace exists. [0.04 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genPropChksWRInf.assert_aw_wr_tbl_no_overflow" was proven in 0.10 s.
+0.0.Hp: A proof was found: No trace exists. [0.04 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genPropChksWRInf.genNoDbcWChks.assert_w_aw_no_dbc" was proven in 0.10 s.
+0.0.Hp: A proof was found: No trace exists. [0.04 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genPropChksWRInf.assert_w_wr_tbl_no_overflow" was proven in 0.10 s.
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.Hp: Trace Attempt  1	[0.04 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  3	[0.01 s]
+0.0.Ht: Proofgrid shell started at 14752@vlsicad9(local) jg_14562_vlsicad9_1
+0.0.Ht: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Trace Attempt  3	[0.02 s]
+0.0.N: Trace Attempt  4	[0.02 s]
+0.0.N: Trace Attempt  5	[0.03 s]
+0.0.Ht: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  1	[0.03 s]
+0.0.N: Trace Attempt  2	[0.03 s]
+0.0.Ht: Trace Attempt  2	[0.02 s]
+0.0.Ht: A trace with 2 cycles was found. [0.02 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.master_ar_arcache_no_ra_wa_for_uncacheable:precondition1" was covered in 2 cycles in 0.01 s.
+0.0.N: Validation of fixpoint was successful. Time = 0.00
+0.0.N: A proof was found: No trace exists. [0.04 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable" was proven in 0.02 s.
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable"	[0.02 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rresp_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rlast_stable:precondition1"	[0.00 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rid_stable:precondition1"	[0.00 s].
+0.0.Ht: A trace with 2 cycles was found. [0.02 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4Full.master_aw_awcache_no_ra_wa_non_modifiable:precondition1" was covered in 2 cycles in 0.02 s.
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.Ht: Trace Attempt  3	[0.03 s]
+0.0.B: Proofgrid shell started at 14753@vlsicad9(local) jg_14562_vlsicad9_1
+0.0.Ht: A trace with 3 cycles was found. [0.03 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.slave_r_ar_rvalid_eventually:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genNoRdTblOverflow.master_ar_rd_tbl_no_overflow:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rresp_stable:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rlast_stable:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rid_stable:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_excl_rresp_no_exokay:precondition1" was covered in 3 cycles in 0.02 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.genLiveMasterChksRReady.master_r_rready_eventually:precondition1" was covered in 3 cycles in 0.02 s.
+0.0.Ht: A trace with 3 cycles was found. [0.04 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_aw_awvalid_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksRDInf.assert_ar_rd_tbl_no_overflow:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_aw_awaddr_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.master_aw_awprot_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awid_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awlen_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awsize_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awburst_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awlock_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awcache_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awqos_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awregion_stable:precondition1" was covered in 3 cycles in 0.04 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.master_aw_awuser_stable:precondition1" was covered in 3 cycles in 0.04 s.
+0.0.N: Trace Attempt  2	[0.01 s]
+0: ProofGrid is temporarily paused because there are too many pending traces.
+0: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+0.0.Ht: A trace with 3 cycles was found. [0.04 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genNoWrTblOverflow.master_aw_wr_tbl_no_overflow:precondition1" was covered in 3 cycles in 0.05 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.assert_aw_wr_tbl_no_overflow:precondition1" was covered in 3 cycles in 0.05 s.
+0.0.B: clocks: 1, declared: 1, disabling: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+0.0.B: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable"	[0.00 s].
+0.0.B: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  3	[0.02 s]
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rvalid_stable:precondition1"	[0.05 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable:precondition1"	[0.05 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rresp_stable:precondition1"	[0.05 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rlast_stable:precondition1"	[0.05 s].
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rid_stable:precondition1"	[0.05 s].
+0.0.N: Starting proof for property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  3	[0.01 s]
+0: ProofGrid is temporarily paused because there are too many pending traces.
+0: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+0.0.Ht: A trace with 3 cycles was found. [0.04 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.master_w_aw_wlast_exact_len:precondition2" was covered in 3 cycles in 0.07 s.
+0.0.Ht: Trace Attempt  4	[0.05 s]
+0.0.B: Trace Attempt  2	[0.02 s]
+0.0.B: Trace Attempt  3	[0.04 s]
+0.0.N: Trace Attempt  3	[0.03 s]
+0.0.N: Trace Attempt  4	[0.04 s]
+0.0.Ht: A trace with 4 cycles was found. [0.07 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.slave_b_bvalid_stable:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genNoWrDatTblOverflow.master_w_wr_tbl_no_overflow:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.slave_b_bresp_stable:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.slave_b_bid_stable:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_order_within_id:precondition1" was covered in 4 cycles in 0.08 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.genLiveMasterChksBReady.master_b_bready_eventually:precondition1" was covered in 4 cycles in 0.08 s.
+0: ProofGrid is temporarily paused because there are too many pending traces.
+0: ProofGrid is resuming to work after pausing for 0s. The amount of pending traces decreased.
+0.0.Ht: A trace with 4 cycles was found. [0.08 s]
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.assert_w_wr_tbl_no_overflow:precondition1" was covered in 4 cycles in 0.09 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.slave_b_excl_bresp_no_exokay_supported:precondition1" was covered in 4 cycles in 0.09 s.
+INFO (IPF047): 0.0.Ht: The cover property "top.axi_monitor.genPropChksWRInf.slave_b_bvalid_eventually:precondition1" was covered in 4 cycles in 0.09 s.
+0.0.Ht: Trace Attempt  5	[0.10 s]
+0.0.N: Trace Attempt  4	[0.06 s]
+0.0.B: Trace Attempt  4	[0.08 s]
+0.0.Hp: A proof was found: No trace exists. [0.23 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rlast_stable" was proven in 0.22 s.
+0.0.Hp: A proof was found: No trace exists. [0.23 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genStableChks.genStableChksRDInf.genAXI4Full.slave_r_rid_stable" was proven in 0.22 s.
+0.0.Hp: A proof was found: No trace exists. [0.23 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genStableChks.genStableChksWRInf.slave_b_bvalid_stable" was proven in 0.22 s.
+0.0.Hp: A proof was found: No trace exists. [0.23 s]
+INFO (IPF057): 0.0.Hp: The property "top.axi_monitor.genStableChks.genStableChksWRInf.genAXI4Full.slave_b_bid_stable" was proven in 0.22 s.
+0.0.N: Trace Attempt  5	[0.14 s]
+0.0.B: Trace Attempt  5	[0.15 s]
+0.0.N: Trace Attempt  1	[0.56 s]
+0.0.N: Trace Attempt  2	[0.57 s]
+0.0.N: Trace Attempt  3	[0.62 s]
+0.0.N: Validation of fixpoint was successful. Time = 0.02
+0.0.N: A proof was found: No trace exists. [0.68 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable" was proven in 0.59 s.
+0.0.N: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable"	[0.59 s].
+0.0.N: Starting proof for property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  2	[0.02 s]
+0.0.N: Trace Attempt  3	[0.03 s]
+0.0.B: Stopped processing property "top.axi_monitor.genStableChks.genStableChksRDInf.slave_r_rdata_stable"	[0.64 s].
+0.0.B: Starting proof for property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match"	[0.00 s].
+0.0.N: Trace Attempt  3	[0.05 s]
+0.0.B: Trace Attempt  1	[0.01 s]
+0.0.B: Trace Attempt  2	[0.01 s]
+0.0.B: Trace Attempt  3	[0.03 s]
+0.0.N: Trace Attempt  4	[0.10 s]
+0.0.N: Trace Attempt  5	[0.10 s]
+0.0.B: Trace Attempt  4	[0.05 s]
+0.0.B: Trace Attempt  5	[0.08 s]
+0.0.N: Trace Attempt  1	[0.14 s]
+0.0.N: Trace Attempt  2	[0.14 s]
+0.0.N: Trace Attempt  3	[0.15 s]
+0.0.N: Trace Attempt  5	[0.17 s]
+0.0.N: Validation of fixpoint was successful. Time = 0.00
+0.0.N: A proof was found: No trace exists. [0.18 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match" was proven in 0.18 s.
+0.0.N: Stopped processing property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match"	[0.18 s].
+0.0.N: Starting proof for property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.B: Stopped processing property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rid_match"	[0.14 s].
+0.0.B: Starting proof for property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len"	[0.00 s].
+0.0.N: Trace Attempt  2	[0.01 s]
+0: ProofGrid usable level: 3
+0.0.B: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  2	[0.02 s]
+0.0.B: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  3	[0.03 s]
+0.0.B: Trace Attempt  3	[0.03 s]
+0.0.N: Trace Attempt  3	[0.05 s]
+0.0.B: Trace Attempt  4	[0.05 s]
+0.0.N: Trace Attempt  4	[0.08 s]
+0.0.N: Trace Attempt  5	[0.08 s]
+0.0.B: Trace Attempt  5	[0.09 s]
+0.0.N: Trace Attempt  1	[0.24 s]
+0.0.N: Trace Attempt  2	[0.24 s]
+0.0.N: Trace Attempt  3	[0.28 s]
+0.0.N: Trace Attempt  4	[0.31 s]
+0.0.N: Trace Attempt  5	[0.35 s]
+0.0.N: Validation of fixpoint was successful. Time = 0.01
+0.0.N: Trace Attempt  8	[0.56 s]
+0.0.N: A proof was found: No trace exists. [0.64 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len" was proven in 0.64 s.
+0.0.N: Stopped processing property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len"	[0.64 s].
+0.0.N: Starting proof for property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.B: Stopped processing property "top.axi_monitor.genPropChksRDInf.genAXI4Full.slave_r_ar_rlast_exact_len"	[0.64 s].
+0.0.B: Starting proof for property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match"	[0.00 s].
+0.0.N: Trace Attempt  2	[0.02 s]
+0.0.N: Trace Attempt  3	[0.02 s]
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.01 s]
+0.0.B: Trace Attempt  3	[0.02 s]
+0.0.N: Trace Attempt  3	[0.04 s]
+0.0.B: Trace Attempt  4	[0.04 s]
+0.0.N: Trace Attempt  4	[0.05 s]
+0.0.B: Trace Attempt  5	[0.05 s]
+0.0.N: Trace Attempt  4	[0.08 s]
+0.0.N: Trace Attempt  5	[0.12 s]
+0.0.N: Trace Attempt  1	[0.18 s]
+0.0.N: Trace Attempt  2	[0.18 s]
+0.0.N: Trace Attempt  3	[0.20 s]
+0.0.N: Trace Attempt  4	[0.20 s]
+0.0.N: Validation of fixpoint was successful. Time = 0.00
+0.0.N: Trace Attempt  7	[0.26 s]
+0.0.N: A proof was found: No trace exists. [0.28 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match" was proven in 0.28 s.
+0.0.N: Stopped processing property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match"	[0.28 s].
+0.0.N: Starting proof for property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_order_within_id"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  3	[0.01 s]
+0.0.N: Trace Attempt  4	[0.01 s]
+0.0.N: Trace Attempt  5	[0.01 s]
+0.0.N: Requesting engine job to stop
+0.0.B: Requesting engine job to stop
+0.0.Hp: Requesting engine job to terminate
+0.0.Ht: Requesting engine job to terminate
+INFO (IPF144): 0: Initiating shutdown of proof [1.88]
+0.0.N: Trace Attempt  6	[0.01 s]
+0.0.N: A proof was found: No trace exists. [0.01 s]
+INFO (IPF057): 0.0.N: The property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_order_within_id" was proven in 0.01 s.
+0.0.N: Stopped processing property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_order_within_id"	[0.01 s].
+0.0.Ht: Interrupted (multi)
+0.0.N: All properties either determined or skipped. [1.60 s]
+0.0.Ht: Trace Attempt 20	[1.80 s]
+0.0.Ht: Interrupted. [1.80 s]
+0.0.Ht: Exited with Success (@ 1.88 s)
+0: ProofGrid usable level: 0
+0.0.N: Exited with Success (@ 1.89 s)
+0.0.B: Stopped processing property "top.axi_monitor.genPropChksWRInf.genAXI4FullWrResp.slave_b_aw_bid_match"	[0.29 s].
+0.0.B: Trace Attempt 13	[0.26 s]
+0.0.B: All properties either determined or skipped. [1.59 s]
+0.0.B: Exited with Success (@ 1.89 s)
+0.0.Hp: Interrupted (multi)
+0.0.Hp: Interrupted. [1.71 s]
+0.0.Hp: Exited with Success (@ 1.92 s)
+0: --------------------------------------------------------------
+ProofGrid Summary
+--------------------------------------------------------------
+     engines started                         :   4
+     engine jobs started                     :   4
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+      N        0.05        1.88        0.00       97.43 %
+     Hp        0.04        1.88        0.00       98.08 %
+     Ht        0.05        1.83        0.00       97.29 %
+      B        0.08        1.79        0.00       95.52 %
+    all        0.06        1.84        0.00       97.09 %
+
+    Data read    : 80.73 kiB
+    Data written : 5.75 kiB
+
+0: ProofGrid usable level: 0
+0: All pending notifications were processed.
+INFO (IPF059): Completed proof on task: "<embedded>"
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 128
+                 assertions                   : 37 (6 disabled)
+                  - proven                    : 31 (83.7838%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 0 (0%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 6 (6 disabled)                                 (16.2162%)
+                  - error                     : 0 (0%)
+                 covers                       : 91 (12 disabled)
+                  - unreachable               : 0 (0%)
+                  - bounded_unreachable (user): 0 (0%)
+                  - covered                   : 79 (86.8132%)
+                  - ar_covered                : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 12 (12 disabled)                                 (13.1868%)
+                  - error                     : 0 (0%)
+determined
+[<embedded>] % 
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.

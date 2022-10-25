@@ -71,8 +71,8 @@ assign B_done = BREADY & BVALID;
 assign AR_done = ARREADY & ARVALID;
 assign R_done = RREADY & RVALID;
 
-always_ff @(posedge clk or negedge rst) begin
-    if (~rst) begin
+always_ff @(posedge clk or posedge rst) begin
+    if (rst) begin
         s_master <= S_init;
     end else begin
         s_master <= s_next;
@@ -109,8 +109,8 @@ always_comb begin
 end
 
 logic r, w;
-always_ff @(posedge clk or negedge rst) begin
-    if (~rst) begin
+always_ff @(posedge clk or posedge rst) begin
+    if (rst) begin
         {r,w} <= 2'b00;
     end
     else begin
@@ -134,8 +134,8 @@ logic [`AXI_DATA_BITS-1:0] reg_RDATA;
 assign data_out = R_done?RDATA:reg_RDATA;
 assign RREADY = (s_master == S_readdata)?1'b1:1'b0;
 
-always_ff @(posedge clk or negedge rst) begin
-    if (~rst) begin
+always_ff @(posedge clk or posedge rst) begin
+    if (rst) begin
         reg_RDATA <= `AXI_DATA_BITS'b0;
     end else begin
         reg_RDATA <= R_done?RDATA:reg_RDATA;

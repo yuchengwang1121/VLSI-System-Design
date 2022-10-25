@@ -52,7 +52,7 @@ end
 
 Master M0(
     .clk            (clk),
-    .rst            (rst),
+    .rst            (~rst),
     .read           (wire_IFIO.b_instr_read),
     .write          (1'b0),
     .write_type     (4'b1111),
@@ -104,7 +104,7 @@ Master M0(
 );
 Master M1(
     .clk            (clk),
-    .rst            (rst),
+    .rst            (~rst),
     .read           (wire_MEMIO.b_data_read & ~lock_DM),
     .write          (wire_MEMIO.b_data_write & ~lock_DM),
     .write_type     (wire_MEMIO.write_type),

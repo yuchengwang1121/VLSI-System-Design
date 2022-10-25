@@ -76,8 +76,8 @@ always_ff @(posedge clk or negedge rst) begin
         SD_RD.RLAST <= 1'b1;
     end else begin
         if (SD_RA.ARREADY & SD_RA.ARVALID) begin
-            if (SD_RA.ARLEN == 4'b0) SD_RD.RLAST <= 1'b1;
-            else SD_RD.RLAST <= 1'b0;
+            if (SD_RA.ARLEN == 4'b1) SD_RD.RLAST <= 1'b0;
+            else SD_RD.RLAST <= 1'b1;
         end
         else if(SD_RD.RVALID & SD_RD.RREADY) begin
             if ((temp_ARLEN == 4'b1) & (SD_RD.RLAST == 1'b0)) begin
