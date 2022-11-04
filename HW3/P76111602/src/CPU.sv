@@ -19,6 +19,7 @@ module CPU(
     output logic b_data_read,
     output logic b_data_write,
     output logic [3:0] write_type,
+    output logic [`CACHE_TYPE_BITS-1:0] core_type,
     output logic [`AXI_ADDR_BITS-1:0] data_addr,
     output logic [`AXI_DATA_BITS-1:0] MEM_din,
     
@@ -84,7 +85,7 @@ IDEXE_inter Wire_IDEXE();
         .ID_rs1addr     (ID_rs1addr),
         .ID_rs2addr     (ID_rs2addr),
         .ID_branch      (ID_branch),
-        .IDEXE_RegWrite (IDEXE_RegWrite)        //new added
+        .IDEXE_RegWrite (IDEXE_RegWrite)
     );
 
 //EXE input wire
@@ -110,7 +111,7 @@ EXEMEM_inter Wire_EXEMEM();
         //output
         .ZeroFlag       (ZeroFlag),
         .EXEMEMo        (Wire_EXEMEM),
-        .EXEMEM_RegWrite(EXEMEM_RegWrite)       //newadded
+        .EXEMEM_RegWrite(EXEMEM_RegWrite)
     );
 
 //MEM output wire
@@ -131,7 +132,8 @@ MEMWB_inter Wire_MEMWB();
         .MEM_CS         (MEM_CS),
         .MEM_WEB        (MEM_WEB),
         .MEM_din        (wire_MEM_din),
-        .MEMWB_RegWrite(MEMWB_RegWrite)         //new added
+        .MEMWB_RegWrite (MEMWB_RegWrite),
+        .write_type     (Wire_writetype)        //new added
     );
 
     // SRAM_wrapper DM1(
@@ -199,6 +201,7 @@ assign instr_addr = PC_out;
 assign b_data_read = Wire_EXEMEM.EXE_MemRead;
 assign b_data_write = Wire_EXEMEM.EXE_MemWrite;
 assign write_type = MEM_WEB;
+assign core_type = Wire_writetype;
 assign data_addr = Wire_EXEMEM.EXE_ALUout;
 assign MEM_din = wire_MEM_din;
 

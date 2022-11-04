@@ -24,12 +24,26 @@ module MEM(
     input [31:0] DM_dataout,
     output logic MEM_CS,
     output logic [3:0] MEM_WEB,
-    output logic [31:0] MEM_din
+    output logic [31:0] MEM_din,
 
+    //Cache
+    output reg [`CACHE_TYPE_BITS-1:0] write_type
 );
 
 assign MEM_CS = EXEMEMi.EXE_MemRead || EXEMEMi.EXE_MemWrite;    //need to used the DM
 assign Forward_Memrddata = (EXEMEMi.EXE_rdsrc == 1'b1)?EXEMEMi.EXE_PCtoReg:EXEMEMi.EXE_ALUout;  //Forward for EXE to use
+
+always_comb begin       //new added to give writetype to CPU
+    case(EXEMEMi.EXE_Funct3)
+        3'b000 : write_type = `CACHE_BYTE;
+        3'b001 : write_type = `CACHE_HWORD;
+        3'b010 : write_type = `CACHE_WORD;
+        3'b100 : write_type = `CACHE_BYTE_U;
+        3'b101 : write_type = `CACHE_HWORD_U;
+        default : write_type = `CACHE_WORD;
+    endcase
+end
+
 
 always_comb begin
     MEM_WEB = 4'b1111;

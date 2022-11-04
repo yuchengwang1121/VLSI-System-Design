@@ -3,10 +3,10 @@
 module WriteRespon(
     input clk,
     input rst,
-    inter_WR.M1 M1,
-    inter_WR.S0 S0,
-    inter_WR.S1 S1,
-    inter_WR.SDEFAULT SD
+    inter_WR.M M1,
+    inter_WR.S S0,
+    inter_WR.S S1,
+    inter_WR.S SD
 );
 inter_WR Wire();
 

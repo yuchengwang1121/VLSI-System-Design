@@ -3,10 +3,10 @@
 module WriteData(
     input clk,
     input rst,
-    inter_WD.M1 M1,
-    inter_WD.S0 S0,
-    inter_WD.S1 S1,
-    inter_WD.SDEFAULT SD,
+    inter_WD.M M1,
+    inter_WD.S S0,
+    inter_WD.S S1,
+    inter_WD.S SD,
     input AWVALID_S0,
     input AWVALID_S1,
     input AWVALID_SD

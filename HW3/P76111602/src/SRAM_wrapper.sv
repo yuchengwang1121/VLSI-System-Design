@@ -1,12 +1,12 @@
 `include "../include/AXI_define.svh"
 module SRAM_wrapper (
-  input clk,
+  input clk, 
   input rst,
-  inter_WA.SRAM S_AW,
-  inter_WD.SRAM S_W,
-  inter_WR.SRAM S_B,
-  inter_RA.SRAM S_AR,
-  inter_RD.SRAM S_R
+  inter_WA.MEM S_AW,
+  inter_WD.MEM S_W,
+  inter_WR.MEM S_B,
+  inter_RA.MEM S_AR,
+  inter_RD.MEM S_R
 );
 
 logic CS;

@@ -21,45 +21,45 @@ module AXI
 
     // AXI to master 0 (IF-stage)
     // ARx
-    inter_RA.M0 RA_M0,
+    inter_RA.M RA_M0,
     // Rx
-    inter_RD.M0 RD_M0,
+    inter_RD.M RD_M0,
 
     // AXI to master 1 (MEM-stage)
     // AWx
-    inter_WA.M1 WA_M1,
+    inter_WA.M WA_M1,
     // Wx
-    inter_WD.M1 WD_M1,
+    inter_WD.M WD_M1,
     // Bx
-    inter_WR.M1 WR_M1,
+    inter_WR.M WR_M1,
     // ARx
-    inter_RA.M1 RA_M1,
+    inter_RA.M RA_M1,
     // Rx
-    inter_RD.M1 RD_M1,
+    inter_RD.M RD_M1,
 
     // AXI to slave 0 (IM)
     // AWx
-    inter_WA.S0 WA_S0,
+    inter_WA.S WA_S0,
     // Wx
-    inter_WD.S0 WD_S0,
+    inter_WD.S WD_S0,
     // Bx
-    inter_WR.S0 WR_S0,
+    inter_WR.S WR_S0,
     // ARx
-    inter_RA.S0 RA_S0,
+    inter_RA.S RA_S0,
     // Rx
-    inter_RD.S0 RD_S0,
+    inter_RD.S RD_S0,
 
     // AXI to slave 1 (DM)
     // AWx
-    inter_WA.S1 WA_S1,
+    inter_WA.S WA_S1,
     // Wx
-    inter_WD.S1 WD_S1,
+    inter_WD.S WD_S1,
     // Bx
-    inter_WR.S1 WR_S1,
+    inter_WR.S WR_S1,
     // ARx
-    inter_RA.S1 RA_S1,
+    inter_RA.S RA_S1,
     // Rx
-    inter_RD.S1 RD_S1    
+    inter_RD.S RD_S1    
 );
 
 //wire

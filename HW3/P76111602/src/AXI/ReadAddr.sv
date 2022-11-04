@@ -6,11 +6,11 @@
 module ReadAddr(
     input clk,
     input rst,
-    inter_RA.M0 M0,
-    inter_RA.M1 M1,
-    inter_RA.S0 S0,
-    inter_RA.S1 S1,
-    inter_RA.SDEFAULT SD
+    inter_RA.M M0,
+    inter_RA.M M1,
+    inter_RA.S S0,
+    inter_RA.S S1,
+    inter_RA.S SD
 );
 //wire
 inter_RA Wire();                      //used to connect submodule for "assign" output

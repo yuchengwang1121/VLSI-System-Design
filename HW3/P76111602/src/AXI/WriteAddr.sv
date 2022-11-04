@@ -5,10 +5,10 @@
 module WriteAddr(
     input clk,
     input rst,
-    inter_WA.M1 M1,             //only DataMemory needs to Write
-    inter_WA.S0 S0,
-    inter_WA.S1 S1,
-    inter_WA.SDEFAULT SD
+    inter_WA.M M1,             //only DataMemory needs to Write
+    inter_WA.S S0,
+    inter_WA.S S1,
+    inter_WA.S SD
 );
 inter_WA Wire();
 

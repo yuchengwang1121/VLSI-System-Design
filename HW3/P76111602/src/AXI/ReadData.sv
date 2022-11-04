@@ -3,11 +3,11 @@
 module ReadData(
     input clk,
     input rst,
-    inter_RD.M0 M0,
-    inter_RD.M1 M1,
-    inter_RD.S0 S0,
-    inter_RD.S1 S1,
-    inter_RD.SDEFAULT SD
+    inter_RD.M M0,
+    inter_RD.M M1,
+    inter_RD.S S0,
+    inter_RD.S S1,
+    inter_RD.S SD
 );
 inter_RD Wire();
 

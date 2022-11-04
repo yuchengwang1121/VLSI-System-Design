@@ -5,7 +5,8 @@ module Master(
     input rst,
     //from CPU
     input read,write,
-    input [`AXI_STRB_BITS-1:0] write_type,
+    // input [`AXI_STRB_BITS-1:0] write_type,
+    input [2:0] write_type,                     //new added
     input [`AXI_DATA_BITS-1:0] data_in,
     input [`AXI_ADDR_BITS-1:0] addr_in,
     //to CPU
@@ -154,7 +155,16 @@ always_comb begin
 end
 
 //W
-assign WSTRB = write_type;
+// assign WSTRB = write_type;
+always_comb begin
+    WSTRB = 4'b1111;
+    case (write_type)
+        `CACHE_BYTE: WSTRB[addr_in[1:0]] = 4'b0;
+        `CACHE_HWORD: WSTRB[{addr_in[1], 1'b0}+:2] = 2'b00;
+        `CACHE_WORD: WSTRB = 4'b0000;
+        default: WSTRB = 4'b1111;
+    endcase
+end
 assign WLAST = 1'b1;
 assign WDATA = data_in;
 
