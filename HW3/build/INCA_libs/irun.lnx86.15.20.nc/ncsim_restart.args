@@ -1,0 +1,27 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++prog_path=/home/charlie/VSD/HW3/./sim/prog0
++incdir+/home/charlie/VSD/HW3/./src+/home/charlie/VSD/HW3/./src/AXI+/home/charlie/VSD/HW3/./include+/home/charlie/VSD/HW3/./sim
++define+prog0+FSDB_ALL
++access+r
+-MESSAGES
++EMGRLOG
+irun.log
+-XLSTIME
+1668664832
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx86.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx86.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.15.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun	15.20-s084"
+-XLNAME
+./INCA_libs/irun.lnx86.15.20.nc/caidcpuserver1_2120468

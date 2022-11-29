@@ -1,0 +1,190 @@
+ncsim(64) 15.20-s084
+Linux 5.15.0-46-generic #49~20.04.1-Ubuntu SMP Thu Aug 4 19:15:44 UTC 2022 x86_64
+CPU cores: 64
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1048576
+memorylocked	65536 kbytes
+maxproc			255907
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+SHELL=/bin/zsh
+LSCOLORS=Gxfxcxdxbxegedabagacad
+LESS=-R
+SYNOPSYS=/home/nfs_cad/synopsys/icc/cur
+MTI_VCO_MODE=64
+LANGUAGE=en_US.UTF-8
+MAKE_TERMOUT=/dev/pts/11
+SYN_MAN_DIR=/home/nfs_cad/synopsys/synthesis/cur/doc/syn/man
+maxpend=1
+MGC_LOCATION_MAP=NO_MAP
+PWD=/home/YuChengWang/VLSI-System-Design/HW3/build
+LOGNAME=YuChengWang
+XDG_SESSION_TYPE=tty
+MANPATH=:/home/nfs_cad/synopsys/synthesis/cur/doc/syn/man
+MAKEOVERRIDES=${-*-command-variables-*-}
+MGC_TMPDIR=/tmp
+OA_HOME=/usr/cad/cadence/INNOVUS/cur/oa
+MOTD_SHOWN=pam
+ENCOUNTER=/usr/cad/cadence/INNOVUS/cur/tools/fe
+HOME=/home/YuChengWang
+SHLIB_PATH=/home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64:
+LANG=en_US.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+SYNTHESIS=/home/nfs_cad/synopsys/synthesis/cur
+SSH_CONNECTION=192.168.102.27 62006 140.116.245.122 22
+MFLAGS=
+FSDB=2
+LESSCLOSE=/usr/bin/lesspipe %s %s
+MAKEFLAGS= -- FSDB=2
+XDG_SESSION_CLASS=user
+TERM=xterm
+ZSH=/home/YuChengWang/.oh-my-zsh
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=YuChengWang
+MAKE_TERMERR=/dev/pts/11
+DISPLAY=localhost:24.0
+SHLVL=2
+PAGER=less
+MAKELEVEL=1
+XDG_SESSION_ID=21775
+LM_LICENSE_FILE=1717@lshc:26585@lstn:5280@lshc
+LD_LIBRARY_PATH=/usr/cad/cadence/INNOVUS/cur/tools/lib:/home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/cad/cadence/INCISIV/cur/tools/lib/64bit:/usr/cad/cadence/INCISIV/cur/tools/lib:
+XDG_RUNTIME_DIR=/run/user/1000084
+SSH_CLIENT=192.168.102.27 62006 22
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+MGC_HOME=/home/nfs_cad/mentor/calibre/cur
+PATH=/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/usr/cad/cadence/INCISIV/cur/tools/bin/64bit:/opt/RISCV/bin:/home/nfs_cad/mentor/calibre/cur/bin:/home/nfs_cad/synopsys/laker/cur/bin:/usr/cad/cadence/JASPER/cur/bin:/usr/cad/cadence/INNOVUS/cur/tools/celtic/bin:/usr/cad/cadence/INNOVUS/cur/tools/plato/bin:/usr/cad/cadence/INNOVUS/cur/tools/dfII:/usr/cad/cadence/INNOVUS/cur/tools/bin:/usr/cad/cadence/INNOVUS/cur/tools/tlfUtil/bin:/home/nfs_cad/synopsys/icc/cur/amd64/syn/bin:/home/nfs_cad/synopsys/synthesis/cur/amd64/syn/bin:/home/nfs_cad/synopsys/cosmos_scope/cur/ai_bin:/usr/cad/synopsys/primetime/cur/linux64/syn/bin:/home/nfs_cad/synopsys/verdi/cur/bin:/home/nfs_cad/synopsys/verdi/cur/nLint/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/home/nfs_cad/mentor/modelsim/10.2/modeltech/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000084/bus
+SSH_TTY=/dev/pts/11
+vip_dir=/home/YuChengWang/VLSI-System-Design/HW3/vip
+OLDPWD=/home/YuChengWang/VLSI-System-Design/HW3
+_=/usr/cad/cadence/INCISIV/cur/tools/bin/irun
+_IRUNROOT_=/usr/cad/cadence/INCISIV/cur/tools
+CDS_ARCH=lnx86
+NCRUNMODE=irun:./INCA_libs/irun.lnx8664.15.20.nc
+IRUNBATCH=FALSE
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/cad/cadence/INCISIV/cur/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=irun
+argv[1]=/home/YuChengWang/VLSI-System-Design/HW3/./sim/top_tb.sv
+argv[2]=+incdir+/home/YuChengWang/VLSI-System-Design/HW3/./src+/home/YuChengWang/VLSI-System-Design/HW3/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW3/./include+/home/YuChengWang/VLSI-System-Design/HW3/./sim
+argv[3]=+define+prog2+FSDB_ALL
+argv[4]=-define
+argv[5]=CYCLE=10.0
+argv[6]=-define
+argv[7]=MAX=6000000
+argv[8]=+access+r
+argv[9]=+prog_path=/home/YuChengWang/VLSI-System-Design/HW3/./sim/prog2
+argv[10]=+nc64bit
+90 profile - 100
+          CPU/Mem usage: 0.060 sys,  0.050 user,  110.17M sys,  0.00M vm
+91 VC callback profile - scalar:0 vector:0
+92 Tue Nov 29 14:54:58 2022
+93 pliAppInit
+94 FSDB_GATE is disabled.
+95 Enable Parallel Dumping.
+96 pliAppMiscSet: New Sim Round
+97 pliEntryInit
+98 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+99 argv[0]: top.fsdb
+100 argv[0]: +struct
+101 argv[1]: +mda
+102 argv[2]: (handle)0x51d8698 top_tb.TOP
+103 argv[0]: +struct
+104 argv[1]: +mda
+105 argv[2]: (handle)0x51d8678 top_tb.i_DRAM
+106 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+107 (C) 1996 - 2018 by Synopsys, Inc.
+108 sps_call_fsdbDumpfile at 0 : /home/YuChengWang/VLSI-System-Design/HW3/sim/top_tb.sv(190)
+109 argv[0]: top.fsdb
+110 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+111 *Verdi* : Create FSDB file 'top.fsdb'
+112 sps_call_fsdbDumpvars at 0 : /home/YuChengWang/VLSI-System-Design/HW3/sim/top_tb.sv(191)
+113 argv[0]: +struct
+114 argv[1]: +mda
+115 argv[2]: (handle)0x51d8698 top_tb.TOP
+116 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+117 *Verdi* : Enable +struct and +mda dumping.
+118 *Verdi* : End of traversing.
+119 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.080 sys,  0.250 user,  221.93M sys,  0.00M vm
+                   incr: 0.000 sys,  0.200 user,  28.58M sys,  0.00M vm
+                   accu: 0.000 sys,  0.200 user,  28.58M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.200 user,  28.58M sys,  0.00M vm
+
+          Count usage: 138725 var,  134994 idcode,  135002 callback
+                 incr: 138725 var,  134994 idcode,  135002 callback
+                 accu: 138725 var,  134994 idcode,  135002 callback
+            accu incr: 138725 var,  134994 idcode,  135002 callback
+120 VC callback profile - scalar:0 vector:0
+121 Tue Nov 29 14:54:58 2022
+122 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.080 sys,  0.300 user,  231.46M sys,  0.00M vm
+                   incr: 0.000 sys,  0.050 user,  9.53M sys,  0.00M vm
+                   accu: 0.000 sys,  0.250 user,  38.11M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.050 user,  9.53M sys,  0.00M vm
+
+          Count usage: 138725 var,  134994 idcode,  135002 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 138725 var,  134994 idcode,  135002 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+123 VC callback profile - scalar:1189 vector:133805
+124 Tue Nov 29 14:54:58 2022
+125 sps_call_fsdbDumpvars at 0 : /home/YuChengWang/VLSI-System-Design/HW3/sim/top_tb.sv(192)
+126 argv[0]: +struct
+127 argv[1]: +mda
+128 argv[2]: (handle)0x51d86c8 top_tb.i_DRAM
+129 *Verdi* : Begin traversing the scope (top_tb.i_DRAM), layer (0).
+130 *Verdi* : Enable +struct and +mda dumping.
+131 *Verdi* : End of traversing.
+132 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.700 sys,  13.980 user,  1604.38M sys,  0.00M vm
+                   incr: 0.620 sys,  13.680 user,  1372.92M sys,  0.00M vm
+                   accu: 0.620 sys,  13.680 user,  1372.92M sys,  0.00M vm
+              accu incr: 0.620 sys,  13.680 user,  1372.92M sys,  0.00M vm
+
+          Count usage: 8527352 var,  8523619 idcode,  8523631 callback
+                 incr: 8388627 var,  8388625 idcode,  8388629 callback
+                 accu: 8388627 var,  8388625 idcode,  8388629 callback
+            accu incr: 8388627 var,  8388625 idcode,  8388629 callback
+133 VC callback profile - scalar:1189 vector:133805
+134 Tue Nov 29 14:55:13 2022
+135 *Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 256M.
+136 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.880 sys,  16.440 user,  2140.09M sys,  0.00M vm
+                   incr: 0.180 sys,  2.460 user,  535.72M sys,  0.00M vm
+                   accu: 0.800 sys,  16.140 user,  1908.63M sys,  0.00M vm
+              accu incr: 0.180 sys,  2.460 user,  535.72M sys,  0.00M vm
+
+          Count usage: 8527352 var,  8523619 idcode,  8523631 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 8388627 var,  8388625 idcode,  8388629 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+137 VC callback profile - scalar:1196 vector:8522425
+138 Tue Nov 29 14:55:15 2022
+139 *Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 512M.
+140 *Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 1024M.
+141 End of simulation at 3127053000
+142 VC callback profile - scalar:649630848 vector:223080084
+143 Tue Nov 29 14:56:41 2022
+144 Begin FSDB profile info:
+145 FSDB Writer : bc1(649630848) bcn(223080084) mtf/stf(0/5)
+FSDB Writer elapsed time : flush(35.538265) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+146 End FSDB profile info
+147 Parallel profile    -  Flush:4 Expand:14 ProduceWait:4 ConsumerWait:1302 BlockUsed:5013
+148                        ProduceTime:89.416814763 ConsumerTime:78.670786613 Buffer:512MB
+149 SimExit
+150 Sim process exit

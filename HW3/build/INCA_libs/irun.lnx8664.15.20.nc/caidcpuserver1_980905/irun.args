@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/charlie/VSD/HW3/./sim/top_tb.sv
+-sdf_file
+/home/charlie/VSD/HW3/./syn/top_syn.sdf
++incdir+/home/charlie/VSD/HW3/./syn+/home/charlie/VSD/HW3/./include+/home/charlie/VSD/HW3/./sim
++define+SYN+prog0+FSDB
+-define
+CYCLE=20.0
+-define
+MAX=6000000
++access+r
++prog_path=/home/charlie/VSD/HW3/./sim/prog0
++nc64bit

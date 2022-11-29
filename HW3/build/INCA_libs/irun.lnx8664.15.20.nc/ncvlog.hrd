@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW3/./src
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW3/./src/AXI
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW3/./include
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW3/./sim
+-DEFINE
+prog2
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=10.0
+-DEFINE
+MAX=6000000

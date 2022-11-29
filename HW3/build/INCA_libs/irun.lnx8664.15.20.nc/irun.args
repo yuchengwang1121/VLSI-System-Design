@@ -1,0 +1,14 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/YuChengWang/VLSI-System-Design/HW3/./sim/top_tb.sv
++incdir+/home/YuChengWang/VLSI-System-Design/HW3/./src+/home/YuChengWang/VLSI-System-Design/HW3/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW3/./include+/home/YuChengWang/VLSI-System-Design/HW3/./sim
++define+prog2+FSDB_ALL
+-define
+CYCLE=10.0
+-define
+MAX=6000000
++access+r
++prog_path=/home/YuChengWang/VLSI-System-Design/HW3/./sim/prog2
++nc64bit

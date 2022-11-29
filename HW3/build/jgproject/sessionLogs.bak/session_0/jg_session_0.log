@@ -1,0 +1,336 @@
+# ----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2021.03
+# platform  : Linux 5.15.0-46-generic
+# version   : 2021.03 FCS 64 bits
+# build date: 2021.03.23 02:50:43 UTC
+# ----------------------------------------
+# started   : 2022-11-23 12:11:22 CST
+# hostname  : caidcpuserver1.(none)
+# pid       : 594488
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:40137' '-style' 'windows' '-data' 'AAAAjHicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcMIJJiAWIRBl6GYoZShgCGVoYghhyGTIY+hBCiuB4b6QLlkoHgmUL4EzENXqQfEyUAeAwM7AJWwFNA=' '-proj' '/home/charlie/VSD/HW3/build/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/charlie/VSD/HW3/build/jgproject/.tmp/.initCmds.tcl' '../script/superlint.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2021 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/charlie/VSD/HW3/build/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_pint" and "jasper_dao".
+INFO: reading configuration file "/home/charlie/.config/jasper/jaspergold.conf".
+% check_superlint -init
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% # Config rules
+% config_rtlds -rule -enable -domain { LINT }
+% config_rtlds -rule -disable -tag { CAS_IS_DFRC SIG_IS_DLCK SIG_NO_TGFL SIG_NO_TGRS SIG_NO_TGST FSM_NO_MTRN FSM_NO_TRRN }
+% # vsd2018_constrain //
+% config_rtlds -rule  -disable -category { NAMING AUTO_FORMAL_DEAD_CODE AUTO_FORMAL_SIGNALS AUTO_FORMAL_ARITHMETIC_OVERFLOW }
+% config_rtlds -rule  -disable -tag { IDN_NR_SVKY ARY_MS_DRNG IDN_NR_AMKY IDN_NR_CKYW IDN_NR_SVKW ARY_NR_LBND VAR_NR_INDL INS_NR_PTEX INP_NO_USED OTP_NR_ASYA FLP_NR_MXCS OTP_UC_INST OTP_NR_UDRV REG_NR_TRRC INS_NR_INPR MOD_NS_GLGC } 
+WARNING (WRTL017): Unable to find a matching tag for IDN_NR_SVKY,IDN_NR_AMKY,VAR_NR_INDL. This command will be completely ignored.
+% config_rtlds -rule  -disable -tag { REG_NR_RWRC  }
+% config_rtlds -rule  -disable -tag { BUS_IS_FLOT ASG_IS_XRCH }
+% #config_rtlds -rule  -reset -sync
+% # vsd2018_constrain //
+% 
+% analyze -sv +incdir+../include+../src/AHB ../src/top.sv ../sim/SRAM/SRAM_rtl.sv
+[-- (VERI-1482)] Analyzing Verilog file '/home/nfs_cad/cadence/JASPER/jasper_2021.03/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../src/top.sv'
+[INFO (VERI-1328)] ../src/top.sv(1): analyzing included file '../src/CPU_wrapper.sv'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(1): analyzing included file '../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(2): analyzing included file '../src/CPU.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(1): analyzing included file '../src/IF.sv'
+[INFO (VERI-1328)] ../src/IF.sv(1): analyzing included file '../src/ProgramCounter.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(2): analyzing included file '../src/ID.sv'
+[INFO (VERI-1328)] ../src/ID.sv(1): analyzing included file '../src/ControlUnit.sv'
+[INFO (VERI-1328)] ../src/ID.sv(2): analyzing included file '../src/RegisterFile.sv'
+[INFO (VERI-1328)] ../src/ID.sv(3): analyzing included file '../src/ImmediateGenerator.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(3): analyzing included file '../src/EXE.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(1): analyzing included file '../src/ALUCtrl.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(2): analyzing included file '../src/ALU.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(3): analyzing included file '../src/Csr.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(4): analyzing included file '../src/MEM.sv'
+[INFO (VERI-1328)] ../src/MEM.sv(1): analyzing included file '../include/def.svh'
+[ERROR (VERI-1026)] ../include/def.svh(33): `endif without `if
+[ERROR (VERI-1072)] ../src/MEM.sv(119): module 'MEM' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU.sv(5): analyzing included file '../src/WB.sv'
+[ERROR (VERI-1072)] ../src/WB.sv(17): module 'WB' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU.sv(6): analyzing included file '../src/ForwardUnit.sv'
+[ERROR (VERI-1072)] ../src/ForwardUnit.sv(32): module 'ForwardUnit' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU.sv(7): analyzing included file '../src/BranchCtrl.sv'
+[ERROR (VERI-1072)] ../src/BranchCtrl.sv(28): module 'BranchCtrl' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU.sv(8): analyzing included file '../src/HazardCtrl.sv'
+[ERROR (VERI-1072)] ../src/HazardCtrl.sv(61): module 'HazardCtrl' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU.sv(9): analyzing included file '../src/CPUInterface.sv'
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(7): interface 'IFID_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(13): interface 'IFEXE_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(19): interface 'IFHC_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(40): interface 'IDEXE_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(53): interface 'EXEMEM_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPUInterface.sv(63): interface 'MEMWB_inter' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/CPU.sv(205): module 'CPU' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(3): analyzing included file '../src/Master.sv'
+[INFO (VERI-1328)] ../src/Master.sv(1): analyzing included file '../src/../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/Master.sv(2): analyzing included file '../include/def.svh'
+[ERROR (VERI-1072)] ../src/Master.sv(185): module 'Master' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(4): analyzing included file '../src/L1C_inst.sv'
+[INFO (VERI-1328)] ../src/L1C_inst.sv(7): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/L1C_inst.sv(8): analyzing included file '../src/data_array_wrapper.sv'
+[ERROR (VERI-1072)] ../src/data_array_wrapper.sv(295): module 'data_array_wrapper' ignored due to previous errors
+[INFO (VERI-1328)] ../src/L1C_inst.sv(9): analyzing included file '../src/tag_array_wrapper.sv'
+[ERROR (VERI-1072)] ../src/tag_array_wrapper.sv(68): module 'tag_array_wrapper' ignored due to previous errors
+[ERROR (VERI-1072)] ../src/L1C_inst.sv(253): module 'L1C_inst' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(5): analyzing included file '../src/L1C_data.sv'
+[INFO (VERI-1328)] ../src/L1C_data.sv(7): analyzing included file '../include/def.svh'
+[ERROR (VERI-1072)] ../src/L1C_data.sv(264): module 'L1C_data' ignored due to previous errors
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(6): analyzing included file '../include/def.svh'
+[ERROR (VERI-1072)] ../src/CPU_wrapper.sv(202): module 'CPU_wrapper' ignored due to previous errors
+[INFO (VERI-1328)] ../src/top.sv(2): analyzing included file '../src/AXI/AXI.sv'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(7): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(8): analyzing included file '../src/AXI/Arbiter.sv'
+[INFO (VERI-1328)] ../src/AXI/Arbiter.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VMSG-1000)] Too many errors. Further error messages will be suppressed.
+Summary of errors detected:
+	[ERROR (VERI-1026)] ../include/def.svh(33): `endif without `if
+	[ERROR (VERI-1072)] ../src/MEM.sv(119): module 'MEM' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/WB.sv(17): module 'WB' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/ForwardUnit.sv(32): module 'ForwardUnit' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/BranchCtrl.sv(28): module 'BranchCtrl' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/HazardCtrl.sv(61): module 'HazardCtrl' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(7): interface 'IFID_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(13): interface 'IFEXE_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(19): interface 'IFHC_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(40): interface 'IDEXE_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(53): interface 'EXEMEM_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPUInterface.sv(63): interface 'MEMWB_inter' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPU.sv(205): module 'CPU' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/Master.sv(185): module 'Master' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/data_array_wrapper.sv(295): module 'data_array_wrapper' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/tag_array_wrapper.sv(68): module 'tag_array_wrapper' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/L1C_inst.sv(253): module 'L1C_inst' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/L1C_data.sv(264): module 'L1C_data' ignored due to previous errors
+	[ERROR (VERI-1072)] ../src/CPU_wrapper.sv(202): module 'CPU_wrapper' ignored due to previous errors
+ERROR (ENL034): 19 errors detected in the design file(s).
+
+ERROR: problem encountered at line 14 in file ../script/superlint.tcl
+
+% include ../script/superlint.tcl
+%% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+%% 
+%% # Config rules
+%% config_rtlds -rule -enable -domain { LINT }
+%% config_rtlds -rule -disable -tag { CAS_IS_DFRC SIG_IS_DLCK SIG_NO_TGFL SIG_NO_TGRS SIG_NO_TGST FSM_NO_MTRN FSM_NO_TRRN }
+%% # vsd2018_constrain //
+%% config_rtlds -rule  -disable -category { NAMING AUTO_FORMAL_DEAD_CODE AUTO_FORMAL_SIGNALS AUTO_FORMAL_ARITHMETIC_OVERFLOW }
+%% config_rtlds -rule  -disable -tag { IDN_NR_SVKY ARY_MS_DRNG IDN_NR_AMKY IDN_NR_CKYW IDN_NR_SVKW ARY_NR_LBND VAR_NR_INDL INS_NR_PTEX INP_NO_USED OTP_NR_ASYA FLP_NR_MXCS OTP_UC_INST OTP_NR_UDRV REG_NR_TRRC INS_NR_INPR MOD_NS_GLGC } 
+WARNING (WRTL017): Unable to find a matching tag for IDN_NR_SVKY,IDN_NR_AMKY,VAR_NR_INDL. This command will be completely ignored.
+%% config_rtlds -rule  -disable -tag { REG_NR_RWRC  }
+%% config_rtlds -rule  -disable -tag { BUS_IS_FLOT ASG_IS_XRCH }
+%% #config_rtlds -rule  -reset -sync
+%% # vsd2018_constrain //
+%% 
+%% analyze -sv +incdir+../include+../src/AHB ../src/top.sv ../sim/SRAM/SRAM_rtl.sv
+[-- (VERI-1482)] Analyzing Verilog file '/home/nfs_cad/cadence/JASPER/jasper_2021.03/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../src/top.sv'
+[INFO (VERI-1328)] ../src/top.sv(1): analyzing included file '../src/CPU_wrapper.sv'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(1): analyzing included file '../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(2): analyzing included file '../src/CPU.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(1): analyzing included file '../src/IF.sv'
+[INFO (VERI-1328)] ../src/IF.sv(1): analyzing included file '../src/ProgramCounter.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(2): analyzing included file '../src/ID.sv'
+[INFO (VERI-1328)] ../src/ID.sv(1): analyzing included file '../src/ControlUnit.sv'
+[INFO (VERI-1328)] ../src/ID.sv(2): analyzing included file '../src/RegisterFile.sv'
+[INFO (VERI-1328)] ../src/ID.sv(3): analyzing included file '../src/ImmediateGenerator.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(3): analyzing included file '../src/EXE.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(1): analyzing included file '../src/ALUCtrl.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(2): analyzing included file '../src/ALU.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(3): analyzing included file '../src/Csr.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(4): analyzing included file '../src/MEM.sv'
+[INFO (VERI-1328)] ../src/MEM.sv(1): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/CPU.sv(5): analyzing included file '../src/WB.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(6): analyzing included file '../src/ForwardUnit.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(7): analyzing included file '../src/BranchCtrl.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(8): analyzing included file '../src/HazardCtrl.sv'
+[INFO (VERI-1328)] ../src/CPU.sv(9): analyzing included file '../src/CPUInterface.sv'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(3): analyzing included file '../src/Master.sv'
+[INFO (VERI-1328)] ../src/Master.sv(1): analyzing included file '../src/../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/Master.sv(2): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(4): analyzing included file '../src/L1C_inst.sv'
+[INFO (VERI-1328)] ../src/L1C_inst.sv(7): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/L1C_inst.sv(8): analyzing included file '../src/data_array_wrapper.sv'
+[INFO (VERI-1328)] ../src/L1C_inst.sv(9): analyzing included file '../src/tag_array_wrapper.sv'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(5): analyzing included file '../src/L1C_data.sv'
+[INFO (VERI-1328)] ../src/L1C_data.sv(7): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/CPU_wrapper.sv(6): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/top.sv(2): analyzing included file '../src/AXI/AXI.sv'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(7): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(8): analyzing included file '../src/AXI/Arbiter.sv'
+[INFO (VERI-1328)] ../src/AXI/Arbiter.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(9): analyzing included file '../src/AXI/Decoder.sv'
+[INFO (VERI-1328)] ../src/AXI/Decoder.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(10): analyzing included file '../src/AXI/DefaultSlave.sv'
+[INFO (VERI-1328)] ../src/AXI/DefaultSlave.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/DefaultSlave.sv(2): analyzing included file '../src/AXI/Interface.sv'
+[INFO (VERI-1328)] ../src/AXI/Interface.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/Interface.sv(2): analyzing included file '../src/AXI/../../include/def.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(11): analyzing included file '../src/AXI/ReadAddr.sv'
+[INFO (VERI-1328)] ../src/AXI/ReadAddr.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(12): analyzing included file '../src/AXI/ReadData.sv'
+[INFO (VERI-1328)] ../src/AXI/ReadData.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(13): analyzing included file '../src/AXI/WriteAddr.sv'
+[INFO (VERI-1328)] ../src/AXI/WriteAddr.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(14): analyzing included file '../src/AXI/WriteData.sv'
+[INFO (VERI-1328)] ../src/AXI/WriteData.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/AXI/AXI.sv(15): analyzing included file '../src/AXI/WriteRespon.sv'
+[INFO (VERI-1328)] ../src/AXI/WriteRespon.sv(1): analyzing included file '../src/AXI/../../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/top.sv(3): analyzing included file '../src/SRAM_wrapper.sv'
+[INFO (VERI-1328)] ../src/SRAM_wrapper.sv(1): analyzing included file '../src/../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/top.sv(4): analyzing included file '../include/AXI_define.svh'
+[INFO (VERI-1328)] ../src/top.sv(5): analyzing included file '../include/def.svh'
+[INFO (VERI-1328)] ../src/top.sv(6): analyzing included file '../src/DRAM_wrapper.sv'
+[INFO (VERI-1328)] ../src/top.sv(7): analyzing included file '../src/ROM_wrapper.sv'
+[INFO (VERI-1328)] ../src/ROM_wrapper.sv(1): analyzing included file '../include/AXI_define.svh'
+[-- (VERI-1482)] Analyzing Verilog file '../sim/SRAM/SRAM_rtl.sv'
+%% elaborate -bbox true -top top
+INFO (ISW003): Top module name is "top".
+[INFO (HIER-8002)] ../src/top.sv(170): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] ../src/AXI/Arbiter.sv(4): compiling module 'Arbiter'
+[INFO (VERI-1018)] ../src/AXI/Decoder.sv(4): compiling module 'Decoder'
+[INFO (VERI-1018)] ../src/ProgramCounter.sv(1): compiling module 'ProgramCounter'
+[INFO (VERI-1018)] ../src/RegisterFile.sv(1): compiling module 'RegisterFile'
+[INFO (VERI-1018)] ../src/ImmediateGenerator.sv(1): compiling module 'ImmediateGenerator'
+[INFO (VERI-1018)] ../src/ControlUnit.sv(1): compiling module 'ControlUnit'
+[INFO (VERI-1018)] ../src/ALU.sv(1): compiling module 'ALU'
+[INFO (VERI-1018)] ../src/ALUCtrl.sv(1): compiling module 'ALUCtrl'
+[INFO (VERI-1018)] ../src/Csr.sv(1): compiling module 'Csr'
+[INFO (VERI-1018)] ../src/BranchCtrl.sv(1): compiling module 'BranchCtrl'
+[INFO (VERI-1018)] ../src/ForwardUnit.sv(1): compiling module 'ForwardUnit'
+[INFO (VERI-1018)] ../src/Master.sv(4): compiling module 'Master'
+[INFO (VERI-1018)] ../src/data_array_wrapper.sv(1): compiling module 'data_array_wrapper'
+[INFO (VERI-1018)] ../src/tag_array_wrapper.sv(1): compiling module 'tag_array_wrapper'
+[INFO (VERI-1018)] ../src/L1C_inst.sv(10): compiling module 'L1C_inst'
+[WARN (VERI-1209)] ../src/L1C_inst.sv(177): expression size 2 truncated to fit in target size 1
+[INFO (VERI-1018)] ../src/L1C_data.sv(8): compiling module 'L1C_data'
+[INFO (VERI-1018)] ../sim/SRAM/SRAM_rtl.sv(1): compiling module 'SRAM'
+[INFO (VERI-1018)] ../src/top.sv(9): compiling module 'top'
+[INFO (VERI-1018)] ../src/AXI/AXI.sv(17): compiling module 'AXI:(RA_M0=inter_RA_M0,RD_M0=inter_RD_M0,WA_M1=inter_WA_M1,WD_M1=inter_WD_M1,WR_M1=inter_WR_M1,RA_M1=inter_RA_M1,RD_M1=inter_RD_M1,WA_S0=inter_WA_S0,WD_S0=inter_WD_S0,WR_S0=inter_WR_S0,RA_S0=inter_RA_S0,RD_S0=inter_RD_S0,WA_S1=inter_WA_S1,WD_S1=inter_WD_S1,WR_S1=inter_WR_S1,RA_S1=inter_RA_S1,RD_S1=inter_RD_S1,WA_S2=inter_WA_S2,WD_S2=inter_WD_S2,WR_S2=inter_WR_S2,RA_S2=inter_RA_S2,RD_S2=inter_RD_S2,WA_S3=inter_WA_S3,WD_S3=inter_WD_S3,WR_S3=inter_WR_S3,RA_S3=inter_RA_S3,RD_S3=inter_RD_S3)'
+[INFO (VERI-1018)] ../src/AXI/DefaultSlave.sv(3): compiling module 'DefaultSlave:(SD_RA=inter_RA_SD,SD_RD=inter_RD_SD,SD_WA=inter_WA_SD,SD_WD=inter_WD_SD,SD_WR=inter_WR_SD)'
+[WARN (VERI-1209)] ../src/AXI/DefaultSlave.sv(56): expression size 4 truncated to fit in target size 1
+[INFO (VERI-1018)] ../src/AXI/ReadAddr.sv(6): compiling module 'ReadAddr:(M0=inter_RA_M0,M1=inter_RA_M1,S0=inter_RA_S0,S1=inter_RA_S1,S2=inter_RA_S2,S3=inter_RA_S3,SD=inter_RA_SDEFAULT)'
+[INFO (VERI-1018)] ../src/AXI/ReadData.sv(3): compiling module 'ReadData:(M0=inter_RD_M0,M1=inter_RD_M1,S0=inter_RD_S0,S1=inter_RD_S1,S2=inter_RD_S2,S3=inter_RD_S3,SD=inter_RD_SDEFAULT)'
+[INFO (VERI-1018)] ../src/AXI/WriteAddr.sv(5): compiling module 'WriteAddr:(M1=inter_WA_M1,S0=inter_WA_S0,S1=inter_WA_S1,S2=inter_WA_S2,S3=inter_WA_S3,SD=inter_WA_SDEFAULT)'
+[INFO (VERI-1018)] ../src/AXI/WriteData.sv(3): compiling module 'WriteData:(M1=inter_WD_M1,S0=inter_WD_S0,S1=inter_WD_S1,S2=inter_WD_S2,S3=inter_WD_S3,SD=inter_WD_SDEFAULT)'
+[INFO (VERI-1018)] ../src/AXI/WriteRespon.sv(3): compiling module 'WriteRespon:(M1=inter_WR_M1,S0=inter_WR_S0,S1=inter_WR_S1,S2=inter_WR_S2,S3=inter_WR_S3,SD=inter_WR_SDEFAULT)'
+[INFO (VERI-1018)] ../src/CPU_wrapper.sv(8): compiling module 'CPU_wrapper:(M0_AW=inter_WA_M0_AW,M0_W=inter_WD_M0_W,M0_B=inter_WR_M0_B,M0_AR=inter_RA_M0_AR,M0_R=inter_RD_M0_R,M1_AW=inter_WA_M1_AW,M1_W=inter_WD_M1_W,M1_B=inter_WR_M1_B,M1_AR=inter_RA_M1_AR,M1_R=inter_RD_M1_R)'
+[INFO (VERI-1018)] ../src/CPU.sv(10): compiling module 'CPU'
+[INFO (VERI-1018)] ../src/IF.sv(2): compiling module 'IF:(IFEXEi=IFEXE_inter_IFEXEi,IFHCi=IFHC_inter_IFHCi,IFIDo=IFID_inter_IFIDo)'
+[INFO (VERI-1018)] ../src/ID.sv(4): compiling module 'ID:(IFIDi=IFID_inter_IFIDi,IDEXEo=IDEXE_inter_IDEXEo)'
+[INFO (VERI-1018)] ../src/EXE.sv(4): compiling module 'EXE:(IDEXEi=IDEXE_inter_IDEXEi,EXEMEMo=EXEMEM_inter_EXEMEMo,IFEXEo=IFEXE_inter_IFEXEo)'
+[INFO (VERI-1018)] ../src/MEM.sv(2): compiling module 'MEM:(EXEMEMi=EXEMEM_inter_EXEMEMi,MEMWBo=MEMWB_inter_MEMWBo)'
+[INFO (VERI-1018)] ../src/WB.sv(1): compiling module 'WB:(MEMWBi=MEMWB_inter_MEMWBi)'
+[INFO (VERI-1018)] ../src/HazardCtrl.sv(1): compiling module 'HazardCtrl:(IFHCo=IFHC_inter_IFHCo)'
+[INFO (VERI-1018)] ../src/ROM_wrapper.sv(2): compiling module 'ROM_wrapper:(S0AW=inter_WA_ROM,S0W=inter_WD_ROM,S0B=inter_WR_ROM,S0AR=inter_RA_ROM,S0R=inter_RD_ROM)'
+[INFO (VERI-1018)] ../src/SRAM_wrapper.sv(2): compiling module 'SRAM_wrapper:(S_AW=inter_WA_SRAM,S_W=inter_WD_SRAM,S_B=inter_WR_SRAM,S_AR=inter_RA_SRAM,S_R=inter_RD_SRAM)'
+[INFO (VERI-1018)] ../src/DRAM_wrapper.sv(1): compiling module 'DRAM_wrapper:(S4AW=inter_WA_DRAM,S4W=inter_WD_DRAM,S4B=inter_WR_DRAM,S4AR=inter_RA_DRAM,S4R=inter_RD_DRAM)'
+[WARN (VDB-1002)] ../src/AXI/Interface.sv(77): net 'wire_M0AW.AWREADY' does not have a driver
+[WARN (VDB-1002)] ../src/AXI/Interface.sv(103): net 'wire_M0W.WREADY' does not have a driver
+[WARN (VDB-1002)] ../src/AXI/Interface.sv(127): net 'wire_M0B.BID[3]' does not have a driver
+[WARN (VDB-1002)] ../src/AXI/Interface.sv(129): net 'wire_M0B.BRESP[1]' does not have a driver
+[WARN (VDB-1002)] ../src/AXI/Interface.sv(130): net 'wire_M0B.BVALID' does not have a driver
+WARNING (WNL008): Module "data_array" is undefined. All instances will be black boxed.
+WARNING (WNL008): Module "tag_array" is undefined. All instances will be black boxed.
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          38 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (36 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      52 (36 synthesized)
+  Number of analyzed VHDL entities        0 (2 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+INFO (IMDS005): Number of multiple-driven bits in design: 64. Use "get_design_info -list multiple_driven" for more information.
+top
+%% 
+%% # Setup clock and reset
+%% clock clk
+%% reset rst
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+%% 
+%% # Setup for CTL check
+%% set_superlint_fsm_ctl_livelock true
+WARNING (WSL070): This command is deprecated.
+    Use "config_rtlds -rule -enable -tag {FSM_IS_LVLK FSM_IS_PLLK FSM_IS_NLLK}" instead.
+    For CTL properties, enable FSM_IS_LVLK, and for LTL properties, enable FSM_IS_PLLK and FSM_IS_NLLK.
+%% set_superlint_fsm_ctl_deadlock true
+WARNING (WSL069): This command is deprecated.
+    Use "config_rtlds -rule -enable -tag {FSM_IS_DDLK FSM_IS_PDLK FSM_IS_NDLK}" instead.
+    For CTL properties, enable FSM_IS_DDLK, and for LTL properties, enable FSM_IS_PDLK and FSM_IS_NDLK.
+%% 
+%% # Setup for LTL check
+%% #set_superlint_fsm_ctl_livelock false
+%% #set_superlint_fsm_ctl_deadlock false
+%% #set_superlint_add_automatic_task_assumption true
+%% 
+%% # Extract checks
+%% check_superlint -extract
+INFO (ISL009): Started detection of ARY_IS_OOBI, CAS_NO_PRIO checks
+INFO (ISL009): Started detection of FSM_IS_DDLK,FSM_IS_LVLK,FSM_IS_PDLK,FSM_IS_PLLK checks
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 4 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 2189 of 2253 design flops, 0 of 0 design latches, 8 of 8 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (ISL009): Started detection of BUS_IS_CONT checks
+INFO (ISL014): Started extracting properties for ARY_IS_OOBI,CAS_NO_PRIO checks
+INFO (ISL015): Extracted 30 properties of ARY_IS_OOBI,CAS_NO_PRIO
+INFO (ISL014): Started extracting properties for BUS_IS_CONT checks
+INFO (ISL018): Started extraction of structural checks
+INFO (ISL018): Started building clock tree
+INFO (ISL018): Finished building clock tree
+INFO (ISL018): Started building reset tree
+INFO (ISL018): Finished building reset tree
+INFO (ISL018): Violation Count: Errors = 15 Warnings = 2181 Info = 2
+2282
+%% 
+%% # Prove
+%% set_superlint_prove_parallel_tasks on
+%% set_prove_no_traces true
+%% # check_superlint -prove -time_limit 10m -bg
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL018): The peak resident set memory use for this session was 0.435 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

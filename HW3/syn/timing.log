@@ -1,0 +1,121 @@
+Warning: Design 'top' has '4' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Tue Nov 29 11:56:49 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: CPU_wrapper/CPU/EXE/EXEMEMo.EXE_rdaddr_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: CPU_wrapper/CPU/IF/PC/PC_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG30K                fsa0m_a_generic_core_ss1p62v125c
+  ForwardUnit        enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__
+                     enG10K                fsa0m_a_generic_core_ss1p62v125c
+  ALU                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  ALU_DW01_add_1     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  ProgramCounter     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  CPU_wrapper/CPU/EXE/EXEMEMo.EXE_rdaddr_reg[4]/CK (QDFFRBN)
+                                                          0.00 #     1.00 r
+  CPU_wrapper/CPU/EXE/EXEMEMo.EXE_rdaddr_reg[4]/Q (QDFFRBN)
+                                                          0.53       1.53 r
+  CPU_wrapper/CPU/EXE/EXEMEMo.EXE_rdaddr[4] (EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__)
+                                                          0.00       1.53 r
+  CPU_wrapper/CPU/FU/EXE_rdaddr[4] (ForwardUnit)          0.00       1.53 r
+  CPU_wrapper/CPU/FU/U28/O (XNR2HS)                       0.23       1.76 r
+  CPU_wrapper/CPU/FU/U23/O (ND3S)                         0.16       1.92 f
+  CPU_wrapper/CPU/FU/U22/O (OR2)                          0.26       2.18 f
+  CPU_wrapper/CPU/FU/U25/O (AN4B1S)                       0.28       2.46 f
+  CPU_wrapper/CPU/FU/U18/O (AN4)                          0.24       2.70 f
+  CPU_wrapper/CPU/FU/Forward_rs1src[1] (ForwardUnit)      0.00       2.70 f
+  CPU_wrapper/CPU/EXE/Forward_rs1src[1] (EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__)
+                                                          0.00       2.70 f
+  CPU_wrapper/CPU/EXE/U45/O (BUF3CK)                      0.16       2.85 f
+  CPU_wrapper/CPU/EXE/U46/O (INV3)                        0.11       2.97 r
+  CPU_wrapper/CPU/EXE/U42/O (AN2T)                        0.34       3.30 r
+  CPU_wrapper/CPU/EXE/U44/O (BUF2)                        0.34       3.65 r
+  CPU_wrapper/CPU/EXE/U127/O (AO222)                      0.42       4.07 r
+  CPU_wrapper/CPU/EXE/ALU/rs1[7] (ALU)                    0.00       4.07 r
+  CPU_wrapper/CPU/EXE/ALU/U47/O (BUF3)                    0.32       4.40 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/A[7] (ALU_DW01_add_1)
+                                                          0.00       4.40 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U413/O (NR2)             0.18       4.58 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U242/O (NR2)             0.33       4.91 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U328/O (ND2P)            0.10       5.01 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U266/O (OAI12H)          0.22       5.23 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U238/O (AOI12H)          0.17       5.40 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U241/O (OAI12HP)         0.19       5.59 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U237/O (AOI12H)          0.16       5.75 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U250/O (OAI12HP)         0.19       5.94 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U264/O (AOI12H)          0.16       6.11 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U254/O (OAI12HP)         0.19       6.30 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U247/O (AOI12H)          0.14       6.44 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U258/O (OAI12H)          0.23       6.67 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U265/O (AOI12H)          0.17       6.85 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U256/O (OAI12HP)         0.21       7.06 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U255/O (AOI12HP)         0.13       7.19 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U257/O (OAI12HP)         0.19       7.37 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U246/O (AOI12H)          0.14       7.51 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U262/O (OAI12H)          0.23       7.74 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U260/O (AOI12H)          0.14       7.89 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U315/O (OAI12HS)         0.29       8.18 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U259/O (AOI12HS)         0.21       8.38 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U316/O (OAI12HS)         0.35       8.74 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U253/O (AOI12H)          0.17       8.91 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U252/O (OAI12H)          0.22       9.13 r
+  CPU_wrapper/CPU/EXE/ALU/add_34/U263/O (AOI12HS)         0.15       9.28 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/U313/O (XOR2HS)          0.17       9.45 f
+  CPU_wrapper/CPU/EXE/ALU/add_34/SUM[31] (ALU_DW01_add_1)
+                                                          0.00       9.45 f
+  CPU_wrapper/CPU/EXE/ALU/U681/O (AOI22S)                 0.18       9.64 r
+  CPU_wrapper/CPU/EXE/ALU/U333/O (OA112)                  0.33       9.97 r
+  CPU_wrapper/CPU/EXE/ALU/U332/O (ND3P)                   0.11      10.08 f
+  CPU_wrapper/CPU/EXE/ALU/ALUout[31] (ALU)                0.00      10.08 f
+  CPU_wrapper/CPU/EXE/IFEXEo.PC_jr[31] (EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__)
+                                                          0.00      10.08 f
+  CPU_wrapper/CPU/IF/IFEXEi.PC_jr[31] (IF_I_IFEXEi_IFEXE_inter__I_IFHCi_IFHC_inter__I_IFIDo_IFID_inter__)
+                                                          0.00      10.08 f
+  CPU_wrapper/CPU/IF/U141/O (AO222S)                      0.42      10.50 f
+  CPU_wrapper/CPU/IF/PC/PC_in[31] (ProgramCounter)        0.00      10.50 f
+  CPU_wrapper/CPU/IF/PC/U12/O (MUX2)                      0.29      10.79 f
+  CPU_wrapper/CPU/IF/PC/PC_out_reg[31]/D (QDFFRBN)        0.00      10.79 f
+  data arrival time                                                 10.79
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             1.00      11.00
+  clock uncertainty                                      -0.10      10.90
+  CPU_wrapper/CPU/IF/PC/PC_out_reg[31]/CK (QDFFRBN)       0.00      10.90 r
+  library setup time                                     -0.11      10.79
+  data required time                                                10.79
+  --------------------------------------------------------------------------
+  data required time                                                10.79
+  data arrival time                                                -10.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

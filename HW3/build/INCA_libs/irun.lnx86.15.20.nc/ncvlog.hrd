@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/charlie/VSD/HW3/./src
+-INCDIR
+/home/charlie/VSD/HW3/./src/AXI
+-INCDIR
+/home/charlie/VSD/HW3/./include
+-INCDIR
+/home/charlie/VSD/HW3/./sim
+-DEFINE
+prog0
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=10.0
+-DEFINE
+MAX=6000000

@@ -1,0 +1,13 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/charlie/VSD/HW3/./sim/top_tb.sv
++incdir+/home/charlie/VSD/HW3/./src+/home/charlie/VSD/HW3/./src/AXI+/home/charlie/VSD/HW3/./include+/home/charlie/VSD/HW3/./sim
++define+prog0+FSDB_ALL
+-define
+CYCLE=10.0
+-define
+MAX=6000000
++access+r
++prog_path=/home/charlie/VSD/HW3/./sim/prog0
