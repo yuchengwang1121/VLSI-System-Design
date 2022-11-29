@@ -2,5 +2,7 @@
 // File created by:  irun
 // Do not modify this file
 //
+-SDF_FILE
+/home/charlie/VSD/HW3/./syn/top_syn.sdf
 -ACCESS
 +r

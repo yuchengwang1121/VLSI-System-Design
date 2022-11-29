@@ -4,30 +4,30 @@ Warning: Design 'top' has '4' unresolved references. For more detailed informati
 Report : area
 Design : top
 Version: T-2022.03
-Date   : Tue Nov 29 11:56:49 2022
+Date   : Wed Nov 23 17:18:09 2022
 ****************************************
 
 Library(s) Used:
 
     fsa0m_a_generic_core_ss1p62v125c (File: /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db)
-    SRAM_WC (File: /home/YuChengWang/VLSI-System-Design/HW3/sim/SRAM/SRAM_WC.db)
+    SRAM_WC (File: /home/charlie/VSD/HW3/sim/SRAM/SRAM_WC.db)
 
-Number of ports:                         8449
-Number of nets:                         22178
-Number of cells:                        14071
-Number of combinational cells:          11917
-Number of sequential cells:              2102
+Number of ports:                         8447
+Number of nets:                         21594
+Number of cells:                        13342
+Number of combinational cells:          11193
+Number of sequential cells:              2097
 Number of macros/black boxes:               2
-Number of buf/inv:                       3634
+Number of buf/inv:                       3453
 Number of references:                      11
 
-Combinational area:             201755.836402
-Buf/Inv area:                    39031.876395
-Noncombinational area:          124638.898750
+Combinational area:             187841.102301
+Buf/Inv area:                    35866.454024
+Noncombinational area:          124301.420349
 Macro/Black Box area:          5344494.500000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:               5670889.235153
+Total cell area:               5656637.022650
 Total area:                 undefined
 
 Information: This design contains black box (unknown) components. (RPT-8)
