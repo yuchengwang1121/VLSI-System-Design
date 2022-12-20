@@ -11,6 +11,7 @@ module ID(
     input [31:0] WB_rddata,
     input IDFlush,
     input IDEXE_RegWrite,
+	input csrrst,
 
     IDEXE_inter.IDEXEo IDEXEo,  // output logic [31:0] ID_pcout,
                                 // output logic [31:0] ID_rs1data,
@@ -78,7 +79,7 @@ ControlUnit CU(
 );
 
 always_ff @(posedge clk or posedge rst) begin
-    if (rst) begin                              //initial output
+    if (rst | csrrst) begin                              //initial output
         IDEXEo.ID_pcout <= 32'b0;
         IDEXEo.ID_rs1data <= 32'b0;
         IDEXEo.ID_rs2data <= 32'b0;

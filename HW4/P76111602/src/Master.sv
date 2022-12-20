@@ -48,7 +48,8 @@ module Master(
     input [1:0] RRESP,
     input RLAST,
     input RVALID,
-    output logic RREADY
+    output logic RREADY,
+    input cacheable
 
     // inter_WA.M_AW M_AW,
     // inter_WD.M_W M_W,
@@ -121,7 +122,7 @@ end
 
 //AR
 assign ARID = `AXI_ID_BITS'b0;
-assign ARLEN = `AXI_LEN_BITS'b11;
+assign ARLEN = (cacheable)?`AXI_LEN_BITS'b11:`AXI_LEN_BITS'b0;
 assign ARSIZE  = `AXI_SIZE_BITS'b10;
 assign ARBURST = `AXI_BURST_INC;
 assign ARADDR  = addr_in;

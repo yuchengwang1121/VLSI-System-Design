@@ -29,6 +29,7 @@ module CPU_wrapper(
     cache wire_cache();
     logic IM_stall,DM_stall,lock_DM;
     logic [2:0]core_type;
+    logic cacheable;
     CPU CPU(
         .clk                (clk),
         .rst                (~rst),
@@ -101,7 +102,8 @@ module CPU_wrapper(
         .RRESP      (M0_R.RRESP),
         .RLAST      (M0_R.RLAST),
         .RVALID     (M0_R.RVALID),
-        .RREADY     (M0_R.RREADY)
+        .RREADY     (M0_R.RREADY),
+        .cacheable  (1'b1)
 
         // .M_AW  (M0_AW),
         // .M_W   (M0_W),
@@ -177,7 +179,8 @@ module CPU_wrapper(
         .RRESP      (M1_R.RRESP),
         .RLAST      (M1_R.RLAST),
         .RVALID     (M1_R.RVALID),
-        .RREADY     (M1_R.RREADY)
+        .RREADY     (M1_R.RREADY),
+        .cacheable  (cacheable)
     );
 
     L1C_data L1CD(
@@ -200,7 +203,8 @@ module CPU_wrapper(
             .D_addr(wire_cache.D_addr),
             .D_write(wire_cache.D_write),
             .D_in(wire_cache.D_in),
-            .D_type(wire_cache.D_type)
+            .D_type(wire_cache.D_type),
+            .cacheable(cacheable)
     );
 
 endmodule

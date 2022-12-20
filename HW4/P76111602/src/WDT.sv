@@ -12,7 +12,7 @@ module WDT (
     logic wden,wdlive;
     logic [31:0]wtocnt;
     always_ff@(posedge clk2, posedge rst2) begin
-        if(rst2) begin
+        if(~rst2) begin
             wden <= 1'b0;
             wdlive <= 1'b0;
             wtocnt <= 32'b0;
@@ -25,17 +25,19 @@ module WDT (
         
     end
     always_ff @(posedge clk2, posedge rst2) begin
-        if(rst2) begin
+        if(~rst2) begin
             count <= 32'b0;
+            WTO <= 0;
         end
         else if(wden == 1) begin
-            if(count == wtocnt) begin
-                count <= 32'b0;
-                WTO <= 1; 
-            end
-            else begin 
+            if(count < wtocnt) begin
                 if(wdlive == 1) count <= 32'b0;
                 else count <= count +32'b1;
+                WTO <= 0; 
+            end
+            else begin 
+                count <= 32'b0;
+                WTO <= 1;
             end
         end
     end

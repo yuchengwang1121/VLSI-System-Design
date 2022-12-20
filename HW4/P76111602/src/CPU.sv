@@ -32,7 +32,7 @@ logic IDEXE_RegWrite;
 logic EXEMEM_RegWrite;
 logic MEMWB_RegWrite;
 //CSR
-logic Wire_csrstall, Wire_csrctrl, Wire_csrret;
+logic Wire_csrstall, Wire_csrctrl, Wire_csrret, Wire_csrrst;
 
 //IF input wire
 logic [1:0] BranchCtrl;
@@ -55,7 +55,8 @@ IFHC_inter Wire_IFHC();
         .csrret         (Wire_csrret),
         //output
         .IFIDo          (Wire_IFID),
-        .PC_out         (PC_out)
+        .PC_out         (PC_out),
+		.csrrst         (Wire_csrrst)			//timeout
     );
     
     // SRAM_wrapper IM1(
@@ -91,7 +92,8 @@ IDEXE_inter Wire_IDEXE();
         .ID_rs1addr     (ID_rs1addr),
         .ID_rs2addr     (ID_rs2addr),
         .ID_branch      (ID_branch),
-        .IDEXE_RegWrite (IDEXE_RegWrite)        //new added
+        .IDEXE_RegWrite (IDEXE_RegWrite),        //new added
+		.csrrst         (Wire_csrrst)			//timeout
     );
 
 //EXE input wire
@@ -122,7 +124,8 @@ EXEMEM_inter Wire_EXEMEM();
         .EXEMEM_RegWrite(EXEMEM_RegWrite),
         .csrstall       (Wire_csrstall),
         .csrctrl        (Wire_csrctrl),
-        .csrret         (Wire_csrret)
+        .csrret         (Wire_csrret),
+		.csrrst         (Wire_csrrst)			//timeout
     );
 
 //MEM output wire
@@ -143,7 +146,8 @@ MEMWB_inter Wire_MEMWB();
         .MEM_CS         (MEM_CS),
         .MEM_WEB        (MEM_WEB),
         .MEM_din        (wire_MEM_din),
-        .MEMWB_RegWrite(MEMWB_RegWrite)         //new added
+        .MEMWB_RegWrite(MEMWB_RegWrite),        //new added
+		.csrrst         (Wire_csrrst)			//timeout
     );
 
     // SRAM_wrapper DM1(

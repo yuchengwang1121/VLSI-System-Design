@@ -73,7 +73,7 @@ void quickSort(int arr[], int low, int high)
  * Description: Sorting data                                     *
  *****************************************************************/
 void sort(int *array, unsigned int size) {
-  
+  /*
   int i, j;
   int temp;
   for (i = 0; i < size - 1; i++) {
@@ -85,7 +85,7 @@ void sort(int *array, unsigned int size) {
       }
     }
   }
-  
+  */
   quickSort(array, 0, size - 1);
 
   return;

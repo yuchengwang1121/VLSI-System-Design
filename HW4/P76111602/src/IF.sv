@@ -9,6 +9,7 @@ module IF(
     input [31:0] Instr_out,     //from IM
     input csrctrl,
     input csrret,
+	input csrrst,
 
     IFID_inter.IFIDo IFIDo,
 
@@ -37,6 +38,9 @@ always_comb begin
     else if (csrctrl) begin
         PC_in = IFEXEi.csrISR_pc;
     end
+	else if(csrrst) begin
+		PC_in = 1'b0;
+	end
     else begin
         case (BranchCtrl)
             PCB:        PC_in = IFEXEi.PC_imm;

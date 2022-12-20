@@ -33,6 +33,7 @@ parameter [2:0] S_imm = 3'b001;
 parameter [2:0] B_imm = 3'b010;
 parameter [2:0] U_imm = 3'b011;
 parameter [2:0] J_imm = 3'b100;
+parameter [2:0] C_imm = 3'b101;
 
 
 always_comb begin
@@ -147,7 +148,7 @@ always_comb begin
             branch = J_branch;
         end
         7'b1110011: begin   //CSR               //added
-            ImmType = I_imm;
+            ImmType = C_imm;
             ALUOP = Csr_type;
             PCtoRegSrc = 1'b0;  // X
             ALUSrc = 1'b0;

@@ -3,6 +3,7 @@ module MEM(
     input clk,
     input rst,
     input MEMWB_RegWrite,
+	input csrrst,
     EXEMEM_inter.EXEMEMi EXEMEMi,   // input EXE_rdsrc,
                                     // input EXE_MemRead,
                                     // input EXE_MemWrite,
@@ -98,7 +99,7 @@ always_comb begin
     endcase
 end
 always_ff @(posedge clk or posedge rst) begin
-    if (rst) begin
+    if (rst | csrrst) begin
         MEMWBo.MEM_rddata <= 32'b0;
         MEMWBo.MEM_dout <= 32'b0;
         MEMWBo.MEM_rdaddr <= 5'b0;

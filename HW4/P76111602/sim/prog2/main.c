@@ -50,7 +50,7 @@ int main(void){
 	 a += data_a[k]*data_b[k*array_size_j];
  }
  
-  result[2] = a
+  result[2] = a;
   
 
   a =0;

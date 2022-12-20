@@ -15,7 +15,7 @@ module WriteRespon(
 inter_WR Wire();
 
 logic wire_READY;
-logic [2:0] slave;
+logic [6:0] slave;
 logic [1:0] master;
 
 assign M1.BID = Wire.BID;
@@ -105,14 +105,14 @@ always_comb begin
             Wire.BID = S4.S_BID[`AXI_ID_BITS-1:0];
             Wire.BRESP = S4.BRESP;
             Wire.BVALID = S4.BVALID;
-            {S0.BREADY, S1.BREADY,S2.BREADY, S3.BREADY, S4.BREADY, S5.BREADY, SD.BREADY} = {4'b0,wire_READY & SD.BVALID, 2'b0};
+            {S0.BREADY, S1.BREADY,S2.BREADY, S3.BREADY, S4.BREADY, S5.BREADY, SD.BREADY} = {4'b0,wire_READY & S4.BVALID, 2'b0};
         end
         7'b0100000:begin
             master = S5.S_BID[5:4];
             Wire.BID = S5.S_BID[`AXI_ID_BITS-1:0];
             Wire.BRESP = S5.BRESP;
             Wire.BVALID = S5.BVALID;
-            {S0.BREADY, S1.BREADY,S2.BREADY, S3.BREADY, S4.BREADY, S5.BREADY, SD.BREADY} = {5'b0,wire_READY & SD.BVALID, 1'b0};
+            {S0.BREADY, S1.BREADY,S2.BREADY, S3.BREADY, S4.BREADY, S5.BREADY, SD.BREADY} = {5'b0,wire_READY & S5.BVALID, 1'b0};
         end
         7'b1000000:begin
             master = SD.S_BID[5:4];

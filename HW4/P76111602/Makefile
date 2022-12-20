@@ -57,6 +57,7 @@ rtl0: | $(bld_dir)
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog0$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog0 \
@@ -73,6 +74,7 @@ rtl1: | $(bld_dir)
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog1$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog1 \
@@ -89,6 +91,7 @@ rtl2: | $(bld_dir)
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+prog2$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog2 \
@@ -147,6 +150,7 @@ syn0: | $(bld_dir)
 	+incdir+$(root_dir)/$(syn_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+SYN+prog0$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog0 \
@@ -165,6 +169,7 @@ syn1: | $(bld_dir)
 	+incdir+$(root_dir)/$(syn_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+SYN+prog1$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog1 \
@@ -182,6 +187,7 @@ syn2: | $(bld_dir)
 	+incdir+$(root_dir)/$(syn_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+SYN+prog2$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog2 \
@@ -244,6 +250,7 @@ pr0: | $(bld_dir)
 	+incdir+$(root_dir)/$(pr_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+PR+prog0$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog0 \
@@ -262,6 +269,7 @@ pr1: | $(bld_dir)
 	+incdir+$(root_dir)/$(pr_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+PR+prog1$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog1 \
@@ -279,6 +287,7 @@ pr2: | $(bld_dir)
 	+incdir+$(root_dir)/$(pr_dir)+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
 	+define+PR+prog2$(FSDB_DEF) \
 	-define CYCLE=$(CYCLE) \
+	-define CYCLE2=$(CYCLE2) \
 	-define MAX=$(MAX) \
 	+access+r \
 	+prog_path=$(root_dir)/$(sim_dir)/prog2 \

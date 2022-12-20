@@ -22,7 +22,8 @@ module EXE(
     //new added
     output logic csrstall,
     output logic csrctrl,
-    output logic csrret
+    output logic csrret,
+	output logic csrrst
 );
 parameter [1:0] PC4 = 2'b00,
                 Branch = 2'b01,
@@ -98,11 +99,12 @@ Csr Csr(
     .csrISR_pc  (IFEXEo.csrISR_pc),
     .csrstall   (csrstall),
     .csrctrl    (csrctrl),
-    .csrret     (csrret)
+    .csrret     (csrret),
+	.csrrst     (csrrst)
 );
 
 always_ff @(posedge clk or posedge rst) begin
-    if (rst) begin
+    if (rst | csrrst) begin
         EXEMEMo.EXE_PCtoReg <= 32'b0;
         EXEMEMo.EXE_ALUout  <= 32'b0;
         EXEMEMo.EXE_rs2data <= 32'b0;

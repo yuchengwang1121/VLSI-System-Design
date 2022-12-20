@@ -188,11 +188,11 @@ DRAM_wrapper DRAM_wrapper
 (
     .clk    (clk),
     .rst    (~latch_rst),
-    .S4AW   (wire_S3AW),
-    .S4W    (wire_S3W),
-    .S4B    (wire_S3B),
-    .S4AR   (wire_S3AR),
-    .S4R    (wire_S3R),
+    .S3AW   (wire_S3AW),
+    .S3W    (wire_S3W),
+    .S3B    (wire_S3B),
+    .S3AR   (wire_S3AR),
+    .S3R    (wire_S3R),
     .DRAM_CSn(DRAM_CSn),
     .DRAM_WEn(DRAM_WEn),
     .DRAM_RASn(DRAM_RASn),
@@ -205,7 +205,7 @@ DRAM_wrapper DRAM_wrapper
 sensor_wrapper sensor_wrapper
 (
     .clk(clk),
-    .rst(rst),
+    .rst(~latch_rst),
     .S_AW(wire_S4AW),
     .S_W(wire_S4W),
     .S_B(wire_S4B),
@@ -219,7 +219,7 @@ sensor_wrapper sensor_wrapper
 WDT_wrapper WDT_wrapper
 (
     .clk(clk),
-    .rst(rst),
+    .rst(~latch_rst),
     .clk2(clk2),
     .rst2(rst2),
     .S_AW(wire_S5AW),

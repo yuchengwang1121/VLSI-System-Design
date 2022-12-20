@@ -20,7 +20,8 @@ module Csr(
     output logic [31:0] csrISR_pc,
     output logic csrstall,
     output logic csrctrl,
-    output logic csrret
+    output logic csrret,
+	output logic csrrst
 );
 
 parameter [1:0] Branch = 2'b01,
@@ -71,14 +72,16 @@ end
 /*---------------------------------------For Interrupt-------------------------------------------------*/
 always_comb begin                   //classfy csrtemp is CSRRX or CSRRI
     if ( funct3[2] == 1'b1 ) begin
-        csrtemp = rs1;
-    end else begin
         csrtemp = Imm;
+    end else begin
+        csrtemp = rs1;
     end
 end
 
 //(3.1)if mstatus.MIE & (interrupt | timeout) => pc go to csrISR_pc in IF, then mip[MEIP] <= 1'b0, pc = pc+4
-assign csrctrl = mstatus[MIE] & ((interrupt & mip[MEIP] & mie[MEIE]) | (timeout & mip[MTIP] & mie[MTIE]));
+assign csrctrl = mstatus[MIE] & interrupt & mip[MEIP] & mie[MEIE];
+// assign csrrst = mstatus[MIE] & timeout & mip[MTIP] & mie[MTIE];
+assign csrrst = timeout
 //(4.1)give origin pc back to IF
 assign csrret = ((funct3 == 3'b0) & (funct7[4] == 1) & csrweb)? 1'b1:1'b0;
 
@@ -187,7 +190,7 @@ always_ff @(posedge clk or posedge rst) begin
     end
     else if(EM_Regwrite) begin
         if((funct7[4] == 0)&(funct3==3'b0)&csrweb) begin    //WFI, if mie can handle then stall 
-            csrstall = mie[MEIE];
+            csrstall <= mie[MEIE];
         end
     end
     else if(csrctrl) begin                                  //Start dealing interrupt

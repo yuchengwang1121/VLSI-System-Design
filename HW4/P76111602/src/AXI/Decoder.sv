@@ -42,7 +42,7 @@ module Decoder(
             {VALID_SD, VALID_S5, VALID_S4, VALID_S3, VALID_S2, VALID_S1, VALID_S0} = {2'b0, VALID, 4'b0};
             READY_S = (VALID)? READY_S4:1'b0;
         end
-        else if(16'h1001<=ADDR[31:16] & ADDR[31:16]<=16'h3FF) begin
+        else if(16'h1001<=ADDR[31:16] & ADDR[15:0]<=16'h3FF) begin
             {VALID_SD, VALID_S5, VALID_S4, VALID_S3, VALID_S2, VALID_S1, VALID_S0} = {1'b0, VALID, 5'b0};
             READY_S = (VALID)? READY_S5:1'b0;
         end

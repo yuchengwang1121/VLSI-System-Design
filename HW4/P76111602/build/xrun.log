@@ -1,0 +1,372 @@
+xrun(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s007: Started on Dec 19, 2022 at 17:25:50 CST
+irun
+	/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv
+	+incdir+/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./src+/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./src/AXI+/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./include+/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim
+	+define+prog2+FSDB_ALL
+	-define CYCLE=12.5
+	-define CYCLE2=100
+	-define MAX=6000000
+	+access+r
+	+prog_path=/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/prog2
+	+nc64bit
+
+   User defined plus("+") options:
+	+prog_path=/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/prog2
+
+xrun: *W,OPDEPRREN: Command Line Option (+nc64bit) is deprecated. Use (+xm64bit) instead.
+xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+file: /home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv
+`define CYCLE 8.0 // Cycle time
+                               |
+xmvlog: *W,MACNDF (/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define CYCLE2 8.0 // Cycle time for WDT
+                                        |
+xmvlog: *W,MACNDF (/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv,3|40): The text macro 'CYCLE2' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 300000 // Max cycle number
+                                      |
+xmvlog: *W,MACNDF (/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv,4|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+	module worklib.ProgramCounter:sv
+		errors: 0, warnings: 0
+	module worklib.IF:sv
+		errors: 0, warnings: 0
+	module worklib.ControlUnit:sv
+		errors: 0, warnings: 0
+	module worklib.RegisterFile:sv
+		errors: 0, warnings: 0
+	module worklib.ImmediateGenerator:sv
+		errors: 0, warnings: 0
+	module worklib.ID:sv
+		errors: 0, warnings: 0
+	module worklib.ALUCtrl:sv
+		errors: 0, warnings: 0
+	module worklib.ALU:sv
+		errors: 0, warnings: 0
+	module worklib.Csr:sv
+		errors: 0, warnings: 0
+	module worklib.EXE:sv
+		errors: 0, warnings: 0
+	module worklib.MEM:sv
+		errors: 0, warnings: 0
+	module worklib.WB:sv
+		errors: 0, warnings: 0
+	module worklib.ForwardUnit:sv
+		errors: 0, warnings: 0
+	module worklib.BranchCtrl:sv
+		errors: 0, warnings: 0
+	module worklib.HazardCtrl:sv
+		errors: 0, warnings: 0
+	interface worklib.IFID_inter:sv
+		errors: 0, warnings: 0
+	interface worklib.IFEXE_inter:sv
+		errors: 0, warnings: 0
+	interface worklib.IFHC_inter:sv
+		errors: 0, warnings: 0
+	interface worklib.IDEXE_inter:sv
+		errors: 0, warnings: 0
+	interface worklib.EXEMEM_inter:sv
+		errors: 0, warnings: 0
+	interface worklib.MEMWB_inter:sv
+		errors: 0, warnings: 0
+	module worklib.CPU:sv
+		errors: 0, warnings: 0
+	module worklib.Master:sv
+		errors: 0, warnings: 0
+	module worklib.data_array_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.tag_array_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.L1C_inst:sv
+		errors: 0, warnings: 0
+	module worklib.L1C_data:sv
+		errors: 0, warnings: 0
+	module worklib.CPU_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.Arbiter:sv
+		errors: 0, warnings: 0
+	module worklib.Decoder:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_Decoder:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_RA:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_RD:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_WA:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_WD:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_WR:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_IFIO:sv
+		errors: 0, warnings: 0
+	interface worklib.inter_MEMIO:sv
+		errors: 0, warnings: 0
+	interface worklib.VALIDCtrl:sv
+		errors: 0, warnings: 0
+	interface worklib.cache:sv
+		errors: 0, warnings: 0
+	module worklib.DefaultSlave:sv
+		errors: 0, warnings: 0
+	module worklib.ReadAddr:sv
+		errors: 0, warnings: 0
+	module worklib.ReadData:sv
+		errors: 0, warnings: 0
+	module worklib.WriteAddr:sv
+		errors: 0, warnings: 0
+	module worklib.WriteData:sv
+		errors: 0, warnings: 0
+	module worklib.WriteRespon:sv
+		errors: 0, warnings: 0
+	module worklib.AXI:sv
+		errors: 0, warnings: 0
+	module worklib.SRAM_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.DRAM_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.ROM_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.WDT:sv
+		errors: 0, warnings: 0
+	module worklib.WDT_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.sensor_ctrl:sv
+		errors: 0, warnings: 0
+	module worklib.sensor_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.top:sv
+		errors: 0, warnings: 0
+	module worklib.SRAM:sv
+		errors: 0, warnings: 0
+	module worklib.data_array:sv
+		errors: 0, warnings: 0
+	module worklib.tag_array:sv
+		errors: 0, warnings: 0
+	module worklib.ROM:v
+		errors: 0, warnings: 0
+	module worklib.DRAM:sv
+		errors: 0, warnings: 0
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+xmvlog: *W,NOSYST (/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv,129|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+xmvlog: *W,NOSYST (/home/user2/Vsd22/Vsd2298/Desktop/HW4/P76111602/./sim/top_tb.sv,146|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:sv
+		errors: 0, warnings: 2
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		inter_Decoder
+		top_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh({prog_path, "/rom0.hex"}, i_ROM.Memory_byte0);
+                                                         |
+xmelab: *W,MEMODR (../sim/top_tb.sv,133|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom1.hex"}, i_ROM.Memory_byte1);
+                                                         |
+xmelab: *W,MEMODR (../sim/top_tb.sv,134|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom2.hex"}, i_ROM.Memory_byte2);
+                                                         |
+xmelab: *W,MEMODR (../sim/top_tb.sv,135|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/rom3.hex"}, i_ROM.Memory_byte3);
+                                                         |
+xmelab: *W,MEMODR (../sim/top_tb.sv,136|57): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram0.hex"}, i_DRAM.Memory_byte0);
+                                                           |
+xmelab: *W,MEMODR (../sim/top_tb.sv,137|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram1.hex"}, i_DRAM.Memory_byte1);
+                                                           |
+xmelab: *W,MEMODR (../sim/top_tb.sv,138|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram2.hex"}, i_DRAM.Memory_byte2);
+                                                           |
+xmelab: *W,MEMODR (../sim/top_tb.sv,139|59): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/dram3.hex"}, i_DRAM.Memory_byte3);
+                                                           |
+xmelab: *W,MEMODR (../sim/top_tb.sv,140|59): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.WDT:sv <0x55600c55>
+			streams:   7, words:  2188
+		worklib.WDT_wrapper:sv <0x3a8bf5ef>
+			streams:  34, words: 15229
+		worklib.sensor_ctrl:sv <0x36a25bd9>
+			streams:   6, words:  3371
+		worklib.sensor_wrapper:sv <0x35826349>
+			streams:  34, words: 15508
+		worklib.DRAM_wrapper:sv <0x5a2630d6>
+			streams:  46, words: 23690
+		worklib.SRAM_wrapper:sv <0x07fdc8eb>
+			streams:  66, words: 37485
+		worklib.SRAM:sv <0x15e9df70>
+			streams:  61, words: 19962
+		worklib.SRAM_wrapper:sv <0x6358ecfc>
+			streams:  66, words: 37482
+		worklib.ROM_wrapper:sv <0x2c4089d4>
+			streams:  44, words: 20636
+		worklib.L1C_data:sv <0x51e03c8d>
+			streams:  35, words: 28690
+		worklib.tag_array:sv <0x786f553a>
+			streams:  34, words: 10236
+		worklib.data_array:sv <0x6d3e5835>
+			streams: 185, words: 69073
+		worklib.L1C_inst:sv <0x1138625c>
+			streams:  38, words: 30216
+		worklib.Master:sv <0x06500457>
+			streams:  24, words: 11529
+		worklib.HazardCtrl:sv <0x5b09c18c>
+			streams:   1, words:  4136
+		worklib.ForwardUnit:sv <0x7cd14822>
+			streams:   2, words:  1231
+		worklib.BranchCtrl:sv <0x3cfaf660>
+			streams:   1, words:   829
+		worklib.WB:sv <0x6bedcbcc>
+			streams:   3, words:   655
+		worklib.MEM:sv <0x0c3d1b0d>
+			streams:  11, words: 10485
+		worklib.Csr:sv <0x206f9eb3>
+			streams:  33, words: 22772
+		worklib.ALUCtrl:sv <0x7b70beb7>
+			streams:   1, words:  4094
+		worklib.ALU:sv <0x627242f4>
+			streams:   5, words:  3613
+		worklib.EXE:sv <0x74b99995>
+			streams:  34, words: 15469
+		worklib.ControlUnit:sv <0x3b3af8b1>
+			streams:   1, words: 14552
+		worklib.ImmediateGenerator:sv <0x3d2d7b2c>
+			streams:   1, words:  1963
+		worklib.RegisterFile:sv <0x77441c6e>
+			streams:   5, words:  2126
+		worklib.ID:sv <0x59479c42>
+			streams:  28, words: 17953
+		worklib.ProgramCounter:sv <0x7af5dd59>
+			streams:   2, words:   463
+		worklib.IF:sv <0x7a7fb2f6>
+			streams:   9, words:  3607
+		worklib.CPU:sv <0x1515c955>
+			streams:  57, words: 12342
+		worklib.CPU_wrapper:sv <0x00cdc09c>
+			streams: 112, words: 27029
+		worklib.WriteRespon:sv <0x5f2ced81>
+			streams:   8, words: 35781
+		worklib.WriteData:sv <0x3fbe0006>
+			streams:  31, words: 28176
+		worklib.WriteAddr:sv <0x1aec0542>
+			streams:  71, words: 12675
+		worklib.ReadData:sv <0x1bd7c3ec>
+			streams:  14, words: 43715
+		worklib.Decoder:sv <0x4da691c8>
+			streams:   1, words:  9414
+		worklib.Arbiter:sv <0x71a5ead4>
+			streams:   5, words:  5340
+		worklib.ReadAddr:sv <0x5358389d>
+			streams:  90, words: 23543
+		worklib.DefaultSlave:sv <0x6cd19dc6>
+			streams:  20, words: 10087
+		worklib.AXI:sv <0x2f718272>
+			streams:   7, words:   901
+		worklib.top:sv <0x646f669a>
+			streams:   9, words:  1713
+		worklib.top_tb:sv <0x1155dfec>
+			streams:  30, words: 37481
+		worklib.ROM:v <0x1dd591f3>
+			streams:   3, words:  1415
+		worklib.DRAM:sv <0x7d2f68d4>
+			streams:  49, words: 33865
+		worklib.SRAM:sv <0x281b1ca5>
+			streams:  61, words: 19962
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 54      45
+		Interfaces:              67      16
+		Registers:             1034     614
+		Scalar wires:          1365       -
+		Expanded wires:         656      14
+		Vectored wires:         439       -
+		Named events:             5       5
+		Always blocks:          198     173
+		Initial blocks:           7       7
+		Cont. assignments:      699     666
+		Pseudo assignments:     392     392
+		Assertions:               5       5
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.inter_Decoder:sv
+Loading snapshot worklib.inter_Decoder:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for IUS, Release Verdi_N-2017.12, Linux x86_64/64bit, 11/12/2017
+(C) 1996 - 2017 by Synopsys, Inc.
+***********************************************************************
+*  ERROR -                                                            *
+*  The simulator version is newer than the FSDB dumper version which  *
+*  may cause abnormal behavior, please contact Synopsys support for   *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (top_tb.i_DRAM), layer (0).
+*Verdi* : Enable +struct dumping.
+*Verdi* : End of traversing.
+
+Done
+
+DRAM[262144] = 000098eb, expect = ffffee3b
+DRAM[262145] = 00000ca6, expect = ffffe0ca
+DRAM[262146] = 0000030a, expect = 0000142e
+DRAM[262147] = ffff7af2, expect = ffffe045
+DRAM[262148] = 00005a53, pass
+DRAM[262149] = 0000a190, pass
+DRAM[262150] = ffff948a, pass
+DRAM[262151] = 0000a51f, pass
+DRAM[262152] = 0000c95a, pass
+DRAM[262153] = 000092de, pass
+DRAM[262154] = ffffaba4, pass
+DRAM[262155] = 0000abd3, pass
+DRAM[262156] = 00004bac, pass
+DRAM[262157] = 000097e8, pass
+DRAM[262158] = ffffa698, pass
+DRAM[262159] = 0000944c, pass
+DRAM[262160] = 00007a3a, pass
+DRAM[262161] = 0000a404, pass
+DRAM[262162] = ffff9c10, pass
+DRAM[262163] = 0000aacd, pass
+DRAM[262164] = 00006cd6, pass
+DRAM[262165] = 0000cb48, pass
+DRAM[262166] = ffff798c, pass
+DRAM[262167] = 0000ce58, pass
+DRAM[262168] = ffffc848, pass
+DRAM[262169] = 0000ab2c, pass
+DRAM[262170] = ffff81b4, pass
+DRAM[262171] = 0000917f, pass
+DRAM[262172] = 00005f9d, pass
+DRAM[262173] = 00004d14, pass
+DRAM[262174] = ffffda6a, pass
+DRAM[262175] = 00005518, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  OOPS!!                **      / X,X  | 
+        **                        **    /_____   | 
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+         Totally has           4 errors                     
+
+
+Simulation complete via $finish(1) at time 1340750 NS + 0
+../sim/top_tb.sv:198     $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s007: Exiting on Dec 19, 2022 at 17:26:03 CST  (total: 00:00:13)
