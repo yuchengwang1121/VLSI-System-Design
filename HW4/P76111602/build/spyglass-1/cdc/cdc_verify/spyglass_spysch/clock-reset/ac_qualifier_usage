@@ -1,0 +1,39 @@
+4@@1@@top.WDT_wrapper.wto_temp@@"top.clk"@@top.WDT_wrapper.WDT.WTO@@"top.clk2"@@Conventional multi-flop for metastability technique
+4@@2@@top.WDT_wrapper.WDT.wtocnt1[31:0]@@"top.clk2"@@top.WDT_wrapper.WDT.wtocnt[31:0]@@"top.clk"@@Conventional multi-flop for metastability technique
+4@@3@@top.WDT_wrapper.WDT.wdlive1@@"top.clk2"@@top.WDT_wrapper.WDT.wdlive@@"top.clk"@@Conventional multi-flop for metastability technique
+4@@4@@top.WDT_wrapper.WDT.wden_temp@@"top.clk2"@@top.WDT_wrapper.WDEN@@"top.clk"@@Conventional multi-flop for metastability technique
+3@@1@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@2@@0
+3@@3@@0
+3@@4@@0

@@ -1,0 +1,6 @@
+@@top.clk@@top.CPU_wrapper.L1CI.DA.i_data_array@@CK
+@@top.clk@@top.CPU_wrapper.L1CI.TA.i_tag_array@@CK
+@@top.clk@@top.CPU_wrapper.L1CD.DA.i_data_array@@CK
+@@top.clk@@top.CPU_wrapper.L1CD.TA.i_tag_array@@CK
+@@top.clk@@top.IM1.i_SRAM@@CK
+@@top.clk@@top.DM1.i_SRAM@@CK

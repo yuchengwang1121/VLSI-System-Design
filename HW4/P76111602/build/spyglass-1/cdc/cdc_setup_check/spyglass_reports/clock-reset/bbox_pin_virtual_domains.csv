@@ -1,0 +1,10 @@
+################################################################################
+#
+# Purpose:
+# This file contains the information about the virtual clock domains 
+# inferred for the black box pins according to the "abstract_module" 
+# constraints provided in sgdc file 
+#
+################################################################################
+
+Blackbox instance, Pin, Domain name, Domain id, SGDC file:line

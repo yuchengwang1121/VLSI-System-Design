@@ -1,0 +1,5 @@
+current_mode@@@@0@@@@
+sgdc@@clock@@clock-name"top.clk"-tagclk-domainclk-period11-edge05.5@@clock -name "top.clk" -domain clk -tag clk -period 11 -edge {0 5.5}@@@../script/Spyglass.sgdc:3
+sgdc@@clock@@clock-name"top.clk2"-tagclk2-domainclk2-period100-edge050@@clock -name "top.clk2" -domain clk2 -tag clk2 -period 100 -edge {0 50}@@@../script/Spyglass.sgdc:4
+sgdc@@reset@@reset-name"top.rst"-value1-sync@@reset -name "top.rst" -value 1 -sync@@@../script/Spyglass.sgdc:5
+sgdc@@reset@@reset-name"top.rst2"-value1-sync@@reset -name "top.rst2" -value 1 -sync@@@../script/Spyglass.sgdc:6

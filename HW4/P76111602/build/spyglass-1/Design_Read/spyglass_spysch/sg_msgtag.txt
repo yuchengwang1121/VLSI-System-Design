@@ -1,0 +1,29 @@
+3 "InfoAnalyzeBBox" 1
+"BBoxEng"
+["SRAM","BB_EMPTY_STOP"]
+4 "InfoAnalyzeBBox" 1
+"BBoxEng"
+["data_array","BB_EMPTY_STOP"]
+5 "InfoAnalyzeBBox" 1
+"BBoxEng"
+["tag_array","BB_EMPTY_STOP"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "InfoAnalyzeBBox" 2
+"RULEGROUP"
+["Blackbox Resolution"]
+"BUILTIN"
+"1"
+-1 "ReportStopSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"

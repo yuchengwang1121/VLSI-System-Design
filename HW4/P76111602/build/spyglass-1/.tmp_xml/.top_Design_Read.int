@@ -1,0 +1,6 @@
+INPUT@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/Design_Read/spyglass_reports@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/html_reports/data_files/@@top@@Design_Read@@
+COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/Design_Read/spyglass_reports/waiver.rpt@@data_files/top_Design_Read_waiver.rpt@@
+COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/Design_Read/spyglass_reports/moresimple.rpt@@data_files/top_Design_Read_moresimple.rpt@@
+COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/Design_Read/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/top_Design_Read_no_msg_reporting_rules.rpt@@
+PROCESS@@SpyGlass
+COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/Design_Read/spyglass.log@@data_files/top_Design_Read_spyglass.log@@

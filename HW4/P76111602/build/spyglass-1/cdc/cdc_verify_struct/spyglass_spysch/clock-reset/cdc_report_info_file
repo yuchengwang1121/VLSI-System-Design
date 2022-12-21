@@ -1,0 +1,5 @@
+
+clock@@name@@top.clk@@domain@@clk@@period@@11@@tag@@clk@@
+clock@@name@@top.clk2@@domain@@clk2@@period@@100@@tag@@clk2@@
+reset@@name@@top.rst@@value@@1@@sync@@
+reset@@name@@top.rst2@@value@@1@@sync@@

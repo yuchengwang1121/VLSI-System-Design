@@ -1,0 +1,122 @@
+#################################################################
+# abstract_port constraints                                     #
+#################################################################
+
+abstract_port  -path_logic combo -ports "ROM_address[0]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[1]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[2]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[3]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[4]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[5]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[6]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[7]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[8]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[9]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[10]" -related_ports DRAM_valid 
+abstract_port  -path_logic combo -ports "ROM_address[11]" -related_ports DRAM_valid 
+
+#################################################################
+# clock constraints                                             #
+#################################################################
+
+
+# Clock constraint is not generated.
+
+
+#################################################################
+# set_case_analysis constraints                                 #
+#################################################################
+
+
+# Case analysis constraint is not generated as 
+# no constant is propagated to any output ports
+
+
+#################################################################
+# reset constraints                                             #
+#################################################################
+
+
+# Asynchronous reset constraint is not generated.
+
+
+reset -sync -name "ROM_read" -value 0
+reset -sync -name "ROM_enable" -value 0
+
+#################################################################
+# quasi_static constraints                                      #
+#################################################################
+
+
+# Quasi-static constraint is not generated.
+
+
+#################################################################
+# abstract_port constraints                                     #
+#################################################################
+
+abstract_port -ports "ROM_enable" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "ROM_enable" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "ROM_read" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "ROM_read" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "ROM_address" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "ROM_address" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_CSn" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_CSn" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_WEn" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_WEn" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_RASn" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_RASn" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_CASn" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_CASn" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_A" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_A" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "DRAM_D" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "DRAM_D" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+abstract_port -ports "sensor_en" -scope cdc -clock "clk" -combo yes -related_ports "ROM_out" "DRAM_Q" "DRAM_valid" "sensor_ready" "sensor_out" 
+abstract_port -ports "sensor_en" -scope cdc -clock "clk" -combo yes -from "clk2" -to "clk" -sync active -seq yes -sync_names "top.wto"
+
+
+#################################################################
+#Adding -combo no to abstract_port defined at input port#
+#If it invloves a synchronized control crossing #
+#################################################################
+
+
+#################################################################
+# qualifier constraints                                         #
+#################################################################
+
+
+#################################################################
+# virtual clock constraints                                     #
+#################################################################
+
+#################################################################
+# cdc_attribute constraints                                     #
+#################################################################
+
+
+# cdc_attribute constraint is not generated.
+
+
+#################################################################
+# reset_filter_path constraints                                 #
+#################################################################
+
+
+# reset_filter_path constraint is not generated.
+
+
+#################################################################
+# Inferred abstract_port constraints                            #
+#################################################################
+
+
+abstract_port -ports "rst" -clock "clk" -start
+abstract_port -ports "rst2" -clock "clk2" -start
+abstract_port -ports "ROM_out" -clock "clk" -start
+abstract_port -ports "DRAM_Q" -clock "clk" -start
+abstract_port -ports "DRAM_valid" -clock "clk" -start
+abstract_port -ports "sensor_ready" -clock "clk" -start
+abstract_port -ports "sensor_out" -clock "clk" -start

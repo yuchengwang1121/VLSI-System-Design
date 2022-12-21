@@ -1,0 +1,169 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Wed Dec 21 23:44:41 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: DRAM_valid (input port clocked by clk)
+  Endpoint: ROM_address[8]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  DRAM_wrapper_I_S3AW_inter_WA__I_S3W_inter_WD__I_S3B_inter_WR__I_S3AR_inter_RA__I_S3R_inter_RD__
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    5.00       6.00 r
+  DRAM_valid (in)                                         0.15       6.15 r
+  DRAM_wrapper/DRAM_valid (DRAM_wrapper_I_S3AW_inter_WA__I_S3W_inter_WD__I_S3B_inter_WR__I_S3AR_inter_RA__I_S3R_inter_RD__)
+                                                          0.00       6.15 r
+  DRAM_wrapper/U260/O (ND2F)                              0.12       6.27 f
+  DRAM_wrapper/U259/O (INV12)                             0.14       6.41 r
+  DRAM_wrapper/S3R.RVALID (DRAM_wrapper_I_S3AW_inter_WA__I_S3W_inter_WD__I_S3B_inter_WR__I_S3AR_inter_RA__I_S3R_inter_RD__)
+                                                          0.00       6.41 r
+  AXI/RD_S3.RVALID (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__I_WA_S4_inter_WA__I_WD_S4_inter_WD__I_WR_S4_inter_WR__I_RA_S4_inter_RA__I_RD_S4_inter_RD__I_WA_S5_inter_WA__I_WD_S5_inter_WD__I_WR_S5_inter_WR__I_RA_S5_inter_RA__I_RD_S5_inter_RD__)
+                                                          0.00       6.41 r
+  AXI/RD/S3.RVALID (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__)
+                                                          0.00       6.41 r
+  AXI/RD/U60/O (INV8CK)                                   0.07       6.48 f
+  AXI/RD/U51/O (MAOI1HT)                                  0.14       6.63 r
+  AXI/RD/U50/O (OAI112HT)                                 0.15       6.78 f
+  AXI/RD/U72/O (INV4)                                     0.10       6.88 r
+  AXI/RD/U100/O (AN2T)                                    0.24       7.12 r
+  AXI/RD/U33/O (ND3P)                                     0.10       7.22 f
+  AXI/RD/U32/O (OAI13H)                                   0.21       7.43 r
+  AXI/RD/U5/O (NR2F)                                      0.09       7.52 f
+  AXI/RD/U92/O (OAI112HP)                                 0.12       7.64 r
+  AXI/RD/U6/O (INV8CK)                                    0.10       7.74 f
+  AXI/RD/U109/O (NR2F)                                    0.12       7.85 r
+  AXI/RD/U7/OB (MXL2HP)                                   0.15       8.00 f
+  AXI/RD/U97/O (AN2T)                                     0.38       8.38 f
+  AXI/RD/S0.RREADY (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__)
+                                                          0.00       8.38 f
+  AXI/RD_S0.RREADY (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__I_WA_S4_inter_WA__I_WD_S4_inter_WD__I_WR_S4_inter_WR__I_RA_S4_inter_RA__I_RD_S4_inter_RD__I_WA_S5_inter_WA__I_WD_S5_inter_WD__I_WR_S5_inter_WR__I_RA_S5_inter_RA__I_RD_S5_inter_RD__)
+                                                          0.00       8.38 f
+  ROM_wrapper/S0R.RREADY (ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__)
+                                                          0.00       8.38 f
+  ROM_wrapper/U106/O (OAI12HT)                            0.19       8.57 r
+  ROM_wrapper/U49/O (INV6CK)                              0.09       8.66 f
+  ROM_wrapper/U114/O (ND2F)                               0.10       8.76 r
+  ROM_wrapper/U104/O (AOI12HT)                            0.10       8.86 f
+  ROM_wrapper/U105/O (AN2)                                0.29       9.15 f
+  ROM_wrapper/U69/O (AN2T)                                0.23       9.38 f
+  ROM_wrapper/U77/O (ND2P)                                0.09       9.47 r
+  ROM_wrapper/U79/O (XNR2HS)                              0.16       9.63 r
+  ROM_wrapper/U78/O (OAI12H)                              0.13       9.76 f
+  ROM_wrapper/U29/O (INV4)                                0.08       9.84 r
+  ROM_wrapper/U335/O (ND3HT)                              0.27      10.11 f
+  ROM_wrapper/ROM_address[8] (ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__)
+                                                          0.00      10.11 f
+  ROM_address[8] (out)                                    0.00      10.11 f
+  data arrival time                                                 10.11
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             1.00      11.00
+  clock uncertainty                                      -0.10      10.90
+  output external delay                                  -5.00       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                -10.11
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -4.21
+
+
+  Startpoint: WDT_wrapper/WDT/count_reg[0]
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: WDT_wrapper/WDT/count_reg[31]
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  WDT                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  WDT_DW01_inc_0_DW01_inc_11
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  WDT_wrapper/WDT/count_reg[0]/CK (QDFFN)                 0.00       1.00 r
+  WDT_wrapper/WDT/count_reg[0]/Q (QDFFN)                  0.43       1.43 f
+  WDT_wrapper/WDT/add_78/A[0] (WDT_DW01_inc_0_DW01_inc_11)
+                                                          0.00       1.43 f
+  WDT_wrapper/WDT/add_78/U1_1_1/C (HA1)                   0.24       1.67 f
+  WDT_wrapper/WDT/add_78/U1_1_2/C (HA1)                   0.21       1.88 f
+  WDT_wrapper/WDT/add_78/U1_1_3/C (HA1)                   0.21       2.09 f
+  WDT_wrapper/WDT/add_78/U1_1_4/C (HA1)                   0.21       2.30 f
+  WDT_wrapper/WDT/add_78/U1_1_5/C (HA1)                   0.21       2.51 f
+  WDT_wrapper/WDT/add_78/U1_1_6/C (HA1)                   0.21       2.71 f
+  WDT_wrapper/WDT/add_78/U1_1_7/C (HA1)                   0.21       2.92 f
+  WDT_wrapper/WDT/add_78/U1_1_8/C (HA1)                   0.21       3.13 f
+  WDT_wrapper/WDT/add_78/U1_1_9/C (HA1)                   0.21       3.34 f
+  WDT_wrapper/WDT/add_78/U1_1_10/C (HA1)                  0.21       3.55 f
+  WDT_wrapper/WDT/add_78/U1_1_11/C (HA1)                  0.21       3.76 f
+  WDT_wrapper/WDT/add_78/U1_1_12/C (HA1)                  0.21       3.97 f
+  WDT_wrapper/WDT/add_78/U1_1_13/C (HA1)                  0.21       4.18 f
+  WDT_wrapper/WDT/add_78/U1_1_14/C (HA1)                  0.21       4.39 f
+  WDT_wrapper/WDT/add_78/U1_1_15/C (HA1)                  0.21       4.59 f
+  WDT_wrapper/WDT/add_78/U1_1_16/C (HA1)                  0.21       4.80 f
+  WDT_wrapper/WDT/add_78/U1_1_17/C (HA1)                  0.21       5.01 f
+  WDT_wrapper/WDT/add_78/U1_1_18/C (HA1)                  0.21       5.22 f
+  WDT_wrapper/WDT/add_78/U1_1_19/C (HA1)                  0.21       5.43 f
+  WDT_wrapper/WDT/add_78/U1_1_20/C (HA1)                  0.21       5.64 f
+  WDT_wrapper/WDT/add_78/U1_1_21/C (HA1)                  0.21       5.85 f
+  WDT_wrapper/WDT/add_78/U1_1_22/C (HA1)                  0.21       6.06 f
+  WDT_wrapper/WDT/add_78/U1_1_23/C (HA1)                  0.21       6.26 f
+  WDT_wrapper/WDT/add_78/U1_1_24/C (HA1)                  0.21       6.47 f
+  WDT_wrapper/WDT/add_78/U1_1_25/C (HA1)                  0.21       6.68 f
+  WDT_wrapper/WDT/add_78/U1_1_26/C (HA1)                  0.21       6.89 f
+  WDT_wrapper/WDT/add_78/U1_1_27/C (HA1)                  0.21       7.10 f
+  WDT_wrapper/WDT/add_78/U1_1_28/C (HA1)                  0.21       7.31 f
+  WDT_wrapper/WDT/add_78/U1_1_29/C (HA1)                  0.21       7.52 f
+  WDT_wrapper/WDT/add_78/U1_1_30/C (HA1)                  0.20       7.72 f
+  WDT_wrapper/WDT/add_78/U1/O (XOR2HS)                    0.20       7.92 f
+  WDT_wrapper/WDT/add_78/SUM[31] (WDT_DW01_inc_0_DW01_inc_11)
+                                                          0.00       7.92 f
+  WDT_wrapper/WDT/U67/O (AO22)                            0.26       8.18 f
+  WDT_wrapper/WDT/count_reg[31]/D (QDFFN)                 0.00       8.18 f
+  data arrival time                                                  8.18
+
+  clock clk2 (rise edge)                                100.00     100.00
+  clock network delay (ideal)                             1.00     101.00
+  clock uncertainty                                      -0.10     100.90
+  WDT_wrapper/WDT/count_reg[31]/CK (QDFFN)                0.00     100.90 r
+  library setup time                                     -0.12     100.78
+  data required time                                               100.78
+  --------------------------------------------------------------------------
+  data required time                                               100.78
+  data arrival time                                                 -8.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       92.60
+
+
+1

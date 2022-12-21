@@ -1,0 +1,51 @@
+Enabled AND-Sync
+Enabled Sync-Enable
+Enabled Clock_Gate-Sync
+Enabled Mux-Select
+Enabled Recirculation
+BEGIN::INFO
+SGDC current_design = top
+clock =
+top.clk
+top.clk2
+END::INFO
+BEGIN INFO :: CLOCKS INFORMATION
+Clk-Name=top.clk::Pos-Flop=3782::Neg-Flop=1024::UnKnown-Flop=0::Gating=No
+Clk-Name=top.clk2::Pos-Flop=167::Neg-Flop=0::UnKnown-Flop=0::Gating=No
+END CLOCKS INFORMATION
+BEGIN INFO :: CLOCK SOURCES
+PRIMARY:
+
+top.clk
+top.clk2
+
+BLACK-BOX:
+
+
+UNDRIVEN:
+
+
+DERIVED:
+
+
+GATED:
+
+
+END::CLOCK-INFO
+BEGIN INFO :: RESET SOURCES
+PRIMARY:
+
+
+BLACK-BOX:
+
+
+UNDRIVEN:
+
+
+DERIVED:
+
+
+GATED:
+
+
+END::RESET-INFO

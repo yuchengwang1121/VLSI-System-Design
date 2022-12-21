@@ -1,0 +1,9 @@
+###### Add Constraints for Black-Box: data_array ######
+###### Clocks in Black-Box: CK ######
+
+###### Add Constraints for Black-Box: tag_array ######
+###### Clocks in Black-Box: CK ######
+
+###### Add Constraints for Black-Box: SRAM ######
+###### Clocks in Black-Box: CK ######
+

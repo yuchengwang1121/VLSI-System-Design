@@ -1,0 +1,10 @@
+################################################################################
+#
+# Purpose:
+# This file contains the information about the virtual clock domains 
+# inferred for the primary ports according to the "abstract_module" 
+# constraints provided in sgdc file 
+#
+################################################################################
+
+Port, Domain name, Domain id, SGDC file:line

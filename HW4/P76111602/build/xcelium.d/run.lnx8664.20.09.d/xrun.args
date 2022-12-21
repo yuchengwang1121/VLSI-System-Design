@@ -1,0 +1,15 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim/top_tb_WDT.sv
++incdir+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src/AXI+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./include+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim
++define+prog4
+-define
+CYCLE=12.5
+-define
+CYCLE2=100
+-define
+MAX=6000000
++access+r
++prog_path=/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim/prog4

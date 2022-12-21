@@ -1,0 +1,8 @@
+AXI@@@@top.AXI
+CPU_wrapper@@@@top.CPU_wrapper
+ROM_wrapper@@@@top.ROM_wrapper
+SRAM_wrapper@@@@top.IM1
+SRAM_wrapper@@@@top.DM1
+DRAM_wrapper@@@@top.DRAM_wrapper
+sensor_wrapper@@@@top.sensor_wrapper
+WDT_wrapper@@@@top.WDT_wrapper

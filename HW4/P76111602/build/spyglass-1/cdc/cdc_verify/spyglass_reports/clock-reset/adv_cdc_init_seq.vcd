@@ -1,0 +1,122 @@
+$date
+	Wed Dec 21 01:05:59 2022
+
+$end
+$version
+	BMC-0.1
+$end
+$timescale
+	1ps
+$end
+
+$var integer 16 verification_cycle verification_cycle $end
+$scope module top $end
+
+$var wire 32 & ROM_out [31:0] $end
+$var wire 32 F DRAM_Q [31:0] $end
+$var wire 1 f DRAM_valid $end
+$var wire 1 g sensor_ready $end
+$var wire 32 h sensor_out [31:0] $end
+$scope module CPU_wrapper $end
+
+$scope module L1CI $end
+
+$var wire 128 /& DA_out [127:0] $end
+$var wire 22 V' TA_out [21:0] $end
+$upscope $end
+
+$scope module L1CD $end
+
+$var wire 128 l' DA_out [127:0] $end
+$var wire 22 :) TA_out [21:0] $end
+$upscope $end
+
+$upscope $end
+
+$scope module DM1 $end
+
+$var wire 32 P) DO [31:0] $end
+$upscope $end
+
+$scope module IM1 $end
+
+$var wire 32 p) DO [31:0] $end
+$upscope $end
+
+$var wire 1 7* rst $end
+$var wire 1 8* rst2 $end
+$var wire 1 9* clk2 $end
+$var wire 1 :* clk $end
+$upscope $end
+
+$enddefinitions $end
+
+#0
+b0000000000000000 verification_cycle
+
+17*
+18*
+19*
+1:*
+
+#5500
+b0000000000000001 verification_cycle
+
+0:*
+
+#11000
+b0000000000000010 verification_cycle
+
+1:*
+
+#16500
+b0000000000000011 verification_cycle
+
+0:*
+
+#22000
+b0000000000000100 verification_cycle
+
+1:*
+
+#27500
+b0000000000000101 verification_cycle
+
+0:*
+
+#33000
+b0000000000000110 verification_cycle
+
+1:*
+
+#38500
+b0000000000000111 verification_cycle
+
+0:*
+
+#44000
+b0000000000001000 verification_cycle
+
+1:*
+
+#49500
+b0000000000001001 verification_cycle
+
+0:*
+
+#50000
+b0000000000001010 verification_cycle
+
+09*
+
+#55000
+b0000000000001011 verification_cycle
+
+1:*
+
+#60500
+b0000000000001100 verification_cycle
+
+0:*
+
+#66000

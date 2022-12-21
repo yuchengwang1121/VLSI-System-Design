@@ -1,0 +1,27 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++prog_path=/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim/prog4
++incdir+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src/AXI+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./include+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim
++define+prog4
++access+r
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1671556066
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	20.09-s007"
+-XLNAME
+./xcelium.d/run.lnx8664.20.09.d/vlsicad6_8986

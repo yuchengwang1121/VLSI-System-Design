@@ -1,0 +1,33 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.20.09.d
+-RUNMODE
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim/top_tb_WDT.sv
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src/AXI
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./include
+-INCDIR
+/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim
+-DEFINE
+prog4
+-DEFINE
+CYCLE=12.5
+-DEFINE
+CYCLE2=100
+-DEFINE
+MAX=6000000
+-CDSLIB
+./xcelium.d/run.lnx8664.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.20.09.d/xllibs
+-ALLOWUNBOUND

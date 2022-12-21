@@ -1,0 +1,937 @@
+source ../script/Spyglass_CDC.tcl
+
+# Started at 21:37:04, Completed at 21:37:12 (Elapsed time = 00:00:07.539)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 21:37:20, Completed at 21:37:23 (Elapsed time = 00:00:03.500)
+
+run_goal
+# Started at 21:37:23, Completed at 21:37:47 (Elapsed time = 00:00:25.800)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 21:37:48, Completed at 21:37:52 (Elapsed time = 00:00:04.180)
+
+run_goal
+# Started at 21:37:52, Completed at 21:38:01 (Elapsed time = 00:00:09.490)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 21:38:01, Completed at 21:38:05 (Elapsed time = 00:00:03.619)
+
+run_goal
+# Started at 21:38:05, Completed at 21:38:15 (Elapsed time = 00:00:10.999)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 21:38:15, Completed at 21:38:19 (Elapsed time = 00:00:03.750)
+
+run_goal
+# Started at 21:38:19, Completed at 21:38:30 (Elapsed time = 00:00:11.500)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 21:38:30, Completed at 21:38:33 (Elapsed time = 00:00:03.750)
+
+run_goal
+# Started at 21:38:34, Completed at 21:38:44 (Elapsed time = 00:00:11.200)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 21:38:44, Completed at 21:38:48 (Elapsed time = 00:00:03.740)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 21:39:14, Completed at 21:39:14 (Elapsed time = 00:00:00.040)
+
+gui_select_message -rule Reset_check03 -msg {Synchronous reset signal top.rst used as active high at top.CPU_wrapper.CPU.IF.\IFIDo.IF_pcout [0] and as active low at top.AXI.DS.s_slave[0]}
+# Started at 21:39:32, Completed at 21:39:32 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 21:40:52, Completed at 21:40:52 (Elapsed time = 00:00:00.030)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 21:42:17, Completed at 21:42:17 (Elapsed time = 00:00:00.020)
+
+run_goal
+# Started at 21:42:17, Completed at 21:42:39 (Elapsed time = 00:00:24.760)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 21:42:39, Completed at 21:42:43 (Elapsed time = 00:00:03.990)
+
+run_goal
+# Started at 21:42:44, Completed at 21:42:52 (Elapsed time = 00:00:09.960)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 21:42:53, Completed at 21:42:56 (Elapsed time = 00:00:03.829)
+
+run_goal
+# Started at 21:42:57, Completed at 21:43:07 (Elapsed time = 00:00:11.590)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 21:43:07, Completed at 21:43:12 (Elapsed time = 00:00:03.799)
+
+run_goal
+# Started at 21:43:12, Completed at 21:43:22 (Elapsed time = 00:00:09.920)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 21:43:23, Completed at 21:43:26 (Elapsed time = 00:00:03.629)
+
+run_goal
+# Started at 21:43:26, Completed at 21:43:36 (Elapsed time = 00:00:09.360)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 21:43:37, Completed at 21:43:40 (Elapsed time = 00:00:03.650)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 21:43:46, Completed at 21:43:46 (Elapsed time = 00:00:00.019)
+
+gui_open_schematic -is
+# Started at 21:44:03, Completed at 21:44:04 (Elapsed time = 00:00:00.099)
+
+gui_open_schematic -ms
+# Started at 21:45:06, Completed at 21:45:06 (Elapsed time = 00:00:00.169)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 21:45:25, Completed at 21:45:29 (Elapsed time = 00:00:04.509)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:45:49, Completed at 21:45:49 (Elapsed time = 00:00:00.110)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:50, Completed at 21:46:50 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:52, Completed at 21:46:52 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:52, Completed at 21:46:52 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:53, Completed at 21:46:53 (Elapsed time = 00:00:00.209)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:53, Completed at 21:46:53 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:54, Completed at 21:46:54 (Elapsed time = 00:00:00.189)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:54, Completed at 21:46:54 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:54, Completed at 21:46:54 (Elapsed time = 00:00:00.010)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:55, Completed at 21:46:55 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:56, Completed at 21:46:56 (Elapsed time = 00:00:00.060)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:46:57, Completed at 21:46:57 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:47:07, Completed at 21:47:07 (Elapsed time = 00:00:00.060)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:47:08, Completed at 21:47:08 (Elapsed time = 00:00:00.000)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 21:49:39, Completed at 21:49:39 (Elapsed time = 00:00:00.120)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:04:56, Completed at 22:05:00 (Elapsed time = 00:00:03.710)
+
+run_goal
+# Started at 22:05:00, Completed at 22:05:16 (Elapsed time = 00:00:15.650)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 22:05:16, Completed at 22:05:20 (Elapsed time = 00:00:04.100)
+
+run_goal
+# Started at 22:05:21, Completed at 22:05:37 (Elapsed time = 00:00:15.770)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:05:37, Completed at 22:05:41 (Elapsed time = 00:00:04.090)
+
+run_goal
+# Started at 22:05:41, Completed at 22:05:57 (Elapsed time = 00:00:15.120)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:05:58, Completed at 22:06:02 (Elapsed time = 00:00:04.129)
+
+run_goal
+# Started at 22:06:02, Completed at 22:06:18 (Elapsed time = 00:00:14.780)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 22:06:18, Completed at 22:06:22 (Elapsed time = 00:00:04.060)
+
+run_goal
+# Started at 22:06:22, Completed at 22:06:38 (Elapsed time = 00:00:14.560)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:06:38, Completed at 22:06:42 (Elapsed time = 00:00:03.979)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:11:27, Completed at 22:11:27 (Elapsed time = 00:00:00.019)
+
+run_goal
+# Started at 22:11:27, Completed at 22:11:51 (Elapsed time = 00:00:25.369)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 22:11:51, Completed at 22:11:55 (Elapsed time = 00:00:04.330)
+
+run_goal
+# Started at 22:11:55, Completed at 22:12:04 (Elapsed time = 00:00:08.740)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:12:04, Completed at 22:12:08 (Elapsed time = 00:00:03.979)
+
+run_goal
+# Started at 22:12:08, Completed at 22:12:19 (Elapsed time = 00:00:11.009)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:12:19, Completed at 22:12:24 (Elapsed time = 00:00:04.299)
+
+run_goal
+# Started at 22:12:24, Completed at 22:12:35 (Elapsed time = 00:00:11.430)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 22:12:35, Completed at 22:12:39 (Elapsed time = 00:00:04.140)
+
+run_goal
+# Started at 22:12:39, Completed at 22:12:50 (Elapsed time = 00:00:10.850)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:12:50, Completed at 22:12:54 (Elapsed time = 00:00:04.189)
+
+gui_open_schematic -ms
+# Started at 22:13:09, Completed at 22:13:10 (Elapsed time = 00:00:00.149)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 22:13:22, Completed at 22:13:22 (Elapsed time = 00:00:00.050)
+
+gui_open_schematic -ms
+# Started at 22:13:26, Completed at 22:13:26 (Elapsed time = 00:00:00.110)
+
+gui_load_schematic -ms top.CPU_wrapper
+# Started at 22:13:31, Completed at 22:13:31 (Elapsed time = 00:00:00.040)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:15:25, Completed at 22:15:30 (Elapsed time = 00:00:04.909)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 22:17:12, Completed at 22:17:12 (Elapsed time = 00:00:00.060)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:19:35, Completed at 22:19:39 (Elapsed time = 00:00:04.189)
+
+run_goal
+# Started at 22:19:39, Completed at 22:20:03 (Elapsed time = 00:00:25.959)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 22:20:03, Completed at 22:20:07 (Elapsed time = 00:00:04.329)
+
+run_goal
+# Started at 22:20:07, Completed at 22:20:16 (Elapsed time = 00:00:08.640)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:20:16, Completed at 22:20:20 (Elapsed time = 00:00:04.039)
+
+run_goal
+# Started at 22:20:21, Completed at 22:20:31 (Elapsed time = 00:00:10.689)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:20:31, Completed at 22:20:36 (Elapsed time = 00:00:04.000)
+
+run_goal
+# Started at 22:20:36, Completed at 22:20:47 (Elapsed time = 00:00:10.750)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 22:20:47, Completed at 22:20:51 (Elapsed time = 00:00:04.060)
+
+run_goal
+# Started at 22:20:51, Completed at 22:21:02 (Elapsed time = 00:00:10.920)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:21:02, Completed at 22:21:06 (Elapsed time = 00:00:04.279)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 22:21:34, Completed at 22:21:34 (Elapsed time = 00:00:00.039)
+
+gui_select_message -rule Reset_info09a -msg {Reset net top.rst is unconstrained}
+# Started at 22:21:42, Completed at 22:21:42 (Elapsed time = 00:00:00.050)
+
+Set_parameter fa_time 100
+# Started at 22:22:24, Completed at 22:22:24 (Elapsed time = 00:00:00.080)
+
+set_parameter fa_time 100
+# Started at 22:22:39, Completed at 22:22:39 (Elapsed time = 00:00:00.019)
+
+set_parameter fa_atime 100
+# Started at 22:22:47, Completed at 22:22:47 (Elapsed time = 00:00:00.009)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:22:55, Completed at 22:22:55 (Elapsed time = 00:00:00.029)
+
+run_goal
+# Started at 22:22:55, Completed at 22:23:05 (Elapsed time = 00:00:10.340)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:23:06, Completed at 22:23:10 (Elapsed time = 00:00:04.170)
+
+run_goal
+# Started at 22:23:10, Completed at 22:23:21 (Elapsed time = 00:00:11.049)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:23:21, Completed at 22:23:25 (Elapsed time = 00:00:04.329)
+
+run_goal
+# Started at 22:23:26, Completed at 22:23:37 (Elapsed time = 00:00:11.900)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:23:37, Completed at 22:23:42 (Elapsed time = 00:00:04.169)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:23:48, Completed at 22:23:52 (Elapsed time = 00:00:04.719)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:25:14, Completed at 22:25:18 (Elapsed time = 00:00:04.269)
+
+run_goal
+# Started at 22:25:19, Completed at 22:25:29 (Elapsed time = 00:00:10.690)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:25:29, Completed at 22:25:33 (Elapsed time = 00:00:04.320)
+
+run_goal
+# Started at 22:25:34, Completed at 22:25:45 (Elapsed time = 00:00:11.610)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:25:45, Completed at 22:25:50 (Elapsed time = 00:00:04.360)
+
+run_goal
+# Started at 22:25:50, Completed at 22:26:02 (Elapsed time = 00:00:11.979)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:26:02, Completed at 22:26:06 (Elapsed time = 00:00:04.470)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:26:09, Completed at 22:26:09 (Elapsed time = 00:00:00.049)
+
+run_goal
+# Started at 22:26:09, Completed at 22:26:20 (Elapsed time = 00:00:11.169)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:26:21, Completed at 22:26:25 (Elapsed time = 00:00:05.850)
+
+run_goal
+# Started at 22:26:26, Completed at 22:26:38 (Elapsed time = 00:00:12.500)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:26:39, Completed at 22:26:44 (Elapsed time = 00:00:06.360)
+
+run_goal
+# Started at 22:26:44, Completed at 22:26:57 (Elapsed time = 00:00:12.929)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:26:57, Completed at 22:27:02 (Elapsed time = 00:00:05.819)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:27:08, Completed at 22:27:13 (Elapsed time = 00:00:05.079)
+
+gui_open_schematic -ms
+# Started at 22:35:42, Completed at 22:35:42 (Elapsed time = 00:00:00.160)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 22:35:50, Completed at 22:35:50 (Elapsed time = 00:00:00.070)
+
+gui_open_schematic -is
+# Started at 22:35:50, Completed at 22:35:51 (Elapsed time = 00:00:00.090)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.wto, clocked by top.clk, source flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 22:36:54, Completed at 22:36:54 (Elapsed time = 00:00:00.009)
+
+gui_open_schematic -is
+# Started at 22:36:55, Completed at 22:36:55 (Elapsed time = 00:00:00.069)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 22:45:47, Completed at 22:45:52 (Elapsed time = 00:00:05.039)
+
+run_goal
+# Started at 22:45:52, Completed at 22:46:19 (Elapsed time = 00:00:29.889)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:48:08, Completed at 22:48:13 (Elapsed time = 00:00:04.820)
+
+run_goal
+# Started at 22:48:13, Completed at 22:48:24 (Elapsed time = 00:00:11.919)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 22:48:25, Completed at 22:48:29 (Elapsed time = 00:00:04.769)
+
+run_goal
+# Started at 22:48:30, Completed at 22:48:41 (Elapsed time = 00:00:12.139)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 22:48:41, Completed at 22:48:46 (Elapsed time = 00:00:04.669)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.wto, clocked by top.clk, source flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 22:49:22, Completed at 22:49:22 (Elapsed time = 00:00:00.069)
+
+gui_open_schematic -is
+# Started at 22:49:27, Completed at 22:49:27 (Elapsed time = 00:00:00.100)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:04:30, Completed at 23:04:30 (Elapsed time = 00:00:00.080)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.wto, clocked by top.clk, source flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:04:36, Completed at 23:04:36 (Elapsed time = 00:00:00.060)
+
+gui_open_schematic -is
+# Started at 23:04:36, Completed at 23:04:36 (Elapsed time = 00:00:00.079)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:05:44, Completed at 23:05:44 (Elapsed time = 00:00:00.060)
+
+gui_open_schematic -ms
+# Started at 23:08:31, Completed at 23:08:32 (Elapsed time = 00:00:00.160)
+
+gui_load_schematic -ms top.WDT_wrapper
+# Started at 23:08:34, Completed at 23:08:34 (Elapsed time = 00:00:00.049)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT
+# Started at 23:08:36, Completed at 23:08:36 (Elapsed time = 00:00:00.040)
+
+gui_open_schematic -ms
+# Started at 23:10:37, Completed at 23:10:38 (Elapsed time = 00:00:00.029)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT.WTO_reg
+# Started at 23:11:20, Completed at 23:11:20 (Elapsed time = 00:00:00.039)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT.WTO_reg
+# Started at 23:11:32, Completed at 23:11:33 (Elapsed time = 00:00:00.029)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT.WTO_reg
+# Started at 23:11:33, Completed at 23:11:33 (Elapsed time = 00:00:00.020)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT.WTO_reg
+# Started at 23:11:34, Completed at 23:11:34 (Elapsed time = 00:00:00.029)
+
+current_goal Design_Read -alltop
+# Started at 23:13:26, Completed at 23:13:28 (Elapsed time = 00:00:02.500)
+
+link_design -force
+# Started at 23:13:29, Completed at 23:13:35 (Elapsed time = 00:00:04.769)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:13:42, Completed at 23:13:46 (Elapsed time = 00:00:05.000)
+
+run_goal
+# Started at 23:13:47, Completed at 23:14:15 (Elapsed time = 00:00:30.490)
+
+gui_open_schematic -ms
+# Started at 23:14:28, Completed at 23:14:29 (Elapsed time = 00:00:00.159)
+
+gui_open_schematic -ms
+# Started at 23:14:43, Completed at 23:14:43 (Elapsed time = 00:00:00.029)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive4, clocked by top.clk2, source primary input top.rst2, clocked by top.clk. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:14:59, Completed at 23:14:59 (Elapsed time = 00:00:00.080)
+
+gui_open_schematic -is
+# Started at 23:15:03, Completed at 23:15:03 (Elapsed time = 00:00:00.100)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wden_temp, clocked by top.clk2, source flop top.WDT_wrapper.WDEN, clocked by top.clk. Reason: Synchronizer flop is the destination flop for another crossing [Total Sources: 2 (Number of source domains: 1)]}
+# Started at 23:15:11, Completed at 23:15:11 (Elapsed time = 00:00:00.069)
+
+gui_open_schematic -is
+# Started at 23:15:11, Completed at 23:15:11 (Elapsed time = 00:00:00.080)
+
+current_goal Design_Read -alltop
+# Started at 23:15:41, Completed at 23:15:44 (Elapsed time = 00:00:02.539)
+
+link_design -force
+# Started at 23:15:45, Completed at 23:15:50 (Elapsed time = 00:00:04.830)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:15:59, Completed at 23:16:04 (Elapsed time = 00:00:05.220)
+
+run_goal
+# Started at 23:16:04, Completed at 23:16:33 (Elapsed time = 00:00:31.310)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.wto, clocked by top.clk, source flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:18:02, Completed at 23:18:02 (Elapsed time = 00:00:00.079)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.WDT.wdlive1, clocked by top.clk2, source flop top.WDT_wrapper.WDT.wdlive, clocked by top.clk. Reason: Synchronizer flop is the destination flop for another crossing [Total Sources: 2 (Number of source domains: 1)]}
+# Started at 23:19:13, Completed at 23:19:14 (Elapsed time = 00:00:00.100)
+
+gui_open_schematic -is
+# Started at 23:19:14, Completed at 23:19:14 (Elapsed time = 00:00:00.100)
+
+current_goal Design_Read -alltop
+# Started at 23:20:08, Completed at 23:20:10 (Elapsed time = 00:00:02.789)
+
+link_design -force
+# Started at 23:20:11, Completed at 23:20:17 (Elapsed time = 00:00:04.980)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:20:23, Completed at 23:20:28 (Elapsed time = 00:00:05.090)
+
+run_goal
+# Started at 23:20:29, Completed at 23:20:57 (Elapsed time = 00:00:30.759)
+
+gui_select_message -rule Ac_unsync01 -msg {Unsynchronized Crossing: destination flop top.WDT_wrapper.wto, clocked by top.clk, source flop top.WDT_wrapper.WDT.WTO, clocked by top.clk2. Reason: Qualifier not found [Total Sources: 1 (Number of source domains: 1)]}
+# Started at 23:21:04, Completed at 23:21:04 (Elapsed time = 00:00:00.070)
+
+current_goal Design_Read -alltop
+# Started at 23:21:59, Completed at 23:22:02 (Elapsed time = 00:00:02.879)
+
+link_design -force
+# Started at 23:22:03, Completed at 23:22:08 (Elapsed time = 00:00:04.920)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 23:22:20, Completed at 23:22:24 (Elapsed time = 00:00:04.399)
+
+run_goal
+# Started at 23:22:24, Completed at 23:22:51 (Elapsed time = 00:00:28.970)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 23:22:51, Completed at 23:22:56 (Elapsed time = 00:00:04.950)
+
+run_goal
+# Started at 23:22:56, Completed at 23:23:06 (Elapsed time = 00:00:09.600)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:23:06, Completed at 23:23:11 (Elapsed time = 00:00:04.490)
+
+run_goal
+# Started at 23:23:11, Completed at 23:23:22 (Elapsed time = 00:00:11.379)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:23:22, Completed at 23:23:27 (Elapsed time = 00:00:04.490)
+
+run_goal
+# Started at 23:23:27, Completed at 23:24:23 (Elapsed time = 00:00:57.319)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 23:24:24, Completed at 23:24:28 (Elapsed time = 00:00:04.720)
+
+run_goal
+# Started at 23:24:28, Completed at 23:24:40 (Elapsed time = 00:00:11.529)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 23:24:40, Completed at 23:24:45 (Elapsed time = 00:00:04.710)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:24:49, Completed at 23:24:54 (Elapsed time = 00:00:05.599)
+
+current_goal Design_Read -alltop
+# Started at 23:26:42, Completed at 23:26:44 (Elapsed time = 00:00:02.319)
+
+link_design -force
+# Started at 23:26:45, Completed at 23:26:51 (Elapsed time = 00:00:04.829)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:26:59, Completed at 23:27:04 (Elapsed time = 00:00:04.970)
+
+run_goal
+# Started at 23:27:04, Completed at 23:28:19 (Elapsed time = 00:01:17.819)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 23:28:35, Completed at 23:28:35 (Elapsed time = 00:00:00.049)
+
+current_goal Design_Read -alltop
+# Started at 23:28:46, Completed at 23:28:49 (Elapsed time = 00:00:02.939)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:30:21, Completed at 23:30:25 (Elapsed time = 00:00:05.139)
+
+run_goal
+# Started at 23:30:26, Completed at 23:31:30 (Elapsed time = 00:01:04.900)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 23:32:07, Completed at 23:32:07 (Elapsed time = 00:00:00.009)
+
+gui_open_schematic -is
+# Started at 23:32:07, Completed at 23:32:07 (Elapsed time = 00:00:00.170)
+
+current_goal Design_Read -alltop
+# Started at 23:40:46, Completed at 23:40:49 (Elapsed time = 00:00:02.589)
+
+link_design -force
+# Started at 23:40:49, Completed at 23:40:55 (Elapsed time = 00:00:05.259)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:41:45, Completed at 23:41:49 (Elapsed time = 00:00:04.750)
+
+run_goal
+# Started at 23:41:50, Completed at 23:42:11 (Elapsed time = 00:00:21.519)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:42:11, Completed at 23:42:16 (Elapsed time = 00:00:04.990)
+
+run_goal
+# Started at 23:42:16, Completed at 23:42:37 (Elapsed time = 00:00:20.930)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:42:37, Completed at 23:42:42 (Elapsed time = 00:00:05.100)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 23:45:19, Completed at 23:45:24 (Elapsed time = 00:00:05.460)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:45:25, Completed at 23:45:31 (Elapsed time = 00:00:05.159)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:45:31, Completed at 23:45:31 (Elapsed time = 00:00:00.039)
+
+gui_select_message -rule STX_VE_481 -msg {Syntax error near ( always_ff )}
+# Started at 23:45:36, Completed at 23:45:36 (Elapsed time = 00:00:00.059)
+
+current_goal Design_Read -alltop
+# Started at 23:45:50, Completed at 23:45:52 (Elapsed time = 00:00:02.569)
+
+link_design -force
+# Started at 23:45:53, Completed at 23:45:58 (Elapsed time = 00:00:03.799)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:46:11, Completed at 23:46:16 (Elapsed time = 00:00:04.559)
+
+run_goal
+# Started at 23:46:16, Completed at 23:46:37 (Elapsed time = 00:00:21.140)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:46:37, Completed at 23:46:42 (Elapsed time = 00:00:05.110)
+
+run_goal
+# Started at 23:46:42, Completed at 23:47:03 (Elapsed time = 00:00:21.490)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:47:03, Completed at 23:47:08 (Elapsed time = 00:00:04.990)
+
+gui_select_message -rule STX_VE_481 -msg {Syntax error near ( always_ff )}
+# Started at 23:47:14, Completed at 23:47:14 (Elapsed time = 00:00:00.019)
+
+gui_select_message -rule STX_VE_481 -msg {Syntax error near ( always_ff )}
+# Started at 23:47:26, Completed at 23:47:26 (Elapsed time = 00:00:00.049)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 23:48:09, Completed at 23:48:14 (Elapsed time = 00:00:04.869)
+
+run_goal
+# Started at 23:48:14, Completed at 23:48:42 (Elapsed time = 00:00:30.789)
+
+current_goal cdc/clock_reset_integrity -alltop
+# Started at 23:48:43, Completed at 23:48:48 (Elapsed time = 00:00:05.149)
+
+run_goal
+# Started at 23:48:48, Completed at 23:48:58 (Elapsed time = 00:00:10.029)
+
+current_goal cdc/cdc_verify_struct -alltop
+# Started at 23:48:58, Completed at 23:49:03 (Elapsed time = 00:00:04.839)
+
+run_goal
+# Started at 23:49:03, Completed at 23:49:15 (Elapsed time = 00:00:11.730)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:49:15, Completed at 23:49:20 (Elapsed time = 00:00:04.870)
+
+run_goal
+# Started at 23:49:20, Completed at 23:50:19 (Elapsed time = 00:00:59.709)
+
+current_goal cdc/cdc_abstract -alltop
+# Started at 23:50:19, Completed at 23:50:24 (Elapsed time = 00:00:04.779)
+
+run_goal
+# Started at 23:50:24, Completed at 23:50:36 (Elapsed time = 00:00:11.430)
+
+current_goal cdc/cdc_setup_check -alltop
+# Started at 23:50:36, Completed at 23:50:41 (Elapsed time = 00:00:04.889)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:50:44, Completed at 23:50:49 (Elapsed time = 00:00:05.490)
+
+gui_open_schematic -ms
+# Started at 23:51:17, Completed at 23:51:17 (Elapsed time = 00:00:00.150)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 23:51:26, Completed at 23:51:26 (Elapsed time = 00:00:00.030)
+
+gui_open_schematic -is
+# Started at 23:51:27, Completed at 23:51:27 (Elapsed time = 00:00:00.179)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 23:51:35, Completed at 23:51:35 (Elapsed time = 00:00:00.069)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 23:54:35, Completed at 23:54:35 (Elapsed time = 00:00:00.039)
+
+run_goal
+# Started at 23:54:35, Completed at 23:55:51 (Elapsed time = 00:01:19.300)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on latch 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 23:56:01, Completed at 23:56:01 (Elapsed time = 00:00:00.089)
+
+gui_open_schematic -is
+# Started at 23:56:06, Completed at 23:56:06 (Elapsed time = 00:00:00.090)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 23:58:49, Completed at 23:58:49 (Elapsed time = 00:00:00.059)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on latch 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 23:58:57, Completed at 23:58:57 (Elapsed time = 00:00:00.109)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 23:59:55, Completed at 23:59:55 (Elapsed time = 00:00:00.059)
+
+gui_open_schematic -is
+# Started at 00:00:03, Completed at 00:00:03 (Elapsed time = 00:00:00.069)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:00:38, Completed at 00:00:38 (Elapsed time = 00:00:00.029)
+
+run_goal
+# Started at 00:00:38, Completed at 00:01:56 (Elapsed time = 00:01:21.319)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:02:23, Completed at 00:02:23 (Elapsed time = 00:00:00.069)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:02:29, Completed at 00:02:29 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:02:34, Completed at 00:02:34 (Elapsed time = 00:00:00.119)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:02:41, Completed at 00:02:41 (Elapsed time = 00:00:00.059)
+
+gui_open_schematic -is
+# Started at 00:02:53, Completed at 00:02:53 (Elapsed time = 00:00:00.089)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:03:58, Completed at 00:03:58 (Elapsed time = 00:00:00.130)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:04:10, Completed at 00:04:11 (Elapsed time = 00:00:00.059)
+
+gui_open_schematic -is
+# Started at 00:04:20, Completed at 00:04:20 (Elapsed time = 00:00:00.109)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:09:47, Completed at 00:09:47 (Elapsed time = 00:00:00.069)
+
+run_goal
+# Started at 00:09:47, Completed at 00:11:05 (Elapsed time = 00:01:21.390)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:11:23, Completed at 00:11:23 (Elapsed time = 00:00:00.069)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:11:36, Completed at 00:11:36 (Elapsed time = 00:00:00.060)
+
+gui_open_schematic -is
+# Started at 00:11:39, Completed at 00:11:39 (Elapsed time = 00:00:00.100)
+
+gui_open_schematic -is
+# Started at 00:12:57, Completed at 00:12:57 (Elapsed time = 00:00:00.029)
+
+gui_open_schematic -ms
+# Started at 00:13:11, Completed at 00:13:12 (Elapsed time = 00:00:00.169)
+
+gui_load_schematic -ms top.WDT_wrapper
+# Started at 00:13:13, Completed at 00:13:13 (Elapsed time = 00:00:00.039)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT
+# Started at 00:13:15, Completed at 00:13:15 (Elapsed time = 00:00:00.030)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:15:41, Completed at 00:15:41 (Elapsed time = 00:00:00.029)
+
+run_goal
+# Started at 00:15:41, Completed at 00:16:59 (Elapsed time = 00:01:21.159)
+
+gui_open_schematic -ms
+# Started at 00:18:08, Completed at 00:18:09 (Elapsed time = 00:00:00.180)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:18:16, Completed at 00:18:16 (Elapsed time = 00:00:00.019)
+
+gui_open_schematic -is
+# Started at 00:18:17, Completed at 00:18:17 (Elapsed time = 00:00:00.109)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:20:45, Completed at 00:20:45 (Elapsed time = 00:00:00.069)
+
+gui_open_schematic -is
+# Started at 00:20:49, Completed at 00:20:49 (Elapsed time = 00:00:00.039)
+
+gui_open_schematic -ms
+# Started at 00:21:02, Completed at 00:21:03 (Elapsed time = 00:00:00.120)
+
+gui_load_schematic -ms top.WDT_wrapper
+# Started at 00:21:04, Completed at 00:21:04 (Elapsed time = 00:00:00.029)
+
+gui_load_schematic -ms top.WDT_wrapper.WDT
+# Started at 00:21:05, Completed at 00:21:05 (Elapsed time = 00:00:00.019)
+
+gui_open_schematic -is
+# Started at 00:22:41, Completed at 00:22:41 (Elapsed time = 00:00:00.049)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.wdlive_reg D input}
+# Started at 00:24:21, Completed at 00:24:21 (Elapsed time = 00:00:00.039)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.rtlc_I9 in1 input}
+# Started at 00:24:25, Completed at 00:24:25 (Elapsed time = 00:00:00.019)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.rtlc_I9 in2 input}
+# Started at 00:24:26, Completed at 00:24:26 (Elapsed time = 00:00:00.050)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.rtlc_I4 in1 input}
+# Started at 00:25:50, Completed at 00:25:50 (Elapsed time = 00:00:00.029)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:27:08, Completed at 00:27:08 (Elapsed time = 00:00:00.049)
+
+run_goal
+# Started at 00:27:08, Completed at 00:28:22 (Elapsed time = 00:01:16.719)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:28:52, Completed at 00:28:52 (Elapsed time = 00:00:00.060)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:30:35, Completed at 00:30:35 (Elapsed time = 00:00:00.039)
+
+run_goal
+# Started at 00:30:35, Completed at 00:31:48 (Elapsed time = 00:01:16.429)
+
+gui_select_message -rule Ac_conv02 -msg {32 synchronizers (top.WDT_wrapper.WDT.wtocnt[31:0]) converge on flop 'top.WDT_wrapper.WDT.wtocnt4[0]'. Gray encoding check: 'FAILED'}
+# Started at 00:31:55, Completed at 00:31:55 (Elapsed time = 00:00:00.129)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:32:01, Completed at 00:32:01 (Elapsed time = 00:00:00.079)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:32:40, Completed at 00:32:40 (Elapsed time = 00:00:00.039)
+
+run_goal
+# Started at 00:32:40, Completed at 00:33:57 (Elapsed time = 00:01:21.429)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:37:00, Completed at 00:37:00 (Elapsed time = 00:00:00.040)
+
+run_goal
+# Started at 00:37:00, Completed at 00:37:44 (Elapsed time = 00:00:47.259)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:38:09, Completed at 00:38:09 (Elapsed time = 00:00:00.050)
+
+run_goal
+# Started at 00:38:09, Completed at 00:39:27 (Elapsed time = 00:01:21.289)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 00:39:33, Completed at 00:39:33 (Elapsed time = 00:00:00.059)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:39:37, Completed at 00:39:37 (Elapsed time = 00:00:00.069)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 00:39:41, Completed at 00:39:41 (Elapsed time = 00:00:00.059)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:39:43, Completed at 00:39:43 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 00:42:26, Completed at 00:42:26 (Elapsed time = 00:00:00.080)
+
+gui_open_schematic -is
+# Started at 00:42:26, Completed at 00:42:27 (Elapsed time = 00:00:00.199)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:42:36, Completed at 00:42:36 (Elapsed time = 00:00:00.079)
+
+gui_open_schematic -is
+# Started at 00:42:36, Completed at 00:42:37 (Elapsed time = 00:00:00.070)
+
+gui_open_schematic -is
+# Started at 00:45:18, Completed at 00:45:18 (Elapsed time = 00:00:00.050)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.wdlive_reg D input}
+# Started at 00:45:27, Completed at 00:45:27 (Elapsed time = 00:00:00.030)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.wdlive_reg Q output}
+# Started at 00:45:32, Completed at 00:45:32 (Elapsed time = 00:00:00.019)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.rtlc_I4 Z output}
+# Started at 00:45:33, Completed at 00:45:33 (Elapsed time = 00:00:00.030)
+
+gui_expand_schematic {pin WDT_wrapper.WDT.rtlc_I377 Z output}
+# Started at 00:45:39, Completed at 00:45:39 (Elapsed time = 00:00:00.040)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:49:14, Completed at 00:49:14 (Elapsed time = 00:00:00.029)
+
+run_goal
+# Started at 00:49:14, Completed at 00:50:32 (Elapsed time = 00:01:20.069)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:50:58, Completed at 00:50:58 (Elapsed time = 00:00:00.019)
+
+set_parameter fa_atime 100
+# Started at 00:53:08, Completed at 00:53:08 (Elapsed time = 00:00:00.009)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 00:53:16, Completed at 00:53:16 (Elapsed time = 00:00:00.050)
+
+run_goal
+# Started at 00:53:16, Completed at 00:54:53 (Elapsed time = 00:01:39.239)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDOCNT[31]' to 'top.WDT_wrapper.WDT.wtocnt[31]') detected. Data hold check:FAILED}
+# Started at 00:55:17, Completed at 00:55:17 (Elapsed time = 00:00:00.019)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:55:19, Completed at 00:55:19 (Elapsed time = 00:00:00.009)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDOCNT[31]' to 'top.WDT_wrapper.WDT.wtocnt[31]') detected. Data hold check:FAILED}
+# Started at 00:55:21, Completed at 00:55:21 (Elapsed time = 00:00:00.050)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:55:22, Completed at 00:55:22 (Elapsed time = 00:00:00.019)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 00:55:23, Completed at 00:55:23 (Elapsed time = 00:00:00.050)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDOCNT[31]' to 'top.WDT_wrapper.WDT.wtocnt[31]') detected. Data hold check:FAILED}
+# Started at 00:55:25, Completed at 00:55:25 (Elapsed time = 00:00:00.049)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDT.wdlive' to 'top.WDT_wrapper.WDT.wdlive1') detected. Data hold check:FAILED}
+# Started at 00:55:26, Completed at 00:55:26 (Elapsed time = 00:00:00.059)
+
+current_goal Design_Read -alltop
+# Started at 01:00:15, Completed at 01:00:17 (Elapsed time = 00:00:02.720)
+
+link_design -force
+# Started at 01:00:18, Completed at 01:00:24 (Elapsed time = 00:00:05.390)
+
+link_design -force
+# Started at 01:00:25, Completed at 01:00:31 (Elapsed time = 00:00:06.539)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 01:00:39, Completed at 01:00:44 (Elapsed time = 00:00:05.599)
+
+run_goal
+# Started at 01:00:45, Completed at 01:03:48 (Elapsed time = 00:03:08.489)
+
+gui_select_message -rule Ac_cdc01a -msg {Fast('top.clk') to slow('top.clk2') clock crossing(from 'top.WDT_wrapper.WDOCNT[31]' to 'top.WDT_wrapper.WDT.wtocnt[31]') detected. Data hold check:FAILED}
+# Started at 01:03:57, Completed at 01:03:57 (Elapsed time = 00:00:00.019)
+
+gui_select_message -rule Ac_conv04 -msg {Control destination bus 'top.WDT_wrapper.WDT.wtocnt[0:31]' has a clock domain crossing. Gray encoding check:FAILED}
+# Started at 01:04:06, Completed at 01:04:06 (Elapsed time = 00:00:00.059)
+
+current_goal Design_Read -alltop
+# Started at 01:05:07, Completed at 01:05:10 (Elapsed time = 00:00:03.100)
+
+link_design -force
+# Started at 01:05:11, Completed at 01:05:18 (Elapsed time = 00:00:05.539)
+
+current_goal cdc/cdc_verify -alltop
+# Started at 01:05:26, Completed at 01:05:32 (Elapsed time = 00:00:05.820)
+
+run_goal
+# Started at 01:05:32, Completed at 01:09:26 (Elapsed time = 00:03:58.679)
+

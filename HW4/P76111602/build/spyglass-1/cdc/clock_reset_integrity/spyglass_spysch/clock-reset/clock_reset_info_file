@@ -1,0 +1,277 @@
+Enabled Sync-Enable
+Enabled Clock_Gate-Sync
+Enabled Recirculation
+BEGIN::INFO
+SGDC current_design = top
+clock =
+top.clk
+top.clk2
+END::INFO
+BEGIN INFO :: CLOCKS INFORMATION
+Clk-Name=top.clk::Pos-Flop=3782::Neg-Flop=1024::UnKnown-Flop=0::Gating=No
+Clk-Name=top.clk2::Pos-Flop=167::Neg-Flop=0::UnKnown-Flop=0::Gating=No
+END CLOCKS INFORMATION
+RULE: Reset_check04 INFORMATION START
+Flops reset synchronously by reset signal "top.rst" are:
+top.CPU_wrapper.CPU.IF.PCtoIM[0:31] (being cleared) in module: ProgramCounter
+top.CPU_wrapper.CPU.\Wire_IFID.IF_pcout [0:31] (being cleared) in module: IF
+top.CPU_wrapper.CPU.\Wire_IFID.IF_instrout [0:31] (being cleared) in module: IF
+top.CPU_wrapper.CPU.ID.RF.Reg[0][0:31] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[1][32:63] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[2][64:95] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[3][96:127] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[4][128:159] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[5][160:191] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[6][192:223] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[7][224:255] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[8][256:287] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[9][288:319] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[10][320:351] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[11][352:383] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[12][384:415] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[13][416:447] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[14][448:479] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[15][480:511] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[16][512:543] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[17][544:575] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[18][576:607] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[19][608:639] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[20][640:671] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[21][672:703] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[22][704:735] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[23][736:767] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[24][768:799] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[25][800:831] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[26][832:863] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[27][864:895] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[28][896:927] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[29][928:959] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[30][960:991] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.ID.RF.Reg[31][992:1023] (being cleared) in module: RegisterFile
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_pcout [0:31] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_rs1data [0:31] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_rs2data [0:31] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_imm [0:31] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_Funct3 [0:2] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_Funct7 [0:6] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_rdaddr [0:4] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_ALUOP [0:2] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_PCtoRegSrc  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_ALUSrc  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_rdsrc  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_MemRead  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_MemWrite  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_MemtoReg  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_RegWrite  (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_csraddr [0:11] (being cleared) in module: ID
+top.CPU_wrapper.CPU.\Wire_IDEXE.ID_csrweb  (being cleared) in module: ID
+top.CPU_wrapper.CPU.ID_rs1addr[0:4] (being cleared) in module: ID
+top.CPU_wrapper.CPU.ID_rs2addr[0:4] (being cleared) in module: ID
+top.CPU_wrapper.CPU.ID_branch[0:1] (being cleared) in module: ID
+top.CPU_wrapper.CPU.EXE.Csr.rdcycleh[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.rdcycle[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.rdinstreth[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.rdinstret[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.mstatus[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.mip[7] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.mip[11] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.mie[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.EXE.Csr.mepc[0:31] (being cleared) in module: Csr
+top.CPU_wrapper.CPU.Wire_csrstall (being cleared) in module: Csr
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_PCtoReg [0:31] (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_ALUout [0:31] (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_rs2data [0:31] (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_rdaddr [0:4] (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_Funct3 [0:2] (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_rdsrc  (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_MemRead  (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_MemWrite  (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_MemtoReg  (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_EXEMEM.EXE_RegWrite  (being cleared) in module: EXE
+top.CPU_wrapper.CPU.\Wire_MEMWB.MEM_rddata [0:31] (being cleared) in module: MEM
+top.CPU_wrapper.CPU.\Wire_MEMWB.MEM_dout [0:31] (being cleared) in module: MEM
+top.CPU_wrapper.CPU.\Wire_MEMWB.MEM_rdaddr [0:4] (being cleared) in module: MEM
+top.CPU_wrapper.CPU.\Wire_MEMWB.MEM_MemtoReg  (being cleared) in module: MEM
+top.CPU_wrapper.CPU.\Wire_MEMWB.MEM_RegWrite  (being cleared) in module: MEM
+top.CPU_wrapper.L1CI.cache_hit[0:31] (being cleared) in module: L1C_inst
+top.CPU_wrapper.L1CI.cache_read[0:31] (being cleared) in module: L1C_inst
+top.CPU_wrapper.L1CI.cache_state[0:1] (being cleared) in module: L1C_inst
+top.CPU_wrapper.L1CI.valid[0:63] (being cleared) in module: L1C_inst
+top.CPU_wrapper.L1CI.cnt[0:2] (being cleared) in module: L1C_inst
+top.CPU_wrapper.L1CD.reg_core_addr[0:31] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.reg_core_write (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.reg_core_in[0:31] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.reg_core_type[0:2] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.cache_state[0:2] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.cnt[0:2] (being cleared) in module: L1C_data
+top.CPU_wrapper.\wire_MEMIO.DM_dataout [0:31] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.reg_TA_in[0:21] (being cleared) in module: L1C_data
+top.CPU_wrapper.L1CD.DA_write[0:15] (being set) in module: L1C_data
+top.CPU_wrapper.L1CD.DA_in[0:127] (being cleared) in module: L1C_data
+top.CPU_wrapper.M1.s_master[0:2] (being cleared) in module: Master
+top.CPU_wrapper.M1.reg_RDATA[0:31] (being cleared) in module: Master
+top.CPU_wrapper.M0.s_master[0:2] (being cleared) in module: Master
+top.CPU_wrapper.M0.reg_RDATA[0:31] (being cleared) in module: Master
+top.CPU_wrapper.lock_DM (being cleared) in module: CPU_wrapper
+top.AXI.RA.RArbiter.lockM0 (being cleared) in module: Arbiter
+top.AXI.RA.RArbiter.lockM1 (being cleared) in module: Arbiter
+top.AXI.RA.\VS0.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VS1.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VS2.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VS3.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VSD.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VS4.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.RA.\VS5.reg_READY  (being cleared) in module: ReadAddr
+top.AXI.WA.WArbiter.lockM0 (being cleared) in module: Arbiter
+top.AXI.WA.WArbiter.lockM1 (being cleared) in module: Arbiter
+top.AXI.RD.lockS0 (being cleared) in module: ReadData
+top.AXI.RD.lockS1 (being cleared) in module: ReadData
+top.AXI.RD.lockS2 (being cleared) in module: ReadData
+top.AXI.RD.lockS3 (being cleared) in module: ReadData
+top.AXI.RD.lockS4 (being cleared) in module: ReadData
+top.AXI.RD.lockS5 (being cleared) in module: ReadData
+top.AXI.RD.lockSD (being cleared) in module: ReadData
+top.AXI.DS.s_slave[0:1] (being cleared) in module: DefaultSlave
+top.AXI.DS.temp_ARLEN (being cleared) in module: DefaultSlave
+top.AXI.\wire_R.S_RID [0:7] (being cleared) in module: DefaultSlave
+top.AXI.\wire_R.RLAST  (being set) in module: DefaultSlave
+top.AXI.\wire_B.S_BID [0:7] (being cleared) in module: DefaultSlave
+top.AXI.WD.reg_WVALID_S0 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_S1 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_S2 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_S3 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_S4 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_S5 (being cleared) in module: WriteData
+top.AXI.WD.reg_WVALID_SD (being cleared) in module: WriteData
+top.AXI.WR.lock_S0 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_S1 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_S2 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_S3 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_S4 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_S5 (being cleared) in module: WriteRespon
+top.AXI.WR.lock_SDEFAULT (being cleared) in module: WriteRespon
+top.sensor_wrapper.sensor_ctrl.counter[0:5] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[63][0:31] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[62][32:63] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[61][64:95] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[60][96:127] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[59][128:159] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[58][160:191] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[57][192:223] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[56][224:255] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[55][256:287] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[54][288:319] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[53][320:351] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[52][352:383] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[51][384:415] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[50][416:447] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[49][448:479] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[48][480:511] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[47][512:543] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[46][544:575] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[45][576:607] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[44][608:639] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[43][640:671] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[42][672:703] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[41][704:735] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[40][736:767] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[39][768:799] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[38][800:831] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[37][832:863] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[36][864:895] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[35][896:927] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[34][928:959] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[33][960:991] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[32][992:1023] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[31][1024:1055] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[30][1056:1087] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[29][1088:1119] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[28][1120:1151] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[27][1152:1183] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[26][1184:1215] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[25][1216:1247] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[24][1248:1279] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[23][1280:1311] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[22][1312:1343] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[21][1344:1375] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[20][1376:1407] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[19][1408:1439] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[18][1440:1471] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[17][1472:1503] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[16][1504:1535] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[15][1536:1567] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[14][1568:1599] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[13][1600:1631] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[12][1632:1663] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[11][1664:1695] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[10][1696:1727] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[9][1728:1759] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[8][1760:1791] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[7][1792:1823] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[6][1824:1855] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[5][1856:1887] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[4][1888:1919] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[3][1920:1951] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[2][1952:1983] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[1][1984:2015] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.mem[0][2016:2047] (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.sensor_ctrl.full (being cleared) in module: sensor_ctrl
+top.sensor_wrapper.s_slave[0:1] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.reg_ARID[0:7] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.reg_AWID[0:7] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.reg_ARLEN[0:3] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.reg_AWLEN[0:3] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.cnt[0:3] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.reg_ADDR[0:31] (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.sctrl_en (being cleared) in module: sensor_wrapper
+top.sensor_wrapper.sctrl_clear (being cleared) in module: sensor_wrapper
+top.WDT_wrapper.WDT.wdlive (being cleared) in module: WDT
+top.WDT_wrapper.s_slave[0:1] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.reg_ARID[0:7] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.reg_AWID[0:7] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.reg_ARLEN[0:3] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.reg_AWLEN[0:3] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.cnt[0:3] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.reg_ADDR[0:31] (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.WDEN (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.WDLIVE (being cleared) in module: WDT_wrapper
+top.WDT_wrapper.WDOCNT[0:31] (being cleared) in module: WDT_wrapper
+top.DM1.s_slave[0:1] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_ARID[0:7] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_AWID[0:7] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_ARLEN[0:3] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_AWLEN[0:3] (being cleared) in module: SRAM_wrapper
+top.DM1.cnt[0:3] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_RADDR[0:13] (being cleared) in module: SRAM_wrapper
+top.DM1.reg_WADDR[0:13] (being cleared) in module: SRAM_wrapper
+top.DRAM_wrapper.write (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.slave_state[0:2] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_ADDR[0:31] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_ID[4:5] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_BURST[0] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_LEN[0:1] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_SIZE[1] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.delay_cnt[0:2] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.read_cnt[0:3] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_WDATA[0:31] (being cleared) in module: DRAM_wrapper
+top.DRAM_wrapper.reg_RDATA[0:31] (being cleared) in module: DRAM_wrapper
+top.ROM_wrapper.slave_status[0:1] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_ARID[0:7] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_AWID[0:7] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_ARLEN[0:3] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_AWLEN[0:3] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.cnt[0:3] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_RADDR[0:13] (being cleared) in module: ROM_wrapper
+top.ROM_wrapper.reg_WADDR[0:13] (being cleared) in module: ROM_wrapper
+top.IM1.s_slave[0:1] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_ARID[0:7] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_AWID[0:7] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_ARLEN[0:3] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_AWLEN[0:3] (being cleared) in module: SRAM_wrapper
+top.IM1.cnt[0:3] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_RADDR[0:13] (being cleared) in module: SRAM_wrapper
+top.IM1.reg_WADDR[0:13] (being cleared) in module: SRAM_wrapper
+Flops reset synchronously by reset signal "top.rst2" are:
+top.WDT_wrapper.WTO (being cleared) in module: WDT
+top.WDT_wrapper.WDT.count[0:31] (being cleared) in module: WDT
+RULE: Reset_check04 INFORMATION END

@@ -1,0 +1,19 @@
+################################################################################
+#
+# Purpose: 
+#   This file specifies the assertion details along with their run status.
+#   Functional analysis is done only for those assertions that are enabled
+#   in the property file.
+#
+# Format: 
+#   
+#   RuleName: <rule-name>
+#   <selection> <type> <status> <file-name> <line-num> <hier> [ <info> ]
+#   .....
+#   
+#   
+################################################################################
+RuleName: Ac_cdc01a 
+on   Assertion   Partially-Proved    ../src/WDT.sv  64  "top.WDT_wrapper.WDT"  [SFlop:top.WDT_wrapper.WDT.wtocnt[31] SClk:top.clk DFlop:top.WDT_wrapper.WDT.wtocnt1[31] DClk:top.clk2]
+on   Assertion   Partially-Proved    ../src/WDT.sv  58  "top.WDT_wrapper.WDT"  [SFlop:top.WDT_wrapper.WDT.wdlive SClk:top.clk DFlop:top.WDT_wrapper.WDT.wdlive1 DClk:top.clk2]
+on   Assertion   Partially-Proved    ../src/WDT.sv  24  "top.WDT_wrapper.WDT"  [SFlop:top.WDT_wrapper.WDEN SClk:top.clk DFlop:top.WDT_wrapper.WDT.wden_temp DClk:top.clk2]

@@ -1,0 +1,4 @@
+
+current_design "top"
+clock -name top.clk2 -period 100.00 -domain clk2
+clock -name top.clk -period 11.00 -domain clk
