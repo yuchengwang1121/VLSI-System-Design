@@ -1,7 +1,0 @@
-INPUT@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass_reports@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/html_reports/data_files/@@top@@cdc-clock_reset_integrity@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass_reports/waiver.rpt@@data_files/top_cdc-clock_reset_integrity_waiver.rpt@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass_reports/moresimple.rpt@@data_files/top_cdc-clock_reset_integrity_moresimple.rpt@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/top_cdc-clock_reset_integrity_no_msg_reporting_rules.rpt@@
-REGEN@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass_reports/CDC-report.rpt@@data_files/top_cdc-clock_reset_integrity_CDC-report.rpt.html@@
-PROCESS@@clock-reset@@SpyGlass
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/clock_reset_integrity/spyglass.log@@data_files/top_cdc-clock_reset_integrity_spyglass.log@@

@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv
++incdir+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim
++define+prog0
+-define
+CYCLE=12.5
+-define
+CYCLE2=100
+-define
+MAX=6000000
++access+r
++prog_path=/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/prog0
++nc64bit

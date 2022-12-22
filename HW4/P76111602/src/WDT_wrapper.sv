@@ -170,7 +170,7 @@ module WDT_wrapper (
 
 
     always_ff@(posedge clk) begin
-            wto_temp <= WTO;
+        wto_temp <= WTO;
 		wto <= wto_temp;
     end
     

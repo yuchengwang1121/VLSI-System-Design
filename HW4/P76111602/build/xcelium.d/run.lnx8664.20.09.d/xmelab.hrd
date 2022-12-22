@@ -2,5 +2,9 @@
 // File created by:  xrun
 // Do not modify this file
 //
+-SDF_FILE
+/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/./pr/top_pr.sdf
+-NONOTIFIER
 -ACCESS
 +r
+-MAXDELAYS

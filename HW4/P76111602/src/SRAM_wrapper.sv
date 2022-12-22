@@ -88,8 +88,29 @@ always_comb begin
 end
 
 always_comb begin
-  S_AW.AWREADY = (s_slave == S_addr)?1'b1:(s_slave == S_resp)?B_done:(s_slave == S_readdata)?R_done:1'b0;
-  S_AR.ARREADY = (s_slave == S_addr)?(~S_AW.AWVALID):1'b0;
+  //S_AW.AWREADY = (s_slave == S_addr)?1'b1:(s_slave == S_resp)?B_done:(s_slave == S_readdata)?R_done:1'b0;
+  //S_AR.ARREADY = (s_slave == S_addr)?(~S_AW.AWVALID):1'b0;
+  case (s_slave)
+    S_addr:
+      S_AW.AWREADY = 1'b1;
+    S_resp:
+      S_AW.AWREADY = B_done;
+    S_readdata:
+      S_AW.AWREADY = R_done;
+    default : /* default */
+      S_AW.AWREADY = 1'b0;
+  endcase
+ 
+  case (s_slave)
+    S_addr:
+      S_AR.ARREADY = ~S_AW.AWVALID;
+    S_resp:
+      S_AR.ARREADY = 1'b0;
+    S_readdata:
+      S_AR.ARREADY = 1'b0;
+    default:/* default */
+      S_AR.ARREADY = 1'b0;
+  endcase
 end
 
 assign S_W.WREADY = (s_slave == S_writedata)? 1'b1:1'b0;
@@ -165,8 +186,26 @@ assign S_R.RLAST = (reg_ARLEN == cnt);
 assign S_R.RDATA = DO;
 assign WEB = S_W.WSTRB;
 assign DI = S_W.WDATA;
-assign OE = (s_slave == S_addr)?(~S_AW.AWVALID & AR_done):(s_slave == S_readdata)?1'b1:1'b0;
-assign CS = (s_slave == S_addr)?(S_AW.AWVALID|S_AR.ARVALID):1'b1;
+//assign OE = (s_slave == S_addr)?(~S_AW.AWVALID & AR_done):(s_slave == S_readdata)?1'b1:1'b0;
+//assign CS = (s_slave == S_addr)?(S_AW.AWVALID|S_AR.ARVALID):1'b1;
+always_comb begin
+        case (s_slave)
+            S_addr:
+                OE = ~S_AW.AWVALID & AR_done;
+            S_readdata:
+                OE = 1'b1;
+            default : /* default */
+                OE = 1'b0;
+        endcase
+end
+always_comb begin
+        case (s_slave)
+            S_addr:
+                CS = S_AW.AWVALID|S_AR.ARVALID;
+            default : /* default */
+                CS = 1'b1;
+        endcase
+end
 
 //RADDR, WADDR
 logic [13:0] reg_RADDR, reg_WADDR;

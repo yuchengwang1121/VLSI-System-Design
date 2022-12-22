@@ -6,6 +6,7 @@ module WriteAddr(
     input clk,
     input rst,
     inter_WA.M1 M1,             //only DataMemory needs to Write
+    inter_WA.S0 S0,
     inter_WA.S1 S1,
     inter_WA.S2 S2,
     inter_WA.S3 S3,
@@ -16,6 +17,13 @@ module WriteAddr(
 inter_WA Wire();
 
 logic ARREADY_M0;
+
+
+assign S0.S_AWID = Wire.S_AWID;
+assign S0.AWADDR = Wire.AWADDR;
+assign S0.AWLEN = Wire.AWLEN;
+assign S0.AWSIZE = Wire.AWSIZE;
+assign S0.AWBURST = Wire.AWBURST;
 
 assign S1.S_AWID = Wire.S_AWID;
 assign S1.AWADDR = Wire.AWADDR;
@@ -82,14 +90,14 @@ Arbiter WArbiter(
 Decoder RDecoder(
     .VALID        (Wire.AWVALID),
     .ADDR         (Wire.AWADDR),
-    .READY_S0     (1'b0),
+    .READY_S0     (S0.AWREADY),
     .READY_S1     (S1.AWREADY),
     .READY_S2     (S2.AWREADY),
     .READY_S3     (S3.AWREADY),
     .READY_S4     (S4.AWREADY),
     .READY_S5     (S5.AWREADY),
     .READY_SD     (SD.AWREADY),
-    .VALID_S0     (),
+    .VALID_S0     (S0.AWVALID),
     .VALID_S1     (S1.AWVALID),
     .VALID_S2     (S2.AWVALID),
     .VALID_S3     (S3.AWVALID),

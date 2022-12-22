@@ -3,13 +3,13 @@
 // Do not modify this file
 //
 -INCDIR
-/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src
+/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/./pr
 -INCDIR
-/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./src/AXI
+/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/./include
 -INCDIR
-/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./include
--INCDIR
-/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/./sim
+/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/./sim
+-DEFINE
+PR
 -DEFINE
 prog4
 -DEFINE

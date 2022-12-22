@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
-`define CYCLE 10.0 // Cycle time
-`define CYCLE2 100.0 // Cycle time for WDT
-`define MAX 600000 // Max cycle number
+`define CYCLE 8.0 // Cycle time
+`define CYCLE2 8.0 // Cycle time for WDT
+`define MAX 300000 // Max cycle number
 `ifdef SYN
 `include "top_syn.v"
 `include "data_array/data_array.v"

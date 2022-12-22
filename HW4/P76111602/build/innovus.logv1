@@ -1,0 +1,1467 @@
+[12/23 00:58:26      0s] 
+[12/23 00:58:26      0s] Cadence Innovus(TM) Implementation System.
+[12/23 00:58:26      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[12/23 00:58:26      0s] 
+[12/23 00:58:26      0s] Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+[12/23 00:58:26      0s] Options:	
+[12/23 00:58:26      0s] Date:		Fri Dec 23 00:58:26 2022
+[12/23 00:58:26      0s] Host:		vlsicad6 (x86_64 w/Linux 3.10.0-693.el7.x86_64) (4cores*16cpus*Intel(R) Xeon(R) CPU E5620 @ 2.40GHz 12288KB)
+[12/23 00:58:26      0s] OS:		CentOS Linux release 7.4.1708 (Core) 
+[12/23 00:58:26      0s] 
+[12/23 00:58:26      0s] License:
+[12/23 00:58:26      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[12/23 00:58:26      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[12/23 00:58:46     19s] **WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[12/23 00:58:48     21s] @(#)CDS: Innovus v20.10-p004_1 (64bit) 05/07/2020 20:02 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/23 00:58:48     21s] @(#)CDS: NanoRoute 20.10-p004_1 NR200413-0234/20_10-UB (database version 18.20.505) {superthreading v1.69}
+[12/23 00:58:48     21s] @(#)CDS: AAE 20.10-p005 (64bit) 05/07/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/23 00:58:48     21s] @(#)CDS: CTE 20.10-p005_1 () Apr 14 2020 09:14:28 ( )
+[12/23 00:58:48     21s] @(#)CDS: SYNTECH 20.10-b004_1 () Mar 12 2020 22:18:21 ( )
+[12/23 00:58:48     21s] @(#)CDS: CPE v20.10-p006
+[12/23 00:58:48     21s] @(#)CDS: IQuantus/TQuantus 19.1.3-s155 (64bit) Sun Nov 3 18:26:52 PST 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[12/23 00:58:48     21s] @(#)CDS: OA 22.60-p028 Tue Dec  3 14:08:48 2019
+[12/23 00:58:48     21s] @(#)CDS: SGN 19.10-d001 (24-May-2019) (64 bit executable, Qt5.9.0)
+[12/23 00:58:48     21s] @(#)CDS: RCDB 11.15.0
+[12/23 00:58:48     21s] @(#)CDS: STYLUS 20.10-p002_1 (03/12/2020 10:11 PDT)
+[12/23 00:58:48     21s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_19888_vlsicad6_Vsd2298_syyYxD.
+
+[12/23 00:58:48     21s] Change the soft stacksize limit to 0.2%RAM (39 mbytes). Set global soft_stack_size_limit to change the value.
+[12/23 00:58:49     22s] 
+[12/23 00:58:49     22s] **INFO:  MMMC transition support version v31-84 
+[12/23 00:58:49     22s] 
+[12/23 00:58:49     22s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[12/23 00:58:49     22s] <CMD> suppressMessage ENCEXT-2799
+[12/23 00:58:49     22s] <CMD> win
+[12/23 00:59:13     26s] <CMD> set init_design_uniquify 1
+[12/23 00:59:28     28s] <CMD> set init_no_new_assigns 1
+[12/23 00:59:33     29s] <CMD> gui_select -rect {0.01000 0.10500 0.00900 0.10800}
+[12/23 00:59:45     32s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[12/23 00:59:45     32s] <CMD> set conf_qxconf_file NULL
+[12/23 00:59:45     32s] <CMD> set conf_qxlib_file NULL
+[12/23 00:59:45     32s] <CMD> set defHierChar /
+[12/23 00:59:45     32s] <CMD> set distributed_client_message_echo 1
+[12/23 00:59:45     32s] <CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+[12/23 00:59:45     32s] <CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+[12/23 00:59:45     32s] <CMD> set enc_enable_print_mode_command_reset_options 1
+[12/23 00:59:45     32s] <CMD> set init_design_uniquify 1
+[12/23 00:59:45     32s] <CMD> set init_gnd_net GND
+[12/23 00:59:45     32s] <CMD> set init_lef_file {/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef  ../sim/SRAM/SRAM.lef ../sim/data_array/data_array.lef ../sim/tag_array/tag_array.lef /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef}
+[12/23 00:59:45     32s] <CMD> set init_mmmc_file ../script/MMMC.view
+[12/23 00:59:45     32s] <CMD> set init_pwr_net VCC
+[12/23 00:59:45     32s] <CMD> set init_remove_assigns 1
+[12/23 00:59:45     32s] <CMD> set init_top_cell top
+[12/23 00:59:45     32s] <CMD> set init_verilog ../syn/top_syn.v
+[12/23 00:59:45     32s] <CMD> get_message -id GLOBAL-100 -suppress
+[12/23 00:59:45     32s] <CMD> get_message -id GLOBAL-100 -suppress
+[12/23 00:59:45     32s] <CMD> set latch_time_borrow_mode max_borrow
+[12/23 00:59:45     32s] <CMD> set pegDefaultResScaleFactor 1
+[12/23 00:59:45     32s] <CMD> set pegDetailResScaleFactor 1
+[12/23 00:59:45     32s] <CMD> get_message -id GLOBAL-100 -suppress
+[12/23 00:59:45     32s] <CMD> get_message -id GLOBAL-100 -suppress
+[12/23 00:59:45     32s] <CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+[12/23 00:59:45     32s] <CMD> set soft_stack_size_limit 192
+[12/23 00:59:45     32s] <CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+[12/23 00:59:47     32s] <CMD> init_design
+[12/23 00:59:47     32s] #% Begin Load MMMC data ... (date=12/23 00:59:47, mem=525.9M)
+[12/23 00:59:47     32s] #% End Load MMMC data ... (date=12/23 00:59:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=526.0M, current mem=526.0M)
+[12/23 00:59:47     32s] 
+[12/23 00:59:47     32s] Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef ...
+[12/23 00:59:47     32s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[12/23 00:59:47     32s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[12/23 00:59:47     32s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/header6_V55_20ka_cic.lef at line 1290.
+[12/23 00:59:47     32s] 
+[12/23 00:59:47     32s] Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef ...
+[12/23 00:59:47     32s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 1.
+[12/23 00:59:47     32s] Set DBUPerIGU to M2 pitch 620.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_generic_core.lef at line 40071.
+[12/23 00:59:47     32s] 
+[12/23 00:59:47     32s] Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef ...
+[12/23 00:59:47     32s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 1.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/fsa0m_a_t33_generic_io.lef at line 2034.
+[12/23 00:59:47     32s] 
+[12/23 00:59:47     32s] Loading LEF file ../sim/SRAM/SRAM.lef ...
+[12/23 00:59:47     32s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/SRAM/SRAM.lef at line 37.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9157.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9171.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9185.
+[12/23 00:59:47     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:47     32s] The LEF parser will ignore this statement.
+[12/23 00:59:47     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9199.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9213.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9227.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9241.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9255.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9269.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9283.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9297.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9311.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9325.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9339.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9353.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9367.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9381.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9395.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/SRAM/SRAM.lef at line 9409.
+[12/23 00:59:48     32s] **ERROR: (IMPLF-40):	Macro 'SRAM' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+[12/23 00:59:48     32s] 
+[12/23 00:59:48     32s] Loading LEF file ../sim/data_array/data_array.lef ...
+[12/23 00:59:48     32s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/data_array/data_array.lef at line 37.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4117.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4131.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4145.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4159.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4173.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4187.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4201.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4215.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4229.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4243.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4257.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4271.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4285.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4299.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4313.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4327.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4341.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4355.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/data_array/data_array.lef at line 4369.
+[12/23 00:59:48     32s] **ERROR: (IMPLF-40):	Macro 'data_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+[12/23 00:59:48     32s] 
+[12/23 00:59:48     32s] Loading LEF file ../sim/tag_array/tag_array.lef ...
+[12/23 00:59:48     32s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../sim/tag_array/tag_array.lef at line 37.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1327.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1341.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1355.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1369.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1383.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1397.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1411.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1425.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1439.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1453.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1467.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1481.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1495.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1509.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1523.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1537.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1551.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1565.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2057): MACRO CAPACITANCE statement is obsolete in version 5.4 and later.
+[12/23 00:59:48     32s] The LEF parser will ignore this statement.
+[12/23 00:59:48     32s] To avoid this warning in the future, remove this statement from the LEF file with version 5.4 or later. See file ../sim/tag_array/tag_array.lef at line 1579.
+[12/23 00:59:48     32s] **ERROR: (IMPLF-40):	Macro 'tag_array' references a site 'core' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+[12/23 00:59:48     32s] 
+[12/23 00:59:48     32s] Loading LEF file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef ...
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-119' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-58' for more detail.
+[12/23 00:59:48     32s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[12/23 00:59:48     32s] To increase the message display limit, refer to the product command reference manual.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[12/23 00:59:48     32s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[12/23 00:59:48     32s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[12/23 00:59:48     32s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[12/23 00:59:48     32s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[12/23 00:59:48     32s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/lef/FSA0M_A_GENERIC_CORE_ANT_V55.lef at line 16493.
+[12/23 00:59:48     32s] **WARN: (IMPLF-61):	382 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+[12/23 00:59:48     32s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[12/23 00:59:48     32s] Type 'man IMPLF-61' for more detail.
+[12/23 00:59:48     32s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[12/23 00:59:48     32s] Type 'man IMPLF-200' for more detail.
+[12/23 00:59:48     32s] 
+[12/23 00:59:48     32s] viaInitial starts at Fri Dec 23 00:59:48 2022
+viaInitial ends at Fri Dec 23 00:59:48 2022
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[12/23 00:59:48     32s] Loading view definition file from ../script/MMMC.view
+[12/23 00:59:48     32s] Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib' ...
+[12/23 00:59:49     34s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+[12/23 00:59:49     34s] Read 382 cells in library 'fsa0m_a_generic_core_ss1p62v125c' 
+[12/23 00:59:49     34s] Reading lib_max timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ss1p62v125c.lib' ...
+[12/23 00:59:49     34s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ss1p62v125c' 
+[12/23 00:59:49     34s] Reading lib_max timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/SRAM/SRAM_WC.lib' ...
+[12/23 00:59:49     34s] Read 1 cells in library 'SRAM_WC' 
+[12/23 00:59:49     34s] Reading lib_max timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/data_array/data_array_WC.lib' ...
+[12/23 00:59:49     34s] Read 1 cells in library 'data_array_WC' 
+[12/23 00:59:49     34s] Reading lib_max timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/tag_array/tag_array_WC.lib' ...
+[12/23 00:59:49     34s] Read 1 cells in library 'tag_array_WC' 
+[12/23 00:59:49     34s] Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib' ...
+[12/23 00:59:51     36s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+[12/23 00:59:51     36s] Read 382 cells in library 'fsa0m_a_generic_core_ff1p98vm40c' 
+[12/23 00:59:51     36s] Reading lib_min timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_ff1p98vm40c.lib' ...
+[12/23 00:59:51     36s] Read 6 cells in library 'fsa0m_a_t33_generic_io_ff1p98vm40c' 
+[12/23 00:59:51     36s] Reading lib_min timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/SRAM/SRAM_BC.lib' ...
+[12/23 00:59:51     36s] Read 1 cells in library 'SRAM_BC' 
+[12/23 00:59:51     36s] Reading lib_min timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/data_array/data_array_BC.lib' ...
+[12/23 00:59:51     36s] Read 1 cells in library 'data_array_BC' 
+[12/23 00:59:51     36s] Reading lib_min timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/tag_array/tag_array_BC.lib' ...
+[12/23 00:59:51     36s] Read 1 cells in library 'tag_array_BC' 
+[12/23 00:59:51     36s] Ending "PreSetAnalysisView" (total cpu=0:00:03.9, real=0:00:03.0, peak res=643.2M, current mem=551.0M)
+[12/23 00:59:51     36s] *** End library_loading (cpu=0.06min, real=0.05min, mem=15.5M, fe_cpu=0.61min, fe_real=1.42min, fe_mem=828.1M) ***
+[12/23 00:59:51     36s] #% Begin Load netlist data ... (date=12/23 00:59:51, mem=551.0M)
+[12/23 00:59:51     36s] *** Begin netlist parsing (mem=828.1M) ***
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[12/23 00:59:51     36s] Type 'man IMPVL-159' for more detail.
+[12/23 00:59:51     36s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[12/23 00:59:51     36s] To increase the message display limit, refer to the product command reference manual.
+[12/23 00:59:51     36s] Created 391 new cells from 10 timing libraries.
+[12/23 00:59:51     36s] Reading netlist ...
+[12/23 00:59:51     36s] Backslashed names will retain backslash and a trailing blank character.
+[12/23 00:59:51     36s] Reading verilog netlist '../syn/top_syn.v'
+[12/23 00:59:52     37s] 
+[12/23 00:59:52     37s] *** Memory Usage v#1 (Current mem = 840.062M, initial mem = 268.020M) ***
+[12/23 00:59:52     37s] *** End netlist parsing (cpu=0:00:00.3, real=0:00:01.0, mem=840.1M) ***
+[12/23 00:59:52     37s] #% End Load netlist data ... (date=12/23 00:59:52, total cpu=0:00:00.4, real=0:00:01.0, peak res=572.6M, current mem=572.6M)
+[12/23 00:59:52     37s] Set top cell to top.
+[12/23 00:59:52     37s] Hooked 782 DB cells to tlib cells.
+[12/23 00:59:52     37s] Ending "BindLib:" (total cpu=0:00:00.3, real=0:00:00.0, peak res=594.8M, current mem=594.8M)
+[12/23 00:59:52     37s] Starting recursive module instantiation check.
+[12/23 00:59:52     37s] No recursion found.
+[12/23 00:59:52     37s] Building hierarchical netlist for Cell top ...
+[12/23 00:59:52     37s] *** Netlist is unique.
+[12/23 00:59:52     37s] Setting Std. cell height to 5040 DBU (smallest netlist inst).
+[12/23 00:59:52     37s] ** info: there are 876 modules.
+[12/23 00:59:52     37s] ** info: there are 24662 stdCell insts.
+[12/23 00:59:52     37s] ** info: there are 6 macros.
+[12/23 00:59:52     37s] 
+[12/23 00:59:52     37s] *** Memory Usage v#1 (Current mem = 899.988M, initial mem = 268.020M) ***
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 00:59:52     37s] Type 'man IMPFP-3961' for more detail.
+[12/23 00:59:52     37s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[12/23 00:59:52     37s] Set Default Net Delay as 1000 ps.
+[12/23 00:59:52     37s] Set Default Net Load as 0.5 pF. 
+[12/23 00:59:52     37s] Set Default Input Pin Transition as 0.1 ps.
+[12/23 00:59:53     38s] Extraction setup Started 
+[12/23 00:59:53     38s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[12/23 00:59:53     38s] Reading Capacitance Table File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl ...
+[12/23 00:59:53     38s] Cap table was created using Encounter 13.13-s017_1.
+[12/23 00:59:53     38s] Process name: MIXED_MODE_RFCMOS18_1P6M_MMC_TOP_METAL20_6K.
+[12/23 00:59:53     38s] Importing multi-corner RC tables ... 
+[12/23 00:59:53     38s] Summary of Active RC-Corners : 
+[12/23 00:59:53     38s]  
+[12/23 00:59:53     38s]  Analysis View: AV_max
+[12/23 00:59:53     38s]     RC-Corner Name        : RC
+[12/23 00:59:53     38s]     RC-Corner Index       : 0
+[12/23 00:59:53     38s]     RC-Corner Temperature : 25 Celsius
+[12/23 00:59:53     38s]     RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+[12/23 00:59:53     38s]     RC-Corner PreRoute Res Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PreRoute Cap Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s]  
+[12/23 00:59:53     38s]  Analysis View: AV_typ
+[12/23 00:59:53     38s]     RC-Corner Name        : RC
+[12/23 00:59:53     38s]     RC-Corner Index       : 0
+[12/23 00:59:53     38s]     RC-Corner Temperature : 25 Celsius
+[12/23 00:59:53     38s]     RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+[12/23 00:59:53     38s]     RC-Corner PreRoute Res Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PreRoute Cap Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s]  
+[12/23 00:59:53     38s]  Analysis View: AV_min
+[12/23 00:59:53     38s]     RC-Corner Name        : RC
+[12/23 00:59:53     38s]     RC-Corner Index       : 0
+[12/23 00:59:53     38s]     RC-Corner Temperature : 25 Celsius
+[12/23 00:59:53     38s]     RC-Corner Cap Table   : '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/CIC/SOCE/u18_Faraday.CapTbl'
+[12/23 00:59:53     38s]     RC-Corner PreRoute Res Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PreRoute Cap Factor         : 1
+[12/23 00:59:53     38s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[12/23 00:59:53     38s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[12/23 00:59:53     38s] LayerId::1 widthSet size::4
+[12/23 00:59:53     38s] LayerId::2 widthSet size::4
+[12/23 00:59:53     38s] LayerId::3 widthSet size::4
+[12/23 00:59:53     38s] LayerId::4 widthSet size::4
+[12/23 00:59:53     38s] LayerId::5 widthSet size::4
+[12/23 00:59:53     38s] LayerId::6 widthSet size::2
+[12/23 00:59:53     38s] Updating RC grid for preRoute extraction ...
+[12/23 00:59:53     38s] Initializing multi-corner capacitance tables ... 
+[12/23 00:59:53     38s] Initializing multi-corner resistance tables ...
+[12/23 00:59:53     38s] **Info: Trial Route has Max Route Layer 15/6.
+[12/23 00:59:53     38s] {RT RC 0 6 6 {5 0} 1}
+[12/23 00:59:53     38s] Preroute length aware model : LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 80 ; 
+[12/23 00:59:53     38s] *Info: initialize multi-corner CTS.
+[12/23 00:59:53     38s] Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib' ...
+[12/23 00:59:54     39s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_tt1p8v25c.lib)
+[12/23 00:59:54     39s] Read 382 cells in library 'fsa0m_a_generic_core_tt1p8v25c' 
+[12/23 00:59:54     39s] Reading lib_typ timing library '/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2008Q3v1.2/T33_GENERIC_IO/FrontEnd/synopsys/fsa0m_a_t33_generic_io_tt1p8v25c.lib' ...
+[12/23 00:59:54     39s] Read 6 cells in library 'fsa0m_a_t33_generic_io_tt1p8v25c' 
+[12/23 00:59:54     39s] Reading lib_typ timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/SRAM/SRAM_TC.lib' ...
+[12/23 00:59:54     40s] Read 1 cells in library 'SRAM_TC' 
+[12/23 00:59:54     40s] Reading lib_typ timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/data_array/data_array_TC.lib' ...
+[12/23 00:59:55     40s] Read 1 cells in library 'data_array_TC' 
+[12/23 00:59:55     40s] Reading lib_typ timing library '/home/user2/Vsd22/Vsd2298/Desktop/HW4_4/sim/tag_array/tag_array_TC.lib' ...
+[12/23 00:59:55     40s] Read 1 cells in library 'tag_array_TC' 
+[12/23 00:59:55     40s] Ending "SetAnalysisView" (total cpu=0:00:02.2, real=0:00:02.0, peak res=796.7M, current mem=631.7M)
+[12/23 00:59:55     40s] Reading timing constraints file '../script/APR.sdc' ...
+[12/23 00:59:55     40s] Current (total cpu=0:00:40.6, real=0:01:29, peak res=826.2M, current mem=826.2M)
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_min.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (IMPCTE-290):	Could not locate cell XMD in any library for view AV_typ.
+[12/23 00:59:55     40s] Type 'man IMPCTE-290' for more detail.
+[12/23 00:59:55     40s] **WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../script/APR.sdc, Line 18).
+[12/23 00:59:55     40s] 
+[12/23 00:59:55     40s] INFO (CTE): Reading of timing constraints file ../script/APR.sdc completed, with 1 WARNING
+[12/23 00:59:55     40s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=844.6M, current mem=844.6M)
+[12/23 00:59:55     40s] Current (total cpu=0:00:40.7, real=0:01:29, peak res=844.6M, current mem=844.6M)
+[12/23 00:59:55     40s] Creating Cell Server ...(0, 1, 1, 1)
+[12/23 00:59:55     40s] Summary for sequential cells identification: 
+[12/23 00:59:55     40s]   Identified SBFF number: 42
+[12/23 00:59:55     40s]   Identified MBFF number: 0
+[12/23 00:59:55     40s]   Identified SB Latch number: 0
+[12/23 00:59:55     40s]   Identified MB Latch number: 0
+[12/23 00:59:55     40s]   Not identified SBFF number: 10
+[12/23 00:59:55     40s]   Not identified MBFF number: 0
+[12/23 00:59:55     40s]   Not identified SB Latch number: 0
+[12/23 00:59:55     40s]   Not identified MB Latch number: 0
+[12/23 00:59:55     40s]   Number of sequential cells which are not FFs: 27
+[12/23 00:59:55     40s] Total number of combinational cells: 290
+[12/23 00:59:55     40s] Total number of sequential cells: 79
+[12/23 00:59:55     40s] Total number of tristate cells: 13
+[12/23 00:59:55     40s] Total number of level shifter cells: 0
+[12/23 00:59:55     40s] Total number of power gating cells: 0
+[12/23 00:59:55     40s] Total number of isolation cells: 0
+[12/23 00:59:55     40s] Total number of power switch cells: 0
+[12/23 00:59:55     40s] Total number of pulse generator cells: 0
+[12/23 00:59:55     40s] Total number of always on buffers: 0
+[12/23 00:59:55     40s] Total number of retention cells: 0
+[12/23 00:59:55     40s] List of usable buffers: BUF1 BUF12CK BUF1S BUF1CK BUF2CK BUF2 BUF3 BUF4 BUF3CK BUF4CK BUF6CK BUF6 BUF8 BUF8CK
+[12/23 00:59:55     40s] Total number of usable buffers: 14
+[12/23 00:59:55     40s] List of unusable buffers:
+[12/23 00:59:55     40s] Total number of unusable buffers: 0
+[12/23 00:59:55     40s] List of usable inverters: INV1 INV12 INV12CK INV1CK INV1S INV2 INV3 INV2CK INV4 INV3CK INV4CK INV6 INV6CK INV8 INV8CK
+[12/23 00:59:55     40s] Total number of usable inverters: 15
+[12/23 00:59:55     40s] List of unusable inverters:
+[12/23 00:59:55     40s] Total number of unusable inverters: 0
+[12/23 00:59:55     40s] List of identified usable delay cells: DELA DELC DELB
+[12/23 00:59:55     40s] Total number of identified usable delay cells: 3
+[12/23 00:59:55     40s] List of identified unusable delay cells:
+[12/23 00:59:55     40s] Total number of identified unusable delay cells: 0
+[12/23 00:59:55     40s] Creating Cell Server, finished. 
+[12/23 00:59:55     40s] 
+[12/23 00:59:55     40s] Deleting Cell Server ...
+[12/23 00:59:55     40s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=866.4M, current mem=866.4M)
+[12/23 00:59:55     40s] Creating Cell Server ...(0, 0, 0, 0)
+[12/23 00:59:55     40s] Summary for sequential cells identification: 
+[12/23 00:59:55     40s]   Identified SBFF number: 42
+[12/23 00:59:55     40s]   Identified MBFF number: 0
+[12/23 00:59:55     40s]   Identified SB Latch number: 0
+[12/23 00:59:55     40s]   Identified MB Latch number: 0
+[12/23 00:59:55     40s]   Not identified SBFF number: 10
+[12/23 00:59:55     40s]   Not identified MBFF number: 0
+[12/23 00:59:55     40s]   Not identified SB Latch number: 0
+[12/23 00:59:55     40s]   Not identified MB Latch number: 0
+[12/23 00:59:55     40s]   Number of sequential cells which are not FFs: 27
+[12/23 00:59:55     40s]  Visiting view : AV_max
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 53.60 (1.000) with rcCorner = 0
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 51.10 (1.000) with rcCorner = -1
+[12/23 00:59:55     40s]  Visiting view : AV_typ
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 32.70 (1.000) with rcCorner = 0
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 30.70 (1.000) with rcCorner = -1
+[12/23 00:59:55     40s]  Visiting view : AV_min
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 22.50 (1.000) with rcCorner = 0
+[12/23 00:59:55     40s]    : PowerDomain = none : Weighted F : unweighted  = 20.60 (1.000) with rcCorner = -1
+[12/23 00:59:55     40s]  Setting StdDelay to 53.60
+[12/23 00:59:55     40s] Creating Cell Server, finished. 
+[12/23 00:59:55     40s] 
+[12/23 00:59:55     40s] 
+[12/23 00:59:55     40s] *** Summary of all messages that are not suppressed in this session:
+[12/23 00:59:55     40s] Severity  ID               Count  Summary                                  
+[12/23 00:59:55     40s] ERROR     IMPLF-40             3  Macro '%s' references a site '%s' that h...
+[12/23 00:59:55     40s] WARNING   IMPLF-58           382  MACRO '%s' has been found in the databas...
+[12/23 00:59:55     40s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[12/23 00:59:55     40s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[12/23 00:59:55     40s] WARNING   IMPLF-119            6  LAYER '%s' has been found in the databas...
+[12/23 00:59:55     40s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[12/23 00:59:55     40s] WARNING   IMPVL-159          770  Pin '%s' of cell '%s' is defined in LEF ...
+[12/23 00:59:55     40s] WARNING   IMPCTE-290           8  Could not locate cell %s in any library ...
+[12/23 00:59:55     40s] WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+[12/23 00:59:55     40s] WARNING   TECHLIB-302          3  No function defined for cell '%s'. The c...
+[12/23 00:59:55     40s] *** Message Summary: 1180 warning(s), 3 error(s)
+[12/23 00:59:55     40s] 
+[12/23 01:00:22     46s] <CMD> saveIoFile -byOrder -temp ../pr/top.io
+[12/23 01:00:22     46s] ** Writing IO pins constraint template file, all existing constraints are ignored.
+[12/23 01:00:22     46s] Dumping FTerm of cell top to file
+[12/23 01:00:32     48s] <CMD> loadIoFile ../pr/top.io
+[12/23 01:00:32     48s] Reading IO assignment file "../pr/top.io" ...
+[12/23 01:00:58     52s] <CMD> remove_assigns
+[12/23 01:01:13     54s] <CMD> setDesignMode -process 180
+[12/23 01:01:13     54s] ##  Process: 180           (User Set)               
+[12/23 01:01:13     54s] ##     Node: (not set)                           
+[12/23 01:01:13     54s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[12/23 01:01:13     54s] Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+[12/23 01:01:13     54s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[12/23 01:01:13     54s] 	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+[12/23 01:01:13     54s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+[12/23 01:01:13     54s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+[12/23 01:01:53     61s] <CMD> clearGlobalNets
+[12/23 01:01:53     61s] <CMD> globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+[12/23 01:01:53     61s] <CMD> globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+[12/23 01:02:04     63s] <CMD> getIoFlowFlag
+[12/23 01:02:36     68s] <CMD> setIoFlowFlag 0
+[12/23 01:02:36     68s] <CMD> floorPlan -site core_5040 -r 1 0.7 35 35 35 35
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[12/23 01:02:37     68s] Type 'man IMPFP-3961' for more detail.
+[12/23 01:02:37     68s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[12/23 01:02:37     68s] <CMD> uiSetTool select
+[12/23 01:02:37     68s] <CMD> getIoFlowFlag
+[12/23 01:02:37     68s] <CMD> fit
+[12/23 01:02:53     70s] <CMD> ::mp::clearAllSeed
+[12/23 01:02:53     70s] <CMD> setPlanDesignMode -effort high -incremental false -boundaryPlace true -fixPlacedMacros false -noColorize false
+[12/23 01:02:53     70s] <CMD> planDesign
+[12/23 01:02:53     70s] **WARN: (IMPAFP-9024):	planDesign is obsolete. This command will be removed from the next release.
+[12/23 01:02:54     71s] OPERPROF: Starting PlacementDelFiller
+ at level 1, MEM:1188.6M
+[12/23 01:02:54     71s] Deleted 0 physical inst  (cell - / prefix -).
+[12/23 01:02:54     71s] OPERPROF: Finished PlacementDelFiller
+ at level 1, CPU:0.000, REAL:0.001, MEM:1188.6M
+[12/23 01:02:54     71s] ***** New seed flow = 1. *****  
+[12/23 01:02:54     71s] Auto Seed: CPU_wrapper
+[12/23 01:02:54     71s] Auto Seed: IM1
+[12/23 01:02:54     71s] Auto Seed: DM1
+[12/23 01:02:54     71s] Auto Macro Seed: DM1
+[12/23 01:02:54     71s] Auto Macro Seed: IM1
+[12/23 01:02:54     71s] Ignore PD Guides: numIgnoredGuide = 0 
+[12/23 01:02:54     71s] INFO: #ExclusiveGroups=0
+[12/23 01:02:54     71s] INFO: There are no Exclusive Groups.
+[12/23 01:02:54     71s] Extracting standard cell pins and blockage ...... 
+[12/23 01:02:54     71s] Pin and blockage extraction finished
+[12/23 01:02:54     71s] Extracting macro/IO cell pins and blockage ...... 
+[12/23 01:02:54     71s] Pin and blockage extraction finished
+[12/23 01:02:54     71s] *** Starting "NanoPlace(TM) placement v#2 (mem=1188.6M)" ...
+[12/23 01:02:54     71s] Wait...
+[12/23 01:03:09     86s] *** Build Buffered Sizing Timing Model
+[12/23 01:03:09     86s] (cpu=0:00:15.3 mem=1279.0M) ***
+[12/23 01:03:09     86s] **WARN: (IMPTS-141):	Cell (PDIX) is marked as dont_touch, but is not marked as dont_use.
+[12/23 01:03:09     86s] **WARN: (IMPTS-141):	Cell (PDI) is marked as dont_touch, but is not marked as dont_use.
+[12/23 01:03:09     86s] **WARN: (IMPTS-141):	Cell (PUI) is marked as dont_touch, but is not marked as dont_use.
+[12/23 01:03:09     86s] **WARN: (IMPTS-141):	Cell (BHD1) is marked as dont_touch, but is not marked as dont_use.
+[12/23 01:03:10     87s] *** Build Virtual Sizing Timing Model
+[12/23 01:03:10     87s] (cpu=0:00:16.2 mem=1294.0M) ***
+[12/23 01:03:10     87s] No user-set net weight.
+[12/23 01:03:10     87s] Net fanout histogram:
+[12/23 01:03:10     87s] 2		: 14078 (57.3%) nets
+[12/23 01:03:10     87s] 3		: 5731 (23.3%) nets
+[12/23 01:03:10     87s] 4     -	14	: 4555 (18.5%) nets
+[12/23 01:03:10     87s] 15    -	39	: 181 (0.7%) nets
+[12/23 01:03:10     87s] 40    -	79	: 14 (0.1%) nets
+[12/23 01:03:10     87s] 80    -	159	: 5 (0.0%) nets
+[12/23 01:03:10     87s] 160   -	319	: 0 (0.0%) nets
+[12/23 01:03:10     87s] 320   -	639	: 0 (0.0%) nets
+[12/23 01:03:10     87s] 640   -	1279	: 0 (0.0%) nets
+[12/23 01:03:10     87s] 1280  -	2559	: 0 (0.0%) nets
+[12/23 01:03:10     87s] 2560  -	5119	: 1 (0.0%) nets
+[12/23 01:03:10     87s] 5120+		: 0 (0.0%) nets
+[12/23 01:03:10     87s] no activity file in design. spp won't run.
+[12/23 01:03:10     87s] Options: timingDriven clkGateAware pinGuide congEffort=auto gpeffort=medium 
+[12/23 01:03:10     87s] #spOpts: N=180 
+[12/23 01:03:10     87s] #std cell=24662 (0 fixed + 24662 movable) #buf cell=3707 #inv cell=2678 #block=6 (6 floating + 0 preplaced)
+[12/23 01:03:10     87s] #ioInst=0 #net=24565 #term=88439 #term/net=3.60, #fixedIo=167, #floatIo=0, #fixedPin=0, #floatPin=167
+[12/23 01:03:10     87s] stdCell: 24662 single + 0 double + 0 multi
+[12/23 01:03:10     87s] Total standard cell length = 116.1564 (mm), area = 0.5854 (mm^2)
+[12/23 01:03:10     87s] OPERPROF: Starting spInitSiteArr at level 1, MEM:1305.0M
+[12/23 01:03:10     87s] OPERPROF:   Starting spiInitFpSiteArr at level 2, MEM:1305.0M
+[12/23 01:03:10     87s] Core basic site is core_5040
+[12/23 01:03:10     87s] Use non-trimmed site array because memory saving is not enough.
+[12/23 01:03:10     87s] SiteArray: non-trimmed site array dimensions = 613 x 4984
+[12/23 01:03:10     87s] SiteArray: use 12,554,240 bytes
+[12/23 01:03:10     87s] SiteArray: current memory after site array memory allocation 1349.0M
+[12/23 01:03:10     87s] SiteArray: FP blocked sites are writable
+[12/23 01:03:10     87s] Estimated cell power/ground rail width = 0.630 um
+[12/23 01:03:10     87s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[12/23 01:03:10     87s] OPERPROF:     Starting RoutingBlockageFromWireViaStBox at level 3, MEM:1349.0M
+[12/23 01:03:10     87s] OPERPROF:     Finished RoutingBlockageFromWireViaStBox at level 3, CPU:0.000, REAL:0.000, MEM:1349.0M
+[12/23 01:03:10     87s] OPERPROF:   Finished spiInitFpSiteArr at level 2, CPU:0.100, REAL:0.095, MEM:1349.0M
+[12/23 01:03:10     87s] OPERPROF: Finished spInitSiteArr at level 1, CPU:0.180, REAL:0.176, MEM:1349.0M
+[12/23 01:03:10     87s] OPERPROF: Starting pre-place ADS at level 1, MEM:1349.0M
+[12/23 01:03:10     87s] OPERPROF:   Starting pre-place ADS Build Supply Map at level 2, MEM:1350.0M
+[12/23 01:03:10     87s] OPERPROF:     Starting ADS RRMInitG at level 3, MEM:1350.0M
+[12/23 01:03:10     87s] OPERPROF:     Finished ADS RRMInitG at level 3, CPU:0.000, REAL:0.000, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:     Starting ADS RRMCPTSL at level 3, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:       Starting ADS RRMBLKB at level 4, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:       Finished ADS RRMBLKB at level 4, CPU:0.000, REAL:0.001, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:       Starting ADS RRMCPTTR at level 4, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:       Finished ADS RRMCPTTR at level 4, CPU:0.000, REAL:0.001, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:     Finished ADS RRMCPTSL at level 3, CPU:0.000, REAL:0.002, MEM:1351.0M
+[12/23 01:03:10     87s] OPERPROF:   Finished pre-place ADS Build Supply Map at level 2, CPU:0.010, REAL:0.005, MEM:1351.0M
+[12/23 01:03:10     88s] ADSU 0.061 -> 0.061. GS 40.320
+[12/23 01:03:10     88s] OPERPROF: Finished pre-place ADS at level 1, CPU:0.300, REAL:0.297, MEM:1351.0M
+[12/23 01:03:11     88s] Average module density = 0.696.
+[12/23 01:03:11     88s] Density for the design = 0.696.
+[12/23 01:03:11     88s]        = (stdcell_area 187349 sites (585428 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3055192 sites (9546864 um^2).
+[12/23 01:03:11     88s] Pin Density = 0.02895.
+[12/23 01:03:11     88s]             = total # of pins 88439 / total area 3055192.
+[12/23 01:03:11     88s] OPERPROF: Starting spMPad at level 1, MEM:1351.0M
+[12/23 01:03:11     88s] OPERPROF:   Starting spContextMPad at level 2, MEM:1351.0M
+[12/23 01:03:11     88s] OPERPROF:   Finished spContextMPad at level 2, CPU:0.000, REAL:0.000, MEM:1351.0M
+[12/23 01:03:11     88s] OPERPROF: Finished spMPad at level 1, CPU:0.010, REAL:0.004, MEM:1351.0M
+[12/23 01:03:11     88s] Initial padding reaches pin density 0.163 for top
+[12/23 01:03:11     88s] InitPadU 0.696 -> 0.823 for top
+[12/23 01:03:11     88s] Fence Initialization: numPrefixFence = 0,  numAutoFence = 0, numPrefixGuide = 0  numAutoGuide = 0 numNoCon = 0 
+[12/23 01:03:11     88s] Identified 6 spare or floating instances, with no clusters.
+[12/23 01:03:11     88s] === lastAutoLevel = 10 
+[12/23 01:03:11     88s] OPERPROF: Starting spSectionHeadInit at level 1, MEM:1351.0M
+[12/23 01:03:11     88s] OPERPROF: Finished spSectionHeadInit at level 1, CPU:0.080, REAL:0.078, MEM:1353.0M
+[12/23 01:03:11     88s] OPERPROF: Starting spInitNetWt at level 1, MEM:1353.0M
+[12/23 01:03:11     88s] 0 delay mode for cte enabled initNetWt.
+[12/23 01:03:11     88s] no activity file in design. spp won't run.
+[12/23 01:03:11     88s] [spp] 0
+[12/23 01:03:11     88s] [adp] 0:1:1:3
+[12/23 01:03:11     88s] 0 delay mode for cte disabled initNetWt.
+[12/23 01:03:11     88s] OPERPROF: Finished spInitNetWt at level 1, CPU:0.090, REAL:0.097, MEM:1355.0M
+[12/23 01:03:11     88s] OPERPROF: Starting npMain at level 1, MEM:1355.0M
+[12/23 01:03:13     90s] Iteration  1: Total net bbox = 2.391e+06 (6.88e+05 1.70e+06)
+[12/23 01:03:13     90s]               Est.  stn bbox = 2.490e+06 (7.16e+05 1.77e+06)
+[12/23 01:03:13     90s]               cpu = 0:00:01.3 real = 0:00:01.0 mem = 1466.8M
+[12/23 01:03:14     90s] OPERPROF: Finished npMain at level 1, CPU:1.460, REAL:2.463, MEM:1469.8M
+[12/23 01:03:14     90s] User specified -module_cluster_mode =  0 
+[12/23 01:03:14     90s] OPERPROF: Starting npMain at level 1, MEM:1469.8M
+[12/23 01:03:14     90s] Iteration  2: Total net bbox = 2.391e+06 (6.88e+05 1.70e+06)
+[12/23 01:03:14     90s]               Est.  stn bbox = 2.490e+06 (7.16e+05 1.77e+06)
+[12/23 01:03:14     90s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 1469.8M
+[12/23 01:03:14     90s] Iteration  3: Total net bbox = 2.076e+06 (7.81e+05 1.30e+06)
+[12/23 01:03:14     90s]               Est.  stn bbox = 2.186e+06 (8.26e+05 1.36e+06)
+[12/23 01:03:14     90s]               cpu = 0:00:00.2 real = 0:00:00.0 mem = 1509.9M
+[12/23 01:03:14     90s] OPERPROF: Finished npMain at level 1, CPU:0.740, REAL:0.739, MEM:1509.9M
+[12/23 01:03:14     91s] OPERPROF: Starting npMain at level 1, MEM:1509.9M
+[12/23 01:03:15     91s] exp_mt_sequential is set from setPlaceMode option to 1
+[12/23 01:03:15     91s] Setting dotProdMode from setPlaceMode option to Multi-thread sequential mode (nrThread=1)
+[12/23 01:03:15     91s] place_exp_mt_interval set to default 32
+[12/23 01:03:15     91s] place_exp_mt_interval_bias (first half) set to default 0.750000
+[12/23 01:03:19     95s] Iteration  4: Total net bbox = 1.578e+06 (6.78e+05 9.00e+05)
+[12/23 01:03:19     95s]               Est.  stn bbox = 1.723e+06 (7.35e+05 9.89e+05)
+[12/23 01:03:19     95s]               cpu = 0:00:04.0 real = 0:00:04.0 mem = 1488.9M
+[12/23 01:03:19     95s] OPERPROF: Finished npMain at level 1, CPU:4.610, REAL:4.621, MEM:1488.9M
+[12/23 01:03:19     95s] OPERPROF: Starting npMain at level 1, MEM:1488.9M
+[12/23 01:03:25    101s] Iteration  5: Total net bbox = 1.662e+06 (8.58e+05 8.03e+05)
+[12/23 01:03:25    101s]               Est.  stn bbox = 1.824e+06 (9.39e+05 8.85e+05)
+[12/23 01:03:25    101s]               cpu = 0:00:05.2 real = 0:00:05.0 mem = 1489.0M
+[12/23 01:03:25    101s] OPERPROF: Finished npMain at level 1, CPU:5.800, REAL:5.802, MEM:1489.0M
+[12/23 01:03:38    114s] nrCritNet: 0.00% ( 0 / 24565 ) cutoffSlk: 214748364.7ps stdDelay: 53.6ps
+[12/23 01:03:38    115s] Iteration  6: Total net bbox = 1.714e+06 (9.00e+05 8.14e+05)
+[12/23 01:03:38    115s]               Est.  stn bbox = 1.876e+06 (9.81e+05 8.95e+05)
+[12/23 01:03:38    115s]               cpu = 0:00:26.3 real = 0:00:27.0 mem = 1505.6M
+[12/23 01:03:38    115s] OPERPROF: Starting npMain at level 1, MEM:1505.6M
+[12/23 01:03:40    116s] OPERPROF: Finished npMain at level 1, CPU:1.450, REAL:1.445, MEM:1541.8M
+[12/23 01:03:40    116s] Iteration  7: Total net bbox = 2.747e+06 (1.42e+06 1.33e+06)
+[12/23 01:03:40    116s]               Est.  stn bbox = 2.970e+06 (1.53e+06 1.44e+06)
+[12/23 01:03:40    116s]               cpu = 0:00:01.5 real = 0:00:02.0 mem = 1541.8M
+[12/23 01:03:54    130s] nrCritNet: 0.00% ( 0 / 24565 ) cutoffSlk: 214748364.7ps stdDelay: 53.6ps
+[12/23 01:03:54    130s] Iteration  8: Total net bbox = 2.747e+06 (1.42e+06 1.33e+06)
+[12/23 01:03:54    130s]               Est.  stn bbox = 2.970e+06 (1.53e+06 1.44e+06)
+[12/23 01:03:54    130s]               cpu = 0:00:13.7 real = 0:00:14.0 mem = 1541.8M
+[12/23 01:03:54    130s] OPERPROF: Starting npMain at level 1, MEM:1541.8M
+[12/23 01:03:55    131s] OPERPROF: Finished npMain at level 1, CPU:1.400, REAL:1.387, MEM:1541.8M
+[12/23 01:03:55    131s] Iteration  9: Total net bbox = 2.951e+06 (1.60e+06 1.35e+06)
+[12/23 01:03:55    131s]               Est.  stn bbox = 3.184e+06 (1.73e+06 1.46e+06)
+[12/23 01:03:55    131s]               cpu = 0:00:01.5 real = 0:00:01.0 mem = 1541.8M
+[12/23 01:03:55    131s]  RelinkConst: Total constraint = 3, Relinked 3 constraints . 
+[12/23 01:03:55    131s] User specified -fenceSpacing =  -1.0000 
+[12/23 01:03:55    131s] User specified fence spacing: -1.0000 um
+[12/23 01:03:55    131s] *** The nonConstraint instance area ratio is 0.665230 
+[12/23 01:03:55    131s] *** The prefixed-fenceArea/coreBoxArea is 0.000000, The auto-ConstraintArea/coreBoxArea is 0.871155 
+[12/23 01:03:55    131s] *** Total utilization of core box is 1.536385 
+[12/23 01:03:55    131s] Start Auto fence creation, hasNoConInst = 1  .
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] ================== Start Auto-Fence Creation ==================
+[12/23 01:03:55    131s] User define fence spacing: -1.0000 um
+[12/23 01:03:55    131s] Number of Movable Guide      : 0
+[12/23 01:03:55    131s] Number of Movable Region     : 0
+[12/23 01:03:55    131s] Number of Movable Fence      : 0
+[12/23 01:03:55    131s] Number of Movable Soft Guide : 0
+[12/23 01:03:55    131s] Total Movable Objects        : 0 (non-group: 0, group: 0)
+[12/23 01:03:55    131s] Total Prefixed Objects       : 0
+[12/23 01:03:55    131s] Total Partition Cut Objects  : 0
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] Number of Nested Objects    : 0
+[12/23 01:03:55    131s] Number of Non-Nested Objects: 0
+[12/23 01:03:55    131s] Number of Nested Sets       : 0
+[12/23 01:03:55    131s] Number of Master&Clone Pairs: 0
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] Fence Spacing: 2.0000 um
+[12/23 01:03:55    131s] Snap Spacing: X(0.6200 um), Y(5.0400 um)
+[12/23 01:03:55    131s] Fence2Core Spaceing: 0.0000 um
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] ==== Design Information ====
+[12/23 01:03:55    131s] Core site: (35340, 35280) - (3125420, 3124800)
+[12/23 01:03:55    131s] Design Whitespace% : 100.00%
+[12/23 01:03:55    131s] Maximum Logical Level: 0
+[12/23 01:03:55    131s] Has Non-constraint Instance: 1
+[12/23 01:03:55    131s] Allow Disjoint Whitespace: 0
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] ==To Place Non-Nested Objects==
+[12/23 01:03:55    131s] Targets: 
+[12/23 01:03:55    131s] Number of Total Targets: 0
+[12/23 01:03:55    131s] 
+[12/23 01:03:55    131s] ================== Finished Auto-Fence Creation ===============
+[12/23 01:03:55    131s] *** Done Auto-Fence Creation, (cpu = 0:00:00.0, mem = 1541.8M, mem_delta = 0.0M) ***
+[12/23 01:03:55    131s] End Auto fence creation 1.
+[12/23 01:03:55    131s] New Seed Flow: add CPU_wrapper as hinst seed
+[12/23 01:03:55    131s] New Seed Flow: add IM1 as hinst seed
+[12/23 01:03:55    131s] New Seed Flow: add DM1 as hinst seed
+[12/23 01:03:55    131s] MacroPlacer: Options: -pathConnWeight 1.000000 -bp 6 
+[12/23 01:03:55    131s] MacroPlacer: Reading Data for Block Placer
+[12/23 01:03:55    131s] MacroPlacer: total number of seeds contain macros: 3
+[12/23 01:03:55    131s] MacroPlacer: total number of seeds:                3
+[12/23 01:03:55    131s] MacroPlacer: total number of macros:               6
+[12/23 01:03:55    131s] MacroPlacer: total number of clusters:             4
+[12/23 01:03:55    131s] MacroPlacer: total number of ios:                  167
+[12/23 01:03:55    131s] MacroPlacer: total number of nets:                 819
+[12/23 01:03:55    131s] MacroPlacer: total number of keepouts:             0
+[12/23 01:03:55    131s] MacroPlacer: total number of fences:               0
+[12/23 01:03:55    131s] MacroPlacer: total number of fixed macros:         0
+[12/23 01:03:55    131s] MacroPlacer:            805 2-pins nets
+[12/23 01:03:55    131s] MacroPlacer:             13 3-pins nets
+[12/23 01:03:55    131s] MacroPlacer:              1 4-pins nets
+[12/23 01:03:55    131s] MacroPlacer:              0 5-pins nets
+[12/23 01:03:55    131s] MacroPlacer: Merging nets.
+[12/23 01:03:55    131s] MacroPlacer: total number of merged nets: 28
+[12/23 01:03:55    131s] -maxRouteLayer is specified which turned on auto macro spacing estimation.
+[12/23 01:03:55    131s] Macro spacing is determined by auto spacing estimation, ..., see documentation for details.
+[12/23 01:03:56    132s] MacroPlacer: Finished data reading for Block Placer
+[12/23 01:03:56    132s] ... in Multi-Level Module Mode...
+[12/23 01:03:56    132s] Start generating contour.
+[12/23 01:03:56    132s] Completed data preparation.
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] ================== Start to Place This Module ===============
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] ==== Design Information ====
+[12/23 01:03:56    132s] Core site: (35340, 35280) - (3125420, 3124800)
+[12/23 01:03:56    132s] Num of Blocks 6 (M: 6, F: 0, O: 0)
+[12/23 01:03:56    132s] ...
+[12/23 01:03:56    132s] Calling Macro Packer
+[12/23 01:03:56    132s] ...
+[12/23 01:03:56    132s] 	 Packing whole design.
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] == Macro Placement Stage 0 (5)==
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] == Macro Placement Stage 0 (2)==
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] == Macro Placement Stage 1 (2)==
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] == Macro Placement Stage 1 (1)==
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] == Macro Placement Stage 2 (1)==
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] ---Succeed on placing blocks!
+[12/23 01:03:56    132s] *** Done Macro Placing, (cpu = 0:00:00.0, mem = 1541.8M, mem_delta = 0.0M) ***
+[12/23 01:03:56    132s] Num of placed blocks:   6 / 6
+[12/23 01:03:56    132s] Num of unplaced blocks: 0
+[12/23 01:03:56    132s] 
+[12/23 01:03:56    132s] ================== Done Placing This Module ===============
+[12/23 01:03:56    132s] Placing Macro with -bp mode 6.
+[12/23 01:03:56    132s] *** Done refineMacro, (cpu = 0:00:00.8, mem = 1541.8M, mem_delta = 0.0M) ***
+[12/23 01:03:56    132s] $$$$ RefineAll Successacros
+[12/23 01:03:56    132s] Iteration 10: Total net bbox = 4.020e+06 (2.21e+06 1.81e+06)
+[12/23 01:03:56    132s]               Est.  stn bbox = 4.266e+06 (2.34e+06 1.93e+06)
+[12/23 01:03:56    132s]               cpu = 0:00:44.2 real = 0:00:45.0 mem = 1541.8M
+[12/23 01:03:56    132s] *** cost = 4.020e+06 (2.21e+06 1.81e+06) (cpu for global=0:00:44.2) real=464369:03:56***
+[12/23 01:03:56    132s] OPERPROF: Starting spSiteCleanup(true) at level 1, MEM:1541.8M
+[12/23 01:03:56    132s] OPERPROF: Finished spSiteCleanup(true) at level 1, CPU:0.000, REAL:0.001, MEM:1541.8M
+[12/23 01:03:56    132s] Solver runtime cpu: 0:00:10.4 real: 0:00:10.4
+[12/23 01:03:56    132s] Core Placement runtime cpu: 0:00:15.5 real: 0:00:17.0
+[12/23 01:03:56    132s] *** Free Virtual Timing Model ...(mem=1541.8M)
+[12/23 01:03:57    133s] checkFence: found no fence violation.
+[12/23 01:03:57    133s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[12/23 01:03:57    133s] Checking routing tracks.....
+[12/23 01:03:57    133s] Checking other grids.....
+[12/23 01:03:57    133s] Checking FINFET Grid is on Manufacture Grid.....
+[12/23 01:03:57    133s] Checking core/die box is on Grid.....
+[12/23 01:03:57    133s] Checking snap rule ......
+[12/23 01:03:57    133s] Checking Row is on grid......
+[12/23 01:03:57    133s] Checking AreaIO row.....
+[12/23 01:03:57    133s] Checking row out of die ...
+[12/23 01:03:57    133s] Checking routing blockage.....
+[12/23 01:03:57    133s] Checking components.....
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CI/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's width is not multiple of default tech site's width.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/DA/i_data_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block CPU_wrapper/L1CD/TA/i_tag_array and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block IM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] **WARN: (IMPFP-10013):	Halo should be created around block DM1/i_SRAM and snapping rules are not checked since it's height is not multiple of default tech site's height.
+[12/23 01:03:57    133s] Checking IO Pads out of die...
+[12/23 01:03:57    133s] Checking constraints (guide/region/fence).....
+[12/23 01:03:57    133s] Checking groups.....
+[12/23 01:03:57    133s] 
+[12/23 01:03:57    133s] Checking Preroutes.....
+[12/23 01:03:57    133s] No. of regular pre-routes not on tracks : 0 
+[12/23 01:03:57    133s] 
+[12/23 01:03:57    133s] Reporting Utilizations.....
+[12/23 01:03:57    133s] 
+[12/23 01:03:57    133s] Core utilization  = 69.598648
+[12/23 01:03:57    133s] Effective Utilizations
+[12/23 01:03:57    133s] #spOpts: N=180 
+[12/23 01:03:57    133s] All LLGs are deleted
+[12/23 01:03:57    133s] OPERPROF: Starting spSiteCleanup(true) at level 1, MEM:1527.2M
+[12/23 01:03:57    133s] OPERPROF: Finished spSiteCleanup(true) at level 1, CPU:0.000, REAL:0.001, MEM:1527.2M
+[12/23 01:03:57    133s] OPERPROF: Starting spInitSiteArr at level 1, MEM:1527.2M
+[12/23 01:03:57    133s] OPERPROF:   Starting spiInitFpSiteArr at level 2, MEM:1527.2M
+[12/23 01:03:57    133s] Core basic site is core_5040
+[12/23 01:03:57    133s] Fast DP-INIT is on for default
+[12/23 01:03:57    133s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[12/23 01:03:57    133s] OPERPROF:   Finished spiInitFpSiteArr at level 2, CPU:0.100, REAL:0.078, MEM:1543.2M
+[12/23 01:03:57    133s] OPERPROF: Finished spInitSiteArr at level 1, CPU:0.120, REAL:0.099, MEM:1543.2M
+[12/23 01:03:57    133s] Average module density = 0.696.
+[12/23 01:03:57    133s] Density for the design = 0.696.
+[12/23 01:03:57    133s]        = (stdcell_area 187349 sites (585428 um^2) + block_area 1939023 sites (6059060 um^2)) / alloc_area 3055192 sites (9546864 um^2).
+[12/23 01:03:57    133s] Pin Density = 0.02924.
+[12/23 01:03:57    133s]             = total # of pins 89321 / total area 3055192.
+[12/23 01:03:57    133s] OPERPROF: Starting spSiteCleanup(true) at level 1, MEM:1543.2M
+[12/23 01:03:57    133s] OPERPROF: Finished spSiteCleanup(true) at level 1, CPU:0.000, REAL:0.001, MEM:1543.2M
+[12/23 01:03:57    133s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[12/23 01:03:57    133s] 
+[12/23 01:03:57    133s] *** Summary of all messages that are not suppressed in this session:
+[12/23 01:03:57    133s] Severity  ID               Count  Summary                                  
+[12/23 01:03:57    133s] WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+[12/23 01:03:57    133s] WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+[12/23 01:03:57    133s] *** Message Summary: 12 warning(s), 0 error(s)
+[12/23 01:03:57    133s] 
+[12/23 01:04:17    137s] <CMD> zoomBox -1885.28800 189.60500 5046.04800 3665.69300
+[12/23 01:04:17    137s] <CMD> zoomBox -1885.28800 537.21400 5046.04800 4013.30200
+[12/23 01:04:19    137s] <CMD> zoomBox -2730.40600 138.56000 5424.10700 4228.07500
+[12/23 01:04:20    137s] <CMD> zoomBox -3720.33600 -326.98400 5873.21000 4484.21100
+[12/23 01:04:21    137s] <CMD> zoomBox -3720.33600 -808.10400 5873.21000 4003.09100
+[12/23 01:04:26    138s] <CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+[12/23 01:04:27    139s] <CMD> uiSetTool move
+[12/23 01:04:30    139s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 74.594 695.085 466.434 851.885
+[12/23 01:04:31    139s] <CMD> deselectAll
+[12/23 01:04:31    139s] <CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+[12/23 01:04:32    140s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 28.004 954.682 419.844 1111.482
+[12/23 01:04:32    140s] <CMD> deselectAll
+[12/23 01:04:32    140s] <CMD> selectInst IM1/i_SRAM
+[12/23 01:04:35    140s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1192.59 64.134 3112.73 1455.734
+[12/23 01:04:36    140s] <CMD> deselectAll
+[12/23 01:04:36    140s] <CMD> selectInst DM1/i_SRAM
+[12/23 01:04:39    141s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1180.042 1704.356 3100.182 3095.956
+[12/23 01:04:40    141s] <CMD> deselectAll
+[12/23 01:04:40    141s] <CMD> selectInst CPU_wrapper/L1CD/DA/i_data_array
+[12/23 01:04:43    142s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 232.717 1259.975 389.517 3147.875
+[12/23 01:04:57    144s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:04:58    144s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:05:04    145s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 578.849 1225.358 735.649 3113.258
+[12/23 01:05:05    145s] <CMD> deselectAll
+[12/23 01:05:05    145s] <CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+[12/23 01:05:07    145s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 56.844 948.912 448.684 1105.712
+[12/23 01:05:12    146s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:05:12    146s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:05:12    146s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:05:14    147s] <CMD> deselectAll
+[12/23 01:05:14    147s] <CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+[12/23 01:05:16    147s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 455.332 464.327 847.172 621.127
+[12/23 01:05:19    147s] <CMD> flipOrRotateObject -rotate R270 -group
+[12/23 01:05:24    149s] <CMD> zoomBox -2713.96600 -486.20400 5440.54900 3603.31200
+[12/23 01:05:25    149s] <CMD> zoomBox -1896.06300 -191.99500 5035.27500 3284.09400
+[12/23 01:05:27    149s] <CMD> zoomBox -1557.20800 -28.81900 4334.43000 2925.85700
+[12/23 01:05:27    149s] <CMD> zoomBox -1029.56400 227.77600 3227.14400 2362.52900
+[12/23 01:05:27    149s] <CMD> zoomBox -824.92000 327.98600 2793.28300 2142.52700
+[12/23 01:05:29    150s] <CMD> zoomBox -824.92000 146.53200 2793.28300 1961.07300
+[12/23 01:05:30    150s] <CMD> zoomBox -824.92000 -216.37600 2793.28300 1598.16500
+[12/23 01:05:31    150s] <CMD> zoomBox -824.92000 -397.83000 2793.28300 1416.71100
+[12/23 01:05:32    150s] <CMD> zoomBox -503.11600 -240.24900 2111.03600 1070.75700
+[12/23 01:06:05    155s] <CMD> deselectAll
+[12/23 01:06:05    155s] <CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+[12/23 01:06:07    156s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 59.984 51.327 216.784 443.167
+[12/23 01:06:07    156s] <CMD> deselectAll
+[12/23 01:06:07    156s] <CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+[12/23 01:06:09    156s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.042 74.487 605.842 466.327
+[12/23 01:06:10    156s] <CMD> zoomBox -503.11600 -109.14800 2111.03600 1201.85800
+[12/23 01:06:10    156s] <CMD> zoomBox -503.11600 153.05400 2111.03600 1464.06000
+[12/23 01:06:10    156s] <CMD> zoomBox -503.11600 21.95300 2111.03600 1332.95900
+[12/23 01:06:11    156s] <CMD> zoomBox -503.11600 -240.24900 2111.03600 1070.75700
+[12/23 01:06:11    156s] <CMD> zoomBox -503.11600 -371.35000 2111.03600 939.65600
+[12/23 01:06:12    157s] <CMD> zoomBox -215.41800 -166.72500 944.49700 414.97600
+[12/23 01:06:12    157s] <CMD> zoomBox -81.94500 -64.48500 432.71600 193.61900
+[12/23 01:06:13    157s] <CMD> zoomBox -64.86200 -48.51700 372.60000 170.87200
+[12/23 01:06:13    157s] <CMD> zoomBox -11.01100 1.82300 183.09300 99.16700
+[12/23 01:06:14    157s] <CMD> deselectAll
+[12/23 01:06:14    157s] <CMD> selectInst CPU_wrapper/L1CD/TA/i_tag_array
+[12/23 01:06:16    157s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 36.519 37.441 193.319 429.281
+[12/23 01:06:17    158s] <CMD> zoomBox 18.14900 19.62400 91.35700 56.33800
+[12/23 01:06:17    158s] <CMD> zoomBox 26.56500 25.15800 64.78000 44.32300
+[12/23 01:06:19    158s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 35.67 35.601 192.47 427.441
+[12/23 01:06:20    158s] <CMD> zoomBox 33.46700 31.20700 43.88300 36.43100
+[12/23 01:06:20    158s] <CMD> zoomBox 33.85300 31.54600 42.70800 35.98700
+[12/23 01:06:20    158s] <CMD> zoomBox 34.18200 31.83400 41.70900 35.60900
+[12/23 01:06:21    158s] <CMD> zoomBox 32.67600 31.83400 40.20300 35.60900
+[12/23 01:06:22    159s] <CMD> zoomBox 34.18200 31.83400 41.70900 35.60900
+[12/23 01:06:22    159s] <CMD> zoomBox 34.18200 32.96800 41.70900 36.74300
+[12/23 01:06:23    159s] <CMD> zoomBox 34.18200 33.72400 41.70900 37.49900
+[12/23 01:06:23    159s] <CMD> zoomBox 35.13400 34.68500 39.06400 36.65600
+[12/23 01:06:26    159s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 35.441 35.374 192.241 427.214
+[12/23 01:06:28    160s] <CMD> zoomBox 34.74100 34.68500 38.67100 36.65600
+[12/23 01:06:28    160s] <CMD> zoomBox 34.34800 34.68500 38.27800 36.65600
+[12/23 01:06:29    160s] <CMD> zoomBox 34.34800 35.67000 38.27800 37.64100
+[12/23 01:06:31    160s] <CMD> zoomBox 34.34800 35.27600 38.27800 37.24700
+[12/23 01:06:31    160s] <CMD> zoomBox 34.34800 34.68500 38.27800 36.65600
+[12/23 01:06:32    160s] <CMD> zoomBox 34.34800 34.29100 38.27800 36.26200
+[12/23 01:06:33    161s] <CMD> zoomBox 33.56200 34.29100 37.49200 36.26200
+[12/23 01:06:34    161s] <CMD> zoomBox 34.72800 34.82400 36.21100 35.56800
+[12/23 01:06:34    161s] <CMD> zoomBox 35.13100 35.01400 35.90700 35.40300
+[12/23 01:06:36    161s] <CMD> zoomBox 35.13100 35.05300 35.90700 35.44200
+[12/23 01:06:37    161s] <CMD> zoomBox 35.13100 35.13100 35.90700 35.52000
+[12/23 01:06:37    162s] <CMD> zoomBox 35.28500 35.21900 35.76400 35.45900
+[12/23 01:06:40    162s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 35.36 35.299 192.16 427.139
+[12/23 01:06:40    162s] <CMD> zoomBox 35.30800 35.24500 35.60300 35.39300
+[12/23 01:06:41    162s] <CMD> zoomBox 35.32600 35.26700 35.46000 35.33400
+[12/23 01:06:42    162s] <CMD> zoomBox 35.33100 35.27600 35.40300 35.31200
+[12/23 01:06:43    163s] <CMD> zoomBox 35.33300 35.28000 35.37300 35.30000
+[12/23 01:06:44    163s] <CMD> zoomBox 35.33200 35.27800 35.37900 35.30200
+[12/23 01:06:46    163s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/TA/i_tag_array 35.343 35.283 192.143 427.123
+[12/23 01:06:47    163s] <CMD> zoomBox 35.33100 35.27800 35.37300 35.29900
+[12/23 01:06:48    164s] <CMD> zoomBox 35.32800 35.27100 35.37800 35.29600
+[12/23 01:06:48    164s] <CMD> zoomBox 35.32800 35.25900 35.37800 35.28400
+[12/23 01:06:50    164s] <CMD> zoomBox 35.32800 35.25000 35.37800 35.27500
+[12/23 01:06:51    164s] <CMD> zoomBox 35.26400 35.22800 35.40400 35.29800
+[12/23 01:06:51    164s] <CMD> zoomBox 35.32400 35.24600 35.38000 35.27400
+[12/23 01:06:52    165s] <CMD> zoomBox 35.23900 35.21700 35.41600 35.30600
+[12/23 01:06:53    165s] <CMD> zoomBox 35.23900 35.23500 35.41600 35.32400
+[12/23 01:06:53    165s] <CMD> zoomBox 35.23900 35.24400 35.41600 35.33300
+[12/23 01:06:53    165s] <CMD> zoomBox 34.81800 35.10400 35.59200 35.49200
+[12/23 01:06:54    165s] <CMD> zoomBox 35.35700 35.10400 36.13100 35.49200
+[12/23 01:06:54    165s] <CMD> zoomBox 35.89600 35.10400 36.67000 35.49200
+[12/23 01:06:55    165s] <CMD> zoomBox 35.89600 34.83100 36.67000 35.21900
+[12/23 01:06:57    166s] <CMD> zoomBox 35.89600 34.59700 36.67000 34.98500
+[12/23 01:06:59    166s] <CMD> zoomBox 34.98800 34.29700 37.04600 35.32900
+[12/23 01:06:59    166s] <CMD> zoomBox 31.89900 33.27600 38.33000 36.50100
+[12/23 01:07:00    166s] <CMD> zoomBox 24.39400 30.79700 41.44700 39.34900
+[12/23 01:07:01    166s] <CMD> zoomBox 34.62400 30.79700 51.67700 39.34900
+[12/23 01:07:01    166s] <CMD> zoomBox 46.55900 30.79700 63.61200 39.34900
+[12/23 01:07:02    166s] <CMD> zoomBox 21.02300 22.36400 74.21700 49.04100
+[12/23 01:07:03    167s] <CMD> zoomBox 58.25600 22.36400 111.45000 49.04100
+[12/23 01:07:03    167s] <CMD> zoomBox 95.48900 22.36400 148.68300 49.04100
+[12/23 01:07:03    167s] <CMD> zoomBox 138.04100 22.36400 191.23500 49.04100
+[12/23 01:07:04    167s] <CMD> zoomBox 37.69200 -10.77300 232.91300 87.13100
+[12/23 01:07:04    167s] <CMD> zoomBox 174.34600 -10.77300 369.56700 87.13100
+[12/23 01:07:04    167s] <CMD> zoomBox 291.47800 -10.77300 486.69900 87.13100
+[12/23 01:07:05    167s] <CMD> zoomBox 408.61000 -10.77300 603.83100 87.13100
+[12/23 01:07:06    167s] <CMD> zoomBox 506.22000 -10.77300 701.44100 87.13100
+[12/23 01:07:07    167s] <CMD> zoomBox 467.17600 -10.77300 662.39700 87.13100
+[12/23 01:07:07    168s] <CMD> zoomBox 447.65400 -10.77300 642.87500 87.13100
+[12/23 01:07:07    168s] <CMD> zoomBox 408.61000 -10.77300 603.83100 87.13100
+[12/23 01:07:08    168s] <CMD> deselectAll
+[12/23 01:07:08    168s] <CMD> selectInst CPU_wrapper/L1CI/TA/i_tag_array
+[12/23 01:07:11    168s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.509 36.338 606.309 428.178
+[12/23 01:07:12    168s] <CMD> zoomBox 467.57800 12.67000 554.20000 56.11100
+[12/23 01:07:12    168s] <CMD> zoomBox 493.74200 23.07200 532.17800 42.34800
+[12/23 01:07:13    169s] <CMD> zoomBox 503.71700 27.03700 523.78300 37.10000
+[12/23 01:07:14    169s] <CMD> zoomBox 503.71700 28.04300 523.78300 38.10600
+[12/23 01:07:14    169s] <CMD> zoomBox 503.71700 29.04900 523.78300 39.11200
+[12/23 01:07:15    169s] <CMD> zoomBox 503.71700 30.05500 523.78300 40.11800
+[12/23 01:07:15    169s] <CMD> zoomBox 508.77300 32.75300 519.25000 38.00700
+[12/23 01:07:16    169s] <CMD> zoomBox 510.90100 33.87100 517.33800 37.09900
+[12/23 01:07:18    170s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.499 35.43 606.299 427.27
+[12/23 01:07:19    170s] <CMD> zoomBox 512.84900 34.25000 515.27700 35.46800
+[12/23 01:07:19    170s] <CMD> zoomBox 513.41200 34.40000 514.68200 35.03700
+[12/23 01:07:20    170s] <CMD> zoomBox 512.84500 34.24900 515.27800 35.46900
+[12/23 01:07:20    170s] <CMD> zoomBox 512.84500 34.49300 515.27800 35.71300
+[12/23 01:07:21    170s] <CMD> zoomBox 512.84500 34.61500 515.27800 35.83500
+[12/23 01:07:21    170s] <CMD> zoomBox 512.84500 34.73700 515.27800 35.95700
+[12/23 01:07:21    170s] <CMD> zoomBox 513.59600 34.97000 514.51500 35.43100
+[12/23 01:07:22    170s] <CMD> zoomBox 513.59600 35.06200 514.51500 35.52300
+[12/23 01:07:22    171s] <CMD> zoomBox 513.59600 35.15400 514.51500 35.61500
+[12/23 01:07:23    171s] <CMD> zoomBox 513.72200 35.19300 514.38700 35.52600
+[12/23 01:07:24    171s] <CMD> zoomBox 513.81200 35.22100 514.29500 35.46300
+[12/23 01:07:25    171s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.496 35.318 606.296 427.158
+[12/23 01:07:26    171s] <CMD> zoomBox 513.92300 35.23800 514.17600 35.36500
+[12/23 01:07:26    172s] <CMD> zoomBox 513.95700 35.24400 514.13900 35.33500
+[12/23 01:07:27    172s] <CMD> zoomBox 513.95700 35.26200 514.13900 35.35300
+[12/23 01:07:28    172s] <CMD> zoomBox 513.98000 35.26500 514.11300 35.33200
+[12/23 01:07:30    172s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.5 35.284 606.3 427.124
+[12/23 01:07:34    173s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.501 35.287 606.301 427.127
+[12/23 01:07:37    174s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.501 35.286 606.301 427.126
+[12/23 01:07:38    174s] <CMD> zoomBox 514.00500 35.27300 514.08700 35.31400
+[12/23 01:07:38    174s] <CMD> zoomBox 514.01100 35.27500 514.08100 35.31000
+[12/23 01:07:38    174s] <CMD> zoomBox 514.01600 35.27600 514.07600 35.30600
+[12/23 01:07:43    175s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/TA/i_tag_array 449.5 35.28 606.3 427.12
+[12/23 01:07:43    175s] <CMD> zoomBox 514.01600 35.25800 514.07600 35.28800
+[12/23 01:07:44    175s] <CMD> zoomBox 514.01600 35.23700 514.07600 35.26700
+[12/23 01:07:45    176s] <CMD> zoomBox 514.01600 35.25200 514.07600 35.28200
+[12/23 01:07:45    176s] <CMD> zoomBox 514.01600 35.27300 514.07600 35.30300
+[12/23 01:07:46    176s] <CMD> zoomBox 513.93800 35.24100 514.13500 35.34000
+[12/23 01:07:46    176s] <CMD> zoomBox 513.70100 35.14500 514.32100 35.45600
+[12/23 01:07:47    176s] <CMD> zoomBox 512.77200 34.76700 515.05500 35.91200
+[12/23 01:07:47    176s] <CMD> zoomBox 509.34900 33.38000 517.73200 37.58400
+[12/23 01:07:48    176s] <CMD> zoomBox 498.93100 29.20200 525.08200 42.31700
+[12/23 01:07:48    176s] <CMD> zoomBox 457.99200 12.78400 553.97000 60.91700
+[12/23 01:07:49    176s] <CMD> zoomBox 338.72800 -35.04500 638.12800 115.10500
+[12/23 01:07:49    176s] <CMD> zoomBox -33.30100 -184.23900 900.64700 284.13900
+[12/23 01:07:50    177s] <CMD> zoomBox 527.06900 -184.23900 1461.01700 284.13900
+[12/23 01:07:51    177s] <CMD> zoomBox 1180.83400 -184.23900 2114.78200 284.13900
+[12/23 01:07:51    177s] <CMD> zoomBox 1834.59900 -184.23900 2768.54700 284.13900
+[12/23 01:07:52    177s] <CMD> zoomBox 2488.36400 -184.23900 3422.31200 284.13900
+[12/23 01:07:53    177s] <CMD> zoomBox 2768.54900 -184.23900 3702.49700 284.13900
+[12/23 01:07:54    177s] <CMD> zoomBox 2675.15400 -184.23900 3609.10200 284.13900
+[12/23 01:07:55    178s] <CMD> zoomBox 2488.36400 -184.23900 3422.31200 284.13900
+[12/23 01:07:56    178s] <CMD> zoomBox 2581.75900 -184.23900 3515.70700 284.13900
+[12/23 01:07:56    178s] <CMD> zoomBox 2910.21600 -46.07000 3262.45500 130.57900
+[12/23 01:07:57    178s] <CMD> zoomBox 2966.52300 -21.56100 3221.01800 106.06900
+[12/23 01:07:57    178s] <CMD> zoomBox 3036.59700 8.94100 3169.44700 75.56600
+[12/23 01:07:58    178s] <CMD> deselectAll
+[12/23 01:07:58    178s] <CMD> selectInst IM1/i_SRAM
+[12/23 01:08:00    179s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1202.975 38.726 3123.115 1430.326
+[12/23 01:08:00    179s] <CMD> zoomBox 3090.33800 28.51700 3140.44400 53.64500
+[12/23 01:08:01    179s] <CMD> zoomBox 3114.59500 36.19400 3130.65900 44.25000
+[12/23 01:08:02    179s] <CMD> zoomBox 3114.59500 35.38800 3130.65900 43.44400
+[12/23 01:08:02    179s] <CMD> zoomBox 3114.59500 34.58200 3130.65900 42.63800
+[12/23 01:08:02    179s] <CMD> zoomBox 3114.59500 32.97000 3130.65900 41.02600
+[12/23 01:08:05    180s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1205.066 35.523 3125.206 1427.123
+[12/23 01:08:06    180s] <CMD> zoomBox 3122.26800 34.59700 3127.41900 37.18000
+[12/23 01:08:06    180s] <CMD> zoomBox 3124.62300 34.97300 3126.56700 35.94800
+[12/23 01:08:08    181s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1205.226 35.372 3125.366 1426.972
+[12/23 01:08:08    181s] <CMD> zoomBox 3125.05400 35.14800 3125.79000 35.51700
+[12/23 01:08:09    181s] <CMD> zoomBox 3125.19200 35.20600 3125.57700 35.39900
+[12/23 01:08:12    181s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1205.273 35.291 3125.413 1426.891
+[12/23 01:08:12    182s] <CMD> zoomBox 3125.34000 35.26300 3125.46500 35.32600
+[12/23 01:08:13    182s] <CMD> zoomBox 3125.38700 35.28200 3125.42800 35.30300
+[12/23 01:08:14    182s] <CMD> zoomBox 3125.38600 35.27800 3125.42800 35.29900
+[12/23 01:08:14    182s] <CMD> zoomBox 3125.38600 35.27600 3125.42800 35.29700
+[12/23 01:08:16    182s] <CMD> setObjFPlanBox Instance IM1/i_SRAM 1205.278 35.282 3125.418 1426.882
+[12/23 01:08:18    183s] <CMD> zoomBox 3125.38600 35.27000 3125.42800 35.29100
+[12/23 01:08:18    183s] <CMD> zoomBox 3125.38600 35.26600 3125.42800 35.28700
+[12/23 01:08:19    183s] <CMD> zoomBox 3125.33000 35.24300 3125.46400 35.31000
+[12/23 01:08:19    183s] <CMD> zoomBox 3125.10800 35.15000 3125.60700 35.40000
+[12/23 01:08:20    183s] <CMD> zoomBox 3124.47700 34.88200 3126.03700 35.66400
+[12/23 01:08:20    183s] <CMD> zoomBox 3122.16900 33.76600 3127.89600 36.63800
+[12/23 01:08:20    184s] <CMD> zoomBox 3116.01900 30.28200 3133.88500 39.24200
+[12/23 01:08:21    184s] <CMD> zoomBox 3102.04200 21.41300 3149.42000 45.17300
+[12/23 01:08:21    184s] <CMD> zoomBox 3102.04200 38.04500 3149.42000 61.80500
+[12/23 01:08:22    184s] <CMD> zoomBox 3102.04200 49.92500 3149.42000 73.68500
+[12/23 01:08:22    184s] <CMD> zoomBox 3057.29800 17.07700 3205.09000 91.19500
+[12/23 01:08:23    184s] <CMD> zoomBox 2917.72900 -85.38700 3378.75100 145.81700
+[12/23 01:08:23    184s] <CMD> zoomBox 2917.72900 76.45300 3378.75100 307.65700
+[12/23 01:08:23    184s] <CMD> zoomBox 2917.72900 238.29300 3378.75100 469.49700
+[12/23 01:08:24    184s] <CMD> zoomBox 2484.12500 -83.09100 3922.22500 638.12100
+[12/23 01:08:24    184s] <CMD> zoomBox 1430.16300 -864.27800 5243.24500 1047.99500
+[12/23 01:08:25    185s] <CMD> zoomBox 1430.16300 474.31100 5243.24500 2386.58400
+[12/23 01:08:25    185s] <CMD> zoomBox 1430.16300 1621.67300 5243.24500 3533.94600
+[12/23 01:08:25    185s] <CMD> zoomBox 1430.16300 2004.12700 5243.24500 3916.40000
+[12/23 01:08:26    185s] <CMD> zoomBox 2405.57600 2659.63800 3843.67900 3380.85100
+[12/23 01:08:27    185s] <CMD> zoomBox 2791.38900 2854.94900 3429.48300 3174.95500
+[12/23 01:08:27    185s] <CMD> zoomBox 3020.92100 2972.07700 3225.48100 3074.66500
+[12/23 01:08:28    185s] <CMD> zoomBox 3020.92000 3013.11300 3225.48100 3115.70100
+[12/23 01:08:28    185s] <CMD> zoomBox 3020.92000 3064.40800 3225.48100 3166.99600
+[12/23 01:08:29    186s] <CMD> zoomBox 3084.48900 3098.48600 3175.25400 3144.00500
+[12/23 01:08:29    186s] <CMD> zoomBox 3084.48900 3089.38200 3175.25400 3134.90100
+[12/23 01:08:30    186s] <CMD> deselectAll
+[12/23 01:08:30    186s] <CMD> selectInst DM1/i_SRAM
+[12/23 01:08:32    186s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1203.127 1729.903 3123.267 3121.503
+[12/23 01:08:33    186s] <CMD> zoomBox 3084.48900 3093.93400 3175.25400 3139.45300
+[12/23 01:08:33    187s] <CMD> zoomBox 3103.76800 3106.79600 3151.14800 3130.55700
+[12/23 01:08:34    187s] <CMD> zoomBox 3116.88100 3115.54300 3134.75100 3124.50500
+[12/23 01:08:35    187s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1204.376 1731.835 3124.516 3123.435
+[12/23 01:08:35    187s] <CMD> zoomBox 3120.50300 3119.64900 3128.43500 3123.62700
+[12/23 01:08:36    187s] <CMD> zoomBox 3120.50300 3121.24100 3128.43500 3125.21900
+[12/23 01:08:37    187s] <CMD> zoomBox 3120.50300 3122.43500 3128.43500 3126.41300
+[12/23 01:08:38    188s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1205.119 1732.923 3125.259 3124.523
+[12/23 01:08:39    188s] <CMD> zoomBox 3123.96900 3123.65800 3126.96200 3125.15900
+[12/23 01:08:39    188s] <CMD> zoomBox 3125.27400 3124.11900 3126.40500 3124.68600
+[12/23 01:08:40    188s] <CMD> zoomBox 3125.27400 3124.00500 3126.40500 3124.57200
+[12/23 01:08:41    188s] <CMD> zoomBox 3125.07800 3123.89500 3126.64300 3124.68000
+[12/23 01:08:41    188s] <CMD> zoomBox 3124.63200 3123.64600 3127.18200 3124.92500
+[12/23 01:08:42    189s] <CMD> zoomBox 3124.37700 3123.64600 3126.92700 3124.92500
+[12/23 01:08:42    189s] <CMD> zoomBox 3124.12200 3123.64600 3126.67200 3124.92500
+[12/23 01:08:42    189s] <CMD> zoomBox 3123.61200 3123.64600 3126.16200 3124.92500
+[12/23 01:08:43    189s] <CMD> zoomBox 3124.12100 3123.85200 3125.96400 3124.77600
+[12/23 01:08:44    189s] <CMD> zoomBox 3124.48800 3124.00000 3125.82200 3124.66900
+[12/23 01:08:46    189s] <CMD> zoomBox 3124.35500 3124.00000 3125.68900 3124.66900
+[12/23 01:08:46    189s] <CMD> zoomBox 3124.62100 3124.00000 3125.95500 3124.66900
+[12/23 01:08:47    190s] <CMD> zoomBox 3124.62100 3124.13400 3125.95500 3124.80300
+[12/23 01:08:48    190s] <CMD> zoomBox 3124.62100 3124.20100 3125.95500 3124.87000
+[12/23 01:08:48    190s] <CMD> zoomBox 3124.62100 3124.26800 3125.95500 3124.93700
+[12/23 01:08:50    190s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1205.242 1733.16 3125.382 3124.76
+[12/23 01:08:51    190s] <CMD> zoomBox 3124.98100 3124.46600 3125.68100 3124.81700
+[12/23 01:08:52    190s] <CMD> zoomBox 3124.84100 3124.46600 3125.54100 3124.81700
+[12/23 01:08:53    191s] <CMD> zoomBox 3124.77100 3124.46600 3125.47100 3124.81700
+[12/23 01:08:53    191s] <CMD> zoomBox 3124.98100 3124.46600 3125.68100 3124.81700
+[12/23 01:08:54    191s] <CMD> zoomBox 3124.98100 3124.53600 3125.68100 3124.88700
+[12/23 01:08:54    191s] <CMD> zoomBox 3124.98100 3124.57100 3125.68100 3124.92200
+[12/23 01:08:55    191s] <CMD> zoomBox 3125.24000 3124.68300 3125.50700 3124.81700
+[12/23 01:08:55    191s] <CMD> zoomBox 3125.31500 3124.71500 3125.45700 3124.78600
+[12/23 01:08:56    191s] <CMD> zoomBox 3125.28700 3124.71500 3125.42900 3124.78600
+[12/23 01:08:57    191s] <CMD> zoomBox 3125.31500 3124.71500 3125.45700 3124.78600
+[12/23 01:08:57    191s] <CMD> zoomBox 3125.31500 3124.72200 3125.45700 3124.79300
+[12/23 01:08:58    192s] <CMD> zoomBox 3125.31500 3124.73600 3125.45700 3124.80700
+[12/23 01:08:59    192s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1205.276 1733.194 3125.416 3124.794
+[12/23 01:09:02    192s] <CMD> setObjFPlanBox Instance DM1/i_SRAM 1205.279 1733.197 3125.419 3124.797
+[12/23 01:09:03    193s] <CMD> zoomBox 3125.11900 3124.67200 3125.49700 3124.86200
+[12/23 01:09:04    193s] <CMD> zoomBox 3124.49300 3124.48900 3125.68300 3125.08600
+[12/23 01:09:04    193s] <CMD> zoomBox 3122.89600 3123.97800 3126.61100 3125.84100
+[12/23 01:09:05    193s] <CMD> zoomBox 3119.88300 3122.89200 3129.73800 3127.83400
+[12/23 01:09:05    193s] <CMD> zoomBox 3113.96700 3122.89200 3123.82200 3127.83400
+[12/23 01:09:05    193s] <CMD> zoomBox 3106.07900 3122.89200 3115.93400 3127.83400
+[12/23 01:09:06    193s] <CMD> zoomBox 3091.45800 3119.46300 3122.20000 3134.88000
+[12/23 01:09:07    194s] <CMD> zoomBox 3064.47100 3108.78200 3160.36900 3156.87500
+[12/23 01:09:07    194s] <CMD> zoomBox 3001.22200 3083.43800 3255.49500 3210.95700
+[12/23 01:09:07    194s] <CMD> zoomBox 2848.66000 3083.43800 3102.93300 3210.95700
+[12/23 01:09:08    194s] <CMD> zoomBox 2645.24400 3083.43800 2899.51700 3210.95700
+[12/23 01:09:08    194s] <CMD> zoomBox 2467.25500 3083.43800 2721.52800 3210.95700
+[12/23 01:09:08    194s] <CMD> zoomBox 2358.94300 3035.32000 2932.01500 3322.71800
+[12/23 01:09:09    194s] <CMD> zoomBox 1946.29800 2852.00300 3733.93100 3748.50700
+[12/23 01:09:09    194s] <CMD> zoomBox 1117.32100 2889.41100 2636.80900 3651.43900
+[12/23 01:09:10    194s] <CMD> zoomBox 205.62700 2889.41100 1725.11500 3651.43900
+[12/23 01:09:10    194s] <CMD> zoomBox -706.06700 2889.41100 813.42100 3651.43900
+[12/23 01:09:11    195s] <CMD> zoomBox 53.67800 2889.41100 1573.16600 3651.43900
+[12/23 01:09:12    195s] <CMD> zoomBox -250.22000 2889.41100 1269.26800 3651.43900
+[12/23 01:09:13    195s] <CMD> zoomBox 53.67800 2889.41100 1573.16600 3651.43900
+[12/23 01:09:13    195s] <CMD> zoomBox 377.30500 2972.39100 1170.48800 3370.17500
+[12/23 01:09:14    195s] <CMD> zoomBox 547.38100 3027.31500 899.32100 3203.81400
+[12/23 01:09:14    196s] <CMD> zoomBox 593.38800 3049.11900 809.52400 3157.51200
+[12/23 01:09:15    196s] <CMD> deselectAll
+[12/23 01:09:15    196s] <CMD> selectInst CPU_wrapper/L1CD/DA/i_data_array
+[12/23 01:09:17    196s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 581.06 1235.108 737.86 3123.008
+[12/23 01:09:17    196s] <CMD> zoomBox 640.52600 3091.41500 736.42800 3139.51000
+[12/23 01:09:18    196s] <CMD> zoomBox 661.50500 3110.18100 704.05900 3131.52200
+[12/23 01:09:19    197s] <CMD> zoomBox 669.63600 3116.94500 691.85100 3128.08600
+[12/23 01:09:19    197s] <CMD> zoomBox 673.06800 3119.65500 686.71200 3126.49800
+[12/23 01:09:20    197s] <CMD> zoomBox 673.88600 3120.30200 685.48500 3126.11900
+[12/23 01:09:20    197s] <CMD> zoomBox 674.57700 3120.83000 684.43700 3125.77500
+[12/23 01:09:22    197s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 581.09 1236.497 737.89 3124.397
+[12/23 01:09:22    197s] <CMD> zoomBox 677.36000 3122.58200 681.08200 3124.44900
+[12/23 01:09:23    198s] <CMD> zoomBox 677.35900 3122.95600 681.08200 3124.82300
+[12/23 01:09:23    198s] <CMD> zoomBox 677.35900 3123.14300 681.08200 3125.01000
+[12/23 01:09:24    198s] <CMD> zoomBox 677.35900 3123.51700 681.08200 3125.38400
+[12/23 01:09:25    198s] <CMD> zoomBox 677.35900 3123.70400 681.08200 3125.57100
+[12/23 01:09:25    198s] <CMD> zoomBox 678.34400 3124.13800 679.99700 3124.96700
+[12/23 01:09:27    198s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 581.105 1236.839 737.905 3124.739
+[12/23 01:09:28    199s] <CMD> zoomBox 678.34400 3124.30400 679.99700 3125.13300
+[12/23 01:09:28    199s] <CMD> zoomBox 678.66900 3124.52000 679.68600 3125.03000
+[12/23 01:09:29    199s] <CMD> zoomBox 678.98900 3124.69900 679.37500 3124.89300
+[12/23 01:09:29    199s] <CMD> zoomBox 679.01700 3124.71400 679.34600 3124.87900
+[12/23 01:09:31    199s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 581.104 1236.889 737.904 3124.789
+[12/23 01:09:32    199s] <CMD> zoomBox 679.12800 3124.75700 679.23400 3124.81000
+[12/23 01:09:33    200s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CD/DA/i_data_array 581.102 1236.899 737.902 3124.799
+[12/23 01:09:34    200s] <CMD> zoomBox 679.12800 3124.72700 679.23400 3124.78000
+[12/23 01:09:35    200s] <CMD> zoomBox 679.01500 3124.64500 679.35700 3124.81700
+[12/23 01:09:35    200s] <CMD> zoomBox 678.66300 3124.39300 679.74300 3124.93500
+[12/23 01:09:36    200s] <CMD> zoomBox 677.57400 3123.61400 680.94800 3125.30600
+[12/23 01:09:36    200s] <CMD> zoomBox 674.18600 3121.18400 684.70900 3126.46100
+[12/23 01:09:37    200s] <CMD> zoomBox 663.61800 3113.60500 696.44400 3130.06700
+[12/23 01:09:37    201s] <CMD> zoomBox 630.65200 3089.98500 733.05000 3141.33800
+[12/23 01:09:38    201s] <CMD> zoomBox 527.81600 3016.38100 847.24000 3176.57300
+[12/23 01:09:38    201s] <CMD> zoomBox 123.71300 2727.14900 1295.95700 3315.03300
+[12/23 01:09:39    201s] <CMD> zoomBox 6.48900 2727.14900 1178.73300 3315.03300
+[12/23 01:09:39    201s] <CMD> zoomBox -345.18300 2727.14900 827.06100 3315.03300
+[12/23 01:09:40    201s] <CMD> zoomBox -462.40700 2727.14900 709.83700 3315.03300
+[12/23 01:09:41    201s] <CMD> zoomBox -163.99800 2939.68300 356.13400 3200.53100
+[12/23 01:09:41    202s] <CMD> zoomBox -51.72500 3020.41200 219.78900 3156.57700
+[12/23 01:09:42    202s] <CMD> zoomBox -78.87600 3020.41200 192.63800 3156.57700
+[12/23 01:09:43    202s] <CMD> zoomBox -60.55700 3034.73900 170.23000 3150.47900
+[12/23 01:09:43    202s] <CMD> zoomBox -44.98600 3046.91700 151.18300 3145.29600
+[12/23 01:09:43    202s] <CMD> zoomBox -20.50100 3066.06600 121.23100 3137.14500
+[12/23 01:09:43    202s] <CMD> zoomBox 14.96200 3093.80000 77.85000 3125.33900
+[12/23 01:09:44    202s] <CMD> zoomBox 14.96100 3100.10800 77.85000 3131.64700
+[12/23 01:09:45    202s] <CMD> zoomBox 14.96100 3106.41600 77.85000 3137.95500
+[12/23 01:09:45    202s] <CMD> zoomBox 26.93000 3116.30800 59.76100 3132.77300
+[12/23 01:09:45    202s] <CMD> zoomBox 28.89000 3117.92800 56.79700 3131.92300
+[12/23 01:09:47    203s] <CMD> zoomBox 26.09900 3117.92800 54.00600 3131.92300
+[12/23 01:09:48    203s] <CMD> zoomBox 28.89000 3117.92800 56.79700 3131.92300
+[12/23 01:09:48    203s] <CMD> zoomBox 28.89000 3119.32800 56.79700 3133.32300
+[12/23 01:09:49    203s] <CMD> zoomBox 28.89000 3117.92800 56.79700 3131.92300
+[12/23 01:09:49    203s] <CMD> zoomBox 28.89000 3115.12800 56.79700 3129.12300
+[12/23 01:09:50    203s] <CMD> zoomBox 30.17900 3116.30600 53.90000 3128.20200
+[12/23 01:09:50    203s] <CMD> zoomBox 31.27400 3117.30700 51.43700 3127.41900
+[12/23 01:09:50    204s] <CMD> zoomBox 32.20500 3118.15800 49.34400 3126.75300
+[12/23 01:09:52    204s] <CMD> zoomBox 32.20500 3119.01800 49.34400 3127.61300
+[12/23 01:09:52    204s] <CMD> zoomBox 32.20500 3119.87800 49.34400 3128.47300
+[12/23 01:09:53    204s] <CMD> zoomBox 32.81700 3120.68600 47.38500 3127.99200
+[12/23 01:09:53    204s] <CMD> zoomBox 33.33700 3121.37300 45.72000 3127.58300
+[12/23 01:09:54    204s] <CMD> zoomBox 30.86100 3121.37300 43.24400 3127.58300
+[12/23 01:09:55    205s] <CMD> zoomBox 32.85200 3123.24100 39.31900 3126.48400
+[12/23 01:09:56    205s] <CMD> zoomBox 32.85200 3122.26900 39.31900 3125.51200
+[12/23 01:09:57    205s] <CMD> zoomBox 29.11900 3118.97900 46.27000 3127.58000
+[12/23 01:09:57    205s] <CMD> zoomBox 16.28600 3107.80800 69.79100 3134.64100
+[12/23 01:09:58    205s] <CMD> zoomBox -35.42800 3063.13900 160.93000 3161.61300
+[12/23 01:09:58    205s] <CMD> zoomBox -236.08100 2944.68800 376.43300 3251.86600
+[12/23 01:09:58    206s] <CMD> zoomBox -754.93800 2667.31700 869.13100 3481.79300
+[12/23 01:09:59    206s] <CMD> zoomBox -1592.47700 2306.14800 1518.73200 3866.43000
+[12/23 01:10:00    206s] <CMD> zoomBox -2879.66400 1845.34700 2186.42200 4386.00600
+[12/23 01:10:01    206s] <CMD> zoomBox -5187.56100 1146.99300 3061.71500 5284.03200
+[12/23 01:10:01    206s] <CMD> zoomBox -6243.26800 830.10600 3461.76300 5697.21100
+[12/23 01:10:02    206s] <CMD> zoomBox -5170.93000 1119.85600 3078.34800 5256.89600
+[12/23 01:10:03    206s] <CMD> zoomBox -3521.07400 1119.85600 4728.20400 5256.89600
+[12/23 01:10:03    207s] <CMD> zoomBox -2696.14600 1119.85600 5553.13200 5256.89600
+[12/23 01:10:04    207s] <CMD> zoomBox -3521.07400 1119.85600 4728.20400 5256.89600
+[12/23 01:10:04    207s] <CMD> zoomBox -3521.07400 292.44800 4728.20400 4429.48800
+[12/23 01:10:05    207s] <CMD> zoomBox -3521.07400 -121.25600 4728.20400 4015.78400
+[12/23 01:10:05    207s] <CMD> zoomBox -3521.07400 -534.96000 4728.20400 3602.08000
+[12/23 01:10:10    208s] <CMD> deselectAll
+[12/23 01:10:10    208s] <CMD> selectInst CPU_wrapper/L1CI/DA/i_data_array
+[12/23 01:10:16    209s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 45.261 1226.979 202.061 3114.879
+[12/23 01:10:17    209s] <CMD> zoomBox -1742.76500 1248.09000 2563.41000 3407.65100
+[12/23 01:10:17    209s] <CMD> zoomBox -573.26700 2446.42100 1050.80800 3260.90000
+[12/23 01:10:18    209s] <CMD> zoomBox -166.39900 2888.94500 446.12100 3196.12600
+[12/23 01:10:19    210s] <CMD> zoomBox -33.57300 3043.10800 197.44100 3158.96200
+[12/23 01:10:19    210s] <CMD> zoomBox -12.14000 3066.27600 154.76700 3149.98000
+[12/23 01:10:21    210s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 35.926 1236.314 192.726 3124.214
+[12/23 01:10:22    210s] <CMD> zoomBox 11.65800 3109.62800 65.16500 3136.46200
+[12/23 01:10:23    210s] <CMD> zoomBox 20.13200 3116.60500 52.99300 3133.08500
+[12/23 01:10:25    211s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 35.534 1236.587 192.334 3124.487
+[12/23 01:10:25    211s] <CMD> zoomBox 30.56800 3120.71400 42.96200 3126.93000
+[12/23 01:10:26    211s] <CMD> zoomBox 33.43700 3122.39100 39.91000 3125.63700
+[12/23 01:10:26    211s] <CMD> zoomBox 32.79000 3122.39100 39.26300 3125.63700
+[12/23 01:10:27    211s] <CMD> zoomBox 32.14300 3122.39100 38.61600 3125.63700
+[12/23 01:10:28    212s] <CMD> zoomBox 32.79000 3122.39100 39.26300 3125.63700
+[12/23 01:10:28    212s] <CMD> zoomBox 33.21900 3122.75100 38.72100 3125.51000
+[12/23 01:10:28    212s] <CMD> zoomBox 34.37900 3123.72500 37.25200 3125.16600
+[12/23 01:10:29    212s] <CMD> zoomBox 34.86700 3124.13500 36.63200 3125.02000
+[12/23 01:10:31    212s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 35.382 1236.857 192.182 3124.757
+[12/23 01:10:32    213s] <CMD> zoomBox 35.14700 3124.49900 35.93300 3124.89300
+[12/23 01:10:32    213s] <CMD> zoomBox 35.18100 3124.54300 35.84900 3124.87800
+[12/23 01:10:32    213s] <CMD> zoomBox 34.98000 3124.54300 35.64800 3124.87800
+[12/23 01:10:33    213s] <CMD> zoomBox 35.11400 3124.54300 35.78200 3124.87800
+[12/23 01:10:34    213s] <CMD> zoomBox 35.14500 3124.58000 35.71300 3124.86500
+[12/23 01:10:34    213s] <CMD> zoomBox 35.14500 3124.60900 35.71300 3124.89400
+[12/23 01:10:35    213s] <CMD> zoomBox 35.14500 3124.63800 35.71300 3124.92300
+[12/23 01:10:35    213s] <CMD> zoomBox 35.26800 3124.74700 35.48400 3124.85500
+[12/23 01:10:38    214s] <CMD> setObjFPlanBox Instance CPU_wrapper/L1CI/DA/i_data_array 35.342 1236.897 192.142 3124.797
+[12/23 01:10:39    214s] <CMD> zoomBox 35.17600 3124.67200 35.66200 3124.91600
+[12/23 01:10:39    214s] <CMD> zoomBox 34.81500 3124.39100 36.33800 3125.15500
+[12/23 01:10:40    215s] <CMD> zoomBox 33.25600 3123.35000 38.85400 3126.15700
+[12/23 01:10:40    215s] <CMD> zoomBox 26.54500 3120.49500 44.01100 3129.25400
+[12/23 01:10:40    215s] <CMD> zoomBox -1.58300 3109.47200 62.51500 3141.61700
+[12/23 01:10:41    215s] <CMD> zoomBox -87.20500 3078.07700 112.74600 3178.35300
+[12/23 01:10:42    215s] <CMD> uiSetTool select
+[12/23 01:10:43    215s] <CMD> zoomBox -245.72400 2983.36100 378.00100 3296.16100
+[12/23 01:10:43    216s] <CMD> zoomBox -1144.70400 2743.82200 800.92700 3719.56200
+[12/23 01:10:44    216s] <CMD> zoomBox -3505.78100 2191.22700 1653.00200 4778.37400
+[12/23 01:10:45    216s] <CMD> zoomBox -2989.90400 2191.22700 2168.88000 4778.37400
+[12/23 01:10:45    216s] <CMD> zoomBox -1958.14800 2191.22700 3200.63600 4778.37400
+[12/23 01:10:46    216s] <CMD> zoomBox -5259.80400 1443.61400 4622.80800 6399.77700
+[12/23 01:10:47    216s] <CMD> zoomBox -7855.83500 873.18100 5822.52300 7732.92300
+[12/23 01:10:47    216s] <CMD> zoomBox -9490.21400 520.46900 6601.97300 8590.75400
+[12/23 01:10:48    217s] <CMD> zoomBox -9490.21400 -1900.61800 6601.97300 6169.66700
+[12/23 01:10:49    217s] <CMD> zoomBox -5289.51200 -997.00100 4593.10400 3959.16400
+[12/23 01:10:49    217s] <CMD> zoomBox -4286.69200 -781.28400 4113.53300 3431.45700
+[12/23 01:10:50    217s] <CMD> zoomBox -2983.09300 -485.52100 3086.07100 2558.18500
+[12/23 01:10:50    217s] <CMD> zoomBox -2020.98900 -271.83300 2363.98500 1927.24600
+[12/23 01:10:51    217s] <CMD> zoomBox -1325.86700 -117.44300 1842.27800 1471.39200
+[12/23 01:11:48    227s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Fri Dec 23 01:11:48 2022
+  Total CPU time:     0:03:47
+  Total real time:    0:13:23
+  Peak memory (main): 1240.30MB
+
+[12/23 01:11:48    227s] 
+[12/23 01:11:48    227s] *** Memory Usage v#1 (Current mem = 1502.164M, initial mem = 268.020M) ***
+[12/23 01:11:48    227s] 
+[12/23 01:11:48    227s] *** Summary of all messages that are not suppressed in this session:
+[12/23 01:11:48    227s] Severity  ID               Count  Summary                                  
+[12/23 01:11:48    227s] ERROR     IMPLF-40             3  Macro '%s' references a site '%s' that h...
+[12/23 01:11:48    227s] WARNING   IMPLF-58           382  MACRO '%s' has been found in the databas...
+[12/23 01:11:48    227s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[12/23 01:11:48    227s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[12/23 01:11:48    227s] WARNING   IMPLF-119            6  LAYER '%s' has been found in the databas...
+[12/23 01:11:48    227s] WARNING   IMPFP-10013          8  Halo should be created around block %s a...
+[12/23 01:11:48    227s] WARNING   IMPFP-3961          16  The techSite '%s' has no related standar...
+[12/23 01:11:48    227s] WARNING   IMPTS-141            4  Cell (%s) is marked as dont_touch, but i...
+[12/23 01:11:48    227s] WARNING   IMPVL-159          770  Pin '%s' of cell '%s' is defined in LEF ...
+[12/23 01:11:48    227s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[12/23 01:11:48    227s] WARNING   IMPAFP-9024          1  planDesign is obsolete. This command wil...
+[12/23 01:11:48    227s] WARNING   IMPCTE-290           8  Could not locate cell %s in any library ...
+[12/23 01:11:48    227s] WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+[12/23 01:11:48    227s] WARNING   TECHLIB-302          3  No function defined for cell '%s'. The c...
+[12/23 01:11:48    227s] *** Message Summary: 1202 warning(s), 3 error(s)
+[12/23 01:11:48    227s] 
+[12/23 01:11:48    227s] --- Ending "Innovus" (totcpu=0:03:48, real=0:13:22, mem=1502.2M) ---

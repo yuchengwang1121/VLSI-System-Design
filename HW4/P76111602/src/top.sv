@@ -14,9 +14,9 @@ module top(
     input rst,
     input rst2,
     //ROM
-    output ROM_enable,
-    output ROM_read,
-    output [11:0] ROM_address,
+    output logic ROM_enable,
+    output logic ROM_read,
+    output logic [11:0] ROM_address,
     input  [`AXI_DATA_BITS-1:0] ROM_out,
     //DRAM
     output DRAM_CSn,
@@ -34,6 +34,7 @@ module top(
 );
 inter_WA wire_M0AW();
 inter_WA wire_M1AW(); 
+inter_WA wire_S0AW();
 inter_WA wire_S1AW();
 inter_WA wire_S2AW();
 inter_WA wire_S3AW();
@@ -42,6 +43,7 @@ inter_WA wire_S5AW();
 
 inter_WD wire_M0W();
 inter_WD wire_M1W();
+inter_WD wire_S0W();
 inter_WD wire_S1W();
 inter_WD wire_S2W();
 inter_WD wire_S3W();
@@ -50,6 +52,7 @@ inter_WD wire_S5W();
 
 inter_WR wire_M0B();
 inter_WR wire_M1B();
+inter_WR wire_S0B();
 inter_WR wire_S1B();
 inter_WR wire_S2B();
 inter_WR wire_S3B();
@@ -75,7 +78,22 @@ inter_RD wire_S4R();
 inter_RD wire_S5R();
 logic [`AXI_DATA_BITS-1:0]rdata_m0;
 logic [`AXI_DATA_BITS-1:0]rdata_m1;
+logic ROM_enable_r;
+logic ROM_read_r;
+logic [11:0] ROM_address_r;
 
+always_ff@(posedge clk) begin
+    if(rst) begin
+        ROM_enable  <= 1'b0;
+        ROM_read    <= 1'b0;
+        ROM_address <= 32'b0;
+    end
+    else begin
+        ROM_enable  <= ROM_enable_r;
+        ROM_read    <= ROM_read_r;
+        ROM_address <= ROM_address_r;
+    end
+end
 
 AXI AXI(
     .ACLK    (clk),
@@ -89,6 +107,9 @@ AXI AXI(
     .RA_M1  (wire_M1AR),
     .RD_M1  (wire_M1R),
     //ROM
+    .WA_S0  (wire_S0AW),
+    .WD_S0  (wire_S0W),
+    .WR_S0  (wire_S0B),
     .RA_S0  (wire_S0AR),
     .RD_S0  (wire_S0R),
     //IM1
@@ -147,11 +168,14 @@ CPU_wrapper CPU_wrapper(
 ROM_wrapper ROM_wrapper(
     .clk(clk),
     .rst(rst),
+    .S0AW(wire_S0AW),
+    .S0W(wire_S0W),
+    .S0B(wire_S0B),
     .S0AR(wire_S0AR),
     .S0R(wire_S0R),
-    .ROM_enable(ROM_enable),
-    .ROM_read(ROM_read),
-    .ROM_address(ROM_address),
+    .ROM_enable(ROM_enable_r),
+    .ROM_read(ROM_read_r),
+    .ROM_address(ROM_address_r),
     .ROM_out(ROM_out)
 );
 SRAM_wrapper IM1(

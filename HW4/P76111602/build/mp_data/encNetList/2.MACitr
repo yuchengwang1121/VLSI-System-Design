@@ -1,0 +1,6 @@
+CPU_wrapper/L1CI/DA/i_data_array
+CPU_wrapper/L1CI/TA/i_tag_array
+CPU_wrapper/L1CD/DA/i_data_array
+CPU_wrapper/L1CD/TA/i_tag_array
+IM1/i_SRAM
+DM1/i_SRAM

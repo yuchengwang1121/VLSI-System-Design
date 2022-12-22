@@ -1,0 +1,6 @@
+CPU_wrapper/L1CI/DA/i_data_array pinCHalo 0 29036 0 0
+CPU_wrapper/L1CI/TA/i_tag_array pinCHalo 0 5580 0 0
+CPU_wrapper/L1CD/DA/i_data_array pinCHalo 0 29036 0 0
+CPU_wrapper/L1CD/TA/i_tag_array pinCHalo 0 5580 0 0
+IM1/i_SRAM pinCHalo 0 8783 0 0
+DM1/i_SRAM pinCHalo 0 8783 0 0

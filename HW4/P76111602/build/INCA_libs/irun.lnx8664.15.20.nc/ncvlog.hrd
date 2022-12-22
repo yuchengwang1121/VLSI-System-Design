@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src/AXI
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./include
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=12.5
+-DEFINE
+CYCLE2=100
+-DEFINE
+MAX=6000000

@@ -77,21 +77,41 @@ assign SD.ARLEN = Wire.ARLEN;
 assign SD.ARSIZE = Wire.ARSIZE;
 assign SD.ARBURST = Wire.ARBURST;
 
-assign VS0.busy = ~S0.ARREADY;
-assign VS1.busy = ~S1.ARREADY;
-assign VS2.busy = ~S2.ARREADY;
-assign VS3.busy = ~S3.ARREADY;
-assign VS4.busy = ~S4.ARREADY;
-assign VS5.busy = ~S5.ARREADY;
-assign VSD.busy = ~SD.ARREADY;
+// assign VS0.busy = VS0.reg_READY & ~S0.ARREADY;
+// assign VS1.busy = VS1.reg_READY & ~S1.ARREADY;
+// assign VS2.busy = VS2.reg_READY & ~S2.ARREADY;
+// assign VS3.busy = VS3.reg_READY & ~S3.ARREADY;
+// assign VS4.busy = VS4.reg_READY & ~S4.ARREADY;
+// assign VS5.busy = VS5.reg_READY & ~S5.ARREADY;
+// assign VSD.busy = VSD.reg_READY & ~SD.ARREADY;
 
-assign S0.ARVALID = VS0.busy?1'b0:VS0.temp_ARVALID;
-assign S1.ARVALID = VS1.busy?1'b0:VS1.temp_ARVALID;
-assign S2.ARVALID = VS2.busy?1'b0:VS2.temp_ARVALID;
-assign S3.ARVALID = VS3.busy?1'b0:VS3.temp_ARVALID;
-assign S4.ARVALID = VS4.busy?1'b0:VS4.temp_ARVALID;
-assign S5.ARVALID = VS5.busy?1'b0:VS5.temp_ARVALID;
-assign SD.ARVALID = VSD.busy?1'b0:VSD.temp_ARVALID;
+// assign S0.ARVALID = VS0.busy?1'b0:VS0.temp_ARVALID;
+// assign S1.ARVALID = VS1.busy?1'b0:VS1.temp_ARVALID;
+// assign S2.ARVALID = VS2.busy?1'b0:VS2.temp_ARVALID;
+// assign S3.ARVALID = VS3.busy?1'b0:VS3.temp_ARVALID;
+// assign S4.ARVALID = VS4.busy?1'b0:VS4.temp_ARVALID;
+// assign S5.ARVALID = VS5.busy?1'b0:VS5.temp_ARVALID;
+// assign SD.ARVALID = VSD.busy?1'b0:VSD.temp_ARVALID;
+
+// always_ff @(posedge clk) begin
+//     if (rst) begin
+//         VS0.reg_READY <= 1'b0;
+//         VS1.reg_READY <= 1'b0;
+//         VS2.reg_READY <= 1'b0;
+//         VS3.reg_READY <= 1'b0;
+//         VSD.reg_READY <= 1'b0;
+//         VS4.reg_READY <= 1'b0;
+//         VS5.reg_READY <= 1'b0;
+//     end else begin
+//         VS0.reg_READY <= S0.ARREADY? 1'b1 : VS0.reg_READY;
+//         VS1.reg_READY <= S1.ARREADY? 1'b1 : VS1.reg_READY;
+//         VS2.reg_READY <= S2.ARREADY? 1'b1 : VS2.reg_READY;
+//         VS3.reg_READY <= S3.ARREADY? 1'b1 : VS3.reg_READY;
+//         VSD.reg_READY <= SD.ARREADY? 1'b1 : VSD.reg_READY;
+//         VS4.reg_READY <= S4.ARREADY? 1'b1 : VS4.reg_READY;
+//         VS5.reg_READY <= S5.ARREADY? 1'b1 : VS5.reg_READY;
+//     end
+// end
 
 Arbiter RArbiter(
     .clk        (clk),
@@ -129,13 +149,13 @@ Decoder RDecoder(
     .READY_S4     (S4.ARREADY),
     .READY_S5     (S5.ARREADY),
     .READY_SD     (SD.ARREADY),
-    .VALID_S0     (VS0.temp_ARVALID),
-    .VALID_S1     (VS1.temp_ARVALID),
-    .VALID_S2     (VS2.temp_ARVALID),
-    .VALID_S3     (VS3.temp_ARVALID),
-    .VALID_S4     (VS4.temp_ARVALID),
-    .VALID_S5     (VS5.temp_ARVALID),
-    .VALID_SD     (VSD.temp_ARVALID),
+    .VALID_S0     (S0.ARVALID),
+    .VALID_S1     (S1.ARVALID),
+    .VALID_S2     (S2.ARVALID),
+    .VALID_S3     (S3.ARVALID),
+    .VALID_S4     (S4.ARVALID),
+    .VALID_S5     (S5.ARVALID),
+    .VALID_SD     (SD.ARVALID),
     .READY_S      (Wire.ARREADY)
 );
 

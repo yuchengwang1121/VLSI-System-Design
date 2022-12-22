@@ -20,10 +20,14 @@ module WDT (
     logic wdlive4;
      
     always_ff@(posedge clk2) begin
-        
+        if(rst2) begin
+            wden_temp <= 1'b0;
+            wden <= 1'b0;
+        end
+        else begin
             wden_temp <= WDEN;
-		wden <= wden_temp;
-        
+		    wden <= wden_temp;
+        end
     end
     logic [2:0]cont;
     always_ff @(posedge clk) begin
@@ -44,8 +48,8 @@ module WDT (
     
     always_ff @(posedge clk2) begin
 		if(rst2) begin		
-		wdlive1 <= 1'b0;            
-		wdlive2 <= 1'b0;
+		    wdlive1 <= 1'b0;            
+		    wdlive2 <= 1'b0;
             wdlive3 <= 1'b0;
             wdlive4 <= 1'b0;
 
@@ -55,22 +59,22 @@ module WDT (
             wtocnt3 <= 32'b0;
 		end
 		else begin 
-		wdlive1 <= wdlive;            
-		wdlive2 <= wdlive1;
-            	wdlive3 <= wdlive2;
-            	wdlive4 <= wdlive3 ^ wdlive2;
+		    wdlive1 <= wdlive;            
+		    wdlive2 <= wdlive1;
+            wdlive3 <= wdlive2;
+            wdlive4 <= wdlive3 ^ wdlive2;
 
-            
-            	wtocnt1 <= wtocnt; 
-            	wtocnt2 <= wtocnt1;
-            	wtocnt3 <= wtocnt2;
+        
+            wtocnt1 <= wtocnt; 
+            wtocnt2 <= wtocnt1;
+            wtocnt3 <= wtocnt2;
 		end
 		
     end
     always_ff @(posedge clk2) begin
         if(rst2) begin
             count <= 32'b0;
-            WTO <= 0;
+            WTO <= 1'b0;
         end
         else if(wden == 1) begin
             if(count < wtocnt3) begin

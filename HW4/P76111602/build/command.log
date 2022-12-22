@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
-#@ # Date:   Wed Dec 21 23:42:24 2022
-#@ # Run by: YuChengWang@caidcpuserver1
+#@ # Date:   Thu Dec 22 21:07:02 2022
+#@ # Run by: charlie@caidcpuserver1
 #@ 
 
 source /home/nfs_cad/synopsys/synthesis/cur/admin/setup/.synopsys_dc.setup
@@ -8585,8 +8585,8 @@ source /home/nfs_cad/synopsys/synthesis/cur/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /home/nfs_cad/synopsys/synthesis/cur/admin/setup/.synopsys_dc.setup
 
-source /home/YuChengWang/VLSI-System-Design/HW4_2/build/.synopsys_dc.setup
-#@ # -- Starting source /home/YuChengWang/VLSI-System-Design/HW4_2/build/.synopsys_dc.setup
+source /home/charlie/VSD/HW4_4/build/.synopsys_dc.setup
+#@ # -- Starting source /home/charlie/VSD/HW4_4/build/.synopsys_dc.setup
 
 #@ set company "CIC"
 #@ set designer "Student"
@@ -8618,10 +8618,10 @@ source /home/YuChengWang/VLSI-System-Design/HW4_2/build/.synopsys_dc.setup
 #@ set sh_enable_line_editing true
 #@ history keep 100
 #@ alias h history
-#@ # -- End source /home/YuChengWang/VLSI-System-Design/HW4_2/build/.synopsys_dc.setup
+#@ # -- End source /home/charlie/VSD/HW4_4/build/.synopsys_dc.setup
 
-source -echo -verbose /home/YuChengWang/VLSI-System-Design/HW4_2/build/../script/synthesis.tcl
-#@ # -- Starting source /home/YuChengWang/VLSI-System-Design/HW4_2/build/../script/synthesis.tcl
+source -echo -verbose /home/charlie/VSD/HW4_4/build/../script/synthesis.tcl
+#@ # -- Starting source /home/charlie/VSD/HW4_4/build/../script/synthesis.tcl
 
 #@ read_file -autoread -top top {../src ../include ../src/AXI}
 #@ current_design top
@@ -8633,7 +8633,7 @@ source -echo -verbose /home/YuChengWang/VLSI-System-Design/HW4_2/build/../script
 #@ # -- Starting source ../script/DC.sdc
 
 #@ #####CLK PERIOD CAN BE ADJUSTED UP TO 20.0 IF SYNTHESIS GOES WRONG#####
-#@ create_clock -name clk -period 10.0 [get_ports clk]
+#@ create_clock -name clk -period 12.5 [get_ports clk]
 #@ create_clock -name clk2 -period 100.0 [get_ports clk2]
 #@ set_clock_groups -asynchronous -group {clk} -group {clk2}
 #@ set_dont_touch_network      [all_clocks]
@@ -8643,9 +8643,9 @@ source -echo -verbose /home/YuChengWang/VLSI-System-Design/HW4_2/build/../script
 #@ set_ideal_network           [get_ports {clk clk2}]
 #@ 
 #@ #####REMEMBER TO SET THIS MAX DELAY TO 1/2 CLK PERIOD#####
-#@ set_input_delay  -max 5.0  -clock clk [remove_from_collection [all_inputs] [get_ports {clk clk2}]]
+#@ set_input_delay  -max 6.25  -clock clk [remove_from_collection [all_inputs] [get_ports {clk clk2}]]
 #@ set_input_delay  -min  0.0  -clock clk [remove_from_collection [all_inputs] [get_ports {clk clk2}]]
-#@ set_output_delay -max 5.0  -clock clk [all_outputs]
+#@ set_output_delay -max 6.25  -clock clk [all_outputs]
 #@ set_output_delay -min  0.0  -clock clk [all_outputs]
 #@ 
 #@ set_driving_cell -library fsa0m_a_t33_generic_io_ss1p62v125c -lib_cell XMD -pin {O} [all_inputs]

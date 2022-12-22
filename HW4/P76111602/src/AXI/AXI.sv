@@ -38,6 +38,12 @@ module AXI
     inter_RD.M1 RD_M1,
 
     // AXI to slave 0 (ROM)
+    // AWx
+    inter_WA.S0 WA_S0,
+    // Wx
+    inter_WD.S0 WD_S0,
+    // Bx
+    inter_WR.S0 WR_S0,
     // ARx
     inter_RA.S0 RA_S0,
     // Rx
@@ -150,6 +156,7 @@ WriteAddr WA(
     .clk            (ACLK),
     .rst            (ARESETn),
     .M1             (WA_M1),             //only DataMemory needs to Write
+    .S0             (WA_S0),
     .S1             (WA_S1),
     .S2             (WA_S2),
     .S3             (WA_S3),
@@ -161,12 +168,14 @@ WriteData WD(
     .clk            (ACLK),
     .rst            (ARESETn),
     .M1             (WD_M1),
+    .S0             (WD_S0),
     .S1             (WD_S1),
     .S2             (WD_S2),
     .S3             (WD_S3),
     .S4             (WD_S4),
     .S5             (WD_S5),
     .SD             (wire_W),
+    .AWVALID_S0     (WA_S0.AWVALID),
     .AWVALID_S1     (WA_S1.AWVALID),
     .AWVALID_S2     (WA_S2.AWVALID),
     .AWVALID_S3     (WA_S3.AWVALID),
@@ -178,6 +187,7 @@ WriteRespon WR(
     .clk            (ACLK),
     .rst            (ARESETn),
     .M1             (WR_M1),
+    .S0             (WR_S0),
     .S1             (WR_S1),
     .S2             (WR_S2),
     .S3             (WR_S3),

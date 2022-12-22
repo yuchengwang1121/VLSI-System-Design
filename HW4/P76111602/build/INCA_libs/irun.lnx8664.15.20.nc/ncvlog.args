@@ -1,0 +1,33 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src/AXI
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./include
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=12.5
+-DEFINE
+CYCLE2=100
+-DEFINE
+MAX=6000000
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND

@@ -1,8 +1,0 @@
-INPUT@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/html_reports/data_files/@@@@cdc-cdc_verify@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports/waiver.rpt@@data_files/_cdc-cdc_verify_waiver.rpt@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports/moresimple.rpt@@data_files/_cdc-cdc_verify_moresimple.rpt@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/_cdc-cdc_verify_no_msg_reporting_rules.rpt@@
-REGEN@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports/CDC-report.rpt@@data_files/_cdc-cdc_verify_CDC-report.rpt.html@@
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass_reports/CDC-report.rpt@@data_files/_cdc-cdc_verify_CDC-report.rpt@@
-PROCESS@@timing@@morelint@@lowpower@@lint@@erc@@area@@Audits@@const_intern1@@constraints@@dft@@dft_dsm@@latch@@miscellaneous@@openmore@@power_est@@simulation@@starc@@starc2002@@starc2005@@txv@@clock-reset@@SpyGlass
-COPY@@/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/spyglass-1/cdc/cdc_verify/spyglass.log@@data_files/_cdc-cdc_verify_spyglass.log@@

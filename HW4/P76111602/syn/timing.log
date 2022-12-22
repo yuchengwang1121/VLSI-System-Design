@@ -1,4 +1,3 @@
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : timing
@@ -7,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: T-2022.03
-Date   : Wed Dec 21 23:44:41 2022
+Date   : Thu Dec 22 21:08:33 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -16,8 +15,8 @@ Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
 Wire Load Model Mode: enclosed
 
   Startpoint: DRAM_valid (input port clocked by clk)
-  Endpoint: ROM_address[8]
-            (output port clocked by clk)
+  Endpoint: CPU_wrapper/CPU/EXE/Csr/mepc_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -28,70 +27,88 @@ Wire Load Model Mode: enclosed
                      enG5K                 fsa0m_a_generic_core_ss1p62v125c
   ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__
                      enG5K                 fsa0m_a_generic_core_ss1p62v125c
-  ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__
+  CPU_wrapper_I_M0_AW_inter_WA__I_M0_W_inter_WD__I_M0_B_inter_WR__I_M0_AR_inter_RA__I_M0_R_inter_RD__I_M1_AW_inter_WA__I_M1_W_inter_WD__I_M1_B_inter_WR__I_M1_AR_inter_RA__I_M1_R_inter_RD__
+                     enG200K               fsa0m_a_generic_core_ss1p62v125c
+  L1C_inst           enG50K                fsa0m_a_generic_core_ss1p62v125c
+  HazardCtrl_I_IFHCo_IFHC_inter__
                      enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG30K                fsa0m_a_generic_core_ss1p62v125c
+  Csr                enG5K                 fsa0m_a_generic_core_ss1p62v125c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             1.00       1.00
-  input external delay                                    5.00       6.00 r
-  DRAM_valid (in)                                         0.15       6.15 r
+  input external delay                                    6.25       7.25 r
+  DRAM_valid (in)                                         0.17       7.42 r
   DRAM_wrapper/DRAM_valid (DRAM_wrapper_I_S3AW_inter_WA__I_S3W_inter_WD__I_S3B_inter_WR__I_S3AR_inter_RA__I_S3R_inter_RD__)
-                                                          0.00       6.15 r
-  DRAM_wrapper/U260/O (ND2F)                              0.12       6.27 f
-  DRAM_wrapper/U259/O (INV12)                             0.14       6.41 r
+                                                          0.00       7.42 r
+  DRAM_wrapper/U298/O (ND2F)                              0.13       7.55 f
+  DRAM_wrapper/U297/O (INV12)                             0.18       7.73 r
   DRAM_wrapper/S3R.RVALID (DRAM_wrapper_I_S3AW_inter_WA__I_S3W_inter_WD__I_S3B_inter_WR__I_S3AR_inter_RA__I_S3R_inter_RD__)
-                                                          0.00       6.41 r
+                                                          0.00       7.73 r
   AXI/RD_S3.RVALID (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__I_WA_S4_inter_WA__I_WD_S4_inter_WD__I_WR_S4_inter_WR__I_RA_S4_inter_RA__I_RD_S4_inter_RD__I_WA_S5_inter_WA__I_WD_S5_inter_WD__I_WR_S5_inter_WR__I_RA_S5_inter_RA__I_RD_S5_inter_RD__)
-                                                          0.00       6.41 r
+                                                          0.00       7.73 r
   AXI/RD/S3.RVALID (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__)
-                                                          0.00       6.41 r
-  AXI/RD/U60/O (INV8CK)                                   0.07       6.48 f
-  AXI/RD/U51/O (MAOI1HT)                                  0.14       6.63 r
-  AXI/RD/U50/O (OAI112HT)                                 0.15       6.78 f
-  AXI/RD/U72/O (INV4)                                     0.10       6.88 r
-  AXI/RD/U100/O (AN2T)                                    0.24       7.12 r
-  AXI/RD/U33/O (ND3P)                                     0.10       7.22 f
-  AXI/RD/U32/O (OAI13H)                                   0.21       7.43 r
-  AXI/RD/U5/O (NR2F)                                      0.09       7.52 f
-  AXI/RD/U92/O (OAI112HP)                                 0.12       7.64 r
-  AXI/RD/U6/O (INV8CK)                                    0.10       7.74 f
-  AXI/RD/U109/O (NR2F)                                    0.12       7.85 r
-  AXI/RD/U7/OB (MXL2HP)                                   0.15       8.00 f
-  AXI/RD/U97/O (AN2T)                                     0.38       8.38 f
-  AXI/RD/S0.RREADY (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__)
-                                                          0.00       8.38 f
-  AXI/RD_S0.RREADY (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__I_WA_S4_inter_WA__I_WD_S4_inter_WD__I_WR_S4_inter_WR__I_RA_S4_inter_RA__I_RD_S4_inter_RD__I_WA_S5_inter_WA__I_WD_S5_inter_WD__I_WR_S5_inter_WR__I_RA_S5_inter_RA__I_RD_S5_inter_RD__)
-                                                          0.00       8.38 f
-  ROM_wrapper/S0R.RREADY (ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__)
-                                                          0.00       8.38 f
-  ROM_wrapper/U106/O (OAI12HT)                            0.19       8.57 r
-  ROM_wrapper/U49/O (INV6CK)                              0.09       8.66 f
-  ROM_wrapper/U114/O (ND2F)                               0.10       8.76 r
-  ROM_wrapper/U104/O (AOI12HT)                            0.10       8.86 f
-  ROM_wrapper/U105/O (AN2)                                0.29       9.15 f
-  ROM_wrapper/U69/O (AN2T)                                0.23       9.38 f
-  ROM_wrapper/U77/O (ND2P)                                0.09       9.47 r
-  ROM_wrapper/U79/O (XNR2HS)                              0.16       9.63 r
-  ROM_wrapper/U78/O (OAI12H)                              0.13       9.76 f
-  ROM_wrapper/U29/O (INV4)                                0.08       9.84 r
-  ROM_wrapper/U335/O (ND3HT)                              0.27      10.11 f
-  ROM_wrapper/ROM_address[8] (ROM_wrapper_I_S0AW_inter_WA__I_S0W_inter_WD__I_S0B_inter_WR__I_S0AR_inter_RA__I_S0R_inter_RD__)
-                                                          0.00      10.11 f
-  ROM_address[8] (out)                                    0.00      10.11 f
-  data arrival time                                                 10.11
+                                                          0.00       7.73 r
+  AXI/RD/U3/O (INV4)                                      0.06       7.79 f
+  AXI/RD/U220/O (OR3B2)                                   0.19       7.98 r
+  AXI/RD/U6/O (ND2T)                                      0.11       8.09 f
+  AXI/RD/U9/O (INV3)                                      0.11       8.20 r
+  AXI/RD/U8/O (OR3B2)                                     0.22       8.43 r
+  AXI/RD/U14/O (INV3)                                     0.11       8.54 f
+  AXI/RD/U231/O (AO222)                                   0.48       9.02 f
+  AXI/RD/U234/O (OR3B2)                                   0.27       9.29 f
+  AXI/RD/U205/O (AN3T)                                    0.48       9.77 f
+  AXI/RD/M0.RVALID (ReadData_I_M0_inter_RD_M0_I_M1_inter_RD_M1_I_S0_inter_RD_S0_I_S1_inter_RD_S1_I_S2_inter_RD_S2_I_S3_inter_RD_S3_I_S4_inter_RD_S3_I_S5_inter_RD_S3_I_SD_inter_RD__)
+                                                          0.00       9.77 f
+  AXI/RD_M0.RVALID (AXI_I_RA_M0_inter_RA__I_RD_M0_inter_RD__I_WA_M1_inter_WA__I_WD_M1_inter_WD__I_WR_M1_inter_WR__I_RA_M1_inter_RA__I_RD_M1_inter_RD__I_WA_S0_inter_WA__I_WD_S0_inter_WD__I_WR_S0_inter_WR__I_RA_S0_inter_RA__I_RD_S0_inter_RD__I_WA_S1_inter_WA__I_WD_S1_inter_WD__I_WR_S1_inter_WR__I_RA_S1_inter_RA__I_RD_S1_inter_RD__I_WA_S2_inter_WA__I_WD_S2_inter_WD__I_WR_S2_inter_WR__I_RA_S2_inter_RA__I_RD_S2_inter_RD__I_WA_S3_inter_WA__I_WD_S3_inter_WD__I_WR_S3_inter_WR__I_RA_S3_inter_RA__I_RD_S3_inter_RD__I_WA_S4_inter_WA__I_WD_S4_inter_WD__I_WR_S4_inter_WR__I_RA_S4_inter_RA__I_RD_S4_inter_RD__I_WA_S5_inter_WA__I_WD_S5_inter_WD__I_WR_S5_inter_WR__I_RA_S5_inter_RA__I_RD_S5_inter_RD__)
+                                                          0.00       9.77 f
+  CPU_wrapper/M0_R.RVALID (CPU_wrapper_I_M0_AW_inter_WA__I_M0_W_inter_WD__I_M0_B_inter_WR__I_M0_AR_inter_RA__I_M0_R_inter_RD__I_M1_AW_inter_WA__I_M1_W_inter_WD__I_M1_B_inter_WR__I_M1_AR_inter_RA__I_M1_R_inter_RD__)
+                                                          0.00       9.77 f
+  CPU_wrapper/M0/RVALID (Master_1)                        0.00       9.77 f
+  CPU_wrapper/M0/U275/O (OAI222HT)                        0.26      10.03 r
+  CPU_wrapper/M0/stall (Master_1)                         0.00      10.03 r
+  CPU_wrapper/L1CI/I_wait (L1C_inst)                      0.00      10.03 r
+  CPU_wrapper/L1CI/U3/O (INV8)                            0.07      10.09 f
+  CPU_wrapper/L1CI/U866/O (OAI112HT)                      0.20      10.29 r
+  CPU_wrapper/L1CI/core_wait (L1C_inst)                   0.00      10.29 r
+  CPU_wrapper/CPU/IM_stall (CPU)                          0.00      10.29 r
+  CPU_wrapper/CPU/HC/IM_stall (HazardCtrl_I_IFHCo_IFHC_inter__)
+                                                          0.00      10.29 r
+  CPU_wrapper/CPU/HC/U3/O (OR3)                           0.41      10.71 r
+  CPU_wrapper/CPU/HC/U4/O (INV6CK)                        0.15      10.86 f
+  CPU_wrapper/CPU/HC/EXEMEM_RegWrite (HazardCtrl_I_IFHCo_IFHC_inter__)
+                                                          0.00      10.86 f
+  CPU_wrapper/CPU/EXE/EXEMEM_RegWrite (EXE_I_IDEXEi_IDEXE_inter__I_EXEMEMo_EXEMEM_inter__I_IFEXEo_IFEXE_inter__)
+                                                          0.00      10.86 f
+  CPU_wrapper/CPU/EXE/Csr/EM_Regwrite (Csr)               0.00      10.86 f
+  CPU_wrapper/CPU/EXE/Csr/U560/O (AN4B1)                  0.26      11.12 f
+  CPU_wrapper/CPU/EXE/Csr/U567/O (OR3B2)                  0.21      11.33 r
+  CPU_wrapper/CPU/EXE/Csr/U165/O (INV1CK)                 0.18      11.51 f
+  CPU_wrapper/CPU/EXE/Csr/U54/O (BUF2)                    0.23      11.73 f
+  CPU_wrapper/CPU/EXE/Csr/U547/O (ND2F)                   0.13      11.86 r
+  CPU_wrapper/CPU/EXE/Csr/U105/O (INV4)                   0.07      11.93 f
+  CPU_wrapper/CPU/EXE/Csr/U125/O (ND2P)                   0.19      12.12 r
+  CPU_wrapper/CPU/EXE/Csr/U58/O (INV2)                    0.06      12.18 f
+  CPU_wrapper/CPU/EXE/Csr/U96/O (AN2T)                    0.35      12.53 f
+  CPU_wrapper/CPU/EXE/Csr/U38/O (ND2S)                    0.17      12.70 r
+  CPU_wrapper/CPU/EXE/Csr/U600/O (OAI222S)                0.22      12.93 f
+  CPU_wrapper/CPU/EXE/Csr/U601/O (AO112)                  0.35      13.28 f
+  CPU_wrapper/CPU/EXE/Csr/mepc_reg[4]/D (QDFFS)           0.00      13.28 f
+  data arrival time                                                 13.28
 
-  clock clk (rise edge)                                  10.00      10.00
-  clock network delay (ideal)                             1.00      11.00
-  clock uncertainty                                      -0.10      10.90
-  output external delay                                  -5.00       5.90
-  data required time                                                 5.90
+  clock clk (rise edge)                                  12.50      12.50
+  clock network delay (ideal)                             1.00      13.50
+  clock uncertainty                                      -0.10      13.40
+  CPU_wrapper/CPU/EXE/Csr/mepc_reg[4]/CK (QDFFS)          0.00      13.40 r
+  library setup time                                     -0.12      13.28
+  data required time                                                13.28
   --------------------------------------------------------------------------
-  data required time                                                 5.90
-  data arrival time                                                -10.11
+  data required time                                                13.28
+  data arrival time                                                -13.28
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -4.21
+  slack (MET)                                                        0.00
 
 
   Startpoint: WDT_wrapper/WDT/count_reg[0]
@@ -114,40 +131,40 @@ Wire Load Model Mode: enclosed
   clock network delay (ideal)                             1.00       1.00
   WDT_wrapper/WDT/count_reg[0]/CK (QDFFN)                 0.00       1.00 r
   WDT_wrapper/WDT/count_reg[0]/Q (QDFFN)                  0.43       1.43 f
-  WDT_wrapper/WDT/add_78/A[0] (WDT_DW01_inc_0_DW01_inc_11)
+  WDT_wrapper/WDT/add_82/A[0] (WDT_DW01_inc_0_DW01_inc_11)
                                                           0.00       1.43 f
-  WDT_wrapper/WDT/add_78/U1_1_1/C (HA1)                   0.24       1.67 f
-  WDT_wrapper/WDT/add_78/U1_1_2/C (HA1)                   0.21       1.88 f
-  WDT_wrapper/WDT/add_78/U1_1_3/C (HA1)                   0.21       2.09 f
-  WDT_wrapper/WDT/add_78/U1_1_4/C (HA1)                   0.21       2.30 f
-  WDT_wrapper/WDT/add_78/U1_1_5/C (HA1)                   0.21       2.51 f
-  WDT_wrapper/WDT/add_78/U1_1_6/C (HA1)                   0.21       2.71 f
-  WDT_wrapper/WDT/add_78/U1_1_7/C (HA1)                   0.21       2.92 f
-  WDT_wrapper/WDT/add_78/U1_1_8/C (HA1)                   0.21       3.13 f
-  WDT_wrapper/WDT/add_78/U1_1_9/C (HA1)                   0.21       3.34 f
-  WDT_wrapper/WDT/add_78/U1_1_10/C (HA1)                  0.21       3.55 f
-  WDT_wrapper/WDT/add_78/U1_1_11/C (HA1)                  0.21       3.76 f
-  WDT_wrapper/WDT/add_78/U1_1_12/C (HA1)                  0.21       3.97 f
-  WDT_wrapper/WDT/add_78/U1_1_13/C (HA1)                  0.21       4.18 f
-  WDT_wrapper/WDT/add_78/U1_1_14/C (HA1)                  0.21       4.39 f
-  WDT_wrapper/WDT/add_78/U1_1_15/C (HA1)                  0.21       4.59 f
-  WDT_wrapper/WDT/add_78/U1_1_16/C (HA1)                  0.21       4.80 f
-  WDT_wrapper/WDT/add_78/U1_1_17/C (HA1)                  0.21       5.01 f
-  WDT_wrapper/WDT/add_78/U1_1_18/C (HA1)                  0.21       5.22 f
-  WDT_wrapper/WDT/add_78/U1_1_19/C (HA1)                  0.21       5.43 f
-  WDT_wrapper/WDT/add_78/U1_1_20/C (HA1)                  0.21       5.64 f
-  WDT_wrapper/WDT/add_78/U1_1_21/C (HA1)                  0.21       5.85 f
-  WDT_wrapper/WDT/add_78/U1_1_22/C (HA1)                  0.21       6.06 f
-  WDT_wrapper/WDT/add_78/U1_1_23/C (HA1)                  0.21       6.26 f
-  WDT_wrapper/WDT/add_78/U1_1_24/C (HA1)                  0.21       6.47 f
-  WDT_wrapper/WDT/add_78/U1_1_25/C (HA1)                  0.21       6.68 f
-  WDT_wrapper/WDT/add_78/U1_1_26/C (HA1)                  0.21       6.89 f
-  WDT_wrapper/WDT/add_78/U1_1_27/C (HA1)                  0.21       7.10 f
-  WDT_wrapper/WDT/add_78/U1_1_28/C (HA1)                  0.21       7.31 f
-  WDT_wrapper/WDT/add_78/U1_1_29/C (HA1)                  0.21       7.52 f
-  WDT_wrapper/WDT/add_78/U1_1_30/C (HA1)                  0.20       7.72 f
-  WDT_wrapper/WDT/add_78/U1/O (XOR2HS)                    0.20       7.92 f
-  WDT_wrapper/WDT/add_78/SUM[31] (WDT_DW01_inc_0_DW01_inc_11)
+  WDT_wrapper/WDT/add_82/U1_1_1/C (HA1)                   0.24       1.67 f
+  WDT_wrapper/WDT/add_82/U1_1_2/C (HA1)                   0.21       1.88 f
+  WDT_wrapper/WDT/add_82/U1_1_3/C (HA1)                   0.21       2.09 f
+  WDT_wrapper/WDT/add_82/U1_1_4/C (HA1)                   0.21       2.30 f
+  WDT_wrapper/WDT/add_82/U1_1_5/C (HA1)                   0.21       2.51 f
+  WDT_wrapper/WDT/add_82/U1_1_6/C (HA1)                   0.21       2.71 f
+  WDT_wrapper/WDT/add_82/U1_1_7/C (HA1)                   0.21       2.92 f
+  WDT_wrapper/WDT/add_82/U1_1_8/C (HA1)                   0.21       3.13 f
+  WDT_wrapper/WDT/add_82/U1_1_9/C (HA1)                   0.21       3.34 f
+  WDT_wrapper/WDT/add_82/U1_1_10/C (HA1)                  0.21       3.55 f
+  WDT_wrapper/WDT/add_82/U1_1_11/C (HA1)                  0.21       3.76 f
+  WDT_wrapper/WDT/add_82/U1_1_12/C (HA1)                  0.21       3.97 f
+  WDT_wrapper/WDT/add_82/U1_1_13/C (HA1)                  0.21       4.18 f
+  WDT_wrapper/WDT/add_82/U1_1_14/C (HA1)                  0.21       4.39 f
+  WDT_wrapper/WDT/add_82/U1_1_15/C (HA1)                  0.21       4.59 f
+  WDT_wrapper/WDT/add_82/U1_1_16/C (HA1)                  0.21       4.80 f
+  WDT_wrapper/WDT/add_82/U1_1_17/C (HA1)                  0.21       5.01 f
+  WDT_wrapper/WDT/add_82/U1_1_18/C (HA1)                  0.21       5.22 f
+  WDT_wrapper/WDT/add_82/U1_1_19/C (HA1)                  0.21       5.43 f
+  WDT_wrapper/WDT/add_82/U1_1_20/C (HA1)                  0.21       5.64 f
+  WDT_wrapper/WDT/add_82/U1_1_21/C (HA1)                  0.21       5.85 f
+  WDT_wrapper/WDT/add_82/U1_1_22/C (HA1)                  0.21       6.06 f
+  WDT_wrapper/WDT/add_82/U1_1_23/C (HA1)                  0.21       6.26 f
+  WDT_wrapper/WDT/add_82/U1_1_24/C (HA1)                  0.21       6.47 f
+  WDT_wrapper/WDT/add_82/U1_1_25/C (HA1)                  0.21       6.68 f
+  WDT_wrapper/WDT/add_82/U1_1_26/C (HA1)                  0.21       6.89 f
+  WDT_wrapper/WDT/add_82/U1_1_27/C (HA1)                  0.21       7.10 f
+  WDT_wrapper/WDT/add_82/U1_1_28/C (HA1)                  0.21       7.31 f
+  WDT_wrapper/WDT/add_82/U1_1_29/C (HA1)                  0.21       7.52 f
+  WDT_wrapper/WDT/add_82/U1_1_30/C (HA1)                  0.20       7.72 f
+  WDT_wrapper/WDT/add_82/U1/O (XOR2HS)                    0.20       7.92 f
+  WDT_wrapper/WDT/add_82/SUM[31] (WDT_DW01_inc_0_DW01_inc_11)
                                                           0.00       7.92 f
   WDT_wrapper/WDT/U67/O (AO22)                            0.26       8.18 f
   WDT_wrapper/WDT/count_reg[31]/D (QDFFN)                 0.00       8.18 f

@@ -1,0 +1,42 @@
+CPU_wrapper/L1CI/DA/i_data_array, R0, R180, MX, MY, R90, R270, MX90, MY90
+CPU_wrapper/L1CI/TA/i_tag_array, R0, R180, MX, MY, R90, R270, MX90, MY90
+CPU_wrapper/L1CD/DA/i_data_array, R0, R180, MX, MY, R90, R270, MX90, MY90
+CPU_wrapper/L1CD/TA/i_tag_array, R0, R180, MX, MY, R90, R270, MX90, MY90
+IM1/i_SRAM, R0, R180, MX, MY, R90, R270, MX90, MY90
+DM1/i_SRAM, R0, R180, MX, MY, R90, R270, MX90, MY90
+CPU_wrapper/L1CI/DA/i_data_array
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 29036
+	UserSpacingR 0
+	UserSpacingT 0
+CPU_wrapper/L1CI/TA/i_tag_array
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 5580
+	UserSpacingR 0
+	UserSpacingT 0
+CPU_wrapper/L1CD/DA/i_data_array
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 29036
+	UserSpacingR 0
+	UserSpacingT 0
+CPU_wrapper/L1CD/TA/i_tag_array
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 5580
+	UserSpacingR 0
+	UserSpacingT 0
+IM1/i_SRAM
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 8783
+	UserSpacingR 0
+	UserSpacingT 0
+DM1/i_SRAM
+	Macro2Core 0
+	UserSpacingL 0
+	UserSpacingB 8783
+	UserSpacingR 0
+	UserSpacingT 0
