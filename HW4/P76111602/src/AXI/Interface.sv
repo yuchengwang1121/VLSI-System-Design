@@ -187,7 +187,7 @@ endinterface
 
 interface VALIDCtrl;
     //for RA 
-    logic temp_ARVALID, busy, reg_READY;
+    logic temp_ARVALID, busy;
 endinterface
 
 interface cache;

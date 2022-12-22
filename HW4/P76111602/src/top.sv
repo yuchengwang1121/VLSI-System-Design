@@ -34,7 +34,6 @@ module top(
 );
 inter_WA wire_M0AW();
 inter_WA wire_M1AW(); 
-inter_WA wire_S0AW();
 inter_WA wire_S1AW();
 inter_WA wire_S2AW();
 inter_WA wire_S3AW();
@@ -43,7 +42,6 @@ inter_WA wire_S5AW();
 
 inter_WD wire_M0W();
 inter_WD wire_M1W();
-inter_WD wire_S0W();
 inter_WD wire_S1W();
 inter_WD wire_S2W();
 inter_WD wire_S3W();
@@ -52,7 +50,6 @@ inter_WD wire_S5W();
 
 inter_WR wire_M0B();
 inter_WR wire_M1B();
-inter_WR wire_S0B();
 inter_WR wire_S1B();
 inter_WR wire_S2B();
 inter_WR wire_S3B();
@@ -92,9 +89,6 @@ AXI AXI(
     .RA_M1  (wire_M1AR),
     .RD_M1  (wire_M1R),
     //ROM
-    .WA_S0  (wire_S0AW),
-    .WD_S0  (wire_S0W),
-    .WR_S0  (wire_S0B),
     .RA_S0  (wire_S0AR),
     .RD_S0  (wire_S0R),
     //IM1
@@ -153,9 +147,6 @@ CPU_wrapper CPU_wrapper(
 ROM_wrapper ROM_wrapper(
     .clk(clk),
     .rst(rst),
-    .S0AW(wire_S0AW),
-    .S0W(wire_S0W),
-    .S0B(wire_S0B),
     .S0AR(wire_S0AR),
     .S0R(wire_S0R),
     .ROM_enable(ROM_enable),

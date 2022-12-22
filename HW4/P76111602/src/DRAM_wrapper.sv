@@ -254,7 +254,7 @@ module DRAM_wrapper (
         if(rst) begin
             reg_RDATA <= `DATA_BITS'b0;
         end else begin
-            reg_RDATA <= DRAM_valid? DRAM_Q:reg_RDATA;
+            reg_RDATA <= DRAM_valid? DRAM_Q : reg_RDATA;
         end
     end
 
