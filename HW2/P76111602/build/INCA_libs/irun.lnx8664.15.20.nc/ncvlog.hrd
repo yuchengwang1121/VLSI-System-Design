@@ -3,16 +3,18 @@
 // Do not modify this file
 //
 -INCDIR
-/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./syn
+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src
+-INCDIR
+/home/YuChengWang/VLSI-System-Design/HW2/P76111602/./src/AXI
 -INCDIR
 /home/YuChengWang/VLSI-System-Design/HW2/P76111602/./include
 -INCDIR
 /home/YuChengWang/VLSI-System-Design/HW2/P76111602/./sim
 -DEFINE
-SYN
+prog0
 -DEFINE
-prog2
+FSDB_ALL
 -DEFINE
-CYCLE=15.0
+CYCLE=20.0
 -DEFINE
 MAX=100000
