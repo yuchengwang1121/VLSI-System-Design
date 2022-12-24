@@ -82,6 +82,7 @@ FSDBDumpsingle = "$novasDumpsingle(${SimDmpObj});"
 FSDBDumpvarsInFile = "$novasDumpvarsToFile(\"${SimDmpFile}\");"
 FSDBDumpMem = "$novasDumpMemNow(${SimDmpObj}, ${SimDmpBegin}, ${SimDmpSize});"
 [CoverageDetail]
+cross_filter_limit = 1000
 branch_limit_vector_display = 50
 showgrid = TRUE
 reuseFirst = TRUE
@@ -110,6 +111,8 @@ FSM = 1
 Branch = 1
 [DesignTree]
 IfShowModule = {TRUE, FALSE}
+[DisabledMessages]
+version = Verdi_O-2018.09
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -123,6 +126,7 @@ saveManually = TRUE
 illegalBehavior = FALSE
 DisplayExcludedItem = FALSE
 adaptiveExclusion = TRUE
+warningExcludeInstance = TRUE
 favorite_exclude_annotation = ""
 [FSM]
 viewport = 65 336 387 479
@@ -197,14 +201,14 @@ StickSet-TextColor = black
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
-nWaveOpenFsdbDirHistory = "\"/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/top.fsdb\""
+nWaveOpenFsdbDirHistory = "\"/home/YuChengWang/VLSI-System-Design/HW4/P76111602/build/top.fsdb\""
 [Form]
-version = Verdi_N-2017.12
+version = Verdi_O-2018.09
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
 SyncBrowserDir = TRUE
-version = Verdi_N-2017.12
+version = Verdi_O-2018.09
 SignalCaseInSensitive = FALSE
 cmd_enter_form = FALSE
 ShowWndCtntDuringResizing = FALSE
@@ -295,6 +299,17 @@ showDollarUnit = TRUE
 [NavigationField]
 DisplayInWaveformSignalPane = FALSE
 SearchFilterMatchCase = FALSE
+[OldFontRC]
+Wave_legend_window_font = -f COURIER12 -c ID_CYAN5
+Wave_value_window_font = -f COURIER12 -c ID_CYAN5
+Wave_curve_window_font = -f COURIER12 -c ID_CYAN5
+Wave_group_name_font = -f COURIER12 -c ID_GREEN5
+Wave_ruler_value_font = -f COURIER12 -c ID_CYAN5
+Wave_analog_ruler_value_font = -f COURIER12 -c ID_CYAN5
+Wave_comment_string_font = -f COURIER12 -c ID_RED5
+HB_designTreeFont = *-adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-*
+Text_font = COURIER12
+nMemory_font = Fixed 14
 [OtherEditor]
 cmd1 = "xterm -font 9x15 -fg black -bg gray -e"
 name = "vi"
@@ -305,8 +320,10 @@ FileName = test.ps
 PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
-qWaveSignalDialog = 560,312,800,479
-openFileDlg = 918,237,602,483
+openFileDlg = 2579,350,602,483
+QwWarnMsgDlg = 2570,435,600,250
+SetWindowTimeUnitDialog = 2663,548,433,86
+qWaveSignalDialog = 2453,547,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -411,7 +428,7 @@ font = COURIER12
 hdlVhEntity = black
 hdlArchitecture = black
 hdlPackage = blue4
-hdlAlias = blue4
+hdlAlias = black
 hdlGeneric = blue4
 hdlTypeName = blue4
 hdlLibrary = blue4
@@ -514,11 +531,8 @@ ovaForbidSuccessColor = -c ID_GREEN5
 SigGroupRuleFile = 
 DisplayFileName = FALSE
 waveform_vertical_scroll_bar = TRUE
-scope_to_save_with_macro
-open_file_dir
-open_rc_file_dir
-getSignalForm = 2 23 800 479 219 381 527 183
-viewPort = 0 25 1920 1007 306 65
+getSignalForm = 2453 547 800 479 247 381 307 89
+viewPort = 1920 23 1920 1137 201 1
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -542,6 +556,11 @@ grid = -c ID_WHITE -lw 1 -ls short_dashed
 rulerBackground = -c ID_GRAY3
 rulerForeground = -c ID_YELLOW5
 busTextColor = -c ID_ORANGE8
+legendForeground = -c ID_CYAN5
+valueForeground = -c ID_CYAN5
+curveForeground = -c ID_CYAN5
+groupNameColor = -c ID_GREEN5
+commentStringColor = -c ID_RED5
 region(Active)Background = -c ID_YELLOW1
 region(NBA)Background = -c ID_RED1
 region(Re-Active)Background = -c ID_YELLOW3
@@ -562,6 +581,7 @@ Compress_Bar_Color = -c ID_YELLOW4
 Vector_Dense_Block_Color = -c ID_ORANGE8
 Scalar_Dense_Block_Color = -c ID_GREEN6
 Composite_Dense_Block_Color = -c ID_ORANGE5
+RPTR_Power_Off_Layer = -c ID_CYAN3 -stipple dots
 DB_Power_Off_Layer = -c ID_BLUE4 -stipple dots
 SPA_Driver_Power_Off_Layer = -c ID_ORANGE4 -stipple dots
 SPA_Receiver_Power_Off_Layer = -c ID_GREEN5 -stipple dots
@@ -635,7 +655,7 @@ EventSequence_SyncCursorTime = TRUE
 EventSequence_Sorting = FALSE
 EventSequence_RemoveGrid = FALSE
 EventSequence_IsGridMode = FALSE
-SetDefaultRadix = TRUE
+SetDefaultRadix_global = FALSE
 DefaultRadix = Hex
 SigSearchSignalMatchCase = FALSE
 SigSearchSignalScopeOption = FALSE
@@ -693,6 +713,7 @@ showMarkerAbsolute = FALSE
 showMarkerAdjacent = FALSE
 showMarkerRelative = FALSE
 showMarkerFrequency = FALSE
+stickCursorMarkerOnWaveform = TRUE
 keepMarkerAtEndTimeOfTransaction = FALSE
 doubleClickToExpandTransaction = TRUE
 expandTransactionAssociatedSignals = TRUE
@@ -706,12 +727,14 @@ ResolveSymbolicLink = TRUE
 signal_rc_abspath = TRUE
 signal_rc_no_natural_bus_range = FALSE
 save_scope_with_macro = FALSE
+scope_to_save_with_macro
 TipInSignalWin = FALSE
+DisplayPackedSiganlInBitwiseManner = FALSE
 DisplaySignalTypeAheadOfSignalName = TRUE ICON
 TipInCurveWin = FALSE
 MouseGesturesInCurveWin = TRUE
 DisplayLSBsFirst = FALSE
-PaintSpecificColorPattern = FALSE
+PaintSpecificColorPattern = TRUE
 ModuleName = TRUE
 form_all_memory_signal = FALSE
 formBusSignalFromPartSelects = FALSE
@@ -741,7 +764,7 @@ showPortNameForDroppedInstance = FALSE
 truncateFilePathInTitleBar = TRUE
 filterPropVacuousSuccess = FALSE
 includeLocalSignals = FALSE
-encloseSignalsByGroup = FALSE
+encloseSignalsByGroup = TRUE
 resaveSignals = TRUE
 adjustBusPrefix = adjustBus_
 adjustBusBits = 1
@@ -751,7 +774,7 @@ maskIsolation = TRUE
 maskRetention = TRUE
 maskDrivingPowerOff = TRUE
 maskToggle = TRUE
-autoBackupSignals = off 5 "\"/home/user2/Vsd22/Vsd22113/nWaveLog\"" "\"novas_autosave_sig\""
+autoBackupSignals = off 5 "\"/home/YuChengWang/VLSI-System-Design/HW4/P76111602/nWaveLog\"" "\"novas_autosave_sig\""
 signal_rc_attribute = 65535
 signal_rc_alias_attribute = 0
 ConvertAttr1 = -inc FALSE
@@ -779,8 +802,10 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/user2/Vsd22/Vsd22113/Desktop/HW4_2/build/top.fsdb\""
+RecentFile1 = "\"/home/YuChengWang/VLSI-System-Design/HW4/P76111602/build/top.fsdb\""
 open_file_time_range = FALSE
+open_file_dir
+open_rc_file_dir
 value_window_aligment = Right
 signal_window_alignment = Auto
 ShowDeltaTime = TRUE
@@ -858,6 +883,7 @@ showConditionId = FALSE
 showfullhier = FALSE
 nameLeftAlignment = TRUE
 showAllInfoInTooltips = FALSE
+copyItemHvpName = TRUE
 ignoreGroupWeight = FALSE
 absTestName = FALSE
 HvpMergeTool = 
@@ -883,6 +909,7 @@ autoSaveCheck = TRUE
 autoSaveTime = 5
 ShowMissingScore = TRUE
 enableFeatureId = FALSE
+enable_HVP_FEAT_ID = FALSE
 enableMeasureConcealment = FALSE
 HvpCloneHierShowMsgAgain = 1
 HvpCloneHierType = tree
@@ -926,7 +953,13 @@ showCellBitRangeWithAddr = TRUE
 wordsShownInOneRow = 8
 syncCursorTime = FALSE
 fixCellColumnWidth = FALSE
-font = Fixed 14
+font = Courier 12
+[planColors]
+plan_fillColor_inactive = lightGray
+plan_fillColor_warning = orange
+plan_fillColor_error = red
+plan_fillColor_invalid = #F0DCDB
+plan_fillColor_subplan = lightGray
 [schematics]
 viewport = 178 262 638 516
 schBackgroundColor = black lineSolid
@@ -983,9 +1016,19 @@ colorIdentifier = green
 Value = darkgreen
 MacroBackground = white
 Missing = #400040
+[specColors]
+top_plan_linked = #ADFFA6
+top_plan_ignore = #D3D3D3
+top_plan_todo = #EECBAD
+sub_plan_ignore = #919191
+sub_plan_todo = #EFAFAF
+sub_plan_linked = darkorange
 [spec_link_setting]
 use_spline = true
+goto_section = false
 exclude_ignore = true
+truncate_abstract = false
+abstract_length = 999
 compare_strategy = 2
 auto_apply_margin = FALSE
 margin_top = 0.80

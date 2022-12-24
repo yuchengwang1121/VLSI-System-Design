@@ -1,29 +1,29 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Dec 23, 2022 at 07:37:15 CST
+TOOL:	irun(64)	15.20-s084: Started on Dec 23, 2022 at 22:05:42 CST
 irun
-	/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv
+	/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv
 	+incdir+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./src/AXI+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./include+/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim
-	+define+prog0
+	+define+prog3+FSDB_ALL
 	-define CYCLE=12.5
 	-define CYCLE2=100
 	-define MAX=6000000
 	+access+r
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/prog0
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/prog3
 	+nc64bit
 
    User defined plus("+") options:
-	+prog_path=/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/prog0
+	+prog_path=/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/prog3
 
-file: /home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv
+file: /home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv
 `define CYCLE 8.0 // Cycle time
                                |
-ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
 `define CYCLE2 8.0 // Cycle time for WDT
                                         |
-ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv,3|40): The text macro 'CYCLE2' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,3|40): The text macro 'CYCLE2' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
 `define MAX 300000 // Max cycle number
                                       |
-ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv,4|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,4|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
 	module worklib.ProgramCounter:sv
 		errors: 0, warnings: 0
 	module worklib.IF:sv
@@ -144,14 +144,26 @@ ncvlog: *W,MACNDF (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_
 		errors: 0, warnings: 0
 	module worklib.DRAM:sv
 		errors: 0, warnings: 0
+  int boot_end_flag = 0;
+                    |
+ncvlog: *W,VARIST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,156|20): Local static variable with initializer requires 'static' keyword.
+  int only_pose1 = 0;
+                 |
+ncvlog: *W,VARIST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,157|17): Local static variable with initializer requires 'static' keyword.
+  int only_pose2 = 0;
+                 |
+ncvlog: *W,VARIST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,158|17): Local static variable with initializer requires 'static' keyword.
+  int cycle_number = 0;
+                   |
+ncvlog: *W,VARIST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,159|19): Local static variable with initializer requires 'static' keyword.
     $value$plusargs("prog_path=%s", prog_path);
                   |
-ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv,138|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,200|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
-ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb.sv,154|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_tb_WDT.sv,216|12): System function '$fscanf' invoked as a task. Return value will be ignored.
 	module worklib.top_tb:sv
-		errors: 0, warnings: 2
+		errors: 0, warnings: 6
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 3
 		Caching library 'worklib' ....... Done
@@ -160,30 +172,33 @@ ncvlog: *W,NOSYST (/home/YuChengWang/VLSI-System-Design/HW4/P76111602/./sim/top_
 		inter_Decoder
 		top_tb
 ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-    $readmemh({prog_path, "/rom0.hex"}, i_ROM.Memory_byte0);
-                                                         |
-ncelab: *W,MEMODR (../sim/top_tb.sv,141|57): $readmem default memory order incompatible with IEEE1364.
+    .ROM_address(ROM_address),
+                           |
+ncelab: *W,CUVMPW (../sim/top_tb_WDT.sv,121|27): port sizes differ in port connection (32/12).
+	$readmemh({prog_path, "/rom0.hex"}, i_ROM.Memory_byte0);
+	                                                     |
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,203|54): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/rom1.hex"}, i_ROM.Memory_byte1);
                                                          |
-ncelab: *W,MEMODR (../sim/top_tb.sv,142|57): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,204|57): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/rom2.hex"}, i_ROM.Memory_byte2);
                                                          |
-ncelab: *W,MEMODR (../sim/top_tb.sv,143|57): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,205|57): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/rom3.hex"}, i_ROM.Memory_byte3);
                                                          |
-ncelab: *W,MEMODR (../sim/top_tb.sv,144|57): $readmem default memory order incompatible with IEEE1364.
-    $readmemh({prog_path, "/dram0.hex"}, i_DRAM.Memory_byte0);
-                                                           |
-ncelab: *W,MEMODR (../sim/top_tb.sv,145|59): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,206|57): $readmem default memory order incompatible with IEEE1364.
+	$readmemh({prog_path, "/dram0.hex"}, i_DRAM.Memory_byte0);
+	                                                       |
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,207|56): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/dram1.hex"}, i_DRAM.Memory_byte1);
                                                            |
-ncelab: *W,MEMODR (../sim/top_tb.sv,146|59): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,208|59): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/dram2.hex"}, i_DRAM.Memory_byte2);
                                                            |
-ncelab: *W,MEMODR (../sim/top_tb.sv,147|59): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,209|59): $readmem default memory order incompatible with IEEE1364.
     $readmemh({prog_path, "/dram3.hex"}, i_DRAM.Memory_byte3);
                                                            |
-ncelab: *W,MEMODR (../sim/top_tb.sv,148|59): $readmem default memory order incompatible with IEEE1364.
+ncelab: *W,MEMODR (../sim/top_tb_WDT.sv,210|59): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
 		worklib.ALU:sv <0x22677c4a>
@@ -192,113 +207,149 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,148|59): $readmem default memory order incom
 			streams:   1, words:  4143
 		worklib.AXI:sv <0x7811eba2>
 			streams:   7, words:   901
-		worklib.Arbiter:sv <0x5cfd14dc>
+		worklib.Arbiter:sv <0x669c3213>
 			streams:   5, words:  5188
 		worklib.BranchCtrl:sv <0x7561cabd>
 			streams:   1, words:   853
 		worklib.CPU:sv <0x7d7a704a>
 			streams:  57, words: 12114
-		worklib.CPU_wrapper:sv <0x765a4871>
+		worklib.CPU_wrapper:sv <0x4c3b6ebe>
 			streams: 111, words: 26507
 		worklib.ControlUnit:sv <0x0f644de2>
 			streams:   1, words: 13053
-		worklib.Csr:sv <0x22b71c0c>
+		worklib.Csr:sv <0x479d1634>
 			streams:  33, words: 21071
-		worklib.DRAM:sv <0x6259822d>
+		worklib.DRAM:sv <0x46c12272>
 			streams:  46, words: 35731
-		worklib.DRAM_wrapper:sv <0x2d8c6386>
+		worklib.DRAM_wrapper:sv <0x76fa5428>
 			streams:  48, words: 23027
 		worklib.Decoder:sv <0x1e335d62>
 			streams:   1, words:  9835
-		worklib.DefaultSlave:sv <0x744e5120>
+		worklib.DefaultSlave:sv <0x4a7290e5>
 			streams:  17, words:  9259
-		worklib.EXE:sv <0x3b2c00b3>
+		worklib.EXE:sv <0x4888fef5>
 			streams:  35, words: 16412
 		worklib.ForwardUnit:sv <0x3d5b96cb>
 			streams:   2, words:  1257
 		worklib.HazardCtrl:sv <0x0a99cc0d>
 			streams:   1, words:  3525
-		worklib.ID:sv <0x4f680ec3>
+		worklib.ID:sv <0x4417f969>
 			streams:  27, words: 18776
-		worklib.IF:sv <0x62b470a7>
+		worklib.IF:sv <0x49085b55>
 			streams:   9, words:  3261
 		worklib.ImmediateGenerator:sv <0x2708cc27>
 			streams:   1, words:  1961
-		worklib.L1C_data:sv <0x4bef7023>
+		worklib.L1C_data:sv <0x7eb49d7f>
 			streams:  32, words: 27273
-		worklib.L1C_inst:sv <0x5fe9ed4d>
+		worklib.L1C_inst:sv <0x52494aec>
 			streams:  38, words: 30690
-		worklib.MEM:sv <0x1980c978>
+		worklib.MEM:sv <0x514c135d>
 			streams:  12, words: 11009
-		worklib.Master:sv <0x4c43b8f9>
+		worklib.Master:sv <0x10bd06c5>
 			streams:  24, words: 11395
-		worklib.ProgramCounter:sv <0x4b681967>
+		worklib.ProgramCounter:sv <0x0a6295f7>
 			streams:   2, words:   454
-		worklib.ROM:v <0x6f7049ac>
+		worklib.ROM:v <0x09894586>
 			streams:   3, words:  1511
-		worklib.ROM_wrapper:sv <0x62801041>
+		worklib.ROM_wrapper:sv <0x01734e47>
 			streams:  44, words: 21601
 		worklib.ReadAddr:sv <0x0ed761a0>
 			streams:  43, words: 11169
-		worklib.ReadData:sv <0x11802242>
+		worklib.ReadData:sv <0x1537d7cf>
 			streams:  10, words: 42260
 		worklib.RegisterFile:sv <0x1228878a>
 			streams:   5, words:  7693
-		worklib.SRAM:sv <0x5f7e64c3>
+		worklib.SRAM:sv <0x0d8d3ed4>
 			streams:  61, words: 19862
-		worklib.SRAM:sv <0x698ef830>
+		worklib.SRAM:sv <0x35493a2b>
 			streams:  61, words: 19862
-		worklib.SRAM_wrapper:sv <0x21a44a9e>
+		worklib.SRAM_wrapper:sv <0x10694066>
 			streams:  64, words: 37195
 		worklib.WB:sv <0x7d7d5aa7>
 			streams:   3, words:   630
-		worklib.WDT:sv <0x4ba61b68>
+		worklib.WDT:sv <0x103b3411>
 			streams:  17, words:  5246
-		worklib.WDT_wrapper:sv <0x1ab07a9b>
+		worklib.WDT_wrapper:sv <0x7aeb3361>
 			streams:  30, words: 14179
 		worklib.WriteAddr:sv <0x0719a3d5>
 			streams:  41, words: 11070
-		worklib.WriteData:sv <0x37c0625a>
+		worklib.WriteData:sv <0x16162773>
 			streams:  19, words: 26287
-		worklib.WriteRespon:sv <0x2c2ec26f>
+		worklib.WriteRespon:sv <0x6e450182>
 			streams:   8, words: 34607
-		worklib.data_array:sv <0x2dd2974a>
+		worklib.data_array:sv <0x1b3c8013>
 			streams:  58, words: 57895
-		worklib.sensor_ctrl:sv <0x582fb1e2>
+		worklib.sensor_ctrl:sv <0x3f0c5ef1>
 			streams:   6, words: 11994
-		worklib.sensor_wrapper:sv <0x6e92daac>
+		worklib.sensor_wrapper:sv <0x63218916>
 			streams:  30, words: 14528
-		worklib.tag_array:sv <0x29d5e962>
+		worklib.tag_array:sv <0x08d58199>
 			streams:  34, words: 10375
-		worklib.top:sv <0x3d8d2c9f>
+		worklib.top:sv <0x1c8d4464>
 			streams:  12, words:  3225
-		worklib.top_tb:sv <0x34ebcfcb>
-			streams:  32, words: 38696
+		worklib.top_tb:sv <0x5db492d9>
+			streams:  35, words: 46474
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 54      45
 		Interfaces:              67      16
-		Registers:             1049     629
+		Registers:             1054     634
 		Scalar wires:          1337       -
 		Expanded wires:         656      14
 		Vectored wires:         441       -
 		Named events:             5       5
 		Always blocks:          204     177
-		Initial blocks:           9       9
+		Initial blocks:          12      12
 		Cont. assignments:      350     650
 		Pseudo assignments:     389     357
 		Assertions:               5       5
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.inter_Decoder:sv
+Loading snapshot worklib.inter_Decoder:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+CYCLE = 12.500000, CYCLE2 = 100.000000
+FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux x86_64/64bit, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scope (top_tb.i_DRAM), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 256M.
+*Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 512M.
+`dram_word(`TEST_START) = ffffffff, cycle_number =       68378
+`ismem_word(`FOR_LOOP_ADDR) = 0000006f
+              854738
+`dram_word(`TEST_START)2 = ffffffff, cycle_number =      217772
+             2722163
+*Verdi* FSDB: For performance reasons, the Memory Size Limit has been increased to 1024M.
 
-Trying to check out license...
-	Incisive_HDL_Simulator 15.20 - Failed
-	Xcelium_Limited_Single_Core 16.00 - Failed
-	Incisive_Enterprise_Simulator 15.20 - Failed
-	Incisive_Enterprise_Verifier 15.20 - Failed
-	Xcelium_Single_Core 16.00 - Failed
-	Xcelium_Safety 16.00 - Failed
-ncsim: *F,NOLICN: Unable to checkout license for the simulation. (flag - 10) 'lic_error -97'.
-TOOL:	irun(64)	15.20-s084: Exiting on Dec 23, 2022 at 07:37:15 CST  (total: 00:00:00)
+Done
+
+DRAM[262144] = ffffffff, pass
+DRAM[262145] = 00078d98, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 8831600 NS + 0
+../sim/top_tb_WDT.sv:265     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Dec 23, 2022 at 22:06:24 CST  (total: 00:00:42)
